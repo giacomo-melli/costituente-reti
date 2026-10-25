@@ -128,7 +128,7 @@ M_SI = re.compile(r'Rispond[oe]no\s+s[iìl1]\s*[:;.]?', re.I)
 M_NO = re.compile(r'Rispond[oe]no\s+no\s*[:;.]?', re.I)
 M_AST = re.compile(r'Si\s+(?:sono\s+)?astengono\s*[:;.]?|Si\s+sono\s+astenuti\s*[:;.]?|Si\s+[èe]\s+astenut[oa]\s*[:;.]?|Astenut[oi]\s*[:;]', re.I)   # anche l'intestazione secca «Astenuti:» (coi due punti: quella del riquadro dei totali non li ha)
 M_CONG = re.compile(r"(?:Sono|Deputati|[EÈ])\s+in\s+congedo\s*[:;.]?|In\s+congedo\s*[:;.]?", re.I)
-M_END = re.compile(r'Risultato\s+della\s+votazione|Hanno\s+risposto\s+s|Comunico\s+il\s+risultato|Annuncio\s+il\s+risultato', re.I)
+M_END = re.compile(r'Risultato\W{0,3}della\W{0,3}votazione|Hanno\W{0,4}rispost\w{0,2}\W{0,4}s|Comunico\W{0,3}il\W{0,3}risultato|Annuncio\W{0,3}il\W{0,3}risultato|Presenti\W{0,4}e\W{0,4}votanti|\bVotanti\W{0,8}\d{2,4}', re.I)
 
 PROSA = re.compile(r"(?:\b[a-zàèéìòù’']{3,}\b[\s,.;:]+){4,}")   # 4+ parole minuscole di fila: è testo, non un elenco
 def nomi_da(seg):
@@ -189,7 +189,7 @@ for s in sedute:
         if mc:
             nxt = min([x.start() for x in [me] if x and x.start() > mc.start()] or [mc.end() + 3000])
             segs['congedo'] = win[mc.end():nxt]
-        after = win[me.start():me.start() + 800] if me else ''
+        after = win[me.start():me.start() + 2500] if me else ''
         before = text[max(0, m.start() - 2500):m.start()]
         k = before.lower().rfind('appello nominale')
         oggetto = before[max(0, k - 500):k + 200] if k >= 0 else before[-600:]
@@ -207,14 +207,71 @@ for s in sedute:
                                       cognome=r.cognome if r is not None else '', abbinamento=how))
                     cnt[voto] += r is not None
         voti.append(dict(id_voto=vid, seduta=s, data=data, pagina=page_at(pm, m.start()),
-                         si_ufficiali=TOTALI_CORRETTI.get((s, 'si', t_si := totale(after, r'Hanno\s+risposto\s+s[iìl1]')), t_si),
-                         no_ufficiali=TOTALI_CORRETTI.get((s, 'no', t_no := totale(after, r'Hanno\s+risposto\W{0,3}n[o0]')), t_no),
-                         astenuti_ufficiali=totale(after, r'Si\s+sono\s+astenuti'),
+                         si_ufficiali=TOTALI_CORRETTI.get((s, 'si', t_si := totale(after, r'Hanno\W{0,4}rispost\w{0,2}\W{0,4}s[iìl1]')), t_si),
+                         no_ufficiali=TOTALI_CORRETTI.get((s, 'no', t_no := totale(after, r'Hanno\W{0,4}rispost\w{0,2}\W{0,4}n[o0]')), t_no),
+                         astenuti_ufficiali=totale(after, r'Si\W{0,3}sono\W{0,3}astenuti'),
                          si_abbinati=cnt.get('sì', 0), no_abbinati=cnt.get('no', 0), astenuti_abbinati=cnt.get('astenuto', 0),
                          congedo_abbinati=cnt.get('congedo', 0), oggetto=re.sub(r'\s+', ' ', oggetto).strip(),
                          url_pdf=f'https://documenti.camera.it/_dati/costituente/lavori/Assemblea/{s}/{s}nc.pdf#page={page_at(pm, m.start())}'))
 
 V = pd.DataFrame(voti); R = pd.DataFrame(righe)
+
+# ---------- recupero per fascia alfabetica ----------
+# Gli elenchi dell'appello nominale sono stampati in ordine alfabetico: un nome storpiato
+# dall'OCR può quindi essere cercato solo fra i cognomi compresi fra il precedente e il
+# successivo abbinati. La fascia è un vincolo esterno, non una somiglianza: riduce i candidati
+# da 556 a pochi, e il controllo sui totali ufficiali dice se il recupero è corretto.
+STOP_VERBALE = set("""DICHIARO CHIUSA VOTAZIONE VOTAZIONI SEGRETARI SEGRETARIO COMPUTO VOTI VOTO ONOREVOLI
+INVITO PRESIDENTE PROCEDERE RISULTATO NOMINALE SCRUTINIO APPELLO COMUNICO ANNUNCIO SEGUENTE
+PRESENTI VOTANTI MAGGIORANZA ASSEMBLEA SEDUTA CAMERA DEPUTATI DEPUTATO CONGEDO ASTENUTI
+SONO HANNO RISPOSTO RISPONDONO ARTICOLO EMENDAMENTO PRESIDENZA RELATORE MINISTRO""".split())
+def recupera_fascia(R):
+    k_di = dict(zip(nomi.id_dep, nomi.k_cogn))
+    uff = {}                       # i totali ufficiali sono il giudice: non si recupera oltre il totale annunciato
+    for v in V.itertuples():
+        for voto, tot in (('sì', v.si_ufficiali), ('no', v.no_ufficiali)):
+            if pd.notna(tot): uff[(v.id_voto, voto)] = int(tot)
+    rec = {'fascia': 0, 'frammento': 0}
+    for _, g in R.groupby(['id_voto', 'voto'], sort=False):   # _ = (id_voto, voto)
+        idx = list(g.index)
+        chiavi = [k_di.get(R.at[i, 'id_dep'], '') if R.at[i, 'id_dep'] else '' for i in idx]
+        presenti = {k for k in chiavi if k}
+        tetto = uff.get(_)
+        for pos, i in enumerate(idx):
+            if tetto is not None and len(presenti) >= tetto:
+                break
+            if chiavi[pos] or R.at[i, 'abbinamento'] != 'non trovato':
+                continue
+            t = re.sub(r'[^A-Z]', '', str(R.at[i, 'nome_stampato']).upper())
+            if len(t) < 4 or t in STOP_VERBALE or t in NOMI_PROPRI:
+                continue
+            lo = next((chiavi[j] for j in range(pos - 1, -1, -1) if chiavi[j]), '')
+            hi = next((chiavi[j] for j in range(pos + 1, len(idx)) if chiavi[j]), '')
+            if not lo or not hi or lo > hi:
+                continue
+            band = [k for k in KEYS if lo <= k <= hi and len(IDX[k]) == 1]
+            if not band or len(band) > 8:
+                continue
+            close = difflib.get_close_matches(t, band, n=1, cutoff=0.6)
+            if not close:
+                continue
+            if close[0] in presenti:        # seconda metà di un cognome composto, già contato
+                R.at[i, 'abbinamento'] = 'frammento'; rec['frammento'] += 1
+                continue
+            r = IDX[close[0]][0]
+            R.loc[i, ['id_dep', 'cognome', 'abbinamento']] = [r.id_dep, r.cognome, 'fascia alfabetica']
+            presenti.add(close[0]); rec['fascia'] += 1
+    return rec
+# una persona vota una volta sola: righe ripetute nello stesso voto sono duplicati dell'OCR
+# («Cingolani Mario» e poi «Cingolani»), e gonfiano il conteggio mascherando nomi mancanti
+_d = R[R.id_dep.astype(str) != ''].duplicated(subset=['id_voto', 'id_dep'], keep='first')
+R.loc[_d[_d].index, ['id_dep', 'abbinamento']] = ['', 'duplicato']
+print('righe duplicate rimosse:', int(_d.sum()))
+print('recupero fascia alfabetica:', recupera_fascia(R))
+
+c = R[R.id_dep.astype(str) != ''].groupby(['id_voto', 'voto']).size().unstack(fill_value=0)
+for col, v in [('si_abbinati', 'sì'), ('no_abbinati', 'no'), ('astenuti_abbinati', 'astenuto'), ('congedo_abbinati', 'congedo')]:
+    V[col] = V.id_voto.map(c[v] if v in c else {}).fillna(0).astype(int)
 V['scarto_si'] = V.si_abbinati - V.si_ufficiali
 V['scarto_no'] = V.no_abbinati - V.no_ufficiali
 V['controllo'] = ['senza totali' if pd.isna(a) or pd.isna(b) else ('ok' if abs(a) <= 3 and abs(b) <= 3 else 'da verificare')

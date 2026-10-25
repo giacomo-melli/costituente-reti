@@ -4,6 +4,22 @@ A dataset on the 581 members of the Italian Constituent Assembly. It contains on
 
 **Why 581 and not 556.** The Assembly had 556 seats: that is how many deputies sat at any one time, and it is the figure usually quoted. The 581 rows of `members_nodes.csv` are instead the *people* who held one of those seats for at least a day between 1946 and 1948. The difference is turnover: deaths, resignations, forfeitures and the options exercised by candidates elected in several constituencies, all replaced as the work went on. The fields `term_start` and `term_end` make it possible to reconstruct who was in office on a given date: on 22 December 1947, the day the Constitution was approved, there were exactly 556. Anyone who would rather treat the Assembly as a body of 556 can filter on that date.
 
+## How the Assembly was elected
+
+Knowing how those 581 names came about helps in reading the dataset's electoral variables.
+
+Voting took place on **Sunday 2 June 1946**, the same day as the referendum between monarchy and republic. It was the first national election under **universal suffrage**: all citizens aged 21 and over voted, women and men alike. Twenty-one women were elected.
+
+The system was **proportional representation with competing lists**, in 32 multi-member constituencies, plus a **national pool** to which the remaining seats were allocated: 81 of the dataset's 581 members were elected there, and for them `constituency` and `election_region` both read «COLLEGIO UNICO NAZIONALE» and «NATIONAL POOL». Aosta Valley had a single-seat constituency.
+
+The electoral law provided for 573 deputies, but **556** were elected: no polling took place in Gorizia, Trieste, Pola, Fiume, Zara and Bolzano. The dataset's 581 are those 556 plus the members who replaced others during the Assembly's work (see «Why 581 and not 556»).
+
+The Assembly first met on **25 June 1946** and approved the Constitution on **22 December 1947**, after 347 sittings, 170 of them devoted to the constitutional text.
+
+Two absences in the data are legitimate and should not be read as gaps: `degree_field` is empty for members without a degree, and one member (Amedeo Filippo, in office from 13 to 18 June 1946) has no parliamentary group because the groups were formed after the first sitting.
+
+Sources for this section: Chamber of Deputies, [page on the Constituent Assembly](https://comunicazione.camera.it/eventi/80-costituente/assemblea-costituente); Wikipedia, [Assemblea Costituente (Italia)](https://it.wikipedia.org/wiki/Assemblea_Costituente_(Italia)).
+
 **Sources** (retrieved 22 October 2026): Italian Chamber of Deputies open data (dati.camera.it) and the costituente.camera.it portal; Italian Senate open data (dati.senato.it); Wikidata; Italian Wikipedia.
 
 Source texts (debate topics, document titles, occupations as recorded, Wikipedia evidence) are kept in Italian. Party lists and parliamentary groups keep their original Italian names.
@@ -22,8 +38,8 @@ Source texts (debate topics, document titles, occupations as recorded, Wikipedia
 | `edgelist_exchanges.csv` | One-mode interaction network: members speaking on the same page of the record (7,787 pairs) |
 | `edgelist_corapporteurs.csv` | Reports and proposals signed jointly (16 pairs) |
 | `edgelist_substitutions.csv` | Directed network: who replaced whom on a body (99 ties) |
-| `amendments_nodes.csv` | 738 amendments tabled in the Assembly, extracted from the records by OCR |
-| `edgelist_amendments.csv` | Two-mode network member × amendment (who signed; 2,198 edges) |
+| `amendments_nodes.csv` | 718 amendments tabled in the Assembly, extracted from the records by OCR |
+| `edgelist_amendments.csv` | Two-mode network member × amendment (who signed; 2,246 edges) |
 | `votes_nodes.csv` | 27 roll-call votes, with official totals and check |
 | `edgelist_votes.csv` | Two-mode network member × vote, with the vote cast (yes, no, abstain) |
 | `evidence_wikipedia.csv` | Wikipedia categories and sentences behind the antifascism and Resistance indicators |
@@ -56,16 +72,27 @@ Signatures on amendments and roll-call votes are not available in structured for
 4. **Check.** 73 randomly drawn mentions were checked against the PDF: 40 (seed 1947) by hand, 34 by Claude (an AI model) from the page image, oversampling amendments with several signatories (seed 1948). The systematic errors found were fixed in the code: lists of distinct amendments («gli emendamenti degli onorevoli X, Y e Z») mistaken for joint signatures, the proposer omitted in «firmato anche dagli onorevoli» formulas, questions to ministers, and OCR noise between names. Votes with discrepancies of more than three names were checked against the page image.
 5. **Completeness.** 10 randomly drawn pages (seed 2026) were read in full by Claude to find amendments with several signatories that the extraction missed. There were 6, of which 2 were extracted correctly. The causes (the formula «Gli onorevoli X e Y hanno presentato…», «a firma degli», «insieme con gli onorevoli», signature blocks broken by OCR, hyphenation, OCR noise in names) were fixed across the whole corpus; after the fix 5 of the 6 are complete and the sixth has 7 of 9 signatories. An automatic search for sentences with two or more surnames that were not extracted (`cerca_mancati.py`) guided further fixes. The number of amendments with several signatories rose from 217 to 327. A second check on a further 20 pages (seed 2027, excluding the earlier ones), carried out in the same way, found 5 amendments with several signatories: all 5 had been extracted with the full list of signatories. The other 17 pages contained none; the multiple signatures they do carry belong to parliamentary questions and interpellations, which are outside the dataset by construction. Details in `pipeline/extraction/richiamo2/ESITO.md`.
 
-**Accuracy of amendments.** Three samples were verified, each record read against the page image: 139 records in all. The first two (99 records) guided the fixes to the extractor, so their rates are optimistic by construction. The third (40 records) was drawn at random **after** those fixes, among records never looked at before, and gives the estimate to use (95% Wilson intervals; `valuta_campioni.py`):
+**Accuracy of amendments.** Amendments do not exist as structured data: they are derived from the text of the records and contain errors. They were measured on four samples, each record read against the page image: 219 records in all. The first two (99 records) guided the fixes to the extractor, so their rates are optimistic by construction. The third (40 records) and the fourth (80 records) were drawn at random **after** the respective fixes, among records never looked at before, and are the estimates to use (Wilson 95% intervals; `tools/valuta_campioni.py`):
 
-- false positives: 3 of 40, 7.5% (2.6–19.9%);
-- genuine amendments with missing or wrong signatories: 1 of 37, 2.7% (0.5–13.8%).
+| | sample 3 | sample 4 |
+|---|---|---|
+| false positives | 3/40 = 7.5% (2.6–19.9) | **2/80 = 2.5% (0.7–8.7)** |
+| missing or wrong signatories | 1/37 = 2.7% (0.5–13.8) | **6/78 = 7.7% (3.6–15.8)** |
+| — among amendments with 2+ signatories | 1/22 = 4.5% (0.8–21.8) | 5/38 = 13.2% (5.8–27.3) |
 
-On the two tuning samples the same rates are 4 of 99 (4.0%) and 1 of 78 (1.3%): the gap between the two estimates measures how far tuning made the first one optimistic, which is why the second is the published figure.
+The two samples measure successive versions of the extractor. Between them false positives fell by two thirds, because reading the context of every single record made the recurring forms visible and discardable: a name governed by a speech-act noun («le parole, le dichiarazioni, l'opinione dell'onorevole X» — the words, statements, opinion of Member X), a list of distinct acts governed by a plural («gli emendamenti degli onorevoli X, Y e Z»), collective acts that are not amendments (requests for a roll-call vote, orders of the day, resolutions, open letters), and the chair of a committee speaking in that capacity.
 
-False positives take three recurring forms: a sentence citing several distinct amendments in a single list («Restano così assorbiti gli emendamenti degli onorevoli X, Y e Z» — 'the amendments of Members X, Y and Z are thus absorbed'), now largely recognised and discarded; the chair of a committee speaking in that capacity and taken for a mover; and the formula by which the Presidency asks two movers of different amendments which one they keep. The errors found in the samples are corrected by hand in the data (`esporta_dataset.py`); the rates are estimates for the remaining amendments. `complete = 0` flags lists ending with «ed altri» (and others), whose further signatories are unknown.
+The fourth sample brought the opposite problem into focus, which the third had underestimated: **incomplete lists of signatories**. The causes are OCR line breaks inside a surname, co-signature formulas that went unrecognised («che reca anche le firme dei colleghi…» — which also bears the signatures of colleagues…), and surnames printed in the records in a different form from the official roll. Four of the six cases found were fixed after the measurement, which therefore remains a **conservative** estimate: the published version's rate is lower than the figure stated. The two remaining are OCR misreadings of names («Toncilo» for Tonello, «Gabriele» for Gabrieli).
 
-**Accuracy of votes.** Of 21 votes with official totals, 19 differ by at most three names per side between matched names and totals (`check = ok`). For votes v16 and v21 the extraction matches the printed page, but the printed list itself differs from the announced totals (`verified: …`). For six votes the record gives no totals (`no official totals`). Two official totals misread by OCR were corrected from the page image (v7 and v27). Consistency checks on the whole dataset: no votes or signatures outside a member's term of office; if a member appears in two lists of the same vote the exact match is kept, and if both are exact (Zappelli in v16, printed twice) the vote is left missing.
+**Namesakes.** Where the record prints only a surname and two members share it (Gullo Fausto and Gullo Rocco, Mastino Pietro and Mastino Gesumino, Pajetta Gian Carlo and Pajetta Giuliano…), the match is resolved in three steps: the party prevailing among the co-signatories already identified; the signatures the candidates have put elsewhere alongside the other members of the group; and finally presence in that same sitting — a namesake who never appears in that sitting cannot have tabled the amendment. The third rule was tested on 248 held-out cases, built by taking the names for which the record also prints the first name and hiding it: the rule picked the right person 248 times out of 248. Nineteen names remain ambiguous, nearly all Gullo, Mastino, Mariani and Cortese, where both candidates are active in the sitting: those signatures are dropped rather than assigned at random. The `abbinamento` column of `menzioni_nomi.csv` records which rule was used for each name.
+
+The errors found in the samples are corrected by hand in the data (`esporta_dataset.py`); the rates are estimates for the remaining amendments. `complete = 0` flags lists ending with «ed altri» (and others), whose further signatories are unknown.
+
+**Accuracy of votes.** Of 22 votes with official totals, 20 differ by at most three names per side between matched names and totals (`check = ok`); for five votes the record gives no totals (`no official totals`). For votes v16 and v21 the extraction matches the printed page, but the printed list itself differs from the announced totals (`verified: …`). Two official totals misread by OCR were corrected from the page image (v7 and v27).
+
+Roll-call lists are printed in alphabetical order, which is an external constraint worth exploiting: a surname garbled by OCR («CARIEPA», «LACOTII», «VANOM») can only be searched among the surnames falling between the previous and the next name already matched. Where that band holds at most eight names and similarity clears the threshold, the name is recovered (`matching = alphabetical band`): 16 cases. Stranded first names («Maria», «Luigi») and procedural words caught from the list («Dichiaro», «Votazione», «Segretari») are excluded. Rows repeating a member already present in the same vote — printing or OCR duplicates, such as «Cingolani Mario» followed by «Cingolani» — are flagged `duplicate` and generate no second edge: 11 cases. Both operations are judged externally, since it is the totals announced by the President that say whether a recovery is right: the mean gap between matched names and official totals falls from 3.05 to 2.64 names per vote, with 8 votes moving closer to their total and none moving away (the one widening gap is v16, where removing a duplicate exposes a printed list that is genuinely incomplete).
+
+Consistency checks on the whole dataset: no votes or signatures outside a member's term of office; if a member appears in two lists of the same vote the exact match is kept, and if both are exact the vote is left missing.
 
 ### Amendment variables (`amendments_nodes.csv`)
 

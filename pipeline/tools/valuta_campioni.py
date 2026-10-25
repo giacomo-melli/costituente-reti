@@ -11,7 +11,9 @@ V2 = pd.read_csv(os.path.join(D, 'extraction', 'VERIFICA_campione2_verificato.cs
 # campione 3: estratto a caso DOPO le correzioni, su record mai guardati prima.
 # E' l'unico indipendente dalla taratura, quindi i suoi tassi si stampano anche a parte.
 V3 = pd.read_csv(os.path.join(D, 'extraction', 'VERIFICA_campione3_verificato.csv'))
-V = pd.concat([V1.assign(campione=1), V2.assign(campione=2), V3.assign(campione=3)])
+# campione 4: 80 record estratti a caso dopo le correzioni del 25.10, anch'essi mai guardati.
+V4 = pd.read_csv(os.path.join(D, 'extraction', 'VERIFICA_campione4_verificato.csv'))
+V = pd.concat([V1.assign(campione=1), V2.assign(campione=2), V3.assign(campione=3), V4.assign(campione=4)])
 cg = lambda f: frozenset(k(nomi.loc[i, 'cognome']) for i in str(f).split('|') if i in nomi.index)
 E0 = pd.read_csv(os.path.join(D, 'extraction', 'emendamenti_estrazione_v1_verificata.csv')).set_index('id_emendamento')   # estrazione verificata
 E = pd.read_csv(os.path.join(EST, 'emendamenti.csv'))
@@ -50,7 +52,13 @@ if (v3.isin(['s', 'n'])).any():
         p = k / n; d = 1 + z * z / n
         c = (p + z * z / (2 * n)) / d; h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
         return f'{k}/{n} = {100 * p:.1f}% (IC 95%: {100 * max(0, c - h):.1f}-{100 * min(1, c + h):.1f}%)'
-    veri = (v3 == 's')
-    print('--- campione 3 (estratto dopo le correzioni, record mai guardati prima)')
-    print('  falsi positivi:', wilson(int((v3 == 'n').sum()), int(v3.isin(['s', 'n']).sum())))
-    print('  firmatari mancanti o errati:', wilson(int((veri & (f3 == 'n')).sum()), int(veri.sum())))
+    for et, Vx in [('campione 3 (estrazione del 24.10)', V3), ('campione 4 (estrazione del 25.10)', V4)]:
+        vv = Vx['emendamento_vero_(s/n)'].astype(str).str.strip().str.lower()
+        ff = Vx['firmatari_corretti_(s/n)'].astype(str).str.strip().str.lower()
+        if not vv.isin(['s', 'n']).any(): continue
+        veri = (vv == 's'); due = veri & (Vx.n_firmatari >= 2)
+        print(f'--- {et}: record mai guardati prima, verdetti letti sull\'immagine')
+        print('  falsi positivi:', wilson(int((vv == 'n').sum()), int(vv.isin(['s', 'n']).sum())))
+        print('  firmatari mancanti o errati:', wilson(int((veri & (ff == 'n')).sum()), int(veri.sum())))
+        if int(due.sum()):
+            print('    fra i soli emendamenti con 2+ firmatari:', wilson(int((due & (ff == 'n')).sum()), int(due.sum())))
