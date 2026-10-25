@@ -3,8 +3,7 @@
 pipeline/pdf/
 pipeline/testi_colonne/
 pipeline/testi_colonne_400/
-pipeline/extraction/crops2/
-pipeline/extraction/crops3/
+pipeline/extraction/crops*/
 pipeline/extraction/richiamo/
 pipeline/extraction/richiamo2/*.png
 pipeline/extraction/diagnostica_cache/

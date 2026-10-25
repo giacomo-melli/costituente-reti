@@ -121,23 +121,22 @@ sull'immagine della pagina.
 the records and contain errors. They were measured on samples read by hand
 against the page image.*
 
-La stima qui sotto viene da un campione di 40 record estratto a caso **dopo** le
-correzioni all'estrattore, fra record mai esaminati prima: è indipendente dalla
-taratura, al contrario dei due campioni precedenti.
+Le stime qui sotto vengono da un campione di 80 record estratto a caso **dopo**
+le correzioni all'estrattore, fra record mai esaminati prima: è indipendente
+dalla taratura. In tutto sono stati verificati a mano 219 record.
 
-*The estimate below comes from a sample of 40 records drawn at random **after**
-the fixes to the extractor, among records never examined before: unlike the two
-earlier samples, it is independent of the tuning.*
+*The estimates below come from a sample of 80 records drawn at random **after**
+the fixes to the extractor, among records never examined before: it is
+independent of the tuning. 219 records have been verified by hand in all.*
 
 - **Falsi positivi** (record che non sono emendamenti con quei firmatari):
-  3 su 40 = 7,5% (IC 95%: 2,6–19,9). — *False positives: 3 of 40.*
-- **Firmatari mancanti o errati**: 1 su 37 = 2,7% (IC 95%: 0,5–13,8).
-  — *Missing or wrong signatories: 1 of 37.*
-- **Completezza**: su 30 pagine lette per intero (due campioni indipendenti),
-  gli emendamenti con più firmatari sfuggiti all'estrazione sono passati da 4 su 6
-  nel primo controllo, prima delle correzioni, a 0 su 5 nel secondo.
-  — *Completeness: across 30 pages read in full, missed multi-signatory
-  amendments went from 4 of 6 before the fixes to 0 of 5 afterwards.*
+  2 su 80 = 2,5% (IC 95%: 0,7–8,7). — *False positives: 2 of 80.*
+- **Firmatari mancanti o errati**: 6 su 78 = 7,7% (IC 95%: 3,6–15,8); 13,2% fra
+  gli emendamenti con due o più firmatari. — *Missing or wrong signatories.*
+
+Quattro dei sei elenchi incompleti sono stati corretti dopo la misura, che è
+quindi una stima conservativa. — *Four of the six incomplete lists were fixed
+after the measurement, so the figure is conservative.*
 
 Il codebook spiega come sono stati costruiti i campioni, quali errori restano e
 perché. I voti hanno un controllo diverso: il confronto fra i nomi estratti e i

@@ -21,7 +21,10 @@ def norm(s):
     s = unicodedata.normalize('NFKD', str(s)).encode('ascii', 'ignore').decode().upper()
     return re.sub(r"\s+", ' ', re.sub(r"[^A-Z ]", ' ', s)).strip()
 
-ALIAS = {'SILONE': 'TRANQUILLI', 'NATOLI': 'NATOLI LAMANTEA', 'DE UNTERRICHTER MARIA': 'JERVOLINO MARIA', 'DE UNTERRICHTER': 'JERVOLINO MARIA'}
+ALIAS = {'SILONE': 'TRANQUILLI', 'NATOLI': 'NATOLI LAMANTEA', 'DE UNTERRICHTER MARIA': 'JERVOLINO MARIA', 'DE UNTERRICHTER': 'JERVOLINO MARIA',
+         'RODINO MARIO': 'RODINO DI MIGLIONE MARIO', 'VASSALLO': 'PASQUALINO VASSALLO ROSARIO',
+         # refusi ricorrenti dell'OCR sui cognomi
+         'TECA': 'TEGA', 'TONCILO': 'TONELLO', 'GABRIELE': 'GABRIELI'}
 STOP = {'PRESIDENTE', 'DEPUTATI', 'COMMISSIONE', 'ASSEMBLEA', 'ONOREVOLE', 'ONOREVOLI', 'ALTRI', 'COLLEGHI', 'GOVERNO', 'MINISTRO', 'RELATORE'}
 nomi['k_cogn'] = nomi.cognome.map(lambda x: norm(x).replace(' ', ''))
 nomi['k_nome'] = nomi.nome.map(lambda x: norm(x).replace(' ', ''))
@@ -96,8 +99,9 @@ def resolve_group(names, data):
 def split_names(s):
     s = re.sub(r'\b(ed|e)\s+altri\b', '', s, flags=re.I)
     s = re.sub(r'(\w)-\s+(\w)', r'\1\2', s)
+    s = re.sub(r'(\w)[|¶]\s*(\w)', r'\1\2', s)   # cognome spezzato dall'a capo: Ma|glioli
     s = re.sub(r'\b([A-Za-z]{1,3})\.\s+(?=[A-Z])', r'\1', s)   # sillabe spezzate dall'OCR (DE Mr. CHELIS)
-    parts = re.split(r',|;|\.\s+(?=[A-ZÀ-Ý])|\s\bed?\b\s', s)
+    parts = re.split(r",|;|\.\s+(?=[A-ZÀ-Ý])|\s\bed?\b['’]?\s", s)   # anche «e'» con apostrofo dell'OCR
     return [p.strip(" .:-'’\"|°_") for p in parts if len(re.sub(r'[^A-Za-zÀ-ÿ]', '', p)) >= 3]
 
 # ---------- testo continuo per seduta ----------
@@ -119,6 +123,10 @@ def flatten(seduta):
             c = '\n'.join(lines)
             c = re.sub(r'-[ \t]*\n(?:[^\S\n]*[|.,\'‘’°-]*[^\S\n]*\n)*\s*', '', c)   # sillabazione, anche con righe vuote o sporche in mezzo
             c = re.sub(r'\bo\W{0,3}n\W{0,2}o\W{0,2}[rt]\W{0,2}e\W{0,2}v\W{0,2}o\W{0,2}l\W{0,2}([ei])\b', r'onorevol\1', c)   # «ono“revoli», «o- norevoli»
+            # cognome spezzato a fine riga con un apice o una barra al posto del trattino
+            # («Carpano Ma ‘glioli», «For-‘nara»): senza ricucirlo, l'elenco dei firmatari
+            # si interrompe li'. Richiede 2-4 lettere prima, per non toccare «L'onorevole».
+            c = re.sub(r"\b([A-ZÀ-Ý][a-zà-ÿ]{1,3})\s*[‘'’|]\s*\n?\s*([a-zà-ÿ]{2,})\b", r"\1\2", c)
             c = re.sub(r'\n\s*\n', ' ¶ ', c)
             c = re.sub(r'\s*\n\s*', ' ', c)
             pagemap.append((len(text), p))
@@ -141,11 +149,15 @@ def is_signature(c):
     parts = split_names(c2)
     return bool(parts) and all(len(x.split()) <= 4 for x in parts) and up >= 0.6
 
-NAME = r"[A-ZÀ-Ý][\w'’À-ÿ:]+(?:\.\s(?=[a-z])\w+)?(?:\s+[A-ZÀ-Ý][\w'’À-ÿ:]+){0,3}"   # ammette «Miccol:s», «Bo. nino» (rumore OCR)
-PRES = re.compile(r"(?:dell['’]\s?onorevole|de\s?gli onorevoli|dagli onorevoli|dalle onorevoli|dell['’]\s?on\.|insie\w{1,3}\s+con\s+gli\s+onorevoli)\s+(" + NAME +
-                  r"(?:\s*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b)[\s\-·.‘’'\"“”|$*!:]*" + NAME + r")*(?:,?\s*(?:ed|e)\s+altri)?)")
+# «|» e «¶» compaiono dentro i cognomi quando l'OCR spezza la riga («Carpano Ma|glioli»):
+# se non si ammettono, l'elenco dei firmatari si interrompe li' e tutti i nomi successivi vanno persi.
+NAME = r"[A-ZÀ-Ý][\w'’À-ÿ:|¶]+(?:\.\s(?=[a-z])\w+)?(?:\s+[A-ZÀ-Ý][\w'’À-ÿ:|¶]+){0,3}"   # ammette «Miccol:s», «Bo. nino» (rumore OCR)
+PRES = re.compile(r"(?:dell['’]\s?onorevole|de\s?gli onorevoli|dagli onorevoli|dalle onorevoli|dell['’]\s?on\.|insie\w{1,3}\s+con\s+gli\s+onorevoli|firm\w+\s+(?:anche\s+)?(?:dei|degli|dai)\s+colleghi)\s+(" + NAME +
+                  r"(?:[\s·]*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b|\s*-\s*)[\s¶\-·.‘’'\"“”|$*!:]*" + NAME + r")*(?:,?\s*(?:ed|e)\s+altri)?)")
+# Il segno ¶ (riga vuota nel testo appiattito) e' ammesso fra separatore e nome:
+# senza, elenchi come «Marinaro e ¶ Rodi» si interrompevano prima dell'ultimo firmatario.
 # «Gli onorevoli X, Y e Z hanno presentato il seguente emendamento»
-PRES2 = re.compile(r"\b[Gg]li\W{0,2}\s*onorevoli[\s\-–]+(" + NAME + r"(?:\s*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b)[\s\-·.‘’'\"“”|$*!:]*" + NAME +
+PRES2 = re.compile(r"\b[Gg]li\W{0,2}\s*onorevoli[\s\-–]+(" + NAME + r"(?:[\s·]*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b|\s*-\s*)[\s¶\-·.‘’'\"“”|$*!:]*" + NAME +
                    r")*(?:,?\s*(?:ed|e)\s+altri)?)[\s,.’'‘\"“”*!$]+ha\w{1,3}o[\s’'‘\",.]+(?:presentato|proposto|ripresentato)\b")
 ART = re.compile(r"articol[oi]\s+(\d+(?:-bis)?)", re.I)
 
@@ -162,13 +174,26 @@ PLUR_NOME = r"(?:emendame\w{0,3}ti|propost[ae]|osservazion[ie]|istanz[ae]|artico
 PLURALE = re.compile(r"(?i:" + PLUR_NOME + r")\b(?![^;:]{0,70}?\.[\s¶/«(\[»·]*[A-ZÀ-Ý])[^;:]{0,70}$")
 QUELLI = re.compile(r"quel-?\s*li\s+(?:\w+\s+){0,2}$", re.I)
 
+# «le parole / le dichiarazioni dell'onorevole X»: il nome e' l'autore di un intervento,
+# non il presentatore di un emendamento. Stessa logica del plurale: il sostantivo deve reggere
+# direttamente il nome, senza due punti, punto e virgola o fine di frase nel mezzo.
+# «proposta» resta fuori di proposito: «la proposta dell'onorevole X» e' spesso un emendamento.
+ATTO_PAROLA = r"(?:parol[ae]|dichiarazion[ei]|osservazion[ei]|intervent[oi]|discors[oi]|relazion[ei]|chiariment[oi]|argoment[oi]|tes[ie]|affermazion[ei]|rilievi|considerazion[ei]|pensiero|parere|critich[ea]|obiezion[ei]|richiest[ae]|domand[ae]|suggeriment[oi]|spiegazion[ei]|eccezion[ei]|avvertenz[ae]|raccomandazion[ei]|preghier[ae]|avviso|opinion[ei]|esposizion[ei]|valutazion[ei]|competenz[ae])"
+PAROLA_DI = re.compile(r"(?i:" + ATTO_PAROLA + r")\b(?![^;:]{0,40}?\.[\s¶/«(\[»·]*[A-ZÀ-Ý])[^;:]{0,40}$")
+
+
+def atto_di_parola(before):
+    """True se la menzione e' retta da un sostantivo di atto linguistico (parole, dichiarazioni...)."""
+    return bool(PAROLA_DI.search(before[-70:]))
+
+
 def elenco_di_atti_distinti(before):
     """True se la menzione è preceduta da un plurale che regge l'elenco."""
     coda = before[-90:]
     return bool(PLURALE.search(coda) or QUELLI.search(coda))
 
 EMEND_VERB = re.compile(r"sostitu|aggiung|soppri|sopprime|inseri|premett|trasferi|far precedere|far seguire|dopo le parole|dopo la parola|alle parole|alla parola|\bcomma\b|all['’]articolo|articolo aggiuntivo|nuovo testo|testo della Commissione", re.I)
-NON_EMEND = re.compile(r"interrog|interpell|ordine del giorno|ordini del giorno|risoluzion|mozion|impegna il Governo|invita il Governo|fiducia|appello nominale|scrutinio segreto|chiede d['’]\s?interrogare|chiedono d['’]\s?interrogare|\bAl(?:la)?\s+Ministr|\bAi\s+Ministri|Al\s+Presidente\s+del\s+Consiglio", re.I)
+NON_EMEND = re.compile(r"interrog|interpell|ordin\w*\W{0,4}del\W{0,4}giorno|risoluzion|mozion|lettera aperta|telegramma|impegna il Governo|invita il Governo|fiducia|appello nominale|scrutinio segreto|chiede d['’]\s?interrogare|chiedono d['’]\s?interrogare|\bAl(?:la)?\s+Ministr|\bAi\s+Ministri|Al\s+Presidente\s+del\s+Consiglio", re.I)
 def tipo_testo(seg):
     if NON_EMEND.search(seg): return 'altro atto'
     return 'emendamento' if EMEND_VERB.search(seg) else 'non classificato'
@@ -205,17 +230,24 @@ for s in sedute:
             continue
         if NON_EMEND.search(before[-150:] + ' ' + after[:80]):
             continue
-        # escluse: interrogazioni, interpellanze, mozioni e richieste di votazione (appello nominale, scrutinio segreto)
-        if re.search(r"interrogazion|interpellanz|mozion|appello nominale|scrutinio segreto|(?:chiest|richiest)\w*\s+(?:la\s+)?votazione|verifica del numero legale", before[-120:], re.I):
+        # escluse: interrogazioni, interpellanze, mozioni e richieste di votazione (appello nominale, scrutinio segreto).
+        # La spia puo' trovarsi anche DOPO i nomi: «...hanno chiesto la votazione per appello nominale»,
+        # «Essa porta le firme anche degli onorevoli X, Y, Z» riferito a una richiesta annunciata prima.
+        NON_EM = r"interrogazion|interpellanz|mozion|ordin\w*\W{0,4}del\W{0,4}giorno|risoluzion|appello\W{0,4}nominale|scrutinio segreto|(?:chiest|richiest)\w*\s+(?:la\s+)?votazione|verifica del numero legale|risoluzion"
+        if re.search(NON_EM, before[-120:], re.I) or re.search(NON_EM, after[:160], re.I):
             continue
         # «gli emendamenti degli onorevoli X, Y e Z»: emendamenti distinti, non firme congiunte
-        if elenco_di_atti_distinti(before):
+        if elenco_di_atti_distinti(before) or atto_di_parola(before):
             continue
         testo = m.group(1).strip()
         # «L'onorevole X ha presentato il seguente emendamento, firmato anche dagli onorevoli...»:
         # il presentatore non è nell'elenco e va aggiunto
-        if re.search(r"firmat[oa]\s+anche|firme\s+anche", before[-60:], re.I) or re.match(r"insie", m.group(0)):
-            mp = re.search(r"[Ll]['’]\s?onorevole[\s.,]+(" + NAME + r")[\s.,]+ha[\s,]+(?:presentato|proposto|sostituito)", before[-400:])
+        if (re.search(r"firmat[oa]\s+anche|firme\s+anche|firme\s+de", before[-70:], re.I)
+                or re.match(r"(?:insie|firm)", m.group(0), re.I)):
+            # due forme: «L'onorevole X ha presentato ... firmato anche dagli onorevoli Y, Z»
+            # e «Segue l'emendamento dell'onorevole X, firmato anche dagli onorevoli Y, Z»
+            mp = (re.search(r"[Ll]['’]\s?onorevole[\s.,]+(" + NAME + r")[\s.,]+ha[\s,]+(?:presentato|proposto|sostituito)", before[-400:])
+                  or re.search(r"emendamento[\s,]+dell['’]\s?onorevole[\s.,]+(" + NAME + r")[\s,]*(?:che\s+)?(?:reca\s+anche\s+le\s*|firmat)", before[-250:]))
             if mp: testo = mp.group(1) + ', ' + testo
         arts = ART.findall(before + m.group(0) + after[:60])
         recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=testo,
@@ -225,7 +257,7 @@ for s in sedute:
     for m in PRES2.finditer(text):
         before = text[max(0, m.start() - 1200):m.start()]; after = text[m.end():m.end() + 300]
         if NON_EMEND.search(after[:150]): continue
-        if elenco_di_atti_distinti(before): continue
+        if elenco_di_atti_distinti(before) or atto_di_parola(before): continue
         arts = ART.findall(before[-300:] + after[:200])
         recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=m.group(1).strip(),
                          altri=int(bool(re.search(r'altri', m.group(1)))), articolo_menzionato=arts[-1] if arts else '',
@@ -254,6 +286,22 @@ if 'candidati' in F:
         if top and top[0] > 0 and (len(top) == 1 or top[0] > top[1]):
             c = max(punti, key=punti.get); x = nomi.set_index('id_dep').loc[c]
             F.loc[i, ['id_dep', 'cognome', 'nome', 'abbinamento']] = [c, x.cognome, x.nome, 'ambiguo+cofirme']
+# ancora ambigui (il cognome citato da solo, senza cofirmatari che aiutino): si sceglie il
+# candidato che in quella stessa seduta risulta abbinato con certezza altrove. Un omonimo
+# assente dalla seduta non puo' aver presentato l'emendamento; se i candidati presenti sono
+# due, si lascia ambiguo.
+sed_di = R.seduta.to_dict()
+attivi = {}
+for _, r in F[F.id_dep.astype(str).str.startswith('d')].iterrows():
+    attivi.setdefault(sed_di.get(r.id_menzione), set()).add(r.id_dep)
+if 'candidati' in F:
+    for i, r in F[F.abbinamento == 'ambiguo'].iterrows():
+        pres = attivi.get(sed_di.get(r.id_menzione), set())
+        c = [x for x in str(r.candidati).split('|') if x in pres]
+        if len(c) == 1:
+            x = nomi.set_index('id_dep').loc[c[0]]
+            F.loc[i, ['id_dep', 'cognome', 'nome', 'abbinamento']] = [c[0], x.cognome, x.nome, 'ambiguo+seduta']
+
 ok = F[F.id_dep.astype(str).str.startswith('d')]
 R['ids'] = R.index.map(ok.groupby('id_menzione').id_dep.apply(lambda x: '|'.join(sorted(set(x))))).fillna('')
 R['n_nomi'] = R.index.map(F.groupby('id_menzione').size()).fillna(0).astype(int)
