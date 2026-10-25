@@ -24,6 +24,14 @@ keywords:
   - 1946-1948
 license: CC-BY-SA-4.0
 license-url: "https://creativecommons.org/licenses/by-sa/4.0/"
+doi: "10.5281/zenodo.23646592"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23646592"
+    description: "DOI che punta sempre all'ultima versione / concept DOI, always the latest version"
+  - type: doi
+    value: "10.5281/zenodo.23646593"
+    description: "DOI della versione 1.0.0 / DOI of version 1.0.0"
 version: "1.0.0"
-date-released: "2026-11-03"
+date-released: "2026-10-25"
 repository-code: "https://github.com/giacomo-melli/costituente-reti"

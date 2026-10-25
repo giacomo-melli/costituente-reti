@@ -1,6 +1,7 @@
 # Le reti dell'Assemblea Costituente (1946–1948)
 ### The networks of the Italian Constituent Assembly (1946–1948)
 
+[![DOI](https://zenodo.org/badge/1433417579.svg)](https://doi.org/10.5281/zenodo.23646592)
 [![Data: CC BY-SA 4.0](https://img.shields.io/badge/data-CC%20BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
 
@@ -189,7 +190,7 @@ the sources, not from a preference.*
 ## Citazione / Citation
 
 Melli, G. (2026). *The networks of the Italian Constituent Assembly (1946–1948)*
-[Data set]. https://github.com/giacomo-melli/costituente-reti
+[Data set]. Zenodo. https://doi.org/10.5281/zenodo.23646592
 
 Vedi [CITATION.cff](CITATION.cff) per il formato leggibile dalle macchine.
 
