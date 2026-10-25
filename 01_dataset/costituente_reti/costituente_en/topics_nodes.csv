@@ -1,0 +1,739 @@
+id_topic,venue,topic_it,type,n_speakers,n_sittings,first_date,last_date
+t1,Assembly,,non-legislative,8,28,1946-06-28,1947-10-30
+t10,Assembly,Aggressione a deputati del Partito socialista lavoratori italiani,non-legislative,1,1,1947-10-10,1947-10-10
+t100,Assembly,Contro il deputato Cremaschi Olindo per il reato di cui all'articolo 336 del Codice penale,non-legislative,3,1,1947-12-10,1947-12-10
+t101,Assembly,Contro il deputato Giannini per il reato di diffamazione a mezzo della stampa,non-legislative,9,1,1948-01-30,1948-01-30
+t102,Assembly,Contro il deputato Laconi per il reato di riunione pubblica non autorizzata,non-legislative,2,1,1948-01-29,1948-01-29
+t103,Assembly,Contro il deputato Motolese per il reato di correità in adulterio,non-legislative,6,1,1948-01-29,1948-01-29
+t104,Assembly,Contro il deputato Patrissi per il reato di oltraggio ad un pubblico ufficiale,non-legislative,5,1,1948-01-29,1948-01-29
+t105,Assembly,Contro il deputato Tega per concorso nel reato di vilipendio alla Magistratura,non-legislative,4,1,1947-10-21,1947-10-21
+t106,Assembly,Contro il deputato Tonetti per il reato di offesa al prestigio di un Corpo amministrativo,non-legislative,1,1,1948-01-30,1948-01-30
+t107,Assembly,Contro il gioco d'azzardo,non-legislative,2,1,1947-07-16,1947-07-16
+t108,Assembly,"Convalida del decreto legislativo del Capo provvisorio dello Stato in data 29 marzo 1947, n. 143, concernente l'istituzione di una imposta straordinaria progressiva sul patrimonio",bills,99,24,1947-07-02,1947-07-30
+t109,Assembly,Coordinamento degli articoli approvati nel progetto di Costituzione della Repubblica italiana,constitution,9,1,1947-12-22,1947-12-22
+t11,Assembly,Aggressione comunista a studenti monarchici di Roma,non-legislative,1,1,1947-10-13,1947-10-13
+t110,Assembly,Costituzione degli Uffici di Presidenza di Gruppi parlamentari,non-legislative,1,1,1947-02-08,1947-02-08
+t111,Assembly,Costituzione dell'Ufficio provvisorio di Presidenza,non-legislative,1,1,1946-06-25,1946-06-25
+t112,Assembly,Costituzione della quarta Commissione permanente,non-legislative,1,1,1946-09-26,1946-09-26
+t113,Assembly,Costituzione delle Commissioni per la Costituzione e per i Trattati internazionali,non-legislative,1,1,1946-07-19,1946-07-19
+t114,Assembly,Costituzione di Gruppi parlamentari,non-legislative,2,2,1946-07-15,1947-02-07
+t115,Assembly,Crisi dell'industria dell'arte bianca a Napoli,non-legislative,1,1,1947-03-14,1947-03-14
+t116,Assembly,Crisi della cultura dei bachi e dell'industria della seta,non-legislative,2,1,1947-09-22,1947-09-22
+t117,Assembly,Crisi economica del Paese e sviluppi della situazione internazionale,non-legislative,40,8,1947-09-27,1947-10-04
+t118,Assembly,Criterio da seguire nell'assegnazione delle terre incolte ai cittadini per i terreni alberati,non-legislative,1,1,1947-02-12,1947-02-12
+t119,Assembly,Crollo delle volte delle case per i senza tetto a Foggia,non-legislative,1,1,1947-09-11,1947-09-11
+t12,Assembly,Aggressioni organizzate contro oratori politici,non-legislative,2,1,1947-03-18,1947-03-18
+t120,Assembly,Danni subiti dalle popolazioni agricole piemontesi per una grandinata,non-legislative,1,1,1947-09-29,1947-09-29
+t121,Assembly,Debiti contratti dalle formazioni partigiane durante la lotta di liberazione,non-legislative,1,1,1947-05-05,1947-05-05
+t122,Assembly,Decreto del commissario ministeriale Liguori del 14 settembre 1943 sui finanziamenti alle ditte fornitrici di materiale bellico,non-legislative,1,1,1947-09-24,1947-09-24
+t123,Assembly,Delle vittime di Mogadiscio,non-legislative,1,1,1948-01-16,1948-01-16
+t124,Assembly,Denuncia contro due ex Ministri dell'aeronautica,non-legislative,3,1,1947-02-27,1947-02-27
+t125,Assembly,Desiderata dei maestri elementari,non-legislative,1,1,1947-03-11,1947-03-11
+t126,Assembly,Devastazione della sede del Partito nazionale monarchico di Agrigento,non-legislative,3,1,1947-03-28,1947-03-28
+t127,Assembly,Di Antonio Fratti,non-legislative,2,1,1947-05-19,1947-05-19
+t128,Assembly,Di Antonio gramsci,non-legislative,13,1,1947-04-28,1947-04-28
+t129,Assembly,Di Bruno Buozzi,non-legislative,11,1,1947-06-04,1947-06-04
+t13,Assembly,Agitazione dei magistrati di Milano,non-legislative,1,1,1947-03-29,1947-03-29
+t130,Assembly,Di Camillo Prampolini,non-legislative,2,1,1947-07-30,1947-07-30
+t131,Assembly,Di Carlo Forlanini,non-legislative,1,1,1947-06-12,1947-06-12
+t132,Assembly,Di Carlo Scialoja,non-legislative,6,1,1947-05-27,1947-05-27
+t133,Assembly,Di Carlo e Nello Rosselli,non-legislative,12,1,1947-06-09,1947-06-09
+t134,Assembly,Di Giacomo Matteotti,non-legislative,11,1,1947-06-10,1947-06-10
+t135,Assembly,Di Guglielmo Marconi,non-legislative,1,1,1947-07-19,1947-07-19
+t136,Assembly,Di Santa Caterina da Siena,non-legislative,1,1,1947-04-30,1947-04-30
+t137,Assembly,Di Silvio e Bertrando Spaventa,non-legislative,1,1,1947-04-22,1947-04-22
+t138,Assembly,Dichiarazione sul disastro del Panigaglia a Porto Santo Stefano,non-legislative,1,0,,
+t139,Assembly,Dichiarazioni del Governo,non-legislative,1,1,1947-06-09,1947-06-09
+t14,Assembly,Agitazione dei magistrati e degli avvocati,non-legislative,3,1,1947-04-12,1947-04-12
+t140,Assembly,Dichiarazioni del Presidente del Consiglio ai giornalisti stranieri sulla stabilità del regime repubblicano,non-legislative,1,1,1947-03-07,1947-03-07
+t141,Assembly,Diffida fatta dal Prefetto di Cosenza e dal Comandante la stazione dei carabinieri ad un attivista sindacale,non-legislative,2,1,1947-04-11,1947-04-11
+t142,Assembly,"Dimissioni del Presidente dell'Assemblea Costituente, Saragat",non-legislative,4,2,1947-02-06,1947-02-07
+t143,Assembly,Dimissioni del deputato Alfeo Corassori e Francesco Ponticelli,non-legislative,1,1,1946-09-11,1946-09-11
+t144,Assembly,Dimissioni del deputato Falchi,non-legislative,1,1,1947-06-27,1947-06-27
+t145,Assembly,Dimissioni del deputato Giuseppe Alberti,non-legislative,1,1,1946-07-23,1946-07-23
+t146,Assembly,Dimissioni del deputato Pietro Montagnani,non-legislative,1,1,1946-07-16,1946-07-16
+t147,Assembly,Dimissioni dell'onorevole Martino Enrico,non-legislative,1,1,1947-10-30,1947-10-30
+t148,Assembly,Dimissioni dell'onorevole Restivo,non-legislative,1,1,1947-11-13,1947-11-13
+t149,Assembly,Dimissioni di un Commissario,non-legislative,1,1,1948-01-26,1948-01-26
+t15,Assembly,Agitazioni nelle provincie di Torino e Cuneo e scioperi generali in diverse località d'Italia,non-legislative,3,1,1946-07-18,1946-07-18
+t150,Assembly,Dimissioni di un deputato,non-legislative,1,1,1947-07-02,1947-07-02
+t151,Assembly,Dipendenti dell'Università di Perugia compromessi nelle malversazioni a danno degli ospedali Riuniti,non-legislative,1,1,1947-09-25,1947-09-25
+t152,Assembly,Dirottamento del piroscafo Conte Biancamano,non-legislative,2,1,1947-09-10,1947-09-10
+t153,Assembly,"Disagio delle popolazioni della provincia di Massa e Carrara, della Versilia e della Garfagnana",non-legislative,1,1,1946-12-12,1946-12-12
+t154,Assembly,Disagio economico dei comuni situati nella piana di Oristano,non-legislative,1,1,1947-09-22,1947-09-22
+t155,Assembly,Disastro aviatorio di Terracina,non-legislative,2,1,1947-02-20,1947-02-20
+t156,Assembly,Disastro ferroviario nei pressi di Cosenza,non-legislative,1,1,1947-11-10,1947-11-10
+t157,Assembly,Disciplina dell'elettorato attivo,bills,49,7,1947-09-11,1947-09-24
+t158,Assembly,Discorso del Presidente,non-legislative,1,1,1946-06-26,1946-06-26
+t159,Assembly,Discorso pronunciato dal Ministro Scelba al Teatro San Carlo in Napoli,non-legislative,1,1,1947-11-20,1947-11-20
+t16,Assembly,Amministrazione degli Ospedali Riuniti di Perugia,non-legislative,1,1,1947-09-11,1947-09-11
+t160,Assembly,Discussione sulle comunicazioni del Presidente del Consiglio,non-legislative,64,16,1946-07-16,1946-09-26
+t161,Assembly,Discussione sulle dichiarazioni del Presidente del Consiglio,non-legislative,74,14,1947-02-08,1947-02-25
+t162,Assembly,Disegno di legge sulla stampa,bills,47,7,1948-01-12,1948-01-19
+t163,Assembly,Disoccupazione agricola nel Salento,non-legislative,1,1,1947-03-06,1947-03-06
+t164,Assembly,Disoccupazione dei lavoratori agricoli delle Puglie,non-legislative,1,1,1946-09-12,1946-09-12
+t165,Assembly,Disoccupazione in Napoli e nella Regione Campana,non-legislative,2,1,1947-09-22,1947-09-22
+t166,Assembly,Disposizioni a favore dei lavoratori italiani infortunati sul lavoro in Germania,non-legislative,1,1,1947-05-05,1947-05-05
+t167,Assembly,Disposizioni finali e transitorie (Discussione generale),constitution,70,11,1947-11-25,1947-12-22
+t168,Assembly,Disposizioni generali (Discussione degli articoli da 1 a 7),constitution,65,3,1947-03-22,1947-03-25
+t169,Assembly,Disposizioni generali (Discussione generale),constitution,35,7,1947-03-13,1947-03-21
+t17,Assembly,Amnistia e indulto a favore di produttori agricoli per lievi infrazioni agli ammassi,non-legislative,25,1,1947-12-18,1947-12-18
+t170,Assembly,Dissidio fra laureati ingegneri e diplomati di Istituti secondari,non-legislative,1,1,1946-12-11,1946-12-11
+t171,Assembly,Distrazione delle acque del Biferno dal Molise,non-legislative,1,1,1947-07-07,1947-07-07
+t172,Assembly,"Distruzioni di pubblicazioni e di edicole nei vari centri e proibizione in provincia di Biella della vendita dei giornali: L'Uomo Qualunque, La Sferza, Candido, Brancaleone, La Rivolta Ideale",non-legislative,3,1,1947-12-09,1947-12-09
+t173,Assembly,Divieto alle reclute di partecipare alle feste organizzate in loro onore a Verona,non-legislative,1,1,1946-12-13,1946-12-13
+t174,Assembly,Divieto di esposizione in pubblico della bandiera con scudo sabaudo,non-legislative,1,1,1947-03-07,1947-03-07
+t175,Assembly,Divieto di impianti di diffusione sonora nei comizi,non-legislative,1,1,1947-06-30,1947-06-30
+t176,Assembly,Domande di emigrazione; raccolta di iscrizioni per l'emigrazione in Argentina,non-legislative,2,1,1947-02-27,1947-02-27
+t177,Assembly,Elezione contestata del deputato Carmine De Martino (Salerno),non-legislative,6,1,1946-12-11,1946-12-11
+t178,Assembly,Elezione contestata del deputato Guglielmo Visocchi (Roma),non-legislative,8,1,1946-12-10,1946-12-10
+t179,Assembly,Elezione contestata del deputato Lupis (Catania),non-legislative,6,1,1947-07-03,1947-07-03
+t18,Assembly,Annuncio di una proposta di riforma del Regolamento,non-legislative,1,1,1947-09-26,1947-09-26
+t180,Assembly,Elezione contestata del deputato Pasqualino Vassallo (Palermo),non-legislative,1,1,1946-09-13,1946-09-13
+t181,Assembly,Elezione del Senato della Repubblica,bills,74,12,1948-01-20,1948-01-27
+t182,Assembly,Elezioni in Sicilia,non-legislative,16,2,1947-02-26,1947-02-27
+t183,Assembly,Emblemi della monarchia sui fregi e distintivi militari,non-legislative,1,1,1947-04-17,1947-04-17
+t184,Assembly,Emendamento Bovetti sulla Costituzione e delimitazione dei collegi,non-legislative,1,2,1947-10-02,1947-10-04
+t185,Assembly,Emigrazione in Argentina,non-legislative,1,1,1947-02-27,1947-02-27
+t186,Assembly,Erogazione di un fondo di cinque miliardi da parte del governo regionale della Sicilia,non-legislative,1,1,1947-06-24,1947-06-24
+t187,Assembly,Eruzione dell'Etna,non-legislative,1,1,1947-02-27,1947-02-27
+t188,Assembly,Esenzione di ricchezza mobile per gli opifici,non-legislative,1,1,1947-03-17,1947-03-17
+t189,Assembly,"Esenzione tributaria, parziale o totale, a favore dei dipendenti dello Stato e degli agenti ferroviari con famiglia numerosa",non-legislative,2,1,1946-12-11,1946-12-11
+t19,Assembly,"Applicazione del regio decreto legge 14 maggio 1946, n. 384, relativo al collocamento nella riserva degli ufficiali generali e superiori",non-legislative,1,1,1947-02-11,1947-02-11
+t190,Assembly,Esercizio della linea Cagliari-Roma; concessione delle linee aeree civili,non-legislative,4,1,1947-02-17,1947-02-17
+t191,Assembly,Estensione al settantesimo anno del limite d'età per il collocamento a riposo degli insegnanti nelle scuole medie,non-legislative,1,1,1946-12-12,1946-12-12
+t192,Assembly,Estensione del premio della Repubblica alle lavoratrici del riso,non-legislative,1,1,1946-12-11,1946-12-11
+t193,Assembly,Estensione dell'amnistia ai contadini meridionali,non-legislative,1,1,1947-11-19,1947-11-19
+t194,Assembly,Estensione dell'indennità caroviveri a tutto il personale delle provincie,non-legislative,1,1,1947-10-13,1947-10-13
+t195,Assembly,Fatti di San Giuseppe Jato e Sancipirrello,non-legislative,12,1,1947-05-02,1947-05-02
+t196,Assembly,Funzionamento dei Provveditorari regionali alle opere pubbliche,non-legislative,1,1,1947-10-13,1947-10-13
+t197,Assembly,Funzionamento della Fondazione del Banco di Napoli,non-legislative,1,1,1946-09-11,1946-09-11
+t198,Assembly,Funzionamento della sezione di Corte di Appello di Reggio Calabria,non-legislative,1,1,1947-06-24,1947-06-24
+t199,Assembly,Funzionari del Ministero degli esteri che giurarono fedeltà al Governo di Salò,non-legislative,1,1,1947-09-15,1947-09-15
+t2,Assembly,"Accoglimento delle richieste dei maestri elementari riguardanti ruoli aperti, sistemazione delle pensioni, fondo di concorso",non-legislative,1,1,1947-04-19,1947-04-19
+t20,Assembly,Applicazione dell'imposta generale sull'entrata,non-legislative,1,1,1947-11-19,1947-11-19
+t200,Assembly,Gli organi ausiliari del Governo,constitution,10,1,1947-10-25,1947-10-25
+t201,Assembly,Governo del Consorzio agrario provinciale di Bari,non-legislative,1,1,1947-03-24,1947-03-24
+t202,Assembly,Grotte del Colle Oppio e di Piazza Consolazione adibite ad abitazioni,non-legislative,1,1,1947-05-05,1947-05-05
+t203,Assembly,Illeciti interventi per il rilascio di una proprietaria di terre denunciata per sottrazione agli ammassi,non-legislative,1,1,1947-07-18,1947-07-18
+t204,Assembly,Illegittimità della nomina del generale Oxilia a Comandante generale della Guardia di finanza,non-legislative,1,1,1946-12-11,1946-12-11
+t205,Assembly,Imposta complementare,non-legislative,3,0,,
+t206,Assembly,"Imposta di fabbricazione di cui all'articolo 2 del decreto legge 5 agosto 1946, n. 43, sugli zuccheri invertiti",non-legislative,1,1,1947-02-11,1947-02-11
+t207,Assembly,In memoria di Adelchi Baratono,non-legislative,2,1,1947-09-30,1947-09-30
+t208,Assembly,In memoria di Fiorello La Guardia,non-legislative,2,1,1947-09-22,1947-09-22
+t209,Assembly,In merito al divieto di pubblicazione di un manifesto di un Comitato dei partiti di sinistra a Siracusa,non-legislative,1,1,1947-10-10,1947-10-10
+t21,Assembly,Applicazione di un'equa imposta sulla produzione mineraria nei Comuni minerari,non-legislative,1,1,1947-07-07,1947-07-07
+t210,Assembly,Incendio della sede della Camera del Lavoro di Gioia del Colle,non-legislative,3,1,1947-04-22,1947-04-22
+t211,Assembly,Incidente in danno dell'onorevole Benedettini,non-legislative,1,1,1947-03-28,1947-03-28
+t212,Assembly,Incidenti a Petilia Policastro (Catanzaro) per il disservizio annonario,non-legislative,1,1,1947-04-22,1947-04-22
+t213,Assembly,Incidenti del 20 novembre 1947 in Puglia durante lo sciopero generale,non-legislative,4,1,1947-12-09,1947-12-09
+t214,Assembly,Incidenti di Messina,non-legislative,1,1,1947-03-14,1947-03-14
+t215,Assembly,Incidenti di Potenza del 29 aprile 1947,non-legislative,3,1,1947-06-18,1947-06-18
+t216,Assembly,Incidenti di Serradifalco (Caltanissetta),non-legislative,1,1,1947-03-28,1947-03-28
+t217,Assembly,Incidenti di Taranto,non-legislative,1,1,1947-03-28,1947-03-28
+t218,Assembly,Incompatibilità del mandato parlamentare con la qualifica di membro dell'Assemblea Regionale,non-legislative,1,1,1947-06-24,1947-06-24
+t219,Assembly,Indagini politiche sul conto della onorevole Merlin Lina,non-legislative,1,1,1947-10-20,1947-10-20
+t22,Assembly,"Approvazione degli Accordi commerciali e di pagamento conclusi in Roma, tra l'Italia ed il Belgio il 18 aprile 1946",bills,1,1,1947-12-03,1947-12-03
+t220,Assembly,Indennità di carovita ai paesi del Napoletano,non-legislative,2,1,1947-10-13,1947-10-13
+t221,Assembly,Indennità percepita dagli sminatori marini,non-legislative,1,1,1947-09-22,1947-09-22
+t222,Assembly,Indennizzi ai sinistrati di guerra,non-legislative,2,1,1947-04-18,1947-04-18
+t223,Assembly,Informazione del «Journal de Genève» relativa al trasferimento clandestino in Jugoslavia di clichés e macchinari per la stampa di carta moneta,non-legislative,2,1,1947-06-30,1947-06-30
+t224,Assembly,Insediamento del Presidente,non-legislative,1,1,1947-02-08,1947-02-08
+t225,Assembly,Insediamento dell'Ufficio di Presidenza,non-legislative,1,1,1946-06-26,1946-06-26
+t226,Assembly,Intervento diplomatico per impedire l'esecuzione della condanna a morte pronunciata dal Tribunale speciale di Madrid contro giovani democratici,non-legislative,1,1,1947-03-22,1947-03-22
+t227,Assembly,Inversione dell'ordine del giorno,non-legislative,1,4,1947-12-02,1947-12-15
+t228,Assembly,Invio alla Commissione dei Trattati del Trattato stipulato col Governo egiziano l'11 settembre 1946,non-legislative,1,1,1946-12-13,1946-12-13
+t229,Assembly,Invito al Governo a revocare il provvedimento di scioglimento del Consiglio comunale di Pescara,non-legislative,29,1,1947-12-17,1947-12-17
+t23,Assembly,"Approvazione degli Accordi di carattere economico conclusi in Roma, tra l'Italia e la Francia, il 22 dicembre 1946",bills,1,1,1947-12-05,1947-12-05
+t230,Assembly,"Irregolare distribuzione dei generi alimentari a Napoli, e perequazione del carovita agli impiegati statali dei comuni vesuviani",non-legislative,2,1,1946-12-14,1946-12-14
+t231,Assembly,Irregolare procedura penale da parte dell'Ispettorato di pubblica sicurezza della Sicilia in occasione dell'assassinio del ragioniere Miraglia da Sciacca,non-legislative,1,1,1947-03-29,1947-03-29
+t232,Assembly,Istituto Orientale di Napoli,non-legislative,1,1,1947-09-25,1947-09-25
+t233,Assembly,Istituzione di un ente bancario in Torino,non-legislative,1,1,1947-10-13,1947-10-13
+t234,Assembly,Istituzione di un ente coordinatore per i servizi dei danni di guerra,non-legislative,1,1,1947-09-22,1947-09-22
+t235,Assembly,La Corte di appello delle Calabrie,non-legislative,2,1,1947-11-19,1947-11-19
+t236,Assembly,Legge per la prima elezione della Camera dei Deputati e del Senato della Repubblica,bills,2,1,1948-01-29,1948-01-29
+t237,Assembly,Linee automobilistiche della Sardegna,non-legislative,1,1,1947-09-22,1947-09-22
+t238,Assembly,Liste elettorali nella provincia di Bolzano,bills,2,1,1948-01-29,1948-01-29
+t239,Assembly,Mancanza di riguardo al Presidente dell'Assemblea Costituente durante il Congresso del Partito Liberale,non-legislative,3,1,1947-12-02,1947-12-02
+t24,Assembly,"Approvazione degli Accordi di carattere economico, commerciale, ecc., fra l'Italia e l'Ungheria",bills,1,0,,
+t240,Assembly,"Mancata applicazione del decreto legge legislativo 13 settembre 1945, n. 593",non-legislative,1,1,1947-02-12,1947-02-12
+t241,Assembly,Mancata applicazione dell'inefficacia giuridica di tutti i provvedimenti legislativi della Repubblica di Salò al decreto 14 settembre 1944 concernente la trasformazione in generi degli affitti agricoli,non-legislative,1,1,1947-04-14,1947-04-14
+t242,Assembly,Mancata celebrazione della data del 21 aprile,non-legislative,1,1,1947-05-05,1947-05-05
+t243,Assembly,Manifestazione di protesta dei minatori di Aragona (Agrigento) e dimostrazione degli zolfatari in Caltanissetta il 19 novembre 1947,non-legislative,3,1,1947-12-09,1947-12-09
+t244,Assembly,Manifestazione di protesta per le condizioni di pace,non-legislative,1,1,1947-02-10,1947-02-10
+t245,Assembly,Materiale ferroviario della Roma-Reggio Calabria,non-legislative,1,1,1947-11-10,1947-11-10
+t246,Assembly,Medaglia d'oro al valor militare alla memoria del Capitano di fregata Vittorio Meneghini,non-legislative,1,1,1947-09-20,1947-09-20
+t247,Assembly,Messaggio del C.L.N. della Venezia Giulia,non-legislative,1,1,1946-09-11,1946-09-11
+t248,Assembly,Messaggio del Capo Provvisorio dello Stato,non-legislative,1,2,1947-06-25,1947-06-27
+t249,Assembly,Messaggio del Capo provvisorio dello Stato,non-legislative,1,1,1946-07-15,1946-07-15
+t25,Assembly,"Approvazione degli Accordi di carattere economico, commerciale, ecc., fra l'Italia e la Danimarca",bills,1,0,,
+t250,Assembly,Messaggio del Governo Regionale Siciliano,non-legislative,1,1,1947-06-03,1947-06-03
+t251,Assembly,Messaggio del Presidente del Presidium del Soviet Supremo al Presidente dell'Assemblea Costituente Italiana per la delegazione delle donne democratiche recatesi nell'U.R.S.S.,non-legislative,1,1,1947-09-10,1947-09-10
+t252,Assembly,Messaggio del Presidente provvisorio dell'Assemblea Siciliana,non-legislative,1,1,1947-05-27,1947-05-27
+t253,Assembly,Messaggio della Camera dei deputati peruviana,non-legislative,1,1,1947-11-06,1947-11-06
+t254,Assembly,Metodi usati dagli organi di polizia negli interrogatori; sul decesso del detenuto Caroselli,non-legislative,2,1,1947-02-17,1947-02-17
+t255,Assembly,Miglioramento economico di dipendenti statali,non-legislative,1,1,1947-05-05,1947-05-05
+t256,Assembly,Misure a difesa della libertà di stampa,non-legislative,1,1,1947-11-15,1947-11-15
+t257,Assembly,Misure a favore dei dipendenti statali che cessano dal servizio per quiescenza,non-legislative,1,1,1947-10-13,1947-10-13
+t258,Assembly,Misure prese dalle autorità di pubblica sicurezza e prefettizie,non-legislative,1,1,1947-09-26,1947-09-26
+t259,Assembly,"Modificazione al decreto legislativo 10 marzo 1946, n. 71, per l'elezione della Camera dei Deputati",bills,120,9,1947-12-13,1947-12-21
+t26,Assembly,"Approvazione degli Accordi di carattere economico, commerciale, ecc., fra l'Italia e la Svezia",bills,2,0,,
+t260,Assembly,Modificazioni al Codice penale per la difesa delle istituzioni repubblicane,bills,15,1,1947-10-28,1947-10-28
+t261,Assembly,"Modifiche al testo unico della legge comunale e provinciale, approvato con regio decreto 5 marzo 1934, n. 383, e successive modificazioni",bills,38,9,1947-03-07,1947-03-28
+t262,Assembly,Mutamento di testata del Corriere Lombardo di Milano,non-legislative,1,1,1947-09-24,1947-09-24
+t263,Assembly,Necessità di provvedimenti legislativi per la cooperazione,non-legislative,1,1,1947-05-05,1947-05-05
+t264,Assembly,Nell'anniversario della guerra civile spagnola,non-legislative,2,1,1946-07-18,1946-07-18
+t265,Assembly,Nomina dell'onorevole Gasparotto a Presidente della Commissione speciale,non-legislative,1,1,1947-12-16,1947-12-16
+t266,Assembly,Nomina della Commissione speciale per l'esame del disegno di legge: Norme per l'elezione del Senato della Repubblica,non-legislative,1,1,1947-12-12,1947-12-12
+t267,Assembly,Nomina della Commissione sulla proroga del termine previsto per la durata della Costituente,non-legislative,3,1,1947-06-11,1947-06-11
+t268,Assembly,Nomina della Giunta delle elezioni e della Giunta del Regolamento,non-legislative,1,1,1946-06-26,1946-06-26
+t269,Assembly,Nomina di Commissioni,non-legislative,1,3,1947-02-19,1947-02-27
+t27,Assembly,"Approvazione degli Accordi di carattere economico, commerciale, ecc., fra l'Italia e la Turchia",bills,1,0,,
+t270,Assembly,Nomina di Sottosegretari di Stato,non-legislative,1,1,1947-12-22,1947-12-22
+t271,Assembly,Nomina di una Commissione,non-legislative,6,3,1946-12-10,1947-07-07
+t272,Assembly,Norma transitoria sul diritto di voto degli ex fascisti,constitution,15,2,1947-10-29,1947-10-29
+t273,Assembly,Norme che regolano l'approvvigionamento della privincia e della città di Milano,non-legislative,1,1,1946-12-14,1946-12-14
+t274,Assembly,Norme per la compilazione delle liste elettorali nella Provincia di Gorizia,bills,3,1,1947-12-11,1947-12-11
+t275,Assembly,Norme per la istituzione dell'Opera di valorizzazione della Sila,bills,21,1,1947-12-09,1947-12-09
+t276,Assembly,Norme per la limitazione temporanea del diritto di voto ai capi responsabili del regime fascista,bills,1,1,1947-12-11,1947-12-11
+t277,Assembly,Norme per la proponibilità dei giudizi e per le garanzie di indipendenza della Corte Costituzionale,bills,17,1,1948-01-31,1948-01-31
+t278,Assembly,Norme per la repressione dell'attività fascista e dell'attività diretta alla restaurazione dell'istituto monarchico,bills,44,5,1947-11-20,1947-11-22
+t279,Assembly,Nota di riprovazione indirizzata dal prefetto di Chieti al Sindaco di Lanciano,non-legislative,1,1,1946-09-17,1946-09-17
+t28,Assembly,"Approvazione degli Accordi di carattere economico, commerciale, ecc., fra l'Italia ed i Paesi Bassi",bills,1,0,,
+t280,Assembly,Nuove formule di giuramento,bills,19,2,1946-12-12,1946-12-13
+t281,Assembly,Nuovi concorsi e indennità di presenza per la scuola media,non-legislative,1,1,1947-04-19,1947-04-19
+t282,Assembly,Nuovo ordinamento dei Corpi consultivi del Ministero della pubblica istruzione,non-legislative,7,1,1947-07-24,1947-07-24
+t283,Assembly,Oneri salariali gravanti sulle industrie milanesi,non-legislative,1,1,1947-10-02,1947-10-02
+t284,Assembly,Opera Nazionale invalidi di guerra,non-legislative,1,1,1947-09-29,1947-09-29
+t285,Assembly,Opere di riparazione del porto di Messina,non-legislative,1,1,1947-02-12,1947-02-12
+t286,Assembly,Opposizione all'emigrazione in Francia per via normale,non-legislative,1,1,1947-03-11,1947-03-11
+t287,Assembly,Opzione e sostituzione di deputati,non-legislative,1,4,1946-07-17,1946-09-12
+t288,Assembly,Ordinamento dei Corpi consuntivi del Ministero della pubblica istruzione,non-legislative,1,1,1947-07-19,1947-07-19
+t289,Assembly,Ordinamento dell'industria cinematografica nazionale,bills,45,5,1947-04-19,1947-05-09
+t29,Assembly,"Approvazione degli Accordi di carattere economico, commerciale, ecc., fra l'Italia ed il Belgio",bills,1,0,,
+t290,Assembly,Ordinanze di decadenza dei senatori fascisti,non-legislative,2,1,1947-09-25,1947-09-25
+t291,Assembly,Osservatori presso la Commissione istituita a Buenos Aires per il ricevimento e l'avviamento degli operai italiani,non-legislative,2,1,1947-06-30,1947-06-30
+t292,Assembly,Pensioni di guerra,non-legislative,1,1,1947-11-10,1947-11-10
+t293,Assembly,Per fatto personale,non-legislative,4,2,1947-03-05,1947-09-16
+t294,Assembly,Per il centenario della rivolta della Fieravecchia (Palermo),non-legislative,2,1,1948-01-12,1948-01-12
+t295,Assembly,Per il cinquantenario di vita parlamentare di Vittorio Emanuele Orlando,non-legislative,2,1,1947-03-21,1947-03-21
+t296,Assembly,Per il recupero dei beni di cui furono spogliati dal fascismo le cooperative e gli enti mutualistici,non-legislative,1,1,1947-05-05,1947-05-05
+t297,Assembly,Per il ritorno in patria di Maria Montessori,non-legislative,1,1,1947-05-03,1947-05-03
+t298,Assembly,Per impedire l'impoverimento del mare di Sicilia,non-legislative,1,1,1947-03-24,1947-03-24
+t299,Assembly,Per l'Università di Trieste,non-legislative,2,2,1947-04-23,1947-04-28
+t3,Assembly,Accordi commerciali e di pagamento tra l'Italia e la Svezia,bills,1,1,1947-09-11,1947-09-11
+t30,Assembly,"Approvazione degli Accordi di carattere economico, conclusi in Roma, tra l'Italia e l'Ungheria, il 9 novembre 1946",bills,1,1,1947-12-03,1947-12-03
+t300,Assembly,Per l'anniversario della morte di Cesare Battisti,non-legislative,3,1,1946-07-17,1946-07-17
+t301,Assembly,Per l'anniversario della morte di Marcello Soleri,non-legislative,2,1,1946-07-23,1946-07-23
+t302,Assembly,Per l'eccidio di Mogadiscio,non-legislative,2,1,1948-01-14,1948-01-14
+t303,Assembly,Per l'efficienza degli edifici scolastici,non-legislative,1,1,1947-03-17,1947-03-17
+t304,Assembly,Per l'elezione di tre membri della Corte costituzionale della Regione siciliana,non-legislative,2,1,1947-10-29,1947-10-29
+t305,Assembly,Per l'italianità delle terre di confine,non-legislative,1,1,1946-07-15,1946-07-15
+t306,Assembly,Per l'onomastico del Capo dello Stato,non-legislative,1,1,1947-07-17,1947-07-17
+t307,Assembly,"Per l'urgente modifica con effetto retroattivo del decreto 11 gennaio 1946, n. 18",non-legislative,1,1,1947-04-14,1947-04-14
+t308,Assembly,Per la chiusura dei lavori dell'Assemblea,non-legislative,2,1,1948-01-31,1948-01-31
+t309,Assembly,Per la discussione di una mozione del deputato Nenni sulla politica economico-finanziaria del Governo,non-legislative,6,1,1947-09-10,1947-09-10
+t31,Assembly,"Approvazione degli Accordi di carattere economico, conclusi in Roma, tra l'Italia e la Danimarca, il 2 marzo 1946",bills,1,1,1947-12-03,1947-12-03
+t310,Assembly,Per la discussione di uno stralcio della legge sulla stampa,non-legislative,1,1,1947-12-12,1947-12-12
+t311,Assembly,Per la discussione sulla situazione finanziaria,non-legislative,11,1,1947-04-11,1947-04-11
+t312,Assembly,Per la festa nazionale della Repubblica Italiana,non-legislative,2,1,1947-12-21,1947-12-21
+t313,Assembly,Per la formazione delle leggi (articolo 71),constitution,4,1,1947-10-23,1947-10-23
+t314,Assembly,Per la morte dei caduti alle Fosse Ardeatine,non-legislative,1,1,1947-03-24,1947-03-24
+t315,Assembly,Per la morte del Cardinale Carlo Salotti,non-legislative,2,1,1947-10-27,1947-10-27
+t316,Assembly,"Per la morte del dottor J.A. Rios, Presidente della Repubblica Cilena",non-legislative,1,1,1946-07-16,1946-07-16
+t317,Assembly,Per la morte del generale Ernesto Coop,non-legislative,8,1,1948-01-20,1948-01-20
+t318,Assembly,"Per la morte di Achille Grandi, Giovanni Lombardi e Luigi Corazzin",non-legislative,20,1,1946-12-10,1946-12-10
+t319,Assembly,Per la morte di Antonio D'Agata,non-legislative,8,1,1947-02-27,1947-02-27
+t32,Assembly,"Approvazione degli Accordi di carattere economico, conclusi in Roma, tra l'Italia ed i Paesi Bassi, il 30 Agosto 1946",bills,1,1,1947-12-03,1947-12-03
+t320,Assembly,Per la morte di Bruno Bernabei,non-legislative,8,1,1948-01-12,1948-01-12
+t321,Assembly,Per la morte di Carlo Bassano,non-legislative,11,1,1947-09-10,1947-09-10
+t322,Assembly,Per la morte di Diego D'Amico,non-legislative,11,1,1947-09-09,1947-09-09
+t323,Assembly,Per la morte di Ermanno Wolff-Ferrari,non-legislative,3,1,1948-01-22,1948-01-22
+t324,Assembly,Per la morte di Federico Nitti,non-legislative,2,1,1947-03-04,1947-03-04
+t325,Assembly,Per la morte di Filippo Amedeo,non-legislative,6,1,1946-06-28,1946-06-28
+t326,Assembly,Per la morte di Filippo Turati,non-legislative,11,1,1947-03-29,1947-03-29
+t327,Assembly,Per la morte di Gandhi,non-legislative,2,1,1948-01-31,1948-01-31
+t328,Assembly,Per la morte di Giuseppe Emanuele Modigliani,non-legislative,10,1,1947-10-07,1947-10-07
+t329,Assembly,Per la morte di Giuseppe Mazzini,non-legislative,2,1,1947-03-10,1947-03-10
+t33,Assembly,Approvazione dei seguenti Accordi conclusi ad Ankara tra l'Italia e la Turchia il 12 aprile 1947: a) Accordo commerciale; b) Accordo di pagamento; c) Scambio di Note,bills,1,1,1947-12-03,1947-12-03
+t330,Assembly,Per la morte di Giuseppe Sbaraglini,non-legislative,2,1,1947-11-26,1947-11-26
+t331,Assembly,Per la morte di Italico Corradino Cappellotto,non-legislative,3,1,1947-02-08,1947-02-08
+t332,Assembly,Per la morte di Lorenzo Ventavoli,non-legislative,4,1,1947-09-11,1947-09-11
+t333,Assembly,Per la morte di Luigi Battisti e Girolamo Grisolia,non-legislative,15,1,1947-02-06,1947-02-06
+t334,Assembly,Per la morte di Luigi Salvatori,non-legislative,2,1,1946-07-22,1946-07-22
+t335,Assembly,Per la morte di Palmerio Delitala,non-legislative,3,1,1947-02-18,1947-02-18
+t336,Assembly,Per la morte di Paolo Campi,non-legislative,2,1,1948-01-31,1948-01-31
+t337,Assembly,Per la morte di Vittorio Emanuele III,non-legislative,2,1,1948-01-12,1948-01-12
+t338,Assembly,Per la nomina di tre membri dell'Alta Corte siciliana,non-legislative,2,1,1947-11-06,1947-11-06
+t339,Assembly,Per la pubblicazione dei resoconti stenografici dell'Assemblea,non-legislative,1,1,1947-09-10,1947-09-10
+t34,Assembly,"Approvazione dei seguenti Accordi, conclusi a Roma tra l'Italia ed il Belgio: a) Protocollo Italo-Belga per il trasferimento di 50.000 minatori italiani in Belgio e scambio di note 23 giugno 1946; b) Scambio di note per l'annullamento dell'articolo 7 del Protocollo suddetto 26-29 ottobre 1947; c) Annesso al Protocollo di emigrazione Italo-Belga 26 aprile 1947; d) Scambio di note per l'applicazione immediata a titolo provvisorio dell' Annesso suddetto 27-28 aprile 1946",bills,1,1,1947-12-03,1947-12-03
+t340,Assembly,Per la pubblicazione delle nuove norme sull'epurazione,non-legislative,2,1,1947-12-21,1947-12-21
+t341,Assembly,Per la pubblicazione di un resoconto parlamentare,non-legislative,1,1,1947-03-24,1947-03-24
+t342,Assembly,Per la restituzione al compartimento ferroviario di Palermo dei carri merci usciti dalla Sicilia,non-legislative,1,1,1947-03-29,1947-03-29
+t343,Assembly,Per la ricorrenza del XX Settembre,non-legislative,2,1,1947-09-20,1947-09-20
+t344,Assembly,Per la ricostruzione delle zone dell'Abruzzo,non-legislative,1,1,1946-12-12,1946-12-12
+t345,Assembly,Per la tutela delle libertà politiche dei cittadini e dei partiti in relazione alla distribuzione ad Enna della sede del Partito monarchico,non-legislative,1,1,1947-02-26,1947-02-26
+t346,Assembly,Per la verifica del numero legale,non-legislative,7,1,1947-04-28,1947-04-28
+t347,Assembly,Per le dimissioni da deputato presentate dall'onorevole Vittorio Emanuele Orlando,non-legislative,1,1,1947-09-10,1947-09-10
+t348,Assembly,Per le popolazioni terremotate,non-legislative,2,1,1947-05-13,1947-05-13
+t349,Assembly,Per lo scoppio della polveriera di Cortenaso,non-legislative,2,1,1947-07-10,1947-07-10
+t35,Assembly,"Approvazione dei seguenti Accordi, conclusi a Roma, fra l'Italia e la Svezia il 19 aprile 1947: a) Accordo Italo-Svedese relativo all'emigrazione di operai italiani in Svezia; b) Protocollo addizionale all'accordo Italo-Svedese relativo all'emigrazione di operai italiani in Svezia",bills,1,1,1947-12-03,1947-12-03
+t350,Assembly,Per migliorare la tecnica edilizia,non-legislative,1,1,1947-10-24,1947-10-24
+t351,Assembly,Per prevenire il colera,non-legislative,2,1,1947-10-22,1947-10-22
+t352,Assembly,Per rafforzare la compattezza politica degli italiani di Trieste,non-legislative,1,1,1946-07-22,1946-07-22
+t353,Assembly,Per un attentato all'abitazione dell'onorevole Tessitori,non-legislative,2,1,1947-07-23,1947-07-23
+t354,Assembly,Per un comizio elettorale nei pressi di Montecitorio,non-legislative,15,1,1947-10-10,1947-10-10
+t355,Assembly,Per un incidente a Piazza Montecitorio,non-legislative,11,1,1947-12-12,1947-12-12
+t356,Assembly,Per un'accusa formulata dal deputato Cianca contro il deputato Chieffi,non-legislative,5,1,1947-12-13,1947-12-13
+t357,Assembly,"Per un'inchiesta parlamentare sull'ammontare e l'uso dei sussidi e sovvenzioni stanziati dallo Stato durante il regime fascista a favore di persone fisiche o enti industriali, commerciali e agricoli",non-legislative,1,1,1946-09-17,1946-09-17
+t358,Assembly,"Per una interpretazione autentica della XVII Disposizione transitoria della Costituzione, relativa alle interrogazioni con risposta scritta",non-legislative,2,1,1948-01-13,1948-01-13
+t359,Assembly,Per una interrogazione sui fatti di Primavalle,non-legislative,3,1,1947-12-11,1947-12-11
+t36,Assembly,"Approvazione dei seguenti Atti internazionali conclusi a Neuchatel, tra l'Italia ed altri Stati, l'8 febbraio 1947: a) Accordo per la conservazione o la reintegrazione dei diritti di proprietà industriale colpiti dalla seconda guerra mondiale; b) Protocollo di chiusura; c) Protocollo di chiusura addizionale",bills,1,1,1947-12-05,1947-12-05
+t360,Assembly,Perquisizione della pubblica sicurezza nei locali della Sezione del M.I.S. di Caltagirone,non-legislative,1,1,1947-02-20,1947-02-20
+t361,Assembly,Perquisizioni domiciliari ad avvocati e procuratori,non-legislative,1,1,1947-03-29,1947-03-29
+t362,Assembly,Perquisizioni effettuate in alcuni paesi della provincia di Roma,non-legislative,1,1,1947-02-17,1947-02-17
+t363,Assembly,Politica economico-finanziaria del Governo,non-legislative,1,1,1947-09-26,1947-09-26
+t364,Assembly,Posizione amministrativa dei segretari di istituti medi,non-legislative,1,1,1947-11-19,1947-11-19
+t365,Assembly,Posizione giuridica e morale degli insegnanti delle scuole pubbliche esclusi per non essere inscritti al partito fascista,non-legislative,2,1,1947-06-18,1947-06-18
+t366,Assembly,Preparazione turistica per l'Anno Santo,non-legislative,1,1,1947-10-13,1947-10-13
+t367,Assembly,Presunta abolizione della nominatività obbligatoria dei titoli azionari in Sicilia,non-legislative,1,1,1947-11-06,1947-11-06
+t368,Assembly,Presunte dichiarazioni dell'ammiraglio Bieri,non-legislative,1,1,1947-09-11,1947-09-11
+t369,Assembly,Prezzi dei cereali soggetti a vincolo di ammasso,non-legislative,1,1,1947-09-24,1947-09-24
+t37,Assembly,"Approvazione dei seguenti atti internazionali: a) Protocollo di emendamento agli Accordi, Convenzioni e Protocolli sugli stupefacenti conclusi all'Aja il 23 gennaio 1912, a Ginevra l'11 febbraio 1925, il 19 febbraio 1925, il 13 luglio 1931 a Bangkok il 27",bills,3,1,1947-12-05,1947-12-05
+t370,Assembly,Problema ospedaliero di Bari,non-legislative,1,1,1947-04-18,1947-04-18
+t371,Assembly,Procedura per lo Statuto Sardo e relativa autorizzazione,non-legislative,20,1,1947-07-21,1947-07-21
+t372,Assembly,Progetto di Costituzione (Discussione generale),constitution,29,8,1947-03-04,1947-03-12
+t373,Assembly,Progetto di autonomia a favore della Regione Tridentina,non-legislative,1,1,1946-09-18,1946-09-18
+t374,Assembly,"Progetto di collegamento elettrico con la Sicilia, per lo sviluppo industriale dell'Isola",non-legislative,1,1,1946-09-17,1946-09-17
+t375,Assembly,Programmi ed esami scolastici,non-legislative,1,1,1947-10-20,1947-10-20
+t376,Assembly,Proposta di aggiunta al Regolamento,non-legislative,28,5,1946-07-23,1946-09-17
+t377,Assembly,Proposta di nomina di una Commissione d'indagine,non-legislative,2,1,1947-12-12,1947-12-12
+t378,Assembly,Proposte di aggiunte al Regolamento della Camera,non-legislative,27,2,1947-05-02,1947-05-05
+t379,Assembly,Proposte per la formazione del progetto di Costituzione e per l'istituzione della Commissione per i trattati internazionali,non-legislative,18,1,1946-07-15,1946-07-15
+t38,Assembly,Approvazione del Trattato di pace tra le Potenze alleate e associate e l'Italia firmato a Parigi il 10 febbraio 1947,bills,44,8,1947-07-24,1947-07-31
+t380,Assembly,Proroga dei Commissariati degli Alloggi,non-legislative,1,1,1947-06-30,1947-06-30
+t381,Assembly,Proroga dei poteri dei Commissariati degli alloggi,non-legislative,1,1,1947-06-30,1947-06-30
+t382,Assembly,"Proroga del termine di otto mesi previsto dall'articolo 4 del decreto legge 16 marzo 1946, n. 98, per la durata dell'Assemblea Costituente",bills,3,1,1947-02-20,1947-02-20
+t383,Assembly,"Proroga del termine previsto dall'articolo 4 del decreto legislativo 16 marzo 1946, n. 98 per durata dell'Assemblea Costituente",bills,12,2,1947-06-14,1947-06-16
+t384,Assembly,Proventi degli spettacoli,non-legislative,1,1,1947-11-19,1947-11-19
+t385,Assembly,"Provvedimenti a carico del capo dell'Ispettorato di pubblica sicurezza della Sicilia, in seguito all'assassinio del ragioniere Miraglia",non-legislative,1,1,1947-02-27,1947-02-27
+t386,Assembly,Provvedimenti a carico del sanatorio antitubercolare di Chiaravalle (Catanzaro),non-legislative,1,1,1947-04-18,1947-04-18
+t387,Assembly,Provvedimenti a favore degli agricoltori colpiti dalla grandinata del 22 giugno 1947,non-legislative,1,1,1947-10-06,1947-10-06
+t388,Assembly,Provvedimenti a favore degli esuli giuliani; provvedimenti a favore dei profughi istriani,non-legislative,2,1,1947-02-27,1947-02-27
+t389,Assembly,Provvedimenti a favore dei partigiani,non-legislative,1,1,1947-03-11,1947-03-11
+t39,Assembly,Approvazione dell'Accordo concluso a Parigi il 10 settembre 1946 tra il Governo italiano e il Governo egiziano circa il risarcimento dei danni subiti dall'Egitto per effetto delle operazioni militari svoltesi nel suo territorio ed il dissequestro dei beni italiani in Egitto,bills,9,1,1947-05-12,1947-05-12
+t390,Assembly,Provvedimenti a favore di ufficiali meritevoli di particolare considerazione,non-legislative,1,1,1947-02-11,1947-02-11
+t391,Assembly,Provvedimenti del Governo per il terremoto di Calabria,non-legislative,2,1,1947-06-17,1947-06-17
+t392,Assembly,Provvedimenti in favore delle donne violentate dalle truppe marocchine in provincia di Frosinone,non-legislative,1,1,1947-04-18,1947-04-18
+t393,Assembly,Provvedimenti per accogliere le rivendicazioni degli insegnanti medi e dei Convitti nazionali,non-legislative,1,1,1947-04-19,1947-04-19
+t394,Assembly,Provvedimenti relativi allo sblocco dell'olio,non-legislative,1,1,1947-06-24,1947-06-24
+t395,Assembly,Provveditorati regionali alle opere pubbliche,non-legislative,1,1,1947-10-20,1947-10-20
+t396,Assembly,Provvidenze per lo sviluppo delle scienze sperimentali,non-legislative,2,1,1947-02-17,1947-02-17
+t397,Assembly,"Ragioni dello sciopero del personale insegnanti della scuola secondaria e come si è inteso tradurre in atto gli impegni circa la funzione educativa, sociale e morale della scuola",non-legislative,1,1,1947-04-19,1947-04-19
+t398,Assembly,"Ragioni per il non accoglimento delle proposte di soluzione dello sciopero del personale della scuola media accettate dal personale interessato, dal Gruppo parlamentare della scuola, dalla C.G.I.L. ed il Ministro della pubblica istruzione",non-legislative,1,1,1947-04-19,1947-04-19
+t399,Assembly,Rappresentanza dell'Assemblea nell'Unione interparlamentare,non-legislative,1,1,1946-12-10,1946-12-10
+t4,Assembly,Accordi firmati a Bretton Woods il 22 luglio 1944,bills,11,2,1947-03-14,1947-03-15
+t40,Assembly,"Approvazione dell'Accordo internazionale per la costituzione della Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura, concluso a Quebec il 16 ottobre 1945",bills,10,1,1947-05-12,1947-05-12
+t400,Assembly,Reati di collaborazionismo,non-legislative,1,1,1947-11-19,1947-11-19
+t401,Assembly,Reclutamento dei lavoratori italiani che si recheranno in Francia,non-legislative,1,1,1947-02-17,1947-02-17
+t402,Assembly,Recupero di beni confiscati dal fascismo,non-legislative,1,0,,
+t403,Assembly,Relazione della Commissione d'inchiesta sulle accuse mosse al deputato Chieffi,non-legislative,8,1,1947-12-22,1947-12-22
+t404,Assembly,Relazione della Commissione degli Undici,non-legislative,14,1,1947-04-14,1947-04-14
+t405,Assembly,Relazione della Commissione degli Undici sulle accuse mosse dal deputato Finocchiaro Aprile ai deputati Campilli e Vanoni,non-legislative,21,1,1947-04-16,1947-04-16
+t406,Assembly,Relazione della Commissione degli Undici sulle accuse mosse dall'onorevole Finocchiaro Aprile contro alcuni deputati,non-legislative,18,2,1947-06-28,1947-07-02
+t407,Assembly,Relazione della Commissione per il caso Finocchiaro Aprile-Parri,non-legislative,1,1,1947-03-15,1947-03-15
+t408,Assembly,Requisizione da parte delle autorità militari di un immobile a Treviso,non-legislative,1,1,1947-10-20,1947-10-20
+t409,Assembly,Requisizioni di locali da parte della Divisione Folgore nella città di Treviso,non-legislative,1,1,1947-06-24,1947-06-24
+t41,Assembly,"Approvazione dello scambio di Note relativo ai danni di guerra ed all'articolo 79 del Trattato di Pace, effettuato in Roma fra l'Italia e la Cina il 30 luglio 1947",bills,1,1,1947-12-05,1947-12-05
+t410,Assembly,Revoca dall'impiego per mancata fede al giuramento,bills,10,1,1947-10-29,1947-10-29
+t411,Assembly,Revoca del decreto n. 13911 del 30 aprile 1947 del Prefetto di Aquila per l'assunzione di disoccupati,non-legislative,1,1,1947-07-07,1947-07-07
+t412,Assembly,Riammissione dei dipendenti dell'Istituto poligrafico licenziati per non aver voluto recarsi al Nord,non-legislative,1,1,1946-12-11,1946-12-11
+t413,Assembly,Riammissione in servizio permanente effettivo degli ufficiali che furono sottosegretari della repubblica di Salò,non-legislative,1,1,1947-09-22,1947-09-22
+t414,Assembly,Richieste dell'Associazione Nazionale militari e invalidi di guerra per l'adeguamento delle pensioni,non-legislative,2,1,1947-09-29,1947-09-29
+t415,Assembly,Richieste di aumeto delle diarie presentate dal sindacato scuole medie,non-legislative,1,1,1946-12-11,1946-12-11
+t416,Assembly,Richieste ed agitazioni dei contadini della provincia di Caltanissetta,non-legislative,1,1,1947-12-09,1947-12-09
+t417,Assembly,Richieste presentate dai professori secondari,non-legislative,1,1,1947-02-22,1947-02-22
+t418,Assembly,Riconoscimento del Gruppo patrioti della Maiella,non-legislative,1,1,1947-11-19,1947-11-19
+t419,Assembly,Ricostituzione dei Comuni soppressi dall'ex regime fascista,non-legislative,1,1,1946-09-11,1946-09-11
+t42,Assembly,Approvvigionamento alimentare della Calabria,non-legislative,1,1,1947-09-29,1947-09-29
+t420,Assembly,Ricostituzione dell'amministrazione ordinaria dell'Istituto Margherita di Savoia per i ciechi,non-legislative,1,1,1946-12-11,1946-12-11
+t421,Assembly,Ricostruzione dei paesi della provincia di Frosinone devastati dalla guerra,non-legislative,1,1,1946-12-11,1946-12-11
+t422,Assembly,Ricostruzione dei ponti sul Volturno,non-legislative,1,1,1947-09-18,1947-09-18
+t423,Assembly,Ricostruzione delle industrie nel Mezzogiorno,non-legislative,1,1,1946-07-20,1946-07-20
+t424,Assembly,Riduzione del contingente di carta d'importazione svedese,non-legislative,1,1,1947-05-05,1947-05-05
+t425,Assembly,Riduzione della superficie autorizzata alla coltivazione del tabacco orientale nel Salento,non-legislative,2,1,1947-02-13,1947-02-13
+t426,Assembly,"Riesame del decreto ministeriale 15 giugno 1946, relativo al concorso per il conseguimento dell'idoneità di esattore delle imposte dirette",non-legislative,1,1,1947-02-10,1947-02-10
+t427,Assembly,Riferimento di un quotidiano romano ad una intervista del Ministro di grazia e giustizia,non-legislative,2,1,1947-07-28,1947-07-28
+t428,Assembly,Rifornimento della legna da ardere,non-legislative,1,1,1947-10-27,1947-10-27
+t429,Assembly,Rimozione dei poligoni di tiro di Pescaia,non-legislative,1,1,1947-06-24,1947-06-24
+t43,Assembly,Approvvigionamento della legna da ardere in Alta Italia,non-legislative,1,1,1947-09-22,1947-09-22
+t430,Assembly,Rinunzia del dottor Andrea Ferrara alla nomina di membro effettivo dell'Alta Corte della Regione siciliana,non-legislative,1,1,1947-12-17,1947-12-17
+t431,Assembly,Rinvio della discussione del disegno di legge sulla stampa,non-legislative,1,1,1947-11-10,1947-11-10
+t432,Assembly,Riordinamento dei Corpi consultivi del Ministero della pubblica istruzione,bills,35,5,1947-12-09,1947-12-11
+t433,Assembly,Riordinamento dei servizi per i danni di guerra,non-legislative,1,1,1947-09-29,1947-09-29
+t434,Assembly,Riorganizzazione del servizio delle pensioni di guerra,non-legislative,3,1,1947-09-29,1947-09-29
+t435,Assembly,Ripartizione dei prodotti all'Alta Italia,non-legislative,1,1,1947-10-13,1947-10-13
+t436,Assembly,Ripresa dell'industria marmifera e dell'attività produttiva della zona industriale di Apuania:,non-legislative,1,1,1946-12-11,1946-12-11
+t437,Assembly,Ripristino a Messina del Consiglio americano,non-legislative,1,1,1946-09-18,1946-09-18
+t438,Assembly,Ripristino della Scuola allievi ufficiale della Guardia di finanza a Messina,non-legislative,1,1,1946-09-18,1946-09-18
+t439,Assembly,Ripristino della linea tramviaria Albano-Velletri,non-legislative,1,1,1947-09-22,1947-09-22
+t44,Assembly,Arbitrario arresto di socialcomunisti di Caorle,non-legislative,1,1,1947-10-06,1947-10-06
+t440,Assembly,"Riscossione, per mezzo delle esattorie, di contributi associativi di enti diversi",non-legislative,1,1,1947-02-27,1947-02-27
+t441,Assembly,Risposta del Congresso del Guatemala al messaggio dell'Assemblea Costituente,non-legislative,1,1,1947-06-27,1947-06-27
+t442,Assembly,Risposta del Presidente della Camera dei deputati Brasiliana al messaggio dell'Assemblea Costituente,non-legislative,1,1,1947-06-18,1947-06-18
+t443,Assembly,Risposta del Presidente della Grande Assemblea Nazionale di Turchia al messaggio dell'Assemblea Costituente,non-legislative,1,1,1947-06-10,1947-06-10
+t444,Assembly,Risposta del Vicepresidente del Consiglio del Paraguay al messaggio dell'Assemblea Costituente,non-legislative,1,1,1947-06-12,1947-06-12
+t445,Assembly,Ritardo dell'esecuzione degli accordi con l'Argentina per l'emigrazione di nostri lavoratori,non-legislative,1,1,1947-04-11,1947-04-11
+t446,Assembly,Ritardo delle elezioni comunali a Roma,non-legislative,1,1,1947-05-05,1947-05-05
+t447,Assembly,Ritardo nell'accoglimento delle rivendicazioni del personale insegnante delle scuole medie ed elementari e degli educandati nazionali,non-legislative,1,1,1947-04-19,1947-04-19
+t448,Assembly,Rivendicazioni dei professori e dei maestri,non-legislative,1,1,1947-04-19,1947-04-19
+t449,Assembly,Sabotaggio nell'applicazione dei decreti Segni per l'assegnazione delle terre incolte,non-legislative,2,1,1946-12-14,1946-12-14
+t45,Assembly,Arresto di un capo partigiano a Genova,non-legislative,1,1,1947-11-19,1947-11-19
+t450,Assembly,Saluto all'Assemblea Costituente,non-legislative,1,1,1946-06-25,1946-06-25
+t451,Assembly,Saluto della Camera cilena,non-legislative,1,1,1946-07-15,1946-07-15
+t452,Assembly,Sanzioni a carico del giornale Il Mercante,non-legislative,3,1,1946-12-14,1946-12-14
+t453,Assembly,Sblocco delle rimanenze dell'olio di oliva in provincia di Campobasso,non-legislative,1,1,1947-09-20,1947-09-20
+t454,Assembly,Scandalo giudiziario di Sciacca e sottrazione di verbali dell'istruttoria del processo Miraglia,non-legislative,2,1,1947-06-17,1947-06-17
+t455,Assembly,Scioglimento del Consiglio comunale di Pescara,non-legislative,4,1,1947-12-11,1947-12-11
+t456,Assembly,Scioglimento della Commissione per la maturità classica del liceo governativo di Acireale,non-legislative,1,1,1947-09-29,1947-09-29
+t457,Assembly,Scoppio d'una bomba presso una chiesa a Bisceglie,non-legislative,1,1,1946-12-11,1946-12-11
+t458,Assembly,Scoppio delle polveriere di Vigevano e di Cassano d'Adda,non-legislative,2,1,1947-11-21,1947-11-21
+t459,Assembly,Secondo comma dell' art. 50 (Discussione),constitution,27,2,1947-12-04,1947-12-05
+t46,Assembly,Assalto alla Prefettura di Rovigo del 23 luglio,non-legislative,1,1,1946-09-18,1946-09-18
+t460,Assembly,Sequestro d'un quantitativo di grano evaso dall'ammasso nel Siracusano,non-legislative,1,1,1946-12-13,1946-12-13
+t461,Assembly,Serrata dei conduttori dei pubblici esercizi di Roma e quella minacciata in altre città,non-legislative,1,1,1947-04-12,1947-04-12
+t462,Assembly,Sistemazione degli acquedotti lucani,non-legislative,1,1,1947-11-06,1947-11-06
+t463,Assembly,Sistemazione del porto di Messina,non-legislative,1,1,1946-09-17,1946-09-17
+t464,Assembly,Sistemazione della Stazione Termini,non-legislative,1,1,1947-10-13,1947-10-13
+t465,Assembly,Situazione alimentare della provincia di Cosenza,non-legislative,2,1,1947-03-28,1947-03-28
+t466,Assembly,Situazione anormale di Crotone,non-legislative,1,1,1947-03-22,1947-03-22
+t467,Assembly,Situazione della Magistratura,non-legislative,3,1,1947-05-05,1947-05-05
+t468,Assembly,Situazione delle imprese appaltatrici,non-legislative,1,1,1947-03-17,1947-03-17
+t469,Assembly,Situazione finanziaria delle amministrazioni ospedaliere,non-legislative,4,1,1947-06-24,1947-06-24
+t47,Assembly,Assassinio del giornalista De Agazio,non-legislative,1,1,1947-03-18,1947-03-18
+t470,Assembly,Soppressione del Commissariato degli alloggi in Roma,non-legislative,1,1,1947-05-05,1947-05-05
+t471,Assembly,Soppressione del Senato e determinazione della posizione giuridica personale dei suoi componenti,bills,18,1,1947-10-28,1947-10-28
+t472,Assembly,Sopratassa speciale di iscrizione alle Università,non-legislative,1,1,1947-09-25,1947-09-25
+t473,Assembly,Sorte dei prigionieri italiani in Russia,non-legislative,7,1,1947-03-27,1947-03-27
+t474,Assembly,Sospensione dei lavori pubblici già in programma,non-legislative,1,1,1947-03-17,1947-03-17
+t475,Assembly,Sospensione dell'esazione del canone di abbonamento per le cooperative di consumo,non-legislative,1,1,1947-02-27,1947-02-27
+t476,Assembly,Sospensione delle comunicazioni telegrafiche e telefoniche con la Sicilia,non-legislative,1,1,1947-02-17,1947-02-17
+t477,Assembly,Sostituzione del Commissario nazionale alla Gioventù italiana con un funzionario della pubblica istruzione,non-legislative,1,1,1947-03-27,1947-03-27
+t478,Assembly,Sostituzione di deputati,non-legislative,1,1,1947-09-11,1947-09-11
+t479,Assembly,Sostituzione di deputati dimissionari,non-legislative,1,3,1946-07-17,1946-09-26
+t48,Assembly,Assassinio del qualunquista Zoppini a Zeme Lomellina,non-legislative,1,1,1947-12-09,1947-12-09
+t480,Assembly,Sostituzione di un deputato,non-legislative,1,2,1947-07-03,1948-01-15
+t481,Assembly,Stanziamenti per l'attivazione dell'acquedotto di Montescuro ovest,non-legislative,1,1,1947-02-12,1947-02-12
+t482,Assembly,Statuto speciale per la Sardegna,bills,41,3,1948-01-28,1948-01-29
+t483,Assembly,Su alcuni pareri del Consiglio Superiore riguardante professori universitari e sulle dimissioni di alcuni membri del Consiglio Superiore,non-legislative,8,1,1947-07-15,1947-07-15
+t484,Assembly,Su presunte infrazioni dell'annona di Siracusa,non-legislative,1,1,1947-10-13,1947-10-13
+t485,Assembly,Su presunte sevizie nel carcere di Poggioreale,non-legislative,4,1,1947-11-19,1947-11-19
+t486,Assembly,Su quattro articoli aggiuntivi relativi alla materia tributaria - art. 53 del testo definitivo (Discussione generale),constitution,14,1,1947-05-23,1947-05-23
+t487,Assembly,Su talune accuse mosse dal deputato Cerreti al Ministro dell'interno,non-legislative,21,3,1947-05-10,1947-06-19
+t488,Assembly,Su talune disposizioni di favore a produttori agricoli nella provincia di Viterbo,non-legislative,1,1,1947-06-18,1947-06-18
+t489,Assembly,Su un atto arbitrario del sindaco di Pozzuoli,non-legislative,1,1,1947-10-13,1947-10-13
+t49,Assembly,Assassinio di un qualunquista di Sesto S. Giovanni,non-legislative,1,1,1947-11-10,1947-11-10
+t490,Assembly,Su un'accusa mossa all'onorevole Russo Perez,non-legislative,1,1,1947-04-10,1947-04-10
+t491,Assembly,Su una riforma a favore dei pensionati,non-legislative,1,1,1946-12-12,1946-12-12
+t492,Assembly,Su una votazione a scrutinio segreto (Sugli accordi commerciali e di pagamenti fra l'Italia e la Svezia),non-legislative,1,1,1947-09-11,1947-09-11
+t493,Assembly,Su una votazione a scrutinio segreto (Sull'articolo 55 del Progetto di Costituzione),non-legislative,11,1,1947-09-25,1947-09-25
+t494,Assembly,Sugli incidenti del 10 febbraio in occasione della firma del Trattato di Pace,non-legislative,1,1,1947-02-13,1947-02-13
+t495,Assembly,Sugli incidenti del 15 giugno a Livorno,non-legislative,1,1,1947-06-24,1947-06-24
+t496,Assembly,Sugli incidenti di Avellino del 28 settembre 1947 durante un comizio monarchico,non-legislative,8,1,1947-10-06,1947-10-06
+t497,Assembly,Sugli incidenti di Napoli,non-legislative,9,1,1947-11-14,1947-11-14
+t498,Assembly,Sugli incidenti di Palermo dell'11 luglio 1947,non-legislative,1,1,1947-10-20,1947-10-20
+t499,Assembly,Sugli incidenti di Torino del 9 aprile 1947,non-legislative,2,1,1947-04-21,1947-04-21
+t5,Assembly,Accordo con la Norvegia per la costruzione di navi nei Cantieri Ansaldo,non-legislative,1,1,1947-03-17,1947-03-17
+t50,Assembly,Assegnazione ai comuni capoluoghi di provincia dei patrimoni della disciolta G.I.L.,non-legislative,1,1,1946-12-11,1946-12-11
+t500,Assembly,Sugli infortunati sul lavoro fruenti di rendita dell'Istituto Nazionale Svizzero di Assicurazioni,non-legislative,1,1,1947-09-11,1947-09-11
+t501,Assembly,"Sugli ordini del giorno degli onorevoli Quintieri Quinto, Micheli e Magrini (sulla politica del Governo)",non-legislative,10,1,1947-10-04,1947-10-04
+t502,Assembly,Sui concorsi speciali per maestri e per le direzioni didattiche,non-legislative,1,1,1946-09-18,1946-09-18
+t503,Assembly,Sui decreti di requisizione di terre incolte disposti con provvedimenti dell'ottobre 1944 dal prefetto di Sassari,non-legislative,1,1,1947-02-12,1947-02-12
+t504,Assembly,Sui deportati in Jugoslavia,non-legislative,1,1,1947-10-27,1947-10-27
+t505,Assembly,Sui due rami del Parlamento (articoli 59-69),constitution,26,2,1947-10-10,1947-10-10
+t506,Assembly,Sui fatti del 22 giugno a Napoli,non-legislative,2,1,1947-06-30,1947-06-30
+t507,Assembly,Sui fatti del 25 giugno a Reggio Calabria,non-legislative,3,1,1947-06-28,1947-06-28
+t508,Assembly,Sui fatti di Cremona dell'8 giugno,non-legislative,5,1,1947-06-13,1947-06-13
+t509,Assembly,Sui fatti di Gravina,non-legislative,3,1,1947-10-27,1947-10-27
+t51,Assembly,Assegnazione di 46 navi Liberty all'armamento genovese,non-legislative,1,1,1947-02-19,1947-02-19
+t510,Assembly,Sui fatti di Milano,non-legislative,8,1,1947-11-29,1947-11-29
+t511,Assembly,Sui fatti di Sicilia del 23 giugno,non-legislative,5,1,1947-06-24,1947-06-24
+t512,Assembly,Sui fatti di Venezia del 29 giugno in occasione di un comizio dell'onorevole De Gasperi,non-legislative,3,1,1947-07-07,1947-07-07
+t513,Assembly,Sui gravi incidenti di Padova,non-legislative,2,1,1946-12-12,1946-12-12
+t514,Assembly,Sui lavori a cottimo e a regia ottenuti dal Consorzio Ricostruente,non-legislative,1,1,1947-02-17,1947-02-17
+t515,Assembly,Sui lavori dell'Assemblea,non-legislative,74,59,1947-03-22,1947-12-21
+t516,Assembly,Sui lavori delle commissioni permanenti per l'esame dei disegni di legge,non-legislative,2,1,1947-09-19,1947-09-19
+t517,Assembly,Sui luttuosi fatti di Padova,non-legislative,1,1,1946-12-12,1946-12-12
+t518,Assembly,"Sui poteri della Commissione per le incompatibilità di cariche, coperte da deputati con il mandato parlamentare",non-legislative,17,1,1947-03-06,1947-03-06
+t519,Assembly,Sui poteri di una Commissione,non-legislative,2,1,1947-02-26,1947-02-26
+t52,Assembly,Assistenza agli studenti reduci nell'anno accademico 1946-47,non-legislative,1,1,1946-09-17,1946-09-17
+t520,Assembly,Sui ruoli aperti e sull'adeguamento delle pensioni a favore dei maestri elementari,non-legislative,1,1,1946-09-11,1946-09-11
+t521,Assembly,Sui sistemi adottati dalla polizia in Sicilia,non-legislative,1,1,1947-02-27,1947-02-27
+t522,Assembly,Sul Governo (articoli 88-96),constitution,18,2,1947-10-23,1947-10-24
+t523,Assembly,Sul bando delle elezioni del Consiglio Superiore della pubblica istruzione,non-legislative,1,1,1947-07-19,1947-07-19
+t524,Assembly,Sul comizio del M.S.I. in Piazza Colonna,non-legislative,1,1,1947-10-13,1947-10-13
+t525,Assembly,Sul decreto di amnistia del 22 giugno 1946 e sull'applicazione del decreto del 6 gennaio 1944,non-legislative,2,1,1946-07-22,1946-07-22
+t526,Assembly,Sul decreto di requisizione del Palazzo Revedin a Treviso,non-legislative,1,1,1947-06-30,1947-06-30
+t527,Assembly,"Sul destino di Briga, Tenda e del Moncenisio",non-legislative,8,1,1946-06-28,1946-06-28
+t528,Assembly,Sul fermo del Professore di Università Crisafulli in seguito ad un ordine emanato nel febbraio 1944,non-legislative,1,1,1947-07-07,1947-07-07
+t529,Assembly,Sul giuoco d'azzardo non autorizzato,non-legislative,1,1,1947-10-27,1947-10-27
+t53,Assembly,Assistenza sanitaria ai tubercolosi poveri,non-legislative,1,1,1947-10-20,1947-10-20
+t530,Assembly,Sul giuramento di fedeltà dei membri del Governo (articolo 74-bis),constitution,18,1,1947-10-14,1947-10-14
+t531,Assembly,Sul messaggio del Capo provvisorio dello Stato,non-legislative,1,1,1947-06-26,1947-06-26
+t532,Assembly,Sul nubifragio del forlivese,non-legislative,1,1,1947-11-06,1947-11-06
+t533,Assembly,Sul posto dei membri dell'Ufficio di presidenza della Commissione per la Costituzione e del Comitato di redazione,non-legislative,1,1,1947-03-05,1947-03-05
+t534,Assembly,Sul premio assegnato ai consegnatari del grano agli ammassi,non-legislative,1,1,1946-09-17,1946-09-17
+t535,Assembly,Sul preparato AF2 del dottore Guarnieri,non-legislative,1,1,1947-06-30,1947-06-30
+t536,Assembly,"Sul problema dei reggenti presidi e dei provveditorati agli Studi, nominati dagli Alleati in via provvisoria",non-legislative,1,1,1946-09-12,1946-09-12
+t537,Assembly,Sul processo Basile,non-legislative,2,1,1947-11-19,1947-11-19
+t538,Assembly,Sul processo verbale,non-legislative,98,64,1946-07-19,1948-01-31
+t539,Assembly,"Sul ripristino del decreto-legge 14 gennaio 1944, n. 13, concernente la disciplina della stampa",non-legislative,1,1,1947-03-15,1947-03-15
+t54,Assembly,Atteggiamento del Ministro della pubblica istruzione relativamente allo sciopero degli insegnanti di scuole medie,non-legislative,1,1,1947-04-19,1947-04-19
+t540,Assembly,Sul rispetto delle istituzioni democratiche in provincia di Gorizia,non-legislative,3,1,1947-09-29,1947-09-29
+t541,Assembly,"Sul risultato della votazione a scrutinio segreto dell'emendamento Grilli relativo all'articolo 23, nuovo testo, del progetto di Costituzione",non-legislative,1,1,1947-04-24,1947-04-24
+t542,Assembly,Sul testo coordinato dello Statuto speciale per la Sicilia,bills,26,2,1948-01-31,1948-01-31
+t543,Assembly,Sul toto calcio S.I.S.A.L.,non-legislative,1,1,1947-10-20,1947-10-20
+t544,Assembly,Sull'A.R.A.R.,non-legislative,2,1,1947-11-10,1947-11-10
+t545,Assembly,Sull'Assemblea nazionale (articolo 52),constitution,26,2,1947-10-18,1947-10-21
+t546,Assembly,"Sull'abbandono dell'Aula da parte di alcuni deputati, in segno di protesta",non-legislative,2,1,1947-03-27,1947-03-27
+t547,Assembly,Sull'abolizione del Commissariato alloggi di Napoli,non-legislative,1,1,1947-10-27,1947-10-27
+t548,Assembly,Sull'affitto del villaggio alpino Colonia Val Grande di Comelico,non-legislative,1,1,1947-07-28,1947-07-28
+t549,Assembly,Sull'aggregazione di due mandamenti al Tribunale di Santa Maria Capua Vetere,non-legislative,1,1,1947-10-27,1947-10-27
+t55,Assembly,Atteggiamento francese in previsione del plebiscito dell'Alta Valle del Roja e trattamento dei profughi di Briga e Tenda,non-legislative,1,1,1947-06-30,1947-06-30
+t550,Assembly,Sull'ammissione dei rappresentanti italiani alle trattative preliminari per la pace con la Germania,non-legislative,1,1,1946-12-12,1946-12-12
+t551,Assembly,Sull'amnistia e l'indulto (articolo 75),constitution,31,1,1947-10-21,1947-10-21
+t552,Assembly,"Sull'applicazione dell'articolo 42 del Regolamento 12 febbraio 1911, n. 278, agli appalti a società cooperative",non-legislative,1,1,1946-12-12,1946-12-12
+t553,Assembly,Sull'approvazione della Costituzione mediante referendum popolare,non-legislative,2,1,1946-09-11,1946-09-11
+t554,Assembly,Sull'arbitraria occupazione di una sede del Partito socialista dei lavoratori italiani a Vittoria,non-legislative,1,1,1947-11-19,1947-11-19
+t555,Assembly,Sull'arresto del sindaco di Roccaforte del Greco (Reggio Calabria),non-legislative,1,1,1947-07-28,1947-07-28
+t556,Assembly,Sull'arresto di alcuni patrioti greci,non-legislative,1,1,1946-09-26,1946-09-26
+t557,Assembly,Sull'arresto di contadini per l'inadempienza agli ammassi,non-legislative,1,1,1947-09-20,1947-09-20
+t558,Assembly,Sull'arsenale di Messina,non-legislative,1,1,1947-10-20,1947-10-20
+t559,Assembly,Sull'articolo 283 del Regolamento per gli Istituti di prevenzione e di pena,non-legislative,1,1,1947-09-20,1947-09-20
+t56,Assembly,Atto di emendamento della Costituzione dell'Organizzazione Internazionale del lavoro,bills,2,1,1947-10-28,1947-10-28
+t560,Assembly,Sull'assassinio dello studente Federici in Roma,non-legislative,3,1,1947-10-15,1947-10-15
+t561,Assembly,Sull'assegnazione delle navi Liberty,non-legislative,1,1,1947-10-06,1947-10-06
+t562,Assembly,Sull'assunzione obbligatoria di invalidi e mutilati del lavoro da parte di ditte ed enti,non-legislative,1,1,1947-04-18,1947-04-18
+t563,Assembly,Sull'avocazione dei profitti di regime a carico di Giorgio Berlutti,non-legislative,1,1,1947-10-27,1947-10-27
+t564,Assembly,Sull'elezione contestata del deputato Giuseppe Sapienza,non-legislative,1,1,1947-09-30,1947-09-30
+t565,Assembly,Sull'elezione del Senato (articoli 57-59),constitution,60,5,1947-10-07,1947-10-09
+t566,Assembly,Sull'elezione del capo dello Stato (articolo 79),constitution,34,2,1947-10-22,1947-10-22
+t567,Assembly,Sull'emblema della Repubblica,non-legislative,13,2,1948-01-19,1948-01-31
+t568,Assembly,Sull'esecuzione del piano regolatore di Padova,non-legislative,1,1,1947-10-27,1947-10-27
+t569,Assembly,Sull'estensibilità del decreto sull'attuazione delle terre incolte ai terreni non coltivati dai mezzadri,non-legislative,2,1,1946-12-13,1946-12-13
+t57,Assembly,Auguri al Presidente,non-legislative,2,1,1947-03-29,1947-03-29
+t570,Assembly,Sull'estensione della sessione speciale di esami,non-legislative,1,1,1947-05-05,1947-05-05
+t571,Assembly,Sull'insufficienza nella provincia di Reggio Calabria di generi razionali,non-legislative,2,1,1946-12-14,1946-12-14
+t572,Assembly,Sull'opportunità della pubblicazione d'un elenco di deputati che coprono cariche retribuite,non-legislative,1,1,1947-02-18,1947-02-18
+t573,Assembly,Sull'opportunità della pubblicazione d'un elenco di deputato che coprono cariche retribuite,non-legislative,12,1,1947-02-18,1947-02-18
+t574,Assembly,Sull'opportunità di consegna delle strade di arroccamento e di allacciamento fra i valichi terminali delle valli alpine agli Uffici del Genio civile per la viabilità statale,non-legislative,1,1,1946-12-12,1946-12-12
+t575,Assembly,Sull'ordine dei lavori,non-legislative,7,5,1947-03-14,1948-01-17
+t576,Assembly,Sull'ordine del giorno,non-legislative,19,14,1946-06-28,1948-01-30
+t577,Assembly,Sull'ordine pubblico,non-legislative,7,1,1947-11-19,1947-11-19
+t578,Assembly,Sull'ordine pubblico del Paese,non-legislative,15,1,1947-11-13,1947-11-13
+t579,Assembly,Sull'urgenza di rendere liberi i locali di proprietà privata occupati dalle forze armate,non-legislative,1,1,1946-12-12,1946-12-12
+t58,Assembly,Aumento della razione del pane nella provincia di Milano,non-legislative,1,1,1946-07-22,1946-07-22
+t580,Assembly,Sulla composizione delle Commissioni per l'avocazione dei profitti di regime,non-legislative,11,1,1946-12-14,1946-12-14
+t581,Assembly,Sulla costituzione di una Commissione per l'esame delle materie costituzionali da regolare con legge costituzionale provvisoria fino all'entrata in vigore della Costituzione,non-legislative,2,1,1946-09-18,1946-09-18
+t582,Assembly,Sulla costruzione del bacino idroelettrico del Taloro,non-legislative,1,1,1947-11-06,1947-11-06
+t583,Assembly,Sulla crisi dell'energia elettrica,non-legislative,1,1,1947-10-27,1947-10-27
+t584,Assembly,Sulla destinazione di professori universitari vincitori di concorso,non-legislative,1,1,1946-09-18,1946-09-18
+t585,Assembly,Sulla devastazione di una tipografia a Taranto,non-legislative,2,1,1947-10-15,1947-10-15
+t586,Assembly,Sulla discussione finanziaria,non-legislative,2,1,1947-04-19,1947-04-19
+t587,Assembly,Sulla dispensa dal servizio militare degli alpigiani che si trovino in particolari condizioni economiche,non-legislative,1,1,1947-02-10,1947-02-10
+t588,Assembly,Sulla elezione del primo Senato della Repubblica,non-legislative,1,1,1947-12-12,1947-12-12
+t589,Assembly,Sulla fissazione dell'ordine del giorno,non-legislative,11,1,1947-07-23,1947-07-23
+t59,Assembly,Aumento delle tasse universitarie,non-legislative,1,1,1947-11-10,1947-11-10
+t590,Assembly,Sulla formazione delle leggi (articoli 70-82),constitution,50,6,1947-10-14,1947-10-17
+t591,Assembly,Sulla garanzia della libertà dei cittadini,non-legislative,1,1,1947-02-11,1947-02-11
+t592,Assembly,Sulla gestione del Casinò di San Remo,non-legislative,3,1,1947-10-27,1947-10-27
+t593,Assembly,Sulla gestione del gioco nel salone dell'Albergo di Russia in Roma,non-legislative,1,1,1947-02-17,1947-02-17
+t594,Assembly,Sulla gravità della situazione in Sicilia,non-legislative,5,1,1947-07-15,1947-07-15
+t595,Assembly,Sulla lettura dei discorsi,non-legislative,1,1,1947-03-05,1947-03-05
+t596,Assembly,Sulla libertà di organizzazione,non-legislative,1,1,1946-09-11,1946-09-11
+t597,Assembly,Sulla mancata attuazione del regio decreto 13 marzo 1944,non-legislative,1,1,1946-12-14,1946-12-14
+t598,Assembly,Sulla manutenzione delle strade nazionali del Sud,non-legislative,1,1,1947-11-06,1947-11-06
+t599,Assembly,"Sulla modalità, del bando di concorso di cui al supplemento n. 1 della Gazzetta Ufficiale n. 158, del 17 luglio 1947",non-legislative,1,1,1947-09-25,1947-09-25
+t6,Assembly,Accordo italo-argentino per l'emigrazione,bills,1,1,1947-10-28,1947-10-28
+t60,Assembly,Autorizzazione ai prefetti dell'inclusione nei bilanci comunali di stanziamenti per indennità di carica ai sindaci,non-legislative,1,1,1946-12-11,1946-12-11
+t600,Assembly,Sulla nomina delle Commissioni per le avocazioni dei profitti di regime,non-legislative,2,1,1946-12-14,1946-12-14
+t601,Assembly,Sulla preoccupante situazione in Calabria e particolarmente nella provincia di Catanzaro in seguito all'occupazione da parte dei contadini di terre coltivate,non-legislative,2,1,1946-12-14,1946-12-14
+t602,Assembly,Sulla presentazione del Trattato di pace,non-legislative,1,1,1947-06-27,1947-06-27
+t603,Assembly,Sulla procedura relativa alla risoluzione delle controversie di lavoro,non-legislative,1,1,1946-12-13,1946-12-13
+t604,Assembly,Sulla proposta di nomina di una Commissione d'indagine,non-legislative,9,1,1947-12-13,1947-12-13
+t605,Assembly,Sulla proroga dei poteri dell'Assemblea Costituente,non-legislative,10,1,1947-06-09,1947-06-09
+t606,Assembly,Sulla qualità del pane a Siracusa,non-legislative,1,1,1947-10-13,1947-10-13
+t607,Assembly,Sulla rimessa in libertà degli ergastolani con oltre trent'anni di espiazione,non-legislative,1,1,1946-09-11,1946-09-11
+t608,Assembly,"Sulla rimozione da bordo delle navi, dagli uffici e dalle divise, dei simboli e degli emblemi monarchici",non-legislative,1,1,1946-09-18,1946-09-18
+t609,Assembly,Sulla riorganizzazione dell'Istituto centrale di statistica,non-legislative,1,1,1947-11-10,1947-11-10
+t61,Assembly,Avocazione allo Stato dei beni della Corona,non-legislative,1,1,1947-04-14,1947-04-14
+t610,Assembly,Sulla situazione delle Università italiane,non-legislative,1,1,1946-09-13,1946-09-13
+t611,Assembly,Sulla situazione economica degli ufficiali e sottufficiali in servizio effettivo,non-legislative,1,1,1946-09-18,1946-09-18
+t612,Assembly,Sulla sorte delle facoltà di scienze politiche e sulla ricostruzione del Cesare Alfieri di Firenze,non-legislative,1,1,1946-09-13,1946-09-13
+t613,Assembly,"Sulla sospensione del decreto legislativo luogotenenziale 5 aprile 1946, n. 247, relativo alle competenze del conciliatore e del pretore",non-legislative,1,1,1946-09-18,1946-09-18
+t614,Assembly,Sulla sostituzione del generale della giustizia militare Zingales nelle indagini sul tesoro di Dongo,non-legislative,1,1,1947-03-18,1947-03-18
+t615,Assembly,Sulla sottrazione di latte in polvere al normale consumo,non-legislative,1,1,1946-12-13,1946-12-13
+t616,Assembly,Sulla validità della votazione di un emendamento,non-legislative,10,1,1947-10-30,1947-10-30
+t617,Assembly,"Sulla validità di una votazione a scrutinio segreto relativa alla soppressione dell'articolo 3 del decreto 10 marzo 1946, n. 74",non-legislative,11,1,1947-12-19,1947-12-19
+t618,Assembly,Sulla vendita di granone avariato,non-legislative,2,1,1947-10-06,1947-10-06
+t619,Assembly,Sulla votazione segreta dell'ordine del giorno Gullo Rocco sul metodo di lavoro del progetto di Costituzione,non-legislative,3,1,1947-05-02,1947-05-02
+t62,Assembly,Avocazione allo Stato di beni della Corona a fini assistenziali,non-legislative,1,1,1946-09-13,1946-09-13
+t620,Assembly,Sulle circoscrizioni regionali,constitution,43,2,1947-10-29,1947-10-30
+t621,Assembly,Sulle condizioni dei senza-tetto in seguito al terremoto dell'11 maggio 1947 in Calabria,non-legislative,1,1,1947-09-22,1947-09-22
+t622,Assembly,Sulle condizioni del Porto di Napoli,non-legislative,2,1,1947-07-07,1947-07-07
+t623,Assembly,Sulle condizioni di San Paolo Civitate (Foggia) dopo il nubifragio del 23 giugno,non-legislative,2,1,1947-07-07,1947-07-07
+t624,Assembly,Sulle condizioni di disagio dei dipendenti di pubblica sicurezza,non-legislative,1,1,1947-09-11,1947-09-11
+t625,Assembly,Sulle condizioni di indigenza in cui versano i tubercolitici in provincia di Agrigento,non-legislative,1,1,1947-09-22,1947-09-22
+t626,Assembly,Sulle condizioni finanziarie dell'Asilo inabili al lavoro «concetta Moselli» di San Severo (Foggia),non-legislative,1,1,1947-04-18,1947-04-18
+t627,Assembly,Sulle dimissioni del deputato Russo Perez dalla Commissione per il disegno di legge per l'elezione del Senato della Repubblica,non-legislative,2,1,1948-01-26,1948-01-26
+t628,Assembly,Sulle dimissioni di un Vicepresidente,non-legislative,7,1,1947-07-30,1947-07-30
+t629,Assembly,"Sulle elezioni dei deputati Giammatteo Matteotti, Ezio Bartalini, Giuseppe Chiostergi, Oddo Marinelli",non-legislative,1,1,1948-01-15,1948-01-15
+t63,Assembly,Azione da svolgere a Roma contro il mercato nero,non-legislative,1,1,1947-02-10,1947-02-10
+t630,Assembly,Sulle funzioni e prerogative del Presidente della Repubblica (articoli 83-91),constitution,45,5,1947-10-22,1947-10-24
+t631,Assembly,Sulle misure in difesa dei lavoratori,non-legislative,4,1,1947-10-30,1947-10-30
+t632,Assembly,Sulle retrocessioni di immobili di cui si sia sospesa l'espropriazione,non-legislative,1,1,1947-10-13,1947-10-13
+t633,Assembly,Sullo Statuto speciale per la Valle d'Aosta,bills,26,3,1948-01-29,1948-01-30
+t634,Assembly,Sullo scandalo delle gomme assegnate all'A.T.A.C.,non-legislative,1,1,1947-10-13,1947-10-13
+t635,Assembly,Sullo statuto speciale per il Trentino e l'Alto Adige,bills,26,1,1948-01-29,1948-01-29
+t636,Assembly,"Titoli I, II e III: il Parlamento, il Capo dello stato, il Governo (Discussione generale)",constitution,36,9,1947-09-10,1947-09-23
+t637,Assembly,Titoli nobiliari concessi sotto il regime fascista,non-legislative,1,0,,
+t638,Assembly,Titolo I: Rapporti civili (Discussione degli articoli da 8 a 22),constitution,85,9,1947-04-10,1947-04-15
+t639,Assembly,Titolo I: Rapporti civili (Discussione generale),constitution,24,5,1947-03-26,1947-04-10
+t64,Assembly,"Azione del Ministero degli interni contro i contadini del Bergamasco, ed arresto del Segretario della Confederterra provinciale di Bergamo",non-legislative,1,1,1947-07-07,1947-07-07
+t640,Assembly,Titolo I: il Parlamento (Discussione articoli),constitution,24,2,1947-09-24,1947-09-25
+t641,Assembly,Titolo II: Rapporti etico-sociali (Discussione articoli),constitution,115,5,1947-04-23,1947-04-30
+t642,Assembly,Titolo II: Rapporti etico-sociali (Discussione generale),constitution,44,10,1947-04-15,1947-04-22
+t643,Assembly,Titolo III: Rapporti economici (Discussione articoli),constitution,118,10,1947-05-07,1947-05-19
+t644,Assembly,Titolo III: Rapporti economici (Discussione generale),constitution,30,3,1947-05-03,1947-05-07
+t645,Assembly,Titolo IV: La Magistratura,constitution,92,12,1947-11-20,1947-11-27
+t646,Assembly,Titolo IV: La Magistratura; e VI: Garanzie costituzionali (Discussione generale),constitution,45,12,1947-11-06,1947-11-15
+t647,Assembly,Titolo IV: Rapporti politici (Discussione degli articoli da 45 a 51),constitution,54,3,1947-05-21,1947-05-23
+t648,Assembly,Titolo IV: Rapporti politici (Discussione generale),constitution,25,4,1947-05-19,1947-05-23
+t649,Assembly,Titolo V: Le Regioni e i Comuni (Discussione degli articoli da 106 a 108),constitution,40,1,1947-06-27,1947-06-27
+t65,Assembly,Banditismo in Sicilia,non-legislative,1,1,1946-07-22,1946-07-22
+t650,Assembly,Titolo V: Le Regioni e i Comuni (Discussione degli articoli dal 108-bis al 124),constitution,92,15,1947-07-02,1947-07-22
+t651,Assembly,Titolo V: Le Regioni e i Comuni (Discussione generale),constitution,88,14,1947-05-27,1947-06-13
+t652,Assembly,"Titolo V: Le Regioni e i Comuni (articoli 117, 118, 122, 125)",constitution,35,3,1947-12-03,1947-12-04
+t653,Assembly,Titolo VI: Garanzie costituzionali (articoli dal 126 al 131),constitution,71,8,1947-11-28,1947-12-20
+t654,Assembly,Trasformazione agricola del tavoliere di Puglia,non-legislative,1,1,1947-03-11,1947-03-11
+t655,Assembly,Trasformazione della interpellanza concernente i lavoratori italiani infortunati sul lavoro in Germania in interrogazione urgente,non-legislative,1,1,1947-04-19,1947-04-19
+t656,Assembly,Trasformazione in interrogazione urgente dell'interpellanza sulla diffida del Prefetto e del Comandante la stazione dei carabinieri di Cosenza al dottor Valente Erminio di cessare dall'attività sindacale e politica,non-legislative,1,1,1947-03-27,1947-03-27
+t657,Assembly,Trasformazione in mozione di una interpellanza del deputato Togliatti sulle misure di pubblica sicurezza prese dal Governo,non-legislative,1,1,1947-09-12,1947-09-12
+t658,Assembly,Trasporto di ordigni di guerra e materiale esplosivo,non-legislative,1,1,1947-02-27,1947-02-27
+t659,Assembly,Trasporto di ordigni di guerra fatto da privati,non-legislative,1,1,1947-03-07,1947-03-07
+t66,Assembly,Base navale di Messina,non-legislative,2,1,1947-09-22,1947-09-22
+t660,Assembly,Trattative per l'unione doganale italo-francese,non-legislative,2,1,1947-12-13,1947-12-13
+t661,Assembly,Trattato di amicizia fra l'Italia e le Filippine,bills,1,1,1947-11-20,1947-11-20
+t662,Assembly,Trattato di pace fra l'Italia e Cuba,bills,3,1,1947-11-20,1947-11-20
+t663,Assembly,Tumulti di San Severo,non-legislative,2,1,1946-07-20,1946-07-20
+t664,Assembly,Utilizzazione degli stanziamenti del bilancio per lenire la disoccupazione,non-legislative,1,1,1946-09-17,1946-09-17
+t665,Assembly,Violenze a Guastalla contro il deputato Simonini Alberto,non-legislative,1,1,1947-04-12,1947-04-12
+t666,Assembly,Violenze all'onorevole Mastrojanni a Sant'Elpidio a Mare (Ancona),non-legislative,1,1,1947-03-18,1947-03-18
+t667,Assembly,sulla ricostruzione della regione di Cassino,non-legislative,2,1,1946-12-11,1946-12-11
+t668,Committee of 75,,non-legislative,6,4,1946-07-20,1947-01-25
+t669,Committee of 75,Diritti e doveri dei cittadini (Condizioni dei figli nati fuori del matrimonio),constitution,13,1,1947-01-16,1947-01-16
+t67,Assembly,Beni immobili di proprietà comunale ceduti al cessato partito fascista,non-legislative,1,1,1947-09-20,1947-09-20
+t670,Committee of 75,Diritti e doveri dei cittadini (Il diritto di sciopero),constitution,27,1,1947-01-14,1947-01-14
+t671,Committee of 75,Diritti e doveri dei cittadini (La famiglia),constitution,18,1,1947-01-15,1947-01-15
+t672,Committee of 75,Diritti e doveri dei cittadini (Tutela dell'igiene e della sanità),constitution,7,2,1947-01-25,1947-01-28
+t673,Committee of 75,Disposizioni finali e transitorie (Avocazione dei beni di casa Savoia),constitution,19,0,,
+t674,Committee of 75,Disposizioni generali,constitution,35,3,1947-01-22,1947-01-25
+t675,Committee of 75,Disposizioni generali (Dei titoli nobiliari),constitution,13,1,1947-01-25,1947-01-25
+t676,Committee of 75,Disposizioni generali (Divieto di stampe e di altre manifestazioni di pensiero a tutela della morale pubblica),constitution,18,2,1947-01-25,1947-01-25
+t677,Committee of 75,Disposizioni generali (Rapporti fra lo Stato e la Chiesa Cattolica),constitution,22,1,1947-01-23,1947-01-23
+t678,Committee of 75,Disposizioni generali (Responsabilità penale e pene),constitution,15,2,1947-01-25,1947-01-25
+t679,Committee of 75,Garanzie costituzionali (La corte costituzionale),constitution,8,0,,
+t68,Assembly,Beni italiani congelati in Brasile,non-legislative,1,1,1947-09-22,1947-09-22
+t680,Committee of 75,II potere Esecutivo (Elezione e rieleggibilità del Presidente della Repubblica),constitution,20,2,1947-01-21,1947-01-22
+t681,Committee of 75,II potere Giudiziario (La Magistratura),constitution,35,3,1947-01-30,1947-01-31
+t682,Committee of 75,II potere Legislativo ('Prorogatio' delle due camere),constitution,11,1,1947-01-27,1947-01-27
+t683,Committee of 75,II potere Legislativo (Conflitti fra le due Camere),constitution,16,1,1947-01-28,1947-01-28
+t684,Committee of 75,II potere Legislativo (Elezione della Camera dei Deputati),constitution,8,1,1947-01-27,1947-01-27
+t685,Committee of 75,II potere Legislativo (Elezione della Camera dei Senatori),constitution,28,4,1947-01-27,1947-01-31
+t686,Committee of 75,II potere Legislativo (Giuramento dei membri del Parlamento),constitution,6,1,1947-01-27,1947-01-27
+t687,Committee of 75,II potere Legislativo (Potere di amnistia dell' Assemblea Nazionale),constitution,11,1,1947-01-29,1947-01-29
+t688,Committee of 75,II potere Legislativo (Presidenza dell' Assemblea Nazionale),constitution,7,1,1947-01-29,1947-01-29
+t689,Committee of 75,II potere Legislativo (Referendum per l' entrata in vigore o per l'abrogazione di una legge),constitution,7,1,1947-01-29,1947-01-29
+t69,Assembly,Blocco degli affitti,non-legislative,2,1,1947-11-19,1947-11-19
+t690,Committee of 75,II potere Legislativo (Voto di fiducia dell' Assemblea Nazionale al Governo),constitution,2,1,1947-01-29,1947-01-29
+t691,Committee of 75,Il potere Esecutivo (Rieleggibilità del Capo provvisorio dello Stato),constitution,5,1,1947-01-22,1947-01-22
+t692,Committee of 75,Le Regioni le Province e i Comuni,constitution,31,2,1947-01-17,1947-01-31
+t693,Committee of 75,Per il funzionamento della Commissione,constitution,20,1,1946-07-25,1946-07-25
+t694,Committee of 75,Per la documentazione della Commissione,constitution,2,1,1946-07-25,1946-07-25
+t695,Committee of 75,Per la redazione del progetto di Costituzione,constitution,27,2,1946-10-25,1946-11-28
+t696,Committee of 75,Sui lavori della Commissione e delle Sottocommissioni,constitution,49,10,1946-07-20,1947-01-22
+t697,First Subcommittee,,non-legislative,7,2,1946-10-30,1946-11-19
+t698,First Subcommittee,Chiusura dei lavori della Sottocommissione,constitution,3,1,1946-12-19,1946-12-19
+t699,First Subcommittee,Dichiarazioni di voto,constitution,2,1,1946-11-15,1946-11-15
+t7,Assembly,Accuse a carico di un Ministro contenute nel settimanale L'Europeo del 9 febbraio 1947,non-legislative,2,2,1947-02-10,1947-02-24
+t70,Assembly,Captazione delle sorgenti del Torano e del Biferno,non-legislative,1,1,1947-09-22,1947-09-22
+t700,First Subcommittee,I principi dei rapporti civili,constitution,17,16,1946-09-09,1946-12-18
+t701,First Subcommittee,I principi dei rapporti politici,constitution,16,4,1946-11-14,1946-11-20
+t702,First Subcommittee,I principi dei rapporti sociali (culturali),constitution,17,7,1946-10-03,1946-10-30
+t703,First Subcommittee,I principi dei rapporti sociali (economici),constitution,17,9,1946-10-03,1946-10-18
+t704,First Subcommittee,Il giuramento,constitution,14,1,1946-12-19,1946-12-19
+t705,First Subcommittee,L'insegnamento religioso nelle scuole elementari,constitution,4,1,1946-12-19,1946-12-19
+t706,First Subcommittee,La famiglia,constitution,16,6,1946-10-30,1946-11-13
+t707,First Subcommittee,"La libertà di opinione, di coscienza e di culto",constitution,15,3,1946-12-18,1946-12-19
+t708,First Subcommittee,Lo Stato come ordinamento giuridico e i suoi rapporti con gli altri ordinamenti,constitution,17,8,1946-11-21,1946-12-18
+t709,First Subcommittee,Revisione degli articoli da deferire al Comitato di Coordinamento,constitution,12,3,1946-12-10,1946-12-19
+t71,Assembly,Celebrazione del 23 marzo a Palermo e a Comito,non-legislative,2,1,1947-03-29,1947-03-29
+t710,First Subcommittee,Sui lavori del Comitato di Coordinamento,constitution,8,1,1946-12-05,1946-12-05
+t711,First Subcommittee,Sui lavori della Sottocommissione,constitution,14,5,1946-07-26,1946-10-30
+t712,First Subcommittee,Sui lavori per la Costituzione,constitution,10,1,1946-10-22,1946-10-22
+t713,Second Subcommittee,,non-legislative,13,3,1946-09-28,1946-12-15
+t714,Second Subcommittee,Autonomie locali,constitution,37,35,1946-07-26,1946-12-21
+t715,Second Subcommittee,Consigli ausiliari e Consiglio economico,constitution,16,3,1947-01-23,1947-01-30
+t716,Second Subcommittee,Coordinamento degli articoli sul potere Legislativo,constitution,25,4,1946-12-19,1946-12-21
+t717,Second Subcommittee,Ordinamento costituzionale dello Stato,constitution,38,48,1946-07-29,1947-01-27
+t718,Second Subcommittee,Sugli Statuti siciliano e sardo,constitution,10,1,1946-10-15,1946-10-15
+t719,Second Subcommittee,Sui lavori della Sottocommissione,constitution,16,6,1946-07-26,1946-12-05
+t72,Assembly,Celebrazione della Giornata della donna,non-legislative,6,1,1947-03-08,1947-03-08
+t720,Second Subcommittee,Sull'ordine dei lavori,constitution,20,3,1946-07-26,1946-11-05
+t721,Second Subcommittee,Sull'ordine della discussione,constitution,2,1,1946-09-03,1946-09-03
+t722,"Second Subcommittee, First Section",Potere Esecutivo,constitution,20,16,1946-12-19,1947-01-15
+t723,"Second Subcommittee, First Section",Rapporti di pubblico impiego,constitution,11,1,1947-01-14,1947-01-14
+t724,"Second Subcommittee, First Section",Revisione della Costituzione,constitution,14,2,1947-01-15,1947-01-16
+t725,"Second Subcommittee, Second Section",,non-legislative,10,1,1947-01-08,1947-01-08
+t726,"Second Subcommittee, Second Section",Garanzie costituzionali,constitution,14,8,1947-01-10,1947-01-24
+t727,"Second Subcommittee, Second Section",Potere Giudiziario,constitution,17,16,1946-12-05,1947-01-27
+t728,Third Subcommittee,,non-legislative,1,5,1946-09-12,1946-10-17
+t729,Third Subcommittee,Controllo sociale dell'attività economica,constitution,10,3,1946-10-15,1946-10-16
+t73,Assembly,Cessazione dell'onorevole De Martino dall'appartenenza al Gruppo Parlamentare misto,non-legislative,1,1,1947-12-10,1947-12-10
+t730,Third Subcommittee,Coordinamento degli articoli approvati,constitution,1,1,1946-10-26,1946-10-26
+t731,Third Subcommittee,Diritto all'assistenza,constitution,12,2,1946-09-11,1946-09-12
+t732,Third Subcommittee,Diritto di associazione e ordinamento sindacale,constitution,19,12,1946-10-11,1946-10-24
+t733,Third Subcommittee,Diritto di proprietà e intrapresa economica,constitution,18,13,1946-09-18,1946-10-11
+t734,Third Subcommittee,Dovere sociale del lavoro e diritto al lavoro,constitution,13,2,1946-09-09,1946-09-10
+t735,Third Subcommittee,Garanzie economico-sociali del diritto all'affermazione della personalità del cittadino,constitution,14,3,1946-09-19,1946-09-24
+t736,Third Subcommittee,Garanzie economico-sociali per l'assistenza alla famiglia,constitution,13,4,1946-09-13,1946-09-24
+t737,Third Subcommittee,Sui lavori della Sottocommissione,constitution,14,5,1946-07-26,1946-10-17
+t738,Third Subcommittee,Sulla protezione della puerpera e del bambino,constitution,1,1,1946-09-24,1946-09-24
+t74,Assembly,Cessazione delle pubblicazioni del Buonsenso,non-legislative,3,1,1947-11-10,1947-11-10
+t75,Assembly,Cessione di terreno facente parte della banchina di Pozzuoli,non-legislative,1,1,1947-09-25,1947-09-25
+t76,Assembly,Chiusura del liceo-ginnasio di Meta di Sorrento,non-legislative,1,1,1947-11-10,1947-11-10
+t77,Assembly,Chiusura del preventorio di Cosenza,non-legislative,1,1,1947-09-29,1947-09-29
+t78,Assembly,Cimitero di guerra francese sul colle della Farnesina,non-legislative,1,1,1947-09-20,1947-09-20
+t79,Assembly,Circa l'aggressione alla sede del «Mattino di Sicilia» a Palermo e alle sedi dell'U.Q. di Pistoia e di altre città,non-legislative,1,1,1947-06-30,1947-06-30
+t8,Assembly,"Acquedotti di Agerola, della penisola Sorrentina e del Nolano",non-legislative,1,1,1947-09-20,1947-09-20
+t80,Assembly,Circolare del Ministro dell'interno e del direttore generale della pubblica sicurezza circa la riunione di lavoratori nell'interno delle aziende,non-legislative,3,1,1947-07-28,1947-07-28
+t81,Assembly,Circolare dell'Alto Commissario per l'igiene e la sanità pubblica sulla professione di medico odontoiatra,non-legislative,1,1,1947-03-15,1947-03-15
+t82,Assembly,"Classificazione della strada Pirato-Catania, via Stazione Raddusa, come strada statale",non-legislative,1,1,1947-02-12,1947-02-12
+t83,Assembly,Coltivazioni superficiali in collina,non-legislative,1,1,1947-11-06,1947-11-06
+t84,Assembly,Commissione parlamentare per lo studio del problema della radio,non-legislative,1,1,1947-04-18,1947-04-18
+t85,Assembly,Comunicazione del risultato del referendum istituzionale,non-legislative,1,1,1946-06-26,1946-06-26
+t86,Assembly,Comunicazioni,non-legislative,3,11,1947-09-09,1948-01-29
+t87,Assembly,Comunicazioni del Governo (Discussione),non-legislative,72,14,1947-06-10,1947-06-21
+t88,Assembly,Comunicazioni del Presidente,non-legislative,1,8,1947-07-02,1947-07-24
+t89,Assembly,Comunicazioni del Presidente del Consiglio,non-legislative,20,4,1947-12-16,1947-12-19
+t9,Assembly,Acquedotto consorziale dell'Alta Irpinia,non-legislative,1,1,1947-11-06,1947-11-06
+t90,Assembly,Condanna a morte da parte delle autorità alleate del cittadino italiano Ido Turchi,non-legislative,1,1,1947-06-30,1947-06-30
+t91,Assembly,Condizioni del turismo in Italia,non-legislative,1,1,1947-03-15,1947-03-15
+t92,Assembly,Condizioni inumane delle popolazioni del Cassinate,non-legislative,1,1,1947-03-11,1947-03-11
+t93,Assembly,Confino di polizia,non-legislative,1,1,1947-11-06,1947-11-06
+t94,Assembly,Congresso provinciale dei contadini a Roma,non-legislative,1,1,1947-02-26,1947-02-26
+t95,Assembly,"Contestazioni relative alla costituzione delle commissioni esaminatrici dei candidati al concorso di cui al supplemento n. 1 della Gazzetta Ufficiale n. 158, del 17 luglio 1947",non-legislative,1,1,1947-09-25,1947-09-25
+t96,Assembly,"Contro i deputati Zappelli, Longhena, Gonella, Zanardi, Labriola e Tomba, per il reato di diffamazione a mezzo della stampa",non-legislative,6,1,1948-01-29,1948-01-29
+t97,Assembly,"Contro il deputato Colombi Arturo per il reato di cui all'articolo 595, 2° e 3° comma, del Codice penale",non-legislative,6,1,1947-12-10,1947-12-10
+t98,Assembly,Contro il deputato Colombi per il reato di diffamazione a mezzo della stampa,non-legislative,4,1,1947-03-06,1947-03-06
+t99,Assembly,Contro il deputato Covelli per il reato di vilipendio delle istituzioni costituzionali,non-legislative,6,1,1948-01-29,1948-01-29

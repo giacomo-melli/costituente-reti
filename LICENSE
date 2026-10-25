@@ -1,0 +1,44 @@
+This repository carries two licences.
+
+1. DATA — everything under 01_dataset/ (the CSV files and the codebooks)
+   Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+   https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+   ShareAlike is not a free choice: part of the source material comes from the
+   Chamber of Deputies open data and from Italian Wikipedia, both released under
+   CC BY-SA, and a derivative work must keep the same terms.
+
+2. CODE — everything under 02_ocr/ (the R and Python scripts of the pipeline)
+   MIT Licence
+
+   Copyright (c) 2026 Giacomo Melli
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to deal
+   in the Software without restriction, including without limitation the rights
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+3. SOURCE MATERIAL — not covered by the licences above
+
+   The parliamentary records of the Constituent Assembly are official acts of the
+   Italian State and are not protected by copyright (art. 5, Law 633/1941). The
+   PDFs themselves are not redistributed here: 02_ocr/pdf/ is excluded from the
+   repository, and the scripts download the files from the Chamber's own site.
+
+   Attribution of the sources used:
+   - Camera dei deputati — dati.camera.it and costituente.camera.it (CC BY-SA 3.0)
+   - Senato della Repubblica — dati.senato.it (CC BY 3.0)
+   - Wikidata (CC0) and Italian Wikipedia (CC BY-SA 4.0)

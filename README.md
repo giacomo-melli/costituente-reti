@@ -1,0 +1,204 @@
+# Le reti dell'Assemblea Costituente (1946–1948)
+### The networks of the Italian Constituent Assembly (1946–1948)
+
+[![Data: CC BY-SA 4.0](https://img.shields.io/badge/data-CC%20BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
+
+Un dataset di reti sui 581 membri dell'Assemblea Costituente italiana, per la
+ricerca e per l'insegnamento dell'analisi delle reti sociali.
+Oltre alla rete formale dell'appartenenza agli organi, contiene reti di
+interazione ricostruite dall'attività quotidiana in Aula: temi di discussione
+condivisi, co-presenza nei resoconti, emendamenti firmati insieme e votazioni
+per appello nominale. Le ultime due sono estratte con l'OCR dai resoconti a
+stampa, e la loro accuratezza è misurata e dichiarata.
+
+*A network dataset on the 581 members of the Italian Constituent Assembly, for
+research and for teaching social network analysis. Alongside
+the formal network of membership of the Assembly's bodies, it contains
+interaction networks reconstructed from day-to-day activity in the chamber:
+shared discussion topics, co-presence in the proceedings, co-signed amendments
+and roll-call votes. The last two are extracted from the printed records by
+OCR, and their accuracy is measured and reported.*
+
+---
+
+## Cosa c'è qui / What is here
+
+| Cartella | Contenuto | Contents |
+|---|---|---|
+| `01_dataset/costituente_reti/costituente_it/` | I file finali, in italiano, con il codebook | The final files, in Italian, with the codebook |
+| `01_dataset/costituente_reti/costituente_en/` | Gli stessi file, in inglese | The same files, in English |
+| `02_ocr/` | La pipeline che ricostruisce emendamenti e voti dai resoconti | The pipeline that rebuilds amendments and votes from the records |
+| `04_figure/` | Quattro figure d'esempio | Four example figures |
+
+Le due cartelle `costituente_it` e `costituente_en` contengono gli stessi dati:
+cambiano i nomi dei file, delle colonne e delle etichette, e il codebook.
+Ogni cartella è autosufficiente.
+
+*The two folders hold the same data: file names, column names, labels and the
+codebook differ. Each folder stands on its own.*
+
+**Cominciare dal codebook.** `costituente_it/codebook.md` (o `costituente_en/codebook.md`)
+descrive ogni file, ogni variabile, come sono state costruite le reti e quali
+errori contengono. — *Start from the codebook.*
+
+---
+
+## Caricare i dati / Loading the data
+
+```r
+# R — rete two-mode costituente × organo
+library(igraph)
+
+base  <- "01_dataset/costituente_reti/costituente_it/"
+nodi  <- read.csv(paste0(base, "costituenti_nodi.csv"))
+archi <- read.csv(paste0(base, "edgelist.csv"))     # id_dep, id_organo, ruolo, inizio, fine
+
+g <- graph_from_data_frame(archi[, c("id_dep", "id_organo")], directed = FALSE)
+V(g)$type <- V(g)$name %in% archi$id_organo          # two-mode
+costituenti <- bipartite_projection(g)$proj1         # chi condivide un organo
+```
+
+```python
+# Python
+import pandas as pd, networkx as nx
+
+base = "01_dataset/costituente_reti/costituente_en/"
+edges = pd.read_csv(base + "edgelist_amendments.csv")   # id_member, id_amendment
+G = nx.from_pandas_edgelist(edges, "id_member", "id_amendment")
+```
+
+I file sono CSV con intestazione, codifica UTF-8 (con BOM nei file di verifica),
+separatore virgola. Gli identificativi dei costituenti (`id_dep`) sono quelli
+della Camera dei deputati e permettono di agganciare altre fonti.
+
+*CSV with a header row, UTF-8, comma-separated. Member identifiers (`id_dep`)
+are the Chamber of Deputies' own, so other sources can be joined on them.*
+
+---
+
+## Rifare tutto da zero / Reproducing the data
+
+I PDF dei resoconti non sono in questo repository: gli script li scaricano dal
+sito della Camera (sono atti ufficiali, non coperti da diritto d'autore).
+Servono R con i pacchetti `tesseract`, `pdftools` e `magick`, Python 3 con
+`pandas`, `numpy` e `pillow`, e Tesseract con la lingua italiana.
+
+*The record PDFs are not in this repository: the scripts download them from the
+Chamber's site. You need R with `tesseract`, `pdftools` and `magick`, Python 3
+with `pandas`, `numpy` and `pillow`, and Tesseract with the Italian language.*
+
+```bash
+# 1. OCR a 300 dpi di tutte le sedute (lungo: molte ore)
+Rscript 02_ocr/ocr_costituente.R
+
+# 2. Rilettura a 400 dpi delle pagine difficili
+Rscript 02_ocr/ocr_400dpi.R
+
+# 3. Estrazione di emendamenti e voti
+python3 02_ocr/strumenti/estrai_emendamenti.py
+python3 02_ocr/strumenti/estrai_voti.py
+
+# 4. File finali, correzioni manuali, etichette e misure di accuratezza
+python3 02_ocr/esporta_dataset.py
+```
+
+Gli script si possono interrompere e rilanciare: riprendono da dove erano
+arrivati. Il passo 1 è quello che costa; i passi 3 e 4 durano pochi minuti.
+
+*The scripts can be stopped and restarted: they resume where they left off.
+Step 1 is the expensive one; steps 3 and 4 take a few minutes.*
+
+---
+
+## Quanto sono accurati emendamenti e voti / How accurate are the amendments and votes
+
+Gli emendamenti non esistono come dato strutturato: sono ricavati dal testo dei
+resoconti, e contengono errori. Sono stati misurati su campioni letti a mano
+sull'immagine della pagina.
+
+*Amendments do not exist as structured data: they are derived from the text of
+the records and contain errors. They were measured on samples read by hand
+against the page image.*
+
+La stima qui sotto viene da un campione di 40 record estratto a caso **dopo** le
+correzioni all'estrattore, fra record mai esaminati prima: è indipendente dalla
+taratura, al contrario dei due campioni precedenti.
+
+*The estimate below comes from a sample of 40 records drawn at random **after**
+the fixes to the extractor, among records never examined before: unlike the two
+earlier samples, it is independent of the tuning.*
+
+- **Falsi positivi** (record che non sono emendamenti con quei firmatari):
+  3 su 40 = 7,5% (IC 95%: 2,6–19,9). — *False positives: 3 of 40.*
+- **Firmatari mancanti o errati**: 1 su 37 = 2,7% (IC 95%: 0,5–13,8).
+  — *Missing or wrong signatories: 1 of 37.*
+- **Completezza**: su 30 pagine lette per intero (due campioni indipendenti),
+  gli emendamenti con più firmatari sfuggiti all'estrazione sono passati da 4 su 6
+  nel primo controllo, prima delle correzioni, a 0 su 5 nel secondo.
+  — *Completeness: across 30 pages read in full, missed multi-signatory
+  amendments went from 4 of 6 before the fixes to 0 of 5 afterwards.*
+
+Il codebook spiega come sono stati costruiti i campioni, quali errori restano e
+perché. I voti hanno un controllo diverso: il confronto fra i nomi estratti e i
+totali ufficiali annunciati in Aula, riportato in `voti_nodi.csv`.
+
+*The codebook explains how the samples were drawn, which errors remain and why.
+Votes are checked differently: extracted names against the official totals
+announced in the chamber, reported in `voti_nodi.csv`.*
+
+---
+
+## Limiti noti / Known limitations
+
+- Gli emendamenti coprono le sedute dell'Aula, non i lavori delle commissioni.
+- Gli elenchi di firmatari chiusi da «ed altri» sono marcati `completo = 0`:
+  i firmatari successivi non sono noti.
+- Interrogazioni, interpellanze, mozioni, risoluzioni e ordini del giorno sono
+  esclusi per costruzione, anche quando portano firme multiple.
+- Il riconoscimento dei nomi è ottimo ma non perfetto: il codebook riporta la
+  distribuzione dei tipi di abbinamento.
+
+*Amendments cover sittings of the chamber, not committee work. Signatory lists
+ending in «ed altri» (and others) are flagged `complete = 0`. Parliamentary
+questions, interpellations, motions, resolutions and orders of the day are out
+of scope by construction, even when multiply signed. Name matching is good but
+not perfect; the codebook reports the distribution of match types.*
+
+---
+
+## Fonti / Sources
+
+| Fonte | Licenza |
+|---|---|
+| Camera dei deputati — [dati.camera.it](https://dati.camera.it), [costituente.camera.it](https://costituente.camera.it) | CC BY-SA 3.0 |
+| Senato della Repubblica — [dati.senato.it](https://dati.senato.it) | CC BY 3.0 |
+| Resoconti dell'Assemblea Costituente | Atti ufficiali, art. 5 l. 633/1941 |
+| Wikidata | CC0 |
+| Wikipedia italiana | CC BY-SA 4.0 |
+
+## Licenze / Licences
+
+Dati (`01_dataset/`): **CC BY-SA 4.0**. Codice (`02_ocr/`): **MIT**.
+Il vincolo ShareAlike sui dati deriva dalle fonti, non è una scelta.
+Vedi [LICENSE](LICENSE).
+
+*Data: CC BY-SA 4.0. Code: MIT. The ShareAlike condition on the data comes from
+the sources, not from a preference.*
+
+## Citazione / Citation
+
+Melli, G. (2026). *The networks of the Italian Constituent Assembly (1946–1948)*
+[Data set]. https://github.com/giacomo-melli/costituente-reti
+
+Vedi [CITATION.cff](CITATION.cff) per il formato leggibile dalle macchine.
+
+## Contatti / Contact
+
+Giacomo Melli — Department of Sociology, University of Oxford
+[giacomo.melli@sociology.ox.ac.uk](mailto:giacomo.melli@sociology.ox.ac.uk) ·
+[www.giacomomelli.com](https://www.giacomomelli.com)
+
+Segnalazioni di errori nei dati sono benvenute: apri una *issue* indicando il
+file, la riga e la pagina del resoconto. — *Reports of errors in the data are
+welcome: open an issue giving the file, the row and the page of the record.*

@@ -1,0 +1,40 @@
+# ---- materiali pesanti o derivati, ricostruibili con la pipeline ----
+# heavy or derived material, rebuildable with the pipeline
+02_ocr/pdf/
+02_ocr/testi_colonne/
+02_ocr/testi_colonne_400/
+02_ocr/estrazione/crops2/
+02_ocr/estrazione/crops3/
+02_ocr/estrazione/richiamo/
+02_ocr/estrazione/richiamo2/*.png
+02_ocr/estrazione/diagnostica_cache/
+02_ocr/estrazione_v1_con_interrogazioni/
+02_ocr/registro.txt
+02_ocr/registro_400.txt
+02_ocr/strumenti/ita.traineddata
+
+# ---- materiali didattici: non fanno parte di questo repository ----
+# teaching materials: not part of this repository
+03_R_labs/
+
+# ---- bozze e scarti ----
+# drafts and discards
+_to_delete/
+**/_to_delete/
+_first_draft/
+**/_first_draft/
+01_dataset/codebook_bozza_precedente.md
+**/_*_v1*.py
+**/_*_prima_dei_fix.py
+
+# ---- sistema, editor, R ----
+.DS_Store
+Thumbs.db
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "The networks of the Italian Constituent Assembly (1946–1948)"
+abstract: >-
+  A network dataset on the 581 members of the Italian Constituent Assembly. It contains one formal network (membership of the Assembly's bodies)
+  and several interaction networks built from day-to-day activity in the chamber
+  and in committee: shared discussion topics, co-presence in the records,
+  co-signed amendments and roll-call votes. Amendments and votes are reconstructed
+  from the printed proceedings by OCR; their accuracy is documented in the codebook.
+type: dataset
+authors:
+  - family-names: Melli
+    given-names: Giacomo
+    email: giacomo.melli@sociology.ox.ac.uk
+    affiliation: "Department of Sociology, University of Oxford"
+    website: "https://www.giacomomelli.com"
+keywords:
+  - social network analysis
+  - Italian Constituent Assembly
+  - legislative networks
+  - political elites
+  - co-sponsorship
+  - roll-call votes
+  - 1946-1948
+license: CC-BY-SA-4.0
+license-url: "https://creativecommons.org/licenses/by-sa/4.0/"
+version: "1.0.0"
+date-released: "2026-11-03"
+repository-code: "https://github.com/giacomo-melli/costituente-reti"
