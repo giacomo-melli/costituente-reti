@@ -1,6 +1,8 @@
 # Networks of the Italian Constituent Assembly (1946–1948) — codebook
 
-A teaching dataset on the 581 members of the Italian Constituent Assembly: 556 seats, plus members who replaced others during the Assembly's work. It contains one formal network (membership of committees and other bodies) and three interaction networks built from day-to-day activity on the floor and in committees.
+A dataset on the 581 members of the Italian Constituent Assembly. It contains one formal network (membership of committees and other bodies) and three interaction networks built from day-to-day activity on the floor and in committees.
+
+**Why 581 and not 556.** The Assembly had 556 seats: that is how many deputies sat at any one time, and it is the figure usually quoted. The 581 rows of `members_nodes.csv` are instead the *people* who held one of those seats for at least a day between 1946 and 1948. The difference is turnover: deaths, resignations, forfeitures and the options exercised by candidates elected in several constituencies, all replaced as the work went on. The fields `term_start` and `term_end` make it possible to reconstruct who was in office on a given date: on 22 December 1947, the day the Constitution was approved, there were exactly 556. Anyone who would rather treat the Assembly as a body of 556 can filter on that date.
 
 **Sources** (retrieved 22 October 2026): Italian Chamber of Deputies open data (dati.camera.it) and the costituente.camera.it portal; Italian Senate open data (dati.senato.it); Wikidata; Italian Wikipedia.
 
@@ -104,7 +106,7 @@ False positives take three recurring forms: a sentence citing several distinct a
 | `constituency`, `national_list` | Constituency (named after its main city) or national list |
 | `election_region`, `election_macroarea`, `same_region` | Udine-Belluno assigned to Friuli-Venezia Giulia |
 | `term_start`, `term_end`, `term_end_reason` | |
-| `replacement` | Term began after the first sitting (25 June 1946): replacement or later proclamation |
+| `replacement` | Term began after the first sitting (25 June 1946). It is 1 for 104 members, but these are not 104 replacements: it covers genuine replacements, late proclamations where electoral operations were still open (24 as early as July 1946), and the seats filled after multi-constituency candidates exercised their option |
 
 ### Education and occupation
 

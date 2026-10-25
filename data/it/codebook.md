@@ -1,6 +1,8 @@
 # Le reti dell'Assemblea Costituente (1946–1948) — codebook
 
-Dataset didattico sui 581 membri dell'Assemblea Costituente: 556 seggi, più i subentrati nel corso dei lavori. Contiene una rete formale (appartenenza agli organi) e tre reti di interazione costruite dall'attività quotidiana in Aula e nelle commissioni.
+Dataset sui 581 membri dell'Assemblea Costituente italiana. Contiene una rete formale (appartenenza agli organi) e tre reti di interazione costruite dall'attività quotidiana in Aula e nelle commissioni.
+
+**Perché 581 e non 556.** I seggi dell'Assemblea sono 556: tanti sono i deputati in carica in un dato momento, ed è il numero che si trova di solito citato. Le 581 righe di `costituenti_nodi.csv` sono invece le *persone* che quel seggio lo hanno occupato almeno un giorno fra il 1946 e il 1948. La differenza sono i ricambi: morti, dimissioni, decadenze e opzioni dei candidati eletti in più circoscrizioni, tutti rimpiazzati in corso d'opera. I campi `inizio_mandato` e `fine_mandato` permettono di ricostruire chi fosse in carica a una certa data: il 22 dicembre 1947, giorno dell'approvazione della Costituzione, erano esattamente 556. Chi preferisce lavorare sull'Assemblea come corpo di 556 membri può filtrare su quella data.
 
 **Fonti** (estrazione del 22.10.2026): Camera dei deputati, open data (dati.camera.it) e portale costituente.camera.it; Senato, open data (dati.senato.it); Wikidata; Wikipedia italiana.
 
@@ -102,7 +104,7 @@ I falsi positivi hanno tre forme ricorrenti: la frase che cita più emendamenti 
 | `circoscrizione`, `collegio_unico_naz` | Circoscrizione (indicata col capoluogo) o Collegio unico nazionale |
 | `regione_elezione`, `macro_elezione`, `stessa_regione` | Udine-Belluno assegnata al Friuli-Venezia Giulia |
 | `inizio_mandato`, `fine_mandato`, `motivo_cessazione` | |
-| `subentrato` | Mandato iniziato dopo la prima seduta (25.6.1946): subentro o proclamazione successiva |
+| `subentrato` | Mandato iniziato dopo la prima seduta (25.6.1946). Vale 1 per 104 costituenti, ma non sono 104 sostituzioni: comprende i subentri veri, le proclamazioni tardive per operazioni elettorali non ancora chiuse (24 già nel luglio 1946) e le surroghe dopo l'opzione dei pluri-eletti |
 
 ### Istruzione e professione
 
