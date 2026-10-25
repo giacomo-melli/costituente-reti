@@ -154,9 +154,9 @@ id_emendamento,firmatari,n_firmatari,completo,articolo_menzionato,prima_seduta,d
 153,d25760,1,1,,sed083,1947-04-11,9,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=9
 154,d19700,1,1,8,sed083,1947-04-11,9,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=9
 155,d11820|d22320|d28000,3,1,,sed083,1947-04-11,11,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=11
-156,d10050|d10690|d11960|d12710|d26340|d300643|d7550|d9190,8,1,22,sed083,1947-04-11,16,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=16
-157,d10630|d12230|d12300|d13040|d13570|d17200|d25430|d25470|d26190|d7350,10,1,11,sed083,1947-04-11,17,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=17
-158,d12110,1,1,11,sed083,1947-04-11,17,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=17
+156,d11900|d12110|d26130|d27350|d27450|d27740|d4810|d7280|d7460|d9450,10,1,,sed083,1947-04-11,12,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=12
+157,d10050|d10690|d11960|d12710|d26340|d300643|d7550|d9190,8,1,22,sed083,1947-04-11,16,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=16
+158,d10630|d12230|d12300|d13040|d13570|d17200|d25430|d25470|d26190|d7350,10,1,11,sed083,1947-04-11,17,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=17
 159,d12110|d25430|d25470,3,1,412,sed083,1947-04-11,19,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed083/sed083nc.pdf#page=19
 160,d10890|d12160|d12540|d13260|d13530|d13680|d17200|d200511|d25500|d25760|d26300|d26590|d7620|d8980,14,1,,sed084,1947-04-11,3,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed084/sed084nc.pdf#page=3
 161,d11330|d17950|d200511,3,1,10,sed084,1947-04-11,6,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed084/sed084nc.pdf#page=6
@@ -275,7 +275,7 @@ id_emendamento,firmatari,n_firmatari,completo,articolo_menzionato,prima_seduta,d
 274,d13530,1,1,,sed119,1947-05-10,16,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed119/sed119nc.pdf#page=16
 275,d10810|d11880|d27200|d27540|d27690|d27770,6,1,,sed119,1947-05-10,16,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed119/sed119nc.pdf#page=16
 276,d13590|d200929|d27000|d4180,4,1,34,sed119,1947-05-10,21,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed119/sed119nc.pdf#page=21
-277,d10810|d11880|d25950|d27200|d27540|d27690|d27770|d28110|d9260,9,1,,sed120,1947-05-10,2,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed120/sed120nc.pdf#page=2
+277,d10810|d11880|d25950|d27200|d27540|d27690|d27770|d9060|d9260,9,1,,sed120,1947-05-10,2,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed120/sed120nc.pdf#page=2
 278,d12760|d12850|d2180,3,1,33-bis,sed120,1947-05-10,5,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed120/sed120nc.pdf#page=5
 279,d11480|d13680|d7550,3,1,,sed120,1947-05-10,9,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed120/sed120nc.pdf#page=9
 280,d3250|d9200,2,1,,sed120,1947-05-10,10,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed120/sed120nc.pdf#page=10
@@ -445,7 +445,7 @@ id_emendamento,firmatari,n_firmatari,completo,articolo_menzionato,prima_seduta,d
 444,d28250,1,1,,sed186,1947-07-15,32,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed186/sed186nc.pdf#page=32
 445,d11660,1,1,,sed188,1947-07-16,3,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed188/sed188nc.pdf#page=3
 446,d13010,1,1,112,sed188,1947-07-16,5,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed188/sed188nc.pdf#page=5
-447,d11320|d11520|d12510|d27060|d28380|d6370|d8770,7,1,,sed188,1947-07-16,8,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed188/sed188nc.pdf#page=8
+447,d11320|d11520|d12510|d12620|d12800|d25950|d27060|d28380|d6370|d8770|d9060,11,1,,sed188,1947-07-16,8,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed188/sed188nc.pdf#page=8
 448,d7210,1,1,,sed190,1947-07-17,6,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed190/sed190nc.pdf#page=6
 449,d26660,1,1,,sed190,1947-07-17,10,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed190/sed190nc.pdf#page=10
 450,d7550,1,1,120,sed190,1947-07-17,18,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed190/sed190nc.pdf#page=18
@@ -496,7 +496,7 @@ id_emendamento,firmatari,n_firmatari,completo,articolo_menzionato,prima_seduta,d
 495,d27000,1,1,55,sed249,1947-10-08,7,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed249/sed249nc.pdf#page=7
 496,d12060,1,1,55,sed249,1947-10-08,7,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed249/sed249nc.pdf#page=7
 497,d28400,1,1,55,sed249,1947-10-08,9,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed249/sed249nc.pdf#page=9
-498,d11710|d14140,2,1,,sed250,1947-10-08,24,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed250/sed250nc.pdf#page=24
+498,d11710|d11820|d13900|d14140|d19260|d19320|d19360|d19410|d3140|d9380,10,1,,sed250,1947-10-08,24,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed250/sed250nc.pdf#page=24
 499,d11300,1,1,,sed252,1947-10-09,2,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed252/sed252nc.pdf#page=2
 500,d10100|d10130|d18990|d27780|d4810|d7280,6,1,56,sed252,1947-10-09,2,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed252/sed252nc.pdf#page=2
 501,d11320|d12190|d25850|d27000|d27770|d6370,6,1,,sed252,1947-10-09,3,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed252/sed252nc.pdf#page=3
@@ -642,7 +642,7 @@ id_emendamento,firmatari,n_firmatari,completo,articolo_menzionato,prima_seduta,d
 641,d11780|d200511,2,1,,sed307,1947-11-26,13,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed307/sed307nc.pdf#page=13
 642,d11710|d19090|d200|d27330|d27390|d28190,6,1,,sed307,1947-11-26,18,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed307/sed307nc.pdf#page=18
 643,d28150,1,1,404,sed308,1947-11-27,2,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed308/sed308nc.pdf#page=2
-644,d26390,1,1,,sed308,1947-11-27,10,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed308/sed308nc.pdf#page=10
+644,d26390,1,1,,sed308,1947-11-27,2,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed308/sed308nc.pdf#page=2
 645,d9610,1,1,,sed308,1947-11-27,13,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed308/sed308nc.pdf#page=13
 646,d25650,1,1,102,sed309,1947-11-27,1,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed309/sed309nc.pdf#page=1
 647,d1750|d9460,2,1,,sed309,1947-11-27,3,presentazione,https://documenti.camera.it/_dati/costituente/lavori/Assemblea/sed309/sed309nc.pdf#page=3

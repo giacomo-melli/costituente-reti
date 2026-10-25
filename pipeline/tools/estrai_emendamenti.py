@@ -121,12 +121,12 @@ def flatten(seduta):
             if lines and len(re.findall(r'[a-z]', lines[0])) < 10:   # residuo di intestazione
                 lines = lines[1:]
             c = '\n'.join(lines)
-            c = re.sub(r'-[ \t]*\n(?:[^\S\n]*[|.,\'‘’°-]*[^\S\n]*\n)*\s*', '', c)   # sillabazione, anche con righe vuote o sporche in mezzo
+            c = re.sub(r'-{1,3}[ \t]*\n(?:[^\S\n]*[|.,\'‘’°-]*[^\S\n]*\n)*\s*', '', c)   # sillabazione, anche con righe vuote o sporche in mezzo
             c = re.sub(r'\bo\W{0,3}n\W{0,2}o\W{0,2}[rt]\W{0,2}e\W{0,2}v\W{0,2}o\W{0,2}l\W{0,2}([ei])\b', r'onorevol\1', c)   # «ono“revoli», «o- norevoli»
             # cognome spezzato a fine riga con un apice o una barra al posto del trattino
             # («Carpano Ma ‘glioli», «For-‘nara»): senza ricucirlo, l'elenco dei firmatari
             # si interrompe li'. Richiede 2-4 lettere prima, per non toccare «L'onorevole».
-            c = re.sub(r"\b([A-ZÀ-Ý][a-zà-ÿ]{1,3})\s*[‘'’|]\s*\n?\s*([a-zà-ÿ]{2,})\b", r"\1\2", c)
+            c = re.sub(r"\b([A-ZÀ-Ý][a-zà-ÿ]{1,3})\s*[‘'’|-]+\s*\n?\s*([a-zà-ÿ]{2,})\b", r"\1\2", c)
             c = re.sub(r'\n\s*\n', ' ¶ ', c)
             c = re.sub(r'\s*\n\s*', ' ', c)
             pagemap.append((len(text), p))
@@ -248,7 +248,12 @@ for s in sedute:
             # e «Segue l'emendamento dell'onorevole X, firmato anche dagli onorevoli Y, Z»
             mp = (re.search(r"[Ll]['’]\s?onorevole[\s.,]+(" + NAME + r")[\s.,]+ha[\s,]+(?:presentato|proposto|sostituito)", before[-400:])
                   or re.search(r"emendamento[\s,]+dell['’]\s?onorevole[\s.,]+(" + NAME + r")[\s,]*(?:che\s+)?(?:reca\s+anche\s+le\s*|firmat)", before[-250:]))
-            if mp: testo = mp.group(1) + ', ' + testo
+            # terza forma: il presentatore è il nome in testa al turno di parola
+            # («LACONI. Presento all'Assemblea il seguente emendamento firmato anche dai colleghi X, Y»)
+            if not mp:
+                mp = re.search(r"(?:^|[.¶/]\s*)([A-ZÀ-Ý][A-ZÀ-Ý'’ ]{3,28})\.\s+(?:Presento|Ho\s+presentato|Propongo)",
+                               before[-400:])
+            if mp: testo = mp.group(1).strip().title() + ', ' + testo
         arts = ART.findall(before + m.group(0) + after[:60])
         recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=testo,
                          altri=int(bool(re.search(r'altri', m.group(1)))), articolo_menzionato=arts[-1] if arts else '',

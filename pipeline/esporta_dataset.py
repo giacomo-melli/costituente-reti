@@ -36,6 +36,20 @@ FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul P
            ['Laconi', 'Cevolotto', 'Targetti', 'Moro', 'Taviani'], 1),   # «presentato insieme con gli onorevoli...»: manca il presentatore
     ('sed186', ['Nobile', 'Porzio'], ['Nobile', 'Porzio', 'Di Gloria', 'Persico', 'Bernini', 'Veroni', 'Morelli Renato',
            'Gasparotto', 'Lami Starnuti', 'Corsi', 'Finocchiaro Aprile', 'Giannini', 'Massini'], 0),
+    # --- verificati sull'immagine della pagina (ottobre 2026): elenchi interrotti dall'OCR ---
+    ('sed106', ['Zerbi', 'Mattarella', 'Lazzati', 'Bertola', 'Colombo', 'Galati', 'Cremaschi Carlo'],
+           ['Mattarella', 'Zerbi', 'Lazzati', 'Bertola', 'Colombo', 'Galati', 'Cremaschi Carlo', 'Benvenuti', 'Monticelli', 'Medi'], 1),
+    ('sed119', ['Vischioni', 'Merighi', 'Barbareschi', 'Carmagnola', 'Costantini', 'De Michelis'],
+           ['Merlin Angelina', 'Barbareschi', 'Carmagnola', 'Vischioni', 'De Michelis', 'Costantini', 'Merighi'], 1),   # «Mariani» resta omonimo irrisolto
+    ('sed188', ['Carpano Maglioli', 'Dugoni', 'Tega', 'Vernocchi', 'Priolo', 'Amadei', 'Jacometti'],
+           ['Amadei', 'Jacometti', 'Carpano Maglioli', 'Dugoni', 'Tega', 'Priolo', 'Vernocchi', 'Fornara', 'Cacciatore', 'Mariani Enrico', 'Bonomelli'], 1),
+    ('sed261', ['Rossi Paolo', 'Lucifero', 'Persico', 'Buffoni', 'Cosattini', 'Carpano Maglioli'],
+           ['Rossi Paolo', 'Lucifero', 'Persico', 'Buffoni', 'Cosattini', 'Carpano Maglioli', 'Bianchi Bianca',
+            'Morelli Renato', 'Lami Starnuti', 'Preti', 'Condorelli'], 1),
+    ('sed301', ['Covelli'], ['Covelli', 'Benedettini'], 1),      # «ella ha firmato anche l'emendamento Covelli»
+    ('sed318', ['Rescigno', 'Adonnino', 'Cimenti', 'Lizier', 'Micheli', 'Carbonari', 'Tozzi Condivi'],
+           ['Adonnino', 'Coccia', 'Borsellino', 'De Maria', 'Angelucci', 'Carbonari', 'Cimenti', 'Tozzi Condivi',
+            'Lizier', 'Cremaschi Carlo', 'Rescigno'], 1),        # «Micheli» apparteneva all'emendamento precedente
 ]
 
 # Oggetto dei voti (in inglese). Quelli non elencati restano «to be labelled».
