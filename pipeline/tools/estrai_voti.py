@@ -1,15 +1,15 @@
 """Estrae dai testi OCR i voti per appello nominale: chi ha risposto sì, no, chi si è astenuto
 e chi era in congedo. Ogni voto è controllato con i totali ufficiali annunciati dal Presidente
 («Hanno risposto sì ... 350»).
-Uso: python3 estrai_voti.py CARTELLA_02_ocr [cartella_output]"""
+Uso: python3 estrai_voti.py CARTELLA_pipeline [cartella_output]"""
 import re, os, sys, glob, unicodedata, difflib
 import pandas as pd
 
 D = sys.argv[1] if len(sys.argv) > 1 else '.'
-OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(D, 'estrazione')
+OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(D, 'extraction')
 TXT = os.path.join(D, 'testi_colonne')
-nomi = pd.read_csv(os.path.join(D, 'strumenti', 'costituenti_nomi.csv'))
-date = dict(pd.read_csv(os.path.join(D, 'strumenti', 'sedute_date.csv')).values)
+nomi = pd.read_csv(os.path.join(D, 'tools', 'costituenti_nomi.csv'))
+date = dict(pd.read_csv(os.path.join(D, 'tools', 'sedute_date.csv')).values)
 
 # ---------- abbinamento dei nomi (come in estrai_emendamenti.py) ----------
 def norm(s):

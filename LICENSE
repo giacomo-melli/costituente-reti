@@ -1,6 +1,6 @@
 This repository carries two licences.
 
-1. DATA — everything under 01_dataset/ (the CSV files and the codebooks)
+1. DATA — everything under data/ (the CSV files and the codebooks)
    Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
    https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
@@ -8,7 +8,7 @@ This repository carries two licences.
    Chamber of Deputies open data and from Italian Wikipedia, both released under
    CC BY-SA, and a derivative work must keep the same terms.
 
-2. CODE — everything under 02_ocr/ (the R and Python scripts of the pipeline)
+2. CODE — everything under pipeline/ (the R and Python scripts)
    MIT Licence
 
    Copyright (c) 2026 Giacomo Melli
@@ -35,7 +35,7 @@ This repository carries two licences.
 
    The parliamentary records of the Constituent Assembly are official acts of the
    Italian State and are not protected by copyright (art. 5, Law 633/1941). The
-   PDFs themselves are not redistributed here: 02_ocr/pdf/ is excluded from the
+   PDFs themselves are not redistributed here: pipeline/pdf/ is excluded from the
    repository, and the scripts download the files from the Chamber's own site.
 
    Attribution of the sources used:

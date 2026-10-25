@@ -27,19 +27,18 @@ OCR, and their accuracy is measured and reported.*
 
 | Cartella | Contenuto | Contents |
 |---|---|---|
-| `01_dataset/costituente_reti/costituente_it/` | I file finali, in italiano, con il codebook | The final files, in Italian, with the codebook |
-| `01_dataset/costituente_reti/costituente_en/` | Gli stessi file, in inglese | The same files, in English |
-| `02_ocr/` | La pipeline che ricostruisce emendamenti e voti dai resoconti | The pipeline that rebuilds amendments and votes from the records |
-| `04_figure/` | Quattro figure d'esempio | Four example figures |
+| `data/it/` | I file finali, in italiano, con il codebook | The final files, in Italian, with the codebook |
+| `data/en/` | Gli stessi file, in inglese | The same files, in English |
+| `pipeline/` | Il codice che ricostruisce emendamenti e voti dai resoconti | The code that rebuilds amendments and votes from the records |
 
-Le due cartelle `costituente_it` e `costituente_en` contengono gli stessi dati:
+Le due cartelle `data/it` e `data/en` contengono gli stessi dati:
 cambiano i nomi dei file, delle colonne e delle etichette, e il codebook.
 Ogni cartella è autosufficiente.
 
 *The two folders hold the same data: file names, column names, labels and the
 codebook differ. Each folder stands on its own.*
 
-**Cominciare dal codebook.** `costituente_it/codebook.md` (o `costituente_en/codebook.md`)
+**Cominciare dal codebook.** `data/it/codebook.md` (o `data/en/codebook.md`)
 descrive ogni file, ogni variabile, come sono state costruite le reti e quali
 errori contengono. — *Start from the codebook.*
 
@@ -51,7 +50,7 @@ errori contengono. — *Start from the codebook.*
 # R — rete two-mode costituente × organo
 library(igraph)
 
-base  <- "01_dataset/costituente_reti/costituente_it/"
+base  <- "data/it/"
 nodi  <- read.csv(paste0(base, "costituenti_nodi.csv"))
 archi <- read.csv(paste0(base, "edgelist.csv"))     # id_dep, id_organo, ruolo, inizio, fine
 
@@ -64,7 +63,7 @@ costituenti <- bipartite_projection(g)$proj1         # chi condivide un organo
 # Python
 import pandas as pd, networkx as nx
 
-base = "01_dataset/costituente_reti/costituente_en/"
+base = "data/en/"
 edges = pd.read_csv(base + "edgelist_amendments.csv")   # id_member, id_amendment
 G = nx.from_pandas_edgelist(edges, "id_member", "id_amendment")
 ```
@@ -91,17 +90,17 @@ with `pandas`, `numpy` and `pillow`, and Tesseract with the Italian language.*
 
 ```bash
 # 1. OCR a 300 dpi di tutte le sedute (lungo: molte ore)
-Rscript 02_ocr/ocr_costituente.R
+Rscript pipeline/ocr_costituente.R
 
 # 2. Rilettura a 400 dpi delle pagine difficili
-Rscript 02_ocr/ocr_400dpi.R
+Rscript pipeline/ocr_400dpi.R
 
 # 3. Estrazione di emendamenti e voti
-python3 02_ocr/strumenti/estrai_emendamenti.py
-python3 02_ocr/strumenti/estrai_voti.py
+python3 pipeline/tools/estrai_emendamenti.py
+python3 pipeline/tools/estrai_voti.py
 
 # 4. File finali, correzioni manuali, etichette e misure di accuratezza
-python3 02_ocr/esporta_dataset.py
+python3 pipeline/esporta_dataset.py
 ```
 
 Gli script si possono interrompere e rilanciare: riprendono da dove erano
@@ -180,7 +179,7 @@ not perfect; the codebook reports the distribution of match types.*
 
 ## Licenze / Licences
 
-Dati (`01_dataset/`): **CC BY-SA 4.0**. Codice (`02_ocr/`): **MIT**.
+Dati (`data/`): **CC BY-SA 4.0**. Codice (`pipeline/`): **MIT**.
 Il vincolo ShareAlike sui dati deriva dalle fonti, non è una scelta.
 Vedi [LICENSE](LICENSE).
 

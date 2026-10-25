@@ -4,7 +4,7 @@
 # Da lanciare DOPO che ocr_costituente.R ha finito.
 # In Spyder: apri questo file e premi Run (F5). Non serve modificare nulla.
 #
-# Produce la cartella "estrazione" con:
+# Produce la cartella "extraction" con:
 #   emendamenti.csv            un emendamento per riga (firmatari, seduta, pagina, fonte)
 #   edgelist_emendamenti.csv   rete two-mode costituente x emendamento
 #   menzioni.csv, menzioni_nomi.csv   tutte le occorrenze trovate, per il controllo
@@ -16,8 +16,8 @@ import os, sys, subprocess
 import pandas as pd
 
 QUI = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(QUI, 'estrazione')
-S = os.path.join(QUI, 'strumenti')
+OUT = os.path.join(QUI, 'extraction')
+S = os.path.join(QUI, 'tools')
 
 for script in ['estrai_emendamenti.py', 'prepara_verifica.py', 'estrai_voti.py']:
     r = subprocess.run([sys.executable, os.path.join(S, script), QUI, OUT], capture_output=True, text=True)
@@ -34,4 +34,4 @@ E = pd.read_csv(os.path.join(OUT, 'emendamenti.csv'))
 print('Sedute trascritte:', len({f.split('_')[0] for f in os.listdir(os.path.join(QUI, 'testi_colonne')) if f.endswith('.txt')}))
 print('Emendamenti:', len(E), '| con 2+ firmatari:', int((E.n_firmatari >= 2).sum()),
       '| da blocchi di firma:', int((E.fonte == 'firma').sum()), '| con «ed altri»:', int((E.completo == 0).sum()))
-print('\nFatto. Controlla VERIFICA_campione.csv nella cartella "estrazione".')
+print('\nFatto. Controlla VERIFICA_campione.csv nella cartella "extraction".')

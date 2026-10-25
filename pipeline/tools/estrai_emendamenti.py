@@ -6,16 +6,16 @@ Due fonti nel testo:
   B. formule di presentazione «emendamento degli onorevoli X, Y e Z» (complete, salvo «ed altri»).
 I nomi sono abbinati ai 581 costituenti usando la data della seduta (chi era in carica),
 il nome proprio quando stampato e, per gli omonimi, il partito degli altri firmatari.
-Uso: python3 estrai_emendamenti.py CARTELLA_02_ocr [cartella_output]"""
+Uso: python3 estrai_emendamenti.py CARTELLA_pipeline [cartella_output]"""
 import re, os, sys, glob, unicodedata, difflib
 from collections import Counter
 import pandas as pd
 
 D = sys.argv[1] if len(sys.argv) > 1 else '.'
-OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(D, 'estrazione')
+OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(D, 'extraction')
 TXT = os.path.join(D, 'testi_colonne')
-nomi = pd.read_csv(os.path.join(D, 'strumenti', 'costituenti_nomi.csv'))
-date = dict(pd.read_csv(os.path.join(D, 'strumenti', 'sedute_date.csv')).values)
+nomi = pd.read_csv(os.path.join(D, 'tools', 'costituenti_nomi.csv'))
+date = dict(pd.read_csv(os.path.join(D, 'tools', 'sedute_date.csv')).values)
 
 def norm(s):
     s = unicodedata.normalize('NFKD', str(s)).encode('ascii', 'ignore').decode().upper()

@@ -2,10 +2,10 @@
 ma non sono state estratte: servono a trovare formule non ancora riconosciute."""
 import re, glob, os, collections, pandas as pd, unicodedata
 D = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-nomi = pd.read_csv(os.path.join(D, 'strumenti', 'costituenti_nomi.csv'))
+nomi = pd.read_csv(os.path.join(D, 'tools', 'costituenti_nomi.csv'))
 COG = {c for c in nomi.cognome if len(c) >= 4}
 pat = re.compile(r'\b(' + '|'.join(sorted(map(re.escape, COG), key=len, reverse=True)) + r')\b')
-M = pd.read_csv(os.path.join(D, 'estrazione', 'menzioni.csv'))
+M = pd.read_csv(os.path.join(D, 'extraction', 'menzioni.csv'))
 presi = set(zip(M.seduta, M.pagina))
 out = []
 for f in sorted(glob.glob(os.path.join(D, 'testi_colonne', 'sed*_p*.txt'))):
@@ -25,4 +25,4 @@ for s, p, fr in out:
     if not m: continue
     form[' '.join(fr[:m.start()].lower().split()[-4:])] += 1
 for k, v in form.most_common(25): print(v, '|', k)
-pd.DataFrame(out, columns=['seduta', 'pagina', 'frase']).to_csv(os.path.join(D, 'estrazione', 'candidati_mancati.csv'), index=False)
+pd.DataFrame(out, columns=['seduta', 'pagina', 'frase']).to_csv(os.path.join(D, 'extraction', 'candidati_mancati.csv'), index=False)

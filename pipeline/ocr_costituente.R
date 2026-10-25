@@ -18,7 +18,7 @@
 # tesseract::tesseract_download("ita")
 
 # ---- SEZIONE 1: impostazioni -----------------------------------------
-CARTELLA <- path.expand("~/Documents/Insegnamento/Trento ASNA/Costituenti/02_ocr")
+CARTELLA <- path.expand("~/Documents/Insegnamento/Trento ASNA/Costituenti/pipeline")
 DPI <- 300
 CORE <- max(1, parallel::detectCores() - 2)   # pagine trascritte in parallelo
 

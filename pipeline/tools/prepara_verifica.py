@@ -1,7 +1,7 @@
 """Crea il file di verifica manuale: un emendamento per riga, con link alla pagina del PDF."""
 import sys, os, pandas as pd
 D = sys.argv[1]; OUT = sys.argv[2]
-n = pd.read_csv(os.path.join(D, 'strumenti', 'costituenti_nomi.csv')).set_index('id_dep')
+n = pd.read_csv(os.path.join(D, 'tools', 'costituenti_nomi.csv')).set_index('id_dep')
 E = pd.read_csv(os.path.join(OUT, 'emendamenti.csv')); M = pd.read_csv(os.path.join(OUT, 'menzioni.csv'))
 first = M.sort_values(['seduta', 'pagina']).groupby('id_emendamento').first()
 E['come_stampato'] = E.id_emendamento.map(first.testo_stampato)

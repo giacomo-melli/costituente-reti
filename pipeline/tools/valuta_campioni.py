@@ -2,18 +2,18 @@
 Uso: python3 valuta_campioni.py CARTELLA_ESTRAZIONE"""
 import sys, os, pandas as pd, unicodedata, re
 D = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-EST = sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, 'estrazione')
-nomi = pd.read_csv(os.path.join(D, 'strumenti', 'costituenti_nomi.csv')).set_index('id_dep')
+EST = sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, 'extraction')
+nomi = pd.read_csv(os.path.join(D, 'tools', 'costituenti_nomi.csv')).set_index('id_dep')
 k = lambda s: re.sub(r'[^A-Z]', '', unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().upper())
 # verità: (seduta, pagina) -> insieme di cognomi; None = non è un emendamento con quei firmatari
-V1 = pd.read_csv(os.path.join(D, 'estrazione', 'VERIFICA_campione_verificato.csv'))
-V2 = pd.read_csv(os.path.join(D, 'estrazione', 'VERIFICA_campione2_verificato.csv'))
+V1 = pd.read_csv(os.path.join(D, 'extraction', 'VERIFICA_campione_verificato.csv'))
+V2 = pd.read_csv(os.path.join(D, 'extraction', 'VERIFICA_campione2_verificato.csv'))
 # campione 3: estratto a caso DOPO le correzioni, su record mai guardati prima.
 # E' l'unico indipendente dalla taratura, quindi i suoi tassi si stampano anche a parte.
-V3 = pd.read_csv(os.path.join(D, 'estrazione', 'VERIFICA_campione3_verificato.csv'))
+V3 = pd.read_csv(os.path.join(D, 'extraction', 'VERIFICA_campione3_verificato.csv'))
 V = pd.concat([V1.assign(campione=1), V2.assign(campione=2), V3.assign(campione=3)])
 cg = lambda f: frozenset(k(nomi.loc[i, 'cognome']) for i in str(f).split('|') if i in nomi.index)
-E0 = pd.read_csv(os.path.join(D, 'estrazione', 'emendamenti_estrazione_v1_verificata.csv')).set_index('id_emendamento')   # estrazione verificata
+E0 = pd.read_csv(os.path.join(D, 'extraction', 'emendamenti_estrazione_v1_verificata.csv')).set_index('id_emendamento')   # estrazione verificata
 E = pd.read_csv(os.path.join(EST, 'emendamenti.csv'))
 E['cogn'] = E.firmatari.map(lambda x: frozenset(k(nomi.loc[i, 'cognome']) for i in str(x).split('|') if i in nomi.index))
 res = []

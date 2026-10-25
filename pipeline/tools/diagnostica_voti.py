@@ -20,12 +20,12 @@ Riusa le funzioni di estrai_voti.py (norm, scomponi, nomi_da...) senza duplicarl
 """
 import os, re, sys, glob, shutil, subprocess, tempfile, urllib.request
 
-QUI = os.path.dirname(os.path.abspath(__file__))          # .../02_ocr/strumenti
-D = os.path.dirname(QUI)                                  # .../02_ocr
+QUI = os.path.dirname(os.path.abspath(__file__))          # .../pipeline/strumenti
+D = os.path.dirname(QUI)                                  # .../pipeline
 TXT = os.path.join(D, 'testi_colonne')
-OUT = os.path.join(D, 'estrazione')
+OUT = os.path.join(D, 'extraction')
 
-VOTI_SOSPETTI = [7, 27]       # id_voto in estrazione/voti.csv (da riga di comando: python3 diagnostica_voti.py 7)
+VOTI_SOSPETTI = [7, 27]       # id_voto in extraction/voti.csv (da riga di comando: python3 diagnostica_voti.py 7)
 # Varianti che preservano l'ordine di lettura (colonna sinistra poi destra) e possono
 # quindi essere applicate; 'psm4_300' legge la pagina intera ed è solo diagnostica.
 VARIANTI = ['colonne_400', 'meta_300', 'meta_400', 'psm4_300']
@@ -112,7 +112,7 @@ def chi(ids):
 def tessdata():
     """Copia ita.traineddata in una cartella temporanea leggibile (come ocr_pagina.sh);
     se /tmp/td appartiene a un altro utente, ne usa una propria; male che vada legge
-    direttamente da strumenti/."""
+    direttamente da tools/."""
     for td in ('/tmp/td', os.path.join(tempfile.gettempdir(), f'td_{os.getuid()}')):
         dst = os.path.join(td, 'ita.traineddata')
         try:

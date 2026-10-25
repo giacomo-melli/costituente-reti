@@ -9,7 +9,7 @@
 # Alla fine scrivi in chat che ha finito.
 # =====================================================================
 # ---- SEZIONE 1: impostazioni -----------------------------------------
-CARTELLA <- path.expand("~/Documents/Papers/SNA-Dataset/Costituenti/02_ocr")
+CARTELLA <- path.expand("~/Documents/Papers/SNA-Dataset/Costituenti/pipeline")
 DPI <- 400
 OUT <- "testi_colonne_400"
 CORE <- max(1, parallel::detectCores() - 2)   # pagine trascritte in parallelo

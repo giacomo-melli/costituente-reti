@@ -1,21 +1,22 @@
 # ---- materiali pesanti o derivati, ricostruibili con la pipeline ----
 # heavy or derived material, rebuildable with the pipeline
-02_ocr/pdf/
-02_ocr/testi_colonne/
-02_ocr/testi_colonne_400/
-02_ocr/estrazione/crops2/
-02_ocr/estrazione/crops3/
-02_ocr/estrazione/richiamo/
-02_ocr/estrazione/richiamo2/*.png
-02_ocr/estrazione/diagnostica_cache/
-02_ocr/estrazione_v1_con_interrogazioni/
-02_ocr/registro.txt
-02_ocr/registro_400.txt
-02_ocr/strumenti/ita.traineddata
+pipeline/pdf/
+pipeline/testi_colonne/
+pipeline/testi_colonne_400/
+pipeline/extraction/crops2/
+pipeline/extraction/crops3/
+pipeline/extraction/richiamo/
+pipeline/extraction/richiamo2/*.png
+pipeline/extraction/diagnostica_cache/
+pipeline/estrazione_v1_con_interrogazioni/
+pipeline/registro.txt
+pipeline/registro_400.txt
+pipeline/tools/ita.traineddata
 
-# ---- materiali didattici: non fanno parte di questo repository ----
-# teaching materials: not part of this repository
+# ---- fuori dal repository: e' un repository di soli dati ----
+# outside this repository: this is a data-only repository
 03_R_labs/
+04_figure/
 
 # ---- bozze e scarti ----
 # drafts and discards
@@ -23,7 +24,7 @@ _to_delete/
 **/_to_delete/
 _first_draft/
 **/_first_draft/
-01_dataset/codebook_bozza_precedente.md
+01_dataset/
 **/_*_v1*.py
 **/_*_prima_dei_fix.py
 
@@ -38,3 +39,4 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .venv/
+**/_*_v1*.R

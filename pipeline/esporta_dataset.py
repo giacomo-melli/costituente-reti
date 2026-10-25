@@ -4,18 +4,18 @@
 # Da lanciare DOPO esegui_estrazione.py e la verifica a campione.
 # In Spyder: apri questo file e premi Run (F5). Non serve modificare nulla.
 #
-# Legge  02_ocr/estrazione/  (emendamenti, voti, campione verificato)
-# Scrive 01_dataset/costituente_reti/costituente_it e costituente_en
+# Legge  pipeline/extraction/  (emendamenti, voti, campione verificato)
+# Scrive data/it e data/en
 # Stampa i tassi di errore stimati dal campione verificato a mano.
 # =====================================================================
 import os, math
 import pandas as pd
 
 QUI = os.path.dirname(os.path.abspath(__file__))
-EST = os.path.join(QUI, 'estrazione')
-DS = os.path.join(os.path.dirname(QUI), '01_dataset', 'costituente_reti')
-IT, EN = os.path.join(DS, 'costituente_it'), os.path.join(DS, 'costituente_en')
-nomi = pd.read_csv(os.path.join(QUI, 'strumenti', 'costituenti_nomi.csv'))
+EST = os.path.join(QUI, 'extraction')
+DS = os.path.join(os.path.dirname(QUI), 'data')
+IT, EN = os.path.join(DS, 'it'), os.path.join(DS, 'en')
+nomi = pd.read_csv(os.path.join(QUI, 'tools', 'costituenti_nomi.csv'))
 
 # ---------- correzioni manuali dalla verifica a campione ----------
 # Individuate per seduta e cognomi (gli id cambiano tra un'estrazione e l'altra).
@@ -86,7 +86,7 @@ def wilson(k, n, z=1.96):
 
 # ---------- accuratezza sui campioni verificati ----------
 import subprocess, sys
-print(subprocess.run([sys.executable, os.path.join(QUI, 'strumenti', 'valuta_campioni.py'), EST], capture_output=True, text=True).stdout)
+print(subprocess.run([sys.executable, os.path.join(QUI, 'tools', 'valuta_campioni.py'), EST], capture_output=True, text=True).stdout)
 
 # ---------- emendamenti ----------
 E = pd.read_csv(os.path.join(EST, 'emendamenti.csv'))
