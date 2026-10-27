@@ -110,10 +110,13 @@ def resolve_group(names, data):
             out.append(dict(nome_stampato=nm, id_dep=c[0].id_dep, cognome=c[0].cognome, nome=c[0].nome, abbinamento=how))
     return out
 
+NOMI_RE = '|'.join(sorted({re.escape(x.split()[0]) for x in nomi.nome if isinstance(x, str) and len(x.split()[0]) >= 4} | {'Giancarlo', 'Garlo', 'Carlo'}, key=len, reverse=True))
 def split_names(s):
     s = re.sub(r'\b(ed|e)\s+altri\b', '', s, flags=re.I)
     s = re.sub(r"\b(?:dell['’]\s?|della\s+|dall['’]\s?)onorevole\b", '', s, flags=re.I)   # elenco che ripete «dell'onorevole»
     s = re.sub(r'(\w)-\s+(\w)', r'\1\2', s)
+    s = re.sub(r"\.\s+[‘’'\"“”]?(?=(?:" + NOMI_RE + r")\b)", ' ', s)            # «Pajetta. Giancarlo», «Creméschi ‘Garlo»
+    s = re.sub(r"\s[‘’'\"“”]+(?=[A-ZÀ-Ý])", ' ', s)
     s = re.sub(r'(\w)[|¶]\s*(\w)', r'\1\2', s)   # cognome spezzato dall'a capo: Ma|glioli
     s = re.sub(r'\b(?!(?:e|ed)\.)([A-Za-z]{1,3})\.\s+(?=[A-Z])', r'\1', s)   # sillabe spezzate dall'OCR (DE Mr. CHELIS), non la congiunzione «e.»
     parts = re.split(r",|;|\.\s+(?=[A-ZÀ-Ý])|\s\bed?\b(?:['’.]?\s|-\s*(?=[A-ZÀ-Ý]))", s)   # anche «e-Carboni»   # anche «e'» ed «e.» con il segno spurio dell'OCR
@@ -173,7 +176,9 @@ def is_signature(c):
 
 # «|» e «¶» compaiono dentro i cognomi quando l'OCR spezza la riga («Carpano Ma|glioli»):
 # se non si ammettono, l'elenco dei firmatari si interrompe li' e tutti i nomi successivi vanno persi.
-NAME = r"[A-ZÀ-Ý][\w'’À-ÿ:|¶]+(?:\.\s(?=[a-z])\w+)?(?:\s+[A-ZÀ-Ý][\w'’À-ÿ:|¶]+){0,3}"   # ammette «Miccol:s», «Bo. nino» (rumore OCR)
+# fra le parole di un nome: spazio, eventualmente un apice spurio («Creméschi ‘Garlo»); un punto solo se segue
+# un nome proprio («Pajetta. Giancarlo»), altrimenti il nome attraverserebbe la fine della frase
+NAME = r"[A-ZÀ-Ý][\w'’À-ÿ:|¶]+(?:\.\s(?=[a-z])\w+)?(?:(?:\.\s+(?=(?:" + NOMI_RE + r")\b)|\s+[‘’'\"“”]?)[A-ZÀ-Ý][\w'’À-ÿ:|¶]+){0,3}"   # ammette «Miccol:s», «Bo. nino» (rumore OCR)
 PRES = re.compile(r"(?:dell['’]\s?onorevole|[Dd]all['’]?\s?onorevole|della\s+onorevole|de\s?gli onorevoli|dagli onorevoli|dalle onorevoli|dell['’]\s?on\.|insie\w{1,3}\s+con\s+gli\s+onorevoli|unitamente\s+(?:agli|con\s+gli|ai)\s+(?:onorevoli|colleghi)|dal\s+collega(?:\s+onorevole)?|dai\s+colleghi(?:\s+onorevoli)?|firm\w+\s+(?:anche\s+)?(?:dei|degli|dai)\s+colleghi)[\s‘'’]+(" + NAME +
                   r"(?:[\s·]*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b|\s*-\s*)[\s¶\-·.‘’'\"“”|$*!:]*(?:(?:dell['’]\s?|della\s+)onorevole[\s‘'’]+)?" + NAME + r")*(?:,?\s*(?:ed|e)\s+altri)?)")
 # Il segno ¶ (riga vuota nel testo appiattito) e' ammesso fra separatore e nome:
