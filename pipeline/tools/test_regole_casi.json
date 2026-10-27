@@ -146,13 +146,16 @@
  {
   "nome": "ed_altri",
   "seduta": "sed083",
-  "nota": "il singolare «l'emendamento» vicino all'elenco prevale sul plurale «emendamenti» della frase prima; chiuso da «ed altri»",
+  "nota": "il singolare «l'emendamento» vicino all'elenco prevale sul plurale «emendamenti» della frase prima; chiuso da «ed altri»; nello stesso passo «l'emendamento proposto dall'onorevole Nobile» (formula «dall'onorevole»)",
   "atteso": [
    [
     "Basso",
     "Giua",
     "Nobili",
     "Tonello"
+   ],
+   [
+    "Nobile"
    ]
   ],
   "testo": "proposto dì trovare una formula d’accordo tra i varî presentatori. Le stesse ragioni da mne opposte ‘all’emendamento Ravagnan e le riserve per talune delle considerazioni illustrative degli emendamenti Treves e Cappi valgono anche’ per l'emendamento degli onorevoli Basso, Nobili Tito Oro, Giua, Tonello ed altri, che dichiaro — perciò — di non accettare.\n\nPer quanto -poi riguarda l’emendamento proposto dall’onorevole Nobile, ricordo quello. che già ho detto a proposito dell’emendamento da lui presentato all"

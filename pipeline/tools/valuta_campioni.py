@@ -62,3 +62,15 @@ if (v3.isin(['s', 'n'])).any():
         print('  firmatari mancanti o errati:', wilson(int((veri & (ff == 'n')).sum()), int(veri.sum())))
         if int(due.sum()):
             print('    fra i soli emendamenti con 2+ firmatari:', wilson(int((due & (ff == 'n')).sum()), int(due.sum())))
+    # campione 5 (estrazione del 27.10, dopo la misura del recall): 40 record estratti a caso fra tutti,
+    # verdetti letti sull'immagine; «incerto» quando il ritaglio non bastava, contato come errore
+    f5 = os.path.join(D, 'extraction', 'VERIFICA_precisione_campione5_verificato.csv')
+    if os.path.exists(f5):
+        V5 = pd.read_csv(f5)
+        em = V5.verdetto_emendamento.str.strip().str.lower(); fi = V5.verdetto_firmatari.astype(str).str.strip().str.lower()
+        print('--- campione 5 (estrazione del 27.10): 40 record a caso, verdetti letti sull\'immagine')
+        print('  falsi positivi (incerti contati come errori):', wilson(int((em != 'sì').sum()), len(V5)))
+        giud = fi.isin(['giusti', 'sbagliati'])
+        print('  firmatari mancanti o errati:', wilson(int((fi == 'sbagliati').sum()), int(giud.sum())), f'({int((~giud).sum())} non giudicabili dal ritaglio)')
+        due = giud & (V5.n >= 2)
+        print('    fra i soli emendamenti con 2+ firmatari:', wilson(int((due & (fi == 'sbagliati')).sum()), int(due.sum())))

@@ -1,0 +1,48 @@
+seduta,n,pag,cert,prop,preso,em,firmatari_ok
+sed118,1,1,alta,Montagnana Mario ; Foa ; Pajetta Giancarlo ; ,1,495.0,0.0
+sed118,2,7,media,Foa,0,,
+sed118,3,20,alta,Parri,0,,
+sed118,4,24,media,Gabrieli,0,,
+sed118,5,24,media,Bosco Lucarelli ; Cappi ; Cappugi,0,,
+sed118,6,24,media,Zotta ; Cassiani,0,,
+sed118,7,24,media,Benvenuti ; Dominedò,0,,
+sed118,8,24,media,Foa,0,,
+sed118,9,24,media,Cortese,0,,
+sed118,10,24,media,Caso ; Coppa ; De Maria,0,,
+sed118,11,24,media,Nitti,0,,
+sed118,12,25,alta,Mortati,1,54.0,
+sed118,13,25,alta,Ruggiero Carlo,0,,
+sed118,14,25,alta,Bubbio,0,,
+sed149,1,15,media,Corbino ; Lucifero ; Rodi ; Perrone Capano ; ,1,709.0,0.0
+sed149,2,11,bassa,Lussu,0,,
+sed149,3,20,bassa,Micheli,0,,
+sed215,1,11,bassa,Clerici,0,,
+sed252,1,1,bassa,Leone Giovanni ; Martino Gaetano ; De Vita ; ,0,,
+sed252,2,2,alta,De Vita,1,926.0,
+sed252,3,2,alta,Carboni Angelo ; Preti ; Lami Starnuti ; Ross,1,927.0,1.0
+sed252,4,3,alta,Targetti ; Amadei ; Carpano Maglioli ; De Mic,1,928.0,1.0
+sed252,5,3,alta,Nobili Tito Oro,0,,
+sed252,6,7,alta,Donati,0,,
+sed252,7,7,alta,Cifaldi ; Cairo,1,929.0,1.0
+sed252,8,7,alta,Codacci Pisanelli ; Castelli Avolio ; Chatria,1,930.0,1.0
+sed252,9,7,alta,Codacci Pisanelli ; Castelli Avolio ; Chatria,0,,
+sed252,10,7,alta,Bastianetto ; Bazoli ; Montini ; Caso ; Betti,1,931.0,1.0
+sed252,11,8,alta,Conti,1,921.0,
+sed252,12,8,alta,Conti,1,933.0,
+sed252,13,8,alta,Rodi,1,932.0,
+sed252,14,9,media,Nitti,0,,
+sed252,15,10,alta,Gasparotto ; Veroni ; Villabruna ; Bocconi ; ,1,934.0,1.0
+sed252,16,13,alta,Mortati,1,938.0,
+sed252,17,14,alta,Perassi,1,935.0,
+sed252,18,15,alta,Conti,0,,
+sed252,19,15,alta,Caronia,1,936.0,
+sed252,20,15,alta,Targetti ; Amadei ; Carpano Maglioli ; De Mic,1,937.0,1.0
+sed252,21,15,alta,Mortati,0,,
+sed252,22,15,alta,Nitti,0,,
+sed252,23,16,alta,Targetti ; Amadei ; Carpano Maglioli ; De Mic,1,917.0,0.0
+sed252,24,16,alta,Perassi,1,939.0,
+sed252,25,17,alta,Bosco Lucarelli,1,940.0,
+sed252,26,17,alta,Corbino,1,941.0,
+sed252,27,26,media,Lucifero,0,,
+sed252,28,26,media,Clerici,0,,
+sed252,29,28,alta,Giannini,0,,
