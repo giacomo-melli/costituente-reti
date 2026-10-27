@@ -38,6 +38,7 @@ Fonti di questo paragrafo: Camera dei deputati, [pagina sull'Assemblea Costituen
 | `edgelist_sostituzioni.csv` | Rete diretta: chi è subentrato a chi in un organo (99 archi) |
 | `emendamenti_nodi.csv` | 1.397 emendamenti presentati in Aula, estratti dai resoconti con l'OCR, con il testo e il tipo |
 | `edgelist_emendamenti.csv` | Rete two-mode costituente × emendamento (chi ha firmato, con il ruolo di presentatore o firmatario; 3.180 archi) |
+| `menzioni_discorso.csv` | Rete diretta delle menzioni nei discorsi: chi, parlando in Aula, nomina chi (9.194 menzioni) |
 | `voti_nodi.csv` | 27 votazioni per appello nominale, con totali ufficiali e controllo |
 | `edgelist_voti.csv` | Rete two-mode costituente × voto, con il voto espresso (sì, no, astenuto) |
 | `evidenze_wikipedia.csv` | Categorie e frasi di Wikipedia alla base degli indicatori su antifascismo e Resistenza |
@@ -59,6 +60,8 @@ Gli identificativi sono `d` + id Camera per i costituenti, `o` + id per gli orga
 **Emendamenti (two-mode).** Chi firma insieme un emendamento: un legame scelto, a differenza dell'appartenenza agli organi. Proiettata sui costituenti, misura la collaborazione nella stesura del testo.
 
 **Emendamenti (two-mode, con direzione).** `edgelist_emendamenti.csv` ha la colonna `ruolo`: `presentatore` per chi presenta l'emendamento, `firmatario` per chi lo sottoscrive. Proiettando solo gli archi firmatario → presentatore si ottiene una rete diretta, chi raccoglie firme e chi le concede. Il presentatore è stato confrontato con l'elenco trascritto sull'immagine per i 131 emendamenti pluri-firmati della verifica sistematica: coincide in 130 casi su 131 (99,2%, IC 95,8–99,9); l'unico errore («presentato dall'onorevole Gasparotto e da me», dove chi parla veniva messo per primo) è stato corretto nell'estrattore. Su 1.397 emendamenti: 187 hanno il presentatore indicato da una formula, 199 dal primo nome dell'elenco, 1.010 sono a firma singola, 1 non è identificabile.
+
+**Menzioni nei discorsi (diretta).** Chi, parlando in Aula, nomina un altro costituente: «l'onorevole X», «dell'/dall'/all'onorevole X», «il collega X», «on. X». A differenza della co-firma è un legame asimmetrico e non concordato, e misura chi è preso come riferimento nel dibattito. Chi parla è il nome in testa al turno di parola, anche quando l'intestazione è stampata in linea («…(Approvazioni). PRESIDENTE. Pongo in votazione…»); i turni del Presidente dell'Assemblea sono esclusi, perché quasi tutti procedurali («Ha facoltà di parlare l'onorevole X»), come le autocitazioni. `tipo_menzione` distingue le menzioni che riguardano un emendamento, gli atti di parola («le dichiarazioni dell'onorevole X», le stesse frasi che l'estrattore degli emendamenti scarta), le didascalie del resoconto («(Interruzione dell'onorevole X)», che registrano un'interazione ma non sono parole dell'oratore) e le altre. Codice: `tools/estrai_menzioni_discorso.py`, che usa le stesse regole di lettura e di abbinamento dei nomi dell'estrattore degli emendamenti.
 
 **Voti nominali (two-mode, con segno).** Come ha votato ciascun costituente nelle 27 votazioni per appello nominale. Le assenze e i congedi non sono archi.
 
@@ -139,6 +142,19 @@ Controlli di coerenza su tutto il dataset: nessun voto fuori dal mandato, nessun
 | `presentatore_fonte` | `formula`, `primo dell'elenco`, `firma singola` o `non identificato` |
 | `tipo_emendamento` | `sostituire`, `sopprimere`, `aggiungere`, `inserire` o `non determinato`: la prima operazione nella formula d'apertura del testo («Sostituirlo col seguente», «Al secondo comma sopprimere…»); se il testo non la stampa, dall'aggettivo della presentazione («emendamento soppressivo», «articolo aggiuntivo»). Accordo con la lettura cieca dell'immagine: 29/40 = 72,5% (57,2–83,9). L'errore più frequente è un testo integrale stampato senza verbo («la seguente dizione: «…»»), che l'estrattore lascia `non determinato` e chi legge classifica come sostituzione: è una codifica di primo livello, da usare con prudenza |
 | `testo` | Testo dell'emendamento come stampato fra virgolette dopo la formula di presentazione (o prima del blocco di firma), con i refusi dell'OCR; `/` separa i capoversi; vuoto se la pagina non lo stampa (139 casi, per lo più citazioni nei discorsi). Sul campione 5: 22 testi giusti, 6 parziali (un pezzo solo, o la frase seguente inclusa), 2 sbagliati, 5 assenti, 5 non verificabili dal ritaglio |
+
+### Variabili delle menzioni nei discorsi (`menzioni_discorso.csv`)
+
+| Variabile | Descrizione |
+|---|---|
+| `seduta`, `data`, `pagina`, `url_pdf` | Dove sta la menzione |
+| `id_parlante`, `parlante_stampato`, `ruolo_parlante` | Chi parla: id, intestazione del turno come stampata, eventuale ruolo («Presidente della Commissione», «Relatore», «Ministro…») |
+| `id_menzionato`, `forma_stampata` | Chi è nominato e come lo stampa il resoconto. Vuoto se il cognome è di più costituenti e nessuno dei due parla in quella seduta (258 casi) o se il nome non corrisponde a un costituente (134: deputati del passato, ministri non costituenti, refusi) |
+| `abbinamento` | Come è stato abbinato il nome (`esatto`, `approssimato`, `prefisso`, `+seduta` per gli omonimi risolti con chi parla nella seduta, `ambiguo`, `non trovato`) |
+| `tipo_menzione` | `su un emendamento`, `atto di parola`, `didascalia`, `altro` |
+| `contesto` | Il testo attorno, con la menzione fra `[[ ]]` |
+
+**Accuratezza.** Due campioni di 40 menzioni estratte a caso, letti sull'immagine con le colonne intere della pagina e la colonna precedente. Il primo ha messo in luce le intestazioni di turno stampate in linea, che facevano attribuire all'oratore precedente le parole del Presidente, e le didascalie fra parentesi: corrette entrambe. Sul secondo, dopo le correzioni: menzioni vere 40/40; persona menzionata giusta 40/40 (100%, IC 91,2–100); chi parla giusto in 31 casi su 31 in cui l'inizio del turno è visibile (100%, IC 89,0–100), mai sbagliato; tipo della menzione giusto 33/40 (82,5%, IC 68,0–91,3), perché `su un emendamento` dipende dalla parola «emendamento» o «proposta» nelle vicinanze e non coglie le frasi che parlano del contenuto di un emendamento senza nominarlo. File: `pipeline/extraction/VERIFICA_menzioni_discorso_verificato.csv`.
 
 ### Variabili dei voti (`voti_nodi.csv`)
 

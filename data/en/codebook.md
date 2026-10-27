@@ -40,6 +40,7 @@ Source texts (debate topics, document titles, occupations as recorded, Wikipedia
 | `edgelist_substitutions.csv` | Directed network: who replaced whom on a body (99 ties) |
 | `amendments_nodes.csv` | 1,397 amendments tabled in the Assembly, extracted from the records by OCR |
 | `edgelist_amendments.csv` | Two-mode network member × amendment (who signed, with the role of proposer or signatory; 3,180 edges) |
+| `speech_mentions.csv` | Directed network of mentions in speeches: who, speaking in the Assembly, names whom (9,194 mentions) |
 | `votes_nodes.csv` | 27 roll-call votes, with official totals and check |
 | `edgelist_votes.csv` | Two-mode network member × vote, with the vote cast (yes, no, abstain) |
 | `evidence_wikipedia.csv` | Wikipedia categories and sentences behind the antifascism and Resistance indicators |
@@ -61,6 +62,8 @@ Identifiers: `d` + Chamber id for members, `o` + id for bodies, `t` + number for
 **Amendments (two-mode).** Who signed an amendment together: a chosen tie, unlike committee membership. Projected onto members, it measures collaboration in drafting the text.
 
 **Amendments (two-mode, directed).** `edgelist_amendments.csv` has a `role` column: `proposer` for whoever tabled the amendment, `signatory` for those who co-signed it. Projecting only the signatory → proposer edges gives a directed network: who gathers signatures and who gives them. The proposer was compared with the list transcribed from the image for the 131 multi-signatory amendments of the systematic check: it matches in 130 of 131 cases (99.2%, CI 95.8–99.9); the only error («presentato dall'onorevole Gasparotto e da me», where the speaker was placed first) was fixed in the extractor. Of 1,397 amendments, 187 have the proposer given by a formula, 199 by the first name in the list, 1,010 are single-signatory and 1 is not identifiable.
+
+**Mentions in speeches (directed).** Who, speaking in the Assembly, names another member: «l'onorevole X», «dell'/dall'/all'onorevole X», «il collega X», «on. X». Unlike co-signature it is an asymmetric, unagreed tie, and measures who is taken as a reference in the debate. The speaker is the name heading the speaking turn, also when the heading is printed inline («…(Approvazioni). PRESIDENTE. Pongo in votazione…»); turns of the President of the Assembly are excluded, because almost all are procedural («Ha facoltà di parlare l'onorevole X»), as are self-mentions. `mention_type` distinguishes mentions concerning an amendment, speech acts («le dichiarazioni dell'onorevole X», the same phrases the amendment extractor discards), stage directions in the record («(Interruzione dell'onorevole X)», which record an interaction but are not the speaker's words) and others. Code: `tools/estrai_menzioni_discorso.py`, which uses the same reading and name-matching rules as the amendment extractor.
 
 **Roll-call votes (two-mode, signed).** How each member voted in the 27 roll calls. Absences and leave are not edges.
 
@@ -141,6 +144,19 @@ Consistency checks on the whole dataset: no votes or signatures outside a member
 | `proposer_source` | `formula`, `first in list`, `single signatory` or `not identified` |
 | `amendment_type` | `replace`, `delete`, `add`, `insert` or `undetermined`: the first operation in the opening formula of the text («Sostituirlo col seguente», «Al secondo comma sopprimere…»); if the text does not print it, from the adjective in the presentation («emendamento soppressivo», «articolo aggiuntivo»). Agreement with a blind reading of the image: 29/40 = 72.5% (57.2–83.9). The most frequent error is a full text printed without a verb («la seguente dizione: «…»»), which the extractor leaves `undetermined` and a reader classifies as a replacement: a first-pass coding, to be used with care |
 | `text_it` | Text of the amendment as printed in quotation marks after the presentation formula (or before the signature block), in Italian, with OCR misreadings; `/` separates paragraphs; empty if the page does not print it (139 cases, mostly citations in speeches). On sample 5: 22 texts correct, 6 partial (only a piece, or including the following sentence), 2 wrong, 5 absent, 5 not verifiable from the crop |
+
+### Variables of mentions in speeches (`speech_mentions.csv`)
+
+| Variable | Description |
+|---|---|
+| `sitting`, `date`, `pdf_page`, `url_pdf` | Where the mention is |
+| `id_speaker`, `speaker_printed`, `speaker_role` | Who speaks: id, turn heading as printed, any role («Presidente della Commissione», «Relatore», «Ministro…») |
+| `id_mentioned`, `printed_form` | Who is named and how the record prints it. Empty if the surname belongs to several members and neither speaks in that sitting (258 cases) or if the name is not a member (134: earlier deputies, non-member ministers, misprints) |
+| `matching` | How the name was matched (`exact`, `approximate`, `prefix`, `+sitting` for homonyms resolved by who speaks in the sitting, `ambiguous`, `not found`) |
+| `mention_type` | `on an amendment`, `speech act`, `stage direction`, `other` |
+| `context_it` | The surrounding text, with the mention between `[[ ]]` |
+
+**Accuracy.** Two samples of 40 randomly drawn mentions, read from the image with the full columns of the page and the preceding column. The first exposed turn headings printed inline, which caused the President's words to be attributed to the previous speaker, and stage directions in parentheses: both were fixed. On the second, after the fixes: true mentions 40/40; mentioned person correct 40/40 (100%, CI 91.2–100); speaker correct in 31 of the 31 cases where the start of the turn is visible (100%, CI 89.0–100), never wrong; mention type correct 33/40 (82.5%, CI 68.0–91.3), because `on an amendment` depends on the word «emendamento» or «proposta» nearby and misses sentences that discuss an amendment's content without naming it. File: `pipeline/extraction/VERIFICA_menzioni_discorso_verificato.csv`.
 
 ### Vote variables (`votes_nodes.csv`)
 
