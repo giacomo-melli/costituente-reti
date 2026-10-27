@@ -42,8 +42,8 @@ FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul P
     ('sed186', ['Nobile', 'Porzio'], ['Nobile', 'Porzio', 'Di Gloria', 'Persico', 'Bernini', 'Veroni', 'Morelli Renato',
            'Gasparotto', 'Lami Starnuti', 'Corsi', 'Finocchiaro Aprile', 'Giannini', 'Massini'], 0),
     # --- verificati sull'immagine della pagina (ottobre 2026): elenchi interrotti dall'OCR ---
-    ('sed106', ['Zerbi', 'Mattarella', 'Lazzati', 'Bertola', 'Colombo', 'Galati', 'Cremaschi Carlo'],
-           ['Mattarella', 'Zerbi', 'Lazzati', 'Bertola', 'Colombo', 'Galati', 'Cremaschi Carlo', 'Benvenuti', 'Monticelli', 'Medi'], 1),
+    # sed106 (Mattarella, Zerbi, Lazzati... 10 firme): dall'ottobre 2026 l'estrattore produce l'elenco completo da solo
+    # (prima menzione in sed105 p25, formula «Abbiamo presentato ... firmato anche dagli onorevoli»)
     ('sed119', ['Vischioni', 'Merighi', 'Barbareschi', 'Carmagnola', 'Costantini', 'De Michelis'],
            ['Merlin Angelina', 'Barbareschi', 'Carmagnola', 'Vischioni', 'De Michelis', 'Costantini', 'Merighi'], 1),   # «Mariani» resta omonimo irrisolto
     ('sed188', ['Carpano Maglioli', 'Dugoni', 'Tega', 'Vernocchi', 'Priolo', 'Amadei', 'Jacometti'],
@@ -62,7 +62,7 @@ FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul P
     # Si tiene l'elenco piu' lungo, che e' quello letto dalla presidenza; Caronia e' stampato, non dedotto.
     ('sed104', ['Martino', 'Labriola', 'Della Seta', 'Corbino', 'Lucifero'],
            ['Martino Gaetano', 'Labriola', 'Della Seta', 'Caronia', 'Lucifero', 'Corbino'], 1),
-    ('sed120', ['Medi'], ['Medi', 'Federici Maria'], 1),   # «l'emendamento degli onorevoli Medi -e Federici Maria»
+    ('sed120', ['Medi'], ['Medi', 'Federici Maria'], 1, 12),   # p12: «l'emendamento degli onorevoli Medi -e Federici Maria»
 ]
 
 # Oggetto dei voti (in inglese). Quelli non elencati restano «to be labelled».
@@ -106,6 +106,14 @@ def trova(nome, data):
             print(f'  ATTENZIONE: «{nome}» ambiguo ({", ".join(c.nome)}): escluso'); return None
     print(f'  ATTENZIONE: «{nome}» non trovato: escluso'); return None
 
+def testi_compatibili(a, b):
+    """Stesso criterio dell'estrattore: due testi diversi sono due emendamenti diversi."""
+    import difflib, re, unicodedata
+    if not isinstance(a, str) or not isinstance(b, str) or len(a) < 25 or len(b) < 25: return True
+    n = lambda t: re.sub(r'[^a-z]', '', unicodedata.normalize('NFKD', t).encode('ascii', 'ignore').decode().lower())
+    c, l = sorted((n(a), n(b)), key=len)
+    return c in l or difflib.SequenceMatcher(None, c[:250], l[:250]).ratio() >= 0.5
+
 def wilson(k, n, z=1.96):
     p = k / n; d = 1 + z * z / n
     c = (p + z * z / (2 * n)) / d; h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
@@ -125,8 +133,10 @@ E = E[~E.id_emendamento.isin(via)].copy(); L = L[~L.id_emendamento.isin(via)]
 def presente(k, cset):
     """«Rossi Paolo» nella chiave vale per il cognome «Rossi»: la chiave puo' riportare il nome proprio."""
     return any(k == c or k.startswith(c + ' ') for c in cset)
-for sed, cc, lista, completo in FIRMATARI_CORRETTI:
+corretti = set()
+for sed, cc, lista, completo, *pag in FIRMATARI_CORRETTI:      # quinto elemento facoltativo: la pagina
     hit = E[(E.prima_seduta == sed) & E.cogn.map(lambda c: all(presente(k, c) for k in cc))]
+    if pag: hit = hit[hit.pagina == pag[0]]
     if len(hit) > 1:   # piu' record contengono quei nomi: vale quello che ha esattamente quei nomi
         hit = hit[hit.cogn.map(lambda c: len(c) == len(cc))]
     if len(hit) != 1: print('  ATTENZIONE: correzione non applicata', sed, cc, len(hit)); continue
@@ -134,16 +144,20 @@ for sed, cc, lista, completo in FIRMATARI_CORRETTI:
     ids = [x for x in (trova(n, data) for n in lista) if x]
     L = pd.concat([L[L.id_emendamento != i], pd.DataFrame({'id_emendamento': i, 'id_dep': ids})])
     E.loc[E.id_emendamento == i, ['firmatari', 'n_firmatari', 'completo']] = ['|'.join(ids), len(ids), completo]
+    corretti.add(i)
 print('Correzioni manuali: rimossi', len(via), 'falsi positivi')
 # dopo le correzioni due record possono avere lo stesso elenco (stesso emendamento stampato due volte,
-# la prima con l'elenco troncato): si tiene il primo, come fa l'estrattore per le riletture (±3 sedute)
+# la prima con l'elenco troncato): si tiene il primo, come fa l'estrattore per le riletture (±3 sedute).
+# Vale solo per i gruppi che contengono un record corretto a mano: gli altri record con gli stessi
+# firmatari sono emendamenti distinti, tenuti separati dall'estrattore perche' i testi sono diversi.
 E['snum'] = E.prima_seduta.str[3:].astype(int)
 doppi = []
 for f, g in E.sort_values(['snum', 'pagina']).groupby(E.firmatari.map(lambda x: '|'.join(sorted(str(x).split('|'))))):
     tenuto = None
+    if not set(g.id_emendamento) & corretti: continue
     for r in g.itertuples():
-        if tenuto is not None and r.snum - tenuto <= 3: doppi.append(r.id_emendamento)
-        else: tenuto = r.snum
+        if tenuto is not None and r.snum - tenuto[0] <= 3 and testi_compatibili(tenuto[1], r.testo): doppi.append(r.id_emendamento)
+        else: tenuto = (r.snum, r.testo)
 E = E[~E.id_emendamento.isin(doppi)].drop(columns='snum'); L = L[~L.id_emendamento.isin(doppi)]
 print('Correzioni manuali: uniti', len(doppi), 'doppioni nati dalle correzioni')
 E['id_emendamento'] = 'a' + E.id_emendamento.astype(str)
@@ -151,14 +165,18 @@ L['id_emendamento'] = 'a' + L.id_emendamento.astype(str)
 L = L.drop_duplicates().sort_values(['id_emendamento', 'id_dep'])
 
 E_it = E.rename(columns={'firmatari': 'firmatari_id'})[['id_emendamento', 'firmatari_id', 'n_firmatari', 'completo',
-        'articolo_menzionato', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf']]
+        'articolo_menzionato', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf', 'tipo_emendamento', 'testo']]
 E_it.to_csv(os.path.join(IT, 'emendamenti_nodi.csv'), index=False)
 L[['id_dep', 'id_emendamento']].to_csv(os.path.join(IT, 'edgelist_emendamenti.csv'), index=False)
 E_en = E_it.drop(columns='firmatari_id').rename(columns={
     'id_emendamento': 'id_amendment', 'n_firmatari': 'n_signatories', 'completo': 'complete',
     'articolo_menzionato': 'article_mentioned', 'prima_seduta': 'sitting', 'data': 'date', 'pagina': 'pdf_page', 'fonte': 'source'})
 E_en['source'] = E_en.source.map({'firma': 'signature block', 'presentazione': 'presentation formula'})
-E_en[['id_amendment', 'n_signatories', 'complete', 'source', 'sitting', 'date', 'pdf_page', 'article_mentioned', 'url_pdf']] \
+E_en['amendment_type'] = E_en.tipo_emendamento.map({'sostituire': 'replace', 'sopprimere': 'delete', 'aggiungere': 'add',
+                                                    'inserire': 'insert', 'non determinato': 'undetermined'})
+E_en = E_en.rename(columns={'testo': 'text_it'})
+E_en[['id_amendment', 'n_signatories', 'complete', 'source', 'sitting', 'date', 'pdf_page', 'article_mentioned', 'url_pdf',
+      'amendment_type', 'text_it']] \
     .to_csv(os.path.join(EN, 'amendments_nodes.csv'), index=False)
 L.rename(columns={'id_dep': 'id_member', 'id_emendamento': 'id_amendment'})[['id_member', 'id_amendment']] \
     .to_csv(os.path.join(EN, 'edgelist_amendments.csv'), index=False)

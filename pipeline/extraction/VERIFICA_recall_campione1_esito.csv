@@ -1,0 +1,45 @@
+seduta,n,pag,cert,prop,preso,em,firmatari_ok
+sed060,1,6,alta,Crispo,1,175.0,
+sed060,2,8,media,Crispo,1,176.0,
+sed060,3,10,alta,Crispo,1,177.0,
+sed060,4,10,alta,Crispo,1,179.0,
+sed060,5,32,alta,Bruni,1,178.0,
+sed115,1,12,bassa,Di Vittorio,0,,
+sed115,2,17,media,Merighi,0,,
+sed115,3,17,media,Merighi,0,,
+sed115,4,18,bassa,Merighi,0,,
+sed115,5,18,media,Caronia,0,,
+sed115,6,21,alta,Federici Maria ; Medi,1,455.0,1.0
+sed115,7,22,alta,Giannini,1,456.0,
+sed115,8,22,alta,Colitto,0,,
+sed115,9,25,alta,Tremelloni ; Cairo,1,457.0,1.0
+sed224,1,17,media,Rubilli,0,,
+sed224,2,17,bassa,Preti,0,,
+sed224,3,17,bassa,Condorelli,0,,
+sed224,4,18,media,Crispo,0,,
+sed231,1,2,alta,Nitti,1,877.0,
+sed231,2,7,bassa,Conti,0,,
+sed231,3,7,bassa,Nitti,0,,
+sed231,4,8,alta,Lami Starnuti ; Rossi Paolo ; Carboni Angelo ,1,882.0,1.0
+sed231,5,10,alta,Preti ; Ruggiero ; Persico,1,884.0,1.0
+sed231,6,10,alta,Targetti ; Amadei ; Carpano Maglioli ; De Mic,1,885.0,1.0
+sed231,7,9,alta,Laconi ; Grieco ; Gullo Fausto,1,886.0,1.0
+sed231,8,11,media,Piccioni,0,,
+sed231,9,13,alta,Macrelli ; De Vita,0,,
+sed231,10,13,alta,Russo Perez,1,887.0,
+sed231,11,13,alta,Caronia,1,888.0,
+sed231,12,14,alta,Colitto,1,889.0,
+sed231,13,14,alta,Mortati ; Fuschini ; Ferrarese ; De Palma ; S,1,890.0,1.0
+sed231,14,14,alta,Mortati,0,,
+sed231,15,15,alta,Nobili Tito Oro,1,891.0,
+sed231,16,9,alta,Perassi,1,892.0,
+sed231,17,20,alta,Zuccarini,1,893.0,
+sed231,18,23,alta,Rubilli,1,894.0,
+sed231,19,23,alta,Russo Perez,1,896.0,
+sed231,20,25,alta,Caronia,1,895.0,
+sed231,21,26,alta,Conti,1,875.0,
+sed231,22,26,alta,Alberti,1,897.0,
+sed231,23,29,alta,Alberti,1,898.0,
+sed231,24,29,bassa,Alberti,0,,
+sed231,25,31,alta,Giovanni Leone,1,899.0,
+sed231,26,31,alta,Martino Gaetano,1,900.0,
