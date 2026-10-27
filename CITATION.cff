@@ -5,7 +5,8 @@ abstract: >-
   A network dataset on the 581 members of the Italian Constituent Assembly. It contains one formal network (membership of the Assembly's bodies)
   and several interaction networks built from day-to-day activity in the chamber
   and in committee: shared discussion topics, co-presence in the records,
-  co-signed amendments and roll-call votes. Amendments and votes are reconstructed
+  co-signed amendments (with proposer and signatories), mentions of members in
+  speeches, and roll-call votes. Amendments, mentions and votes are reconstructed
   from the printed proceedings by OCR; their accuracy is documented in the codebook.
 type: dataset
 authors:
@@ -32,6 +33,6 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.23646593"
     description: "DOI della versione 1.0.0 / DOI of version 1.0.0"
-version: "1.0.0"
-date-released: "2026-10-25"
+version: "1.1.0"
+date-released: "2026-10-28"
 repository-code: "https://github.com/giacomo-melli/costituente-reti"
