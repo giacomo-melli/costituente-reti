@@ -326,7 +326,16 @@ for s in sedute:
     text, pm = flatten(s)
     data = date.get(s)
     last_end = 0
+    # a fine seduta il resoconto stampa le interrogazioni e interpellanze annunciate, con le firme in maiuscoletto
+    # come gli emendamenti: un blocco di firma dopo quel titolo, senza «emendamento» in mezzo, non e' un emendamento
+    SEZ_INTERR = [x.end() for x in re.finditer(r"(?i)annunzio\s+di\s+interrogazion|interrogazion\w*\s+(?:e\s+(?:di\s+)?interpellanz\w*\s+)?pervenut|"
+                                              r"lettura\s+delle\s+interrogazion|seguenti\s+interrogazion", text)]
     for m in SIG.finditer(text):
+        sez = [x for x in SEZ_INTERR if x < m.start()]
+        if sez and not re.search(r"emendament|articolo aggiuntivo", text[sez[-1]:m.start()], re.I): continue
+        # ogni interrogazione si apre con «Il sottoscritto chiede d'interrogare / I sottoscritti chiedono di
+        # interpellare»: se la formula sta fra il blocco precedente e questo, il blocco firma un'interrogazione
+        if re.search(r"chied\w*\s+d\W{0,2}i?\s*(?:interrogare|interpellare)", text[max(last_end, m.start() - 4000):m.start()], re.I): continue
         firma = m.group(1)
         if not is_signature(firma): continue
         prev = text[max(0, m.start() - 160):m.start()]                     # «MEDA, ..., BAL- «.. DUZZI; ...»:
@@ -363,6 +372,12 @@ for s in sedute:
         # dopo l'elenco la spia vale solo nella stessa frase: «Identico emendamento è stato presentato
         # dagli onorevoli X, Y. ¶ È stata chiesta la votazione per appello nominale...» e' un emendamento
         stessa_frase = re.split(r"\.[\s¶/]*(?=[A-ZÀ-Ý«])|¶", after[:160])[0]
+        # «Essa porta le firme anche degli onorevoli...»: se a portare le firme e' una richiesta di votazione,
+        # la richiesta e' nominata qualche riga prima; si guarda piu' indietro, ma solo per le richieste di voto
+        if (re.search(r"port\w*\s+(?:le\s+)?firme|firme\s+anche", before[-40:] + m.group(0)[:20], re.I)
+                and re.search(r"appello\W{0,4}nominale|s\w?rutinio\W{0,3}segreto|(?:chiest|richiest)\w*\W+(?:\w+\W+){0,3}votazione", before[-260:], re.I)
+                and not re.search(r"emendament\w*[^.]{0,40}$", before[-60:], re.I)):
+            continue
         if re.search(NON_EM, before[-120:], re.I) or re.search(NON_EM, stessa_frase, re.I):
             continue
         # «dall'onorevole X» dopo un participio di discorso («l'inconveniente accennato dall'onorevole X»)
@@ -383,8 +398,13 @@ for s in sedute:
                 or re.match(r"(?:insie|firm|unitam)", m.group(0), re.I)):
             # due forme: «L'onorevole X ha presentato ... firmato anche dagli onorevoli Y, Z»
             # e «Segue l'emendamento dell'onorevole X, firmato anche dagli onorevoli Y, Z»
-            mp = (re.search(r"[Ll]['’]\s?onorevole[\s.,]+(" + NAME + r")[\s.,]+ha[\s,]+(?:(?:ora|anche|pure|gia|già|poi|inoltre)[\s,]+){0,2}(?:presentato|proposto|sostituito)", before[-400:])
-                  or re.search(r"emendamento[\s,]+dell['’]\s?onorevole[\s.,]+(" + NAME + r")[\s,]*(?:che\s+)?(?:reca\s+anche\s+le\s*|firmat)", before[-250:]))
+            # l'ultima formula prima dell'elenco, non la prima della finestra: in «L'onorevole Gabrieli ha presentato…
+            # L'onorevole Basso ha proposto il seguente emendamento, firmato anche dagli…» il presentatore e' Basso
+            ultimo = lambda pat, txt: (list(re.finditer(pat, txt)) or [None])[-1]
+            c1 = ultimo(r"[Ll]['’]\s?onorevole[\s.,]+(" + NAME + r")[\s.,]+ha[\s,]+(?:(?:ora|anche|pure|gia|già|poi|inoltre)[\s,]+){0,2}(?:presentato|proposto|sostituito)", before[-400:])
+            c2 = ultimo(r"emendamento[\s,]+dell['’]\s?onorevole[\s.,]+(" + NAME + r")[\s,]*(?:che\s+)?(?:reca\s+anche\s+le\s*|firmat)", before[-250:])
+            # fra le due forme vale quella che finisce piu' vicino all'elenco (le finestre sono allineate alla fine)
+            mp = max([x for x in (c1, c2) if x], key=lambda x: x.end() - len(x.string), default=None)
             # terza forma: il presentatore è il nome in testa al turno di parola
             # («LACONI. Presento all'Assemblea il seguente emendamento firmato anche dai colleghi X, Y»)
             if not mp:
@@ -421,7 +441,11 @@ for s in sedute:
         if elenco_di_atti_distinti(before, m.group(0)[:1]) or atto_di_parola(before, m.group(0)[:1]): continue
         arts = ART.findall(before[-300:] + after[:200])
         t_em = testo_dopo(text, m.end())
-        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=m.group(1).strip(),
+        nomi_pres2 = m.group(1).strip()
+        # «L'onorevole Dugoni, insieme con gli onorevoli X, Y hanno presentato»: il soggetto e' il primo firmatario
+        mp = re.search(r"[Ll]['’]\s?onorevole[\s.,‘'’]+(" + NAME + r")[\s,]*(?:ins\S{1,6}|unitamente)\s+(?:con|a)\s*$", before[-120:])
+        if mp: nomi_pres2 = mp.group(1).strip() + ', ' + nomi_pres2
+        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=nomi_pres2,
                          testo_emendamento=t_em, tipo_emendamento=tipo_emendamento(t_em, m.group(0) + after[:80]),
                          altri=int(bool(re.search(r'altri', m.group(1)))), articolo_menzionato=arts[-1] if arts else '',
                          contesto=(before[-200:] + ' [[' + m.group(0) + ']] ' + after).replace('¶', '/'), pos=m.start()))

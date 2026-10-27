@@ -38,8 +38,8 @@ Source texts (debate topics, document titles, occupations as recorded, Wikipedia
 | `edgelist_exchanges.csv` | One-mode interaction network: members speaking on the same page of the record (7,787 pairs) |
 | `edgelist_corapporteurs.csv` | Reports and proposals signed jointly (16 pairs) |
 | `edgelist_substitutions.csv` | Directed network: who replaced whom on a body (99 ties) |
-| `amendments_nodes.csv` | 1,402 amendments tabled in the Assembly, extracted from the records by OCR |
-| `edgelist_amendments.csv` | Two-mode network member × amendment (who signed; 3,205 edges) |
+| `amendments_nodes.csv` | 1,400 amendments tabled in the Assembly, extracted from the records by OCR |
+| `edgelist_amendments.csv` | Two-mode network member × amendment (who signed; 3,183 edges) |
 | `votes_nodes.csv` | 27 roll-call votes, with official totals and check |
 | `edgelist_votes.csv` | Two-mode network member × vote, with the vote cast (yes, no, abstain) |
 | `evidence_wikipedia.csv` | Wikipedia categories and sentences behind the antifascism and Resistance indicators |
@@ -114,9 +114,11 @@ The new rules were also checked for precision, on a **fifth sample of 40 records
 | 2 | 2/40 | 1/38 |
 | 3 | 2/40 | 3/38 |
 | 4 | 1/40 | 2/39 |
-| **1–4** | **7/160 = 4.4% (2.1–8.8)** | **7/153 = 4.6% (2.2–9.1)** |
+| 5 | 2/40 | 2/38 |
+| 6 | 0/16 | 0/16 |
+| **all (216)** | **9/216 = 4.2% (2.2–7.7)** | **9/207 = 4.3% (2.3–8.1)** |
 
-Almost all errors belonged to general families, fixed in the extractor: lists of separate acts («hanno proposto ciascuno un identico emendamento», «hanno presentato due emendamenti», «gli emendamenti, più sostanziali, degli onorevoli X e Y» with a stray OCR mark in between), lists of speakers («dall'onorevole X, dall'onorevole Y e da altri a favore dell'emendamento…»), signature blocks of interrogations («per sapere», «se non ravvisi») and vote requests garbled by OCR («chiesto la .votazione: a serutinio segreto»), the proposer in «ha facoltà di parlare l'onorevole X, per svolgere il seguente emendamento, firmato anche dagli onorevoli…», and two OCR errors inside a list («Tremelloni e-Carboni», «De' : Palma»). Two lists continuing into the next column or page were corrected by hand. Two uncertain cases remain: «Mariani» (Enrico or Francesco, both Socialists), left out, and «Massa» matched approximately to Massola in a Liberal and Qualunquist list. File: `pipeline/extraction/VERIFICA_2plus_blocchi*_verificato.csv`.
+Almost all errors belonged to general families, fixed in the extractor: lists of separate acts («hanno proposto ciascuno un identico emendamento», «hanno presentato due emendamenti», «gli emendamenti, più sostanziali, degli onorevoli X e Y» with a stray OCR mark in between), lists of speakers («dall'onorevole X, dall'onorevole Y e da altri a favore dell'emendamento…»), signature blocks of interrogations («per sapere», «se non ravvisi») and vote requests garbled by OCR («chiesto la .votazione: a serutinio segreto»), the proposer in «ha facoltà di parlare l'onorevole X, per svolgere il seguente emendamento, firmato anche dagli onorevoli…», and two OCR errors inside a list («Tremelloni e-Carboni», «De' : Palma»). Blocks 5 and 6 revealed three more families: the signatures of interrogations announced at the end of a sitting (each opens with «Il sottoscritto chiede d'interrogare»), the roll-call request that «porta le firme anche degli onorevoli…», and the proposer being taken from the first «L'onorevole X ha presentato» in the window rather than the last, which attributed a list to the proposer of the previous amendment. Two lists continuing into the next column or page were corrected by hand. With this check, every one of the 386 amendments with several signatories in the dataset has been checked against the image at least once. Two uncertain cases remain: «Mariani» (Enrico or Francesco, both Socialists), left out, and «Massa» matched approximately to Massola in a Liberal and Qualunquist list. File: `pipeline/extraction/VERIFICA_2plus_blocchi*_verificato.csv`.
 
 **Accuracy of votes.** Of 22 votes with official totals, 20 differ by at most three names per side between matched names and totals (`check = ok`); for five votes the record gives no totals (`no official totals`). For votes v16 and v21 the extraction matches the printed page, but the printed list itself differs from the announced totals (`verified: …`). Two official totals misread by OCR were corrected from the page image (v7 and v27).
 

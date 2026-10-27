@@ -36,8 +36,8 @@ Fonti di questo paragrafo: Camera dei deputati, [pagina sull'Assemblea Costituen
 | `edgelist_scambi.csv` | Rete one-mode di interazione: costituenti intervenuti sulla stessa pagina del resoconto (7.787 coppie) |
 | `edgelist_corelatori.csv` | Relazioni e proposte firmate insieme (16 coppie) |
 | `edgelist_sostituzioni.csv` | Rete diretta: chi è subentrato a chi in un organo (99 archi) |
-| `emendamenti_nodi.csv` | 1.402 emendamenti presentati in Aula, estratti dai resoconti con l'OCR, con il testo e il tipo |
-| `edgelist_emendamenti.csv` | Rete two-mode costituente × emendamento (chi ha firmato; 3.205 archi) |
+| `emendamenti_nodi.csv` | 1.400 emendamenti presentati in Aula, estratti dai resoconti con l'OCR, con il testo e il tipo |
+| `edgelist_emendamenti.csv` | Rete two-mode costituente × emendamento (chi ha firmato; 3.183 archi) |
 | `voti_nodi.csv` | 27 votazioni per appello nominale, con totali ufficiali e controllo |
 | `edgelist_voti.csv` | Rete two-mode costituente × voto, con il voto espresso (sì, no, astenuto) |
 | `evidenze_wikipedia.csv` | Categorie e frasi di Wikipedia alla base degli indicatori su antifascismo e Resistenza |
@@ -112,9 +112,11 @@ Le nuove regole sono state controllate anche sulla precisione, con un **quinto c
 | 2 | 2/40 | 1/38 |
 | 3 | 2/40 | 3/38 |
 | 4 | 1/40 | 2/39 |
-| **1–4** | **7/160 = 4,4% (2,1–8,8)** | **7/153 = 4,6% (2,2–9,1)** |
+| 5 | 2/40 | 2/38 |
+| 6 | 0/16 | 0/16 |
+| **tutti (216)** | **9/216 = 4,2% (2,2–7,7)** | **9/207 = 4,3% (2,3–8,1)** |
 
-Gli errori erano quasi tutti di famiglie generali, corrette nell'estrattore: elenchi di atti distinti («hanno proposto ciascuno un identico emendamento», «hanno presentato due emendamenti», «gli emendamenti, più sostanziali, degli onorevoli X e Y» con un segno spurio dell'OCR in mezzo), elenchi di oratori («dall'onorevole X, dall'onorevole Y e da altri a favore dell'emendamento…»), blocchi di firma di interrogazioni («per sapere», «se non ravvisi») e richieste di votazione scritte male dall'OCR («chiesto la .votazione: a serutinio segreto»), il presentatore nella formula «ha facoltà di parlare l'onorevole X, per svolgere il seguente emendamento, firmato anche dagli onorevoli…», e due errori dell'OCR dentro l'elenco («Tremelloni e-Carboni», «De' : Palma»). Due elenchi che proseguono nella colonna o nella pagina successiva sono stati corretti a mano. Restano due casi incerti: «Mariani» (Enrico o Francesco, entrambi socialisti), lasciato fuori, e «Massa» abbinato per approssimazione a Massola in un elenco liberale e qualunquista. File: `pipeline/extraction/VERIFICA_2plus_blocchi*_verificato.csv`.
+Gli errori erano quasi tutti di famiglie generali, corrette nell'estrattore: elenchi di atti distinti («hanno proposto ciascuno un identico emendamento», «hanno presentato due emendamenti», «gli emendamenti, più sostanziali, degli onorevoli X e Y» con un segno spurio dell'OCR in mezzo), elenchi di oratori («dall'onorevole X, dall'onorevole Y e da altri a favore dell'emendamento…»), blocchi di firma di interrogazioni («per sapere», «se non ravvisi») e richieste di votazione scritte male dall'OCR («chiesto la .votazione: a serutinio segreto»), il presentatore nella formula «ha facoltà di parlare l'onorevole X, per svolgere il seguente emendamento, firmato anche dagli onorevoli…», e due errori dell'OCR dentro l'elenco («Tremelloni e-Carboni», «De' : Palma»). Nei blocchi 5 e 6 sono emerse altre tre famiglie: le firme delle interrogazioni annunciate a fine seduta (ognuna si apre con «Il sottoscritto chiede d'interrogare»), la richiesta di appello nominale che «porta le firme anche degli onorevoli…», e il presentatore cercato nella prima formula «L'onorevole X ha presentato» della finestra invece che nell'ultima, che attribuiva un elenco al presentatore dell'emendamento precedente. Due elenchi che proseguono nella colonna o nella pagina successiva sono stati corretti a mano. Con questa verifica tutti i 386 emendamenti con più firmatari del dataset sono stati controllati almeno una volta sull'immagine. Restano due casi incerti: «Mariani» (Enrico o Francesco, entrambi socialisti), lasciato fuori, e «Massa» abbinato per approssimazione a Massola in un elenco liberale e qualunquista. File: `pipeline/extraction/VERIFICA_2plus_blocchi*_verificato.csv`.
 
 **Accuratezza dei voti.** Su 22 voti con totali ufficiali, 20 hanno uno scarto di al massimo tre nomi per lato tra nomi abbinati e totali (`controllo = ok`); per cinque voti il resoconto non riporta i totali (`senza totali`). Nei voti v16 e v21 l'estrazione è fedele alla pagina, ma è l'elenco stampato a non coincidere con i totali annunciati (`verificato: …`). Due totali ufficiali letti male dall'OCR sono stati corretti sull'immagine (v7 e v27).
 
