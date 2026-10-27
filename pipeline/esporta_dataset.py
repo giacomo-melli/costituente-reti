@@ -202,6 +202,24 @@ L.assign(role=L.ruolo.map({'presentatore': 'proposer', 'firmatario': 'signatory'
     .rename(columns={'id_dep': 'id_member', 'id_emendamento': 'id_amendment'})[['id_member', 'id_amendment', 'role']] \
     .to_csv(os.path.join(EN, 'edgelist_amendments.csv'), index=False)
 
+# ---------- menzioni nei discorsi (tools/estrai_menzioni_discorso.py) ----------
+f_md = os.path.join(EST, 'menzioni_discorso.csv')
+if os.path.exists(f_md):
+    MD = pd.read_csv(f_md, dtype=str).fillna('')
+    MD['url_pdf'] = [f'https://documenti.camera.it/_dati/costituente/lavori/Assemblea/{s}/{s}nc.pdf#page={p}' for s, p in zip(MD.seduta, MD.pagina)]
+    col = ['seduta', 'data', 'pagina', 'url_pdf', 'id_parlante', 'parlante_stampato', 'ruolo_parlante', 'id_menzionato',
+           'forma_stampata', 'abbinamento', 'tipo_menzione', 'contesto']
+    MD[col].to_csv(os.path.join(IT, 'menzioni_discorso.csv'), index=False)
+    MD_en = MD[col].rename(columns={'seduta': 'sitting', 'data': 'date', 'pagina': 'pdf_page', 'id_parlante': 'id_speaker',
+        'parlante_stampato': 'speaker_printed', 'ruolo_parlante': 'speaker_role', 'id_menzionato': 'id_mentioned',
+        'forma_stampata': 'printed_form', 'abbinamento': 'matching', 'tipo_menzione': 'mention_type', 'contesto': 'context_it'})
+    MD_en['mention_type'] = MD_en.mention_type.map({'su un emendamento': 'on an amendment', 'atto di parola': 'speech act',
+                                                    'didascalia': 'stage direction', 'altro': 'other'})
+    MD_en['matching'] = MD_en.matching.str.replace('esatto', 'exact').str.replace('approssimato', 'approximate') \
+        .str.replace('prefisso', 'prefix').str.replace('seduta', 'sitting').str.replace('ambiguo', 'ambiguous').str.replace('non trovato', 'not found')
+    MD_en.to_csv(os.path.join(EN, 'speech_mentions.csv'), index=False)
+    print('Menzioni nei discorsi:', len(MD), '| con parlante e menzionato:', int(((MD.id_parlante != '') & (MD.id_menzionato != '')).sum()))
+
 # ---------- voti ----------
 Vt = pd.read_csv(os.path.join(EST, 'voti.csv'))
 Ev = pd.read_csv(os.path.join(EST, 'edgelist_voti.csv'))
