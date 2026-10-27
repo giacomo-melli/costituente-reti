@@ -151,7 +151,7 @@ for sed, cc, lista, completo, *pag in FIRMATARI_CORRETTI:      # quinto elemento
     i = hit.id_emendamento.iloc[0]; data = hit.data.iloc[0]
     ids = [x for x in (trova(n, data) for n in lista) if x]
     L = pd.concat([L[L.id_emendamento != i], pd.DataFrame({'id_emendamento': i, 'id_dep': ids})])
-    E.loc[E.id_emendamento == i, ['firmatari', 'n_firmatari', 'completo']] = ['|'.join(ids), len(ids), completo]
+    E.loc[E.id_emendamento == i, ['firmatari', 'n_firmatari', 'completo', 'primo', 'presentatore_formula']] = ['|'.join(ids), len(ids), completo, ids[0], 0]
     corretti.add(i)
 print('Correzioni manuali: rimossi', len(via), 'falsi positivi')
 # dopo le correzioni due record possono avere lo stesso elenco (stesso emendamento stampato due volte,
@@ -168,25 +168,38 @@ for f, g in E.sort_values(['snum', 'pagina']).groupby(E.firmatari.map(lambda x: 
         else: tenuto = (r.snum, r.testo)
 E = E[~E.id_emendamento.isin(doppi)].drop(columns='snum'); L = L[~L.id_emendamento.isin(doppi)]
 print('Correzioni manuali: uniti', len(doppi), 'doppioni nati dalle correzioni')
+# ---------- direzione del legame: presentatore e firmatari ----------
+E['primo'] = E.primo.fillna('').astype(str)
+E['id_presentatore'] = [p if p and p in str(f).split('|') else '' for p, f in zip(E.primo, E.firmatari)]
+E['presentatore_fonte'] = ['non identificato' if not p else 'firma singola' if n == 1 else 'formula' if fm == 1 else 'primo dell\'elenco'
+                           for p, n, fm in zip(E.id_presentatore, E.n_firmatari, E.presentatore_formula.fillna(0))]
+print('Presentatore:', E.presentatore_fonte.value_counts().to_dict())
 E['id_emendamento'] = 'a' + E.id_emendamento.astype(str)
 L['id_emendamento'] = 'a' + L.id_emendamento.astype(str)
 L = L.drop_duplicates().sort_values(['id_emendamento', 'id_dep'])
+pres = E.set_index('id_emendamento').id_presentatore
+L['ruolo'] = ['presentatore' if pres.get(e, '') == d else 'firmatario' for e, d in zip(L.id_emendamento, L.id_dep)]
 
 E_it = E.rename(columns={'firmatari': 'firmatari_id'})[['id_emendamento', 'firmatari_id', 'n_firmatari', 'completo',
-        'articolo_menzionato', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf', 'tipo_emendamento', 'testo']]
+        'articolo_menzionato', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf', 'id_presentatore', 'presentatore_fonte',
+        'tipo_emendamento', 'testo']]
 E_it.to_csv(os.path.join(IT, 'emendamenti_nodi.csv'), index=False)
-L[['id_dep', 'id_emendamento']].to_csv(os.path.join(IT, 'edgelist_emendamenti.csv'), index=False)
+L[['id_dep', 'id_emendamento', 'ruolo']].to_csv(os.path.join(IT, 'edgelist_emendamenti.csv'), index=False)
 E_en = E_it.drop(columns='firmatari_id').rename(columns={
     'id_emendamento': 'id_amendment', 'n_firmatari': 'n_signatories', 'completo': 'complete',
     'articolo_menzionato': 'article_mentioned', 'prima_seduta': 'sitting', 'data': 'date', 'pagina': 'pdf_page', 'fonte': 'source'})
 E_en['source'] = E_en.source.map({'firma': 'signature block', 'presentazione': 'presentation formula'})
+E_en['id_proposer'] = E_en.id_presentatore
+E_en['proposer_source'] = E_en.presentatore_fonte.map({'formula': 'formula', 'firma singola': 'single signatory',
+                                                      "primo dell'elenco": 'first in list', 'non identificato': 'not identified'})
 E_en['amendment_type'] = E_en.tipo_emendamento.map({'sostituire': 'replace', 'sopprimere': 'delete', 'aggiungere': 'add',
                                                     'inserire': 'insert', 'non determinato': 'undetermined'})
 E_en = E_en.rename(columns={'testo': 'text_it'})
 E_en[['id_amendment', 'n_signatories', 'complete', 'source', 'sitting', 'date', 'pdf_page', 'article_mentioned', 'url_pdf',
-      'amendment_type', 'text_it']] \
+      'id_proposer', 'proposer_source', 'amendment_type', 'text_it']] \
     .to_csv(os.path.join(EN, 'amendments_nodes.csv'), index=False)
-L.rename(columns={'id_dep': 'id_member', 'id_emendamento': 'id_amendment'})[['id_member', 'id_amendment']] \
+L.assign(role=L.ruolo.map({'presentatore': 'proposer', 'firmatario': 'signatory'})) \
+    .rename(columns={'id_dep': 'id_member', 'id_emendamento': 'id_amendment'})[['id_member', 'id_amendment', 'role']] \
     .to_csv(os.path.join(EN, 'edgelist_amendments.csv'), index=False)
 
 # ---------- voti ----------
