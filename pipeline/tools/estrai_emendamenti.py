@@ -116,7 +116,7 @@ def split_names(s):
     s = re.sub(r'(\w)-\s+(\w)', r'\1\2', s)
     s = re.sub(r'(\w)[|¶]\s*(\w)', r'\1\2', s)   # cognome spezzato dall'a capo: Ma|glioli
     s = re.sub(r'\b(?!(?:e|ed)\.)([A-Za-z]{1,3})\.\s+(?=[A-Z])', r'\1', s)   # sillabe spezzate dall'OCR (DE Mr. CHELIS), non la congiunzione «e.»
-    parts = re.split(r",|;|\.\s+(?=[A-ZÀ-Ý])|\s\bed?\b['’.]?\s", s)   # anche «e'» ed «e.» con il segno spurio dell'OCR
+    parts = re.split(r",|;|\.\s+(?=[A-ZÀ-Ý])|\s\bed?\b(?:['’.]?\s|-\s*(?=[A-ZÀ-Ý]))", s)   # anche «e-Carboni»   # anche «e'» ed «e.» con il segno spurio dell'OCR
     return [p.strip(" .:-'’\"|°_") for p in parts if len(re.sub(r'[^A-Za-zÀ-ÿ]', '', p)) >= 3]
 
 # ---------- testo continuo per seduta ----------
@@ -312,7 +312,7 @@ def elenco_di_atti_distinti(before, nxt=''):
     return bool(PLURALE.search((before + nxt)[-90:]) or QUELLI.search(before[-90:]) or RISPETTIV.search(before[-40:]))
 
 EMEND_VERB = re.compile(r"sostitu|aggiung|soppri|sopprime|inseri|premett|trasferi|far precedere|far seguire|dopo le parole|dopo la parola|alle parole|alla parola|\bcomma\b|all['’]articolo|articolo aggiuntivo|nuovo testo|testo della Commissione", re.I)
-NON_EMEND = re.compile(r"interrog|interpell|ordin\w*\W{0,4}del\W{0,4}giorno|risoluzion|mozion|lettera aperta|telegramma|impegna il Governo|invita il Governo|fiducia|appello nominale|scrutinio segreto|chiede d['’]\s?interrogare|chiedono d['’]\s?interrogare|\bAl(?:la)?\s+Ministr|\bAi\s+Ministri|Al\s+Presidente\s+del\s+Consiglio", re.I)
+NON_EMEND = re.compile(r"interrog|interpell|per\s+sapere\b|se\s+non\s+(?:ritenga|ravvisi|creda)|quali\s+provvedimenti|ordin\w*\W{0,4}del\W{0,4}giorno|risoluzion|mozion|lettera aperta|telegramma|impegna il Governo|invita il Governo|fiducia|appello nominale|scrutinio segreto|chiede d['’]\s?interrogare|chiedono d['’]\s?interrogare|\bAl(?:la)?\s+Ministr|\bAi\s+Ministri|Al\s+Presidente\s+del\s+Consiglio", re.I)
 def tipo_testo(seg):
     if NON_EMEND.search(seg): return 'altro atto'
     return 'emendamento' if EMEND_VERB.search(seg) else 'non classificato'
@@ -412,6 +412,9 @@ for s in sedute:
 
     for m in PRES2.finditer(text):
         before = text[max(0, m.start() - 1200):m.start()]; after = text[m.end():m.end() + 300]
+        # «hanno proposto ciascuno un identico emendamento», «hanno presentato due emendamenti ... in
+        # formulazioni diverse»: atti distinti, uno per firmatario
+        if re.match(r"[\s,]*(?:il\s+)?(?:ciascuno|rispettivamente|separatamente|(?:due|tre|quattro)\s+emendament)", after, re.I): continue
         if NON_EMEND.search(after[:150]): continue
         if elenco_di_atti_distinti(before, m.group(0)[:1]) or atto_di_parola(before, m.group(0)[:1]): continue
         arts = ART.findall(before[-300:] + after[:200])
