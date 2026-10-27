@@ -71,6 +71,12 @@ FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul P
             'Tosi', 'Balduzzi', 'Mortati', 'Bonomi Paolo'], 1, 34),     # seconda formulazione dell'emendamento Clerici
     ('sed118', ['Montagnana Mario', 'Pajetta Gian Carlo', 'Foa'],
            ['Montagnana Mario', 'Foa', 'Pajetta Gian Carlo', 'Pesenti', 'Grieco', 'Laconi'], 1, 1),   # p1 col. destra -> p2 col. sinistra
+    # INCERTO: la pagina stampa «Massa», che non e' un costituente; l'abbinamento approssimato dava Massola (PCI) in un
+    # elenco liberale e qualunquista. Si attribuisce a Mazza Crescenzo (Uomo Qualunque), il cognome piu' vicino coerente
+    # con i cofirmatari (Colitto, Perrone Capano, Condorelli, Rodino' Mario).
+    ('sed322', ['Martino', 'Massola', 'Villabruna'],
+           ['Martino Gaetano', 'Villabruna', 'Morelli Renato', 'Bonino', 'Colitto', 'Perrone Capano', 'Condorelli',
+            'Colonna Di Paliano', 'Mazza', "Rodino' Di Miglione", 'Cifaldi'], 1, 17),
 ]
 
 # Oggetto dei voti (in inglese). Quelli non elencati restano «to be labelled».
