@@ -26,7 +26,7 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
 
 - `menzioni_discorso.csv` (EN `speech_mentions.csv`): rete diretta delle menzioni nei discorsi, chi nomina chi in Aula; 9.194 menzioni, 3.743 coppie dirette.
 - `pipeline/tools/test_regole.py`: test di non-regressione delle regole di estrazione (57 passi veri, 58 controlli).
-- `pipeline/tools/estrai_menzioni_discorso.py`, `pipeline/tools/coesione_voto.py`, `pipeline/tools/ritaglia.py`.
+- `pipeline/tools/estrai_menzioni_discorso.py`, `pipeline/tools/coesione_voto.py`, `pipeline/tools/ritaglia.py`, `pipeline/tools/qualita_ocr.py` (qualità dell'OCR per pagina, `pipeline/extraction/qualita_pagine.csv`).
 - File di verifica in `pipeline/extraction/VERIFICA_*`: recall, precisione, pluri-firmati, kappa, menzioni.
 
 ### Voti / Votes
