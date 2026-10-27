@@ -476,5 +476,141 @@
    ]
   ],
   "testo": "lavoro, sia la retribuzione del lavoro stesso.\n\nPRESIDENTE. Gli onorevoli Meda Luigi,\nCappugi, Codacci Pisanelli, Malvestiti, Cle-.\nrici, Zerbi, Giordani, Belotti, Colonnetti,\nCarbonari, Bosco Lucarelli, Martinelli, Bub-\nbio, Micheli, Montini, Perlingieri, Merlin Um-\nberto, Balduzzi, Guerrieri Filippo, Cavalli,\nBenvenuti, Togni, Manzini Raimondo, Fu-\nschini, Mortati, Cappi, Andreotti, Cremaschi\nCarlo, hanno presentato il seguente emen-\ndamento:\n\n« Sostituire il secondo comma col seguente:\n« Lo Stato riconosce e garantisce ai lavo-\nratori il diritto al riposo festivo »."
+ },
+ {
+  "nome": "singolo_ha_presentato_il_seguente",
+  "seduta": "sed231",
+  "nota": "«L'onorevole X ha presentato il seguente emendamento»: la formula di lettura di un emendamento a firma singola (controllato sull'immagine); nello stesso passo «faccio mio il suo emendamento» dell'onorevole Russo Perez",
+  "atteso": [
+   [
+    "Russo Perez"
+   ],
+   [
+    "Caronia"
+   ]
+  ],
+  "testo": "LLI. In assenza dell’onorevole Russo Perez, faccio mio il suo emendamento pur rinunziando a svolgerlo.\n\n., PRESIDENTE. L'onorevole Caronia ha presentato il seguente emendamento: i\n\n« Sostituire il secondo comma col seguente:\n\n«A ciascuna Regione è attribuito un senatore per 200.000 abitanti o frazione superiore a 100.000 ».\n\nNon essendo presente l'onorevole Caronia, si intende che abbia rinunziato a svolgerlo. L’onorevole Colitto"
+ },
+ {
+  "nome": "dall_onorevole_maiuscolo_senza_apostrofo",
+  "seduta": "sed060",
+  "nota": "«Dallonorevole Bruni è stato presentato un emendamento» (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Bruni"
+   ]
+  ],
+  "testo": "ione, noi avremmo il diritto di porre nella Costituzione una dichiarazione espressa che la\n\nreligione degli italiani è la religione cattolica.\n\n2°) Dallonorevole Bruni è stato presentato un emendamento, in' cui vi è il richiamo alla aconfessionalità dello Stato ed\n\nal principio della uguaglianza dei diritti, fissato negli ar"
+ },
+ {
+  "nome": "unitamente_agli_onorevoli",
+  "seduta": "sed254",
+  "nota": "«L'onorevole Stampacchia unitamente agli onorevoli...» (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Grieco",
+    "Laconi",
+    "Nobili",
+    "Stampacchia",
+    "Tega",
+    "Tonello",
+    "Vigna"
+   ]
+  ],
+  "testo": "tto di raccomandare ai voti dell'Assemblea questa formula, come più precisa e concreta. PRESIDENTE. L’onorevole Stampacchia unitamente agli onorevoli Vigna, Laconi, Nobili Tito Oro, Tonello, Tega e Grieco ha presentato il seguente emendamento: _\n\nAl secondo comma, dopo la parola: « perquisizione », aggiungere: « personale 0 ».\n\nL'onorevole Stampacchia ha facoltà di svolgerlo.\n\nSTAMPACCHIA"
+ },
+ {
+  "nome": "neg_elenco_di_oratori",
+  "seduta": "sed069",
+  "nota": "«dall'onorevole Marchesi, dall'onorevole Ravagnan… e da altri a favore dell'emendamento»: elenco di oratori (controllato sull'immagine)",
+  "atteso": [],
+  "testo": "ssione le coni clusioni che si impongono.  Io non starò quindi a riprendere gli argomenti sostenuti con molta autorità dai colleghi che mi hanno preceduto, dall’onorevole Marchesi, dall'onorevole Ravagnan, dall’onorevole Targetti, dall'onorevole Basso, dall’onorevole Mancini e da altri a favore dell'emendamento proposto dall’onorevole Togliatti nella prima Commissione al primo capoverso del primo articolo e per il "
+ },
+ {
+  "nome": "neg_ciascuno_identico",
+  "seduta": "sed106",
+  "nota": "«hanno proposto ciascuno un identico emendamento»: atti distinti (controllato sull'immagine)",
+  "atteso": [],
+  "testo": "ormula siano tali da non poter accedere a quella dell’onorevole Bruni, anche se assai commendevole ed apprezzabile.\n\n. Gli onorevoli Bosco Lucarelli, Rodi e Marconi hanno proposto ciascuno un identico emendamento che consiste nel sostituire all'espressione da noi proposta « La scuola è aperta al popolo», l’altra: «La scuola è aperta a tutli ».\n\n‘. Io personalménte sono favore"
+ },
+ {
+  "nome": "neg_porta_le_firme_richiesta",
+  "seduta": "sed084",
+  "nota": "«Essa porta le firme anche degli onorevoli…» riferito a una richiesta di appello nominale (controllato sull'immagine)",
+  "atteso": [],
+  "testo": "ne, alla quasi unanimità, è contraria all’emendamento Ravagnan. I\n\nANDREOTTI. Chiedo di parlare.\n\nPRESIDENTE. Ne ha facoltà.\n\nANDREOTTI. . Questa mattina ho presentato una richiesta di votazione per appello nominale sull’emendamento  dell’onorevole Treves. Analoga richiesta presento ora perla votazione nell’emendamento Ravagnan. Essa porta le firme anche degli onorevoli Orlando Camillo, Cremaschi,. Quintieri Adolfo, Tambroni, Leone Giovanni, Valenti, Dominedò, Maffioli, Tosi, De Palma, Zerbi, Bubbio, Marazza e Castelli Avolio. ° .\n\nPRESIDENTE. Mi consentano i colleghi di far pres"
+ },
+ {
+  "nome": "porta_le_firme_emendamento",
+  "seduta": "sed278",
+  "nota": "«il primo emendamento, che porta le firme degli onorevoli…»: e' un emendamento (elenco di 27 nomi non controllato uno per uno: il caso protegge il riconoscimento)",
+  "atteso": [
+   [
+    "Abozzi",
+    "Benedetti",
+    "Bergamini",
+    "Cevolotto",
+    "Cifaldi",
+    "Condorelli",
+    "Corbino",
+    "Crispo",
+    "De Falco",
+    "Fornara",
+    "Fresa",
+    "Giannini",
+    "Gullo Fausto",
+    "Lombardi Riccardo",
+    "Mancini",
+    "Marchesi",
+    "Marinaro",
+    "Martino Gaetano",
+    "Mastrojanni",
+    "Morelli Renato",
+    "Nobile",
+    "Nobili",
+    "Paratore",
+    "Preziosi",
+    "Rodi",
+    "Rubilli",
+    "Venditti"
+   ]
+  ],
+  "testo": "a questo nuovo testo. Alcuni di questi emendamenti, dato il carattere preclusivo che l’Assemblea ha dato ieri sera alla votazione dell'ordine del giorno Targetti, evidentemente non possono più essere né svolti, né posti in votazione. Così ad esempio il primo emendamento, che porta le firme degli onorevoli Nobile, Corbino, Marchesi, Rubilli, Giannini, Cevolotto, Gullo Fausto, Paratore, Benedetti, Bergamini, Martino Gaetano, Preziosi, Mancini, Nobili Tito Oro, Cifaldi, Lombardi Riccardo, Rodi, De Falco, Condorelli, Fresa, Abozzi, Marinaro, Venditti, Mastrojanni, Morelli Renato, Crispo e Fornara:\n\n.« Sostituire il nuovo testo del Comitato col seguente :\n\n« A parte le Regioni della Sicilia, Sardegna, Trentino-Alto Adige e Val d’Aosta, tutte le altre verranno costituite con legge de"
+ },
+ {
+  "nome": "congiunzione_attaccata",
+  "seduta": "sed084",
+  "nota": "«Tremelloni e-Carboni» (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Carboni Angelo",
+    "Lami Starnuti",
+    "Tremelloni"
+   ]
+  ],
+  "testo": " quali costituiscono reato e ‘sono perseguibili specificamente, a termini delle leggi penali. PRESIDENTE. Gli onorevoli Lami Starnuti, Tremelloni e-Carboni, hanno presentato il seguente emendamento: « Al secondo comma, sostituire alla parola: anche, le altre: private 0». ì DI GLORIA. Fo mio l’emendamento e ‘chiedo di svolgerlo. PRESIDENTE. Ne "
+ },
+ {
+  "nome": "presentatore_ultimo_nella_finestra",
+  "seduta": "sed075",
+  "nota": "due presentazioni nella finestra: il presentatore e' Basso, non Gabrieli dell'emendamento prima (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Basso",
+    "Costantini",
+    "De Michelis",
+    "Dugoni",
+    "Fedeli Aldo",
+    "Giua",
+    "Malagugini",
+    "Merlin Angelina",
+    "Targetti",
+    "Vigna"
+   ],
+   [
+    "Gabrieli"
+   ]
+  ],
+  "testo": " lo Stato italiano era dominio d’un pugno di avventurieri. (Viviapplausi a sinistra). . o\n\nPRESIDENTE. L'onorevole Gabrieli ha presentato il seguente emendamento, che la facoltà di svolgere.\n\n« Sostituire il primo comma col seguente::\n\n«Lo Stato e la Chiesa cattolica sono due ordinamenti indipendenti .e sovrani». = ——kp__—_—T_—_—_—__—_——__—__1nmÀwat_m_mwo__ 6 GABRIELI. Non insisto nelmio emendamento. . È PRESIDENTE. L’onorevole Basso ha proposto il seguente emendamento, firmato anche dagli onorevoli Dugoni, Vigna, Malagugini, De Michelis, Giua, Targetti, Merlin Angelina, Costantini, Fedeli:\n\n« Sostituire î-commi primo e secondo con i ‘seguenti: i Ì . i\n\ni «La Chiesa cattolica è, nell’ambito suo proprio, libera ed indipendente.\n\n« I ra"
  }
 ]
