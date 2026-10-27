@@ -37,6 +37,8 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *The five votes «without totals» were read on the image: four are void for lack of quorum (new variable `quorum_failed`); the fifth had its totals printed as «Voti favorevoli / contrari», now read.*
 - L'ordine alfabetico degli elenchi controlla ora anche gli abbinamenti approssimati: sei nomi attribuiti alla persona sbagliata sono stati corretti (Vanoni, Iotti, Pella, Marina, Massini, Montini tolti; Giolitti, Preti, Cassiani aggiunti), e sono stati recuperati Carpano Maglioli (v24) e Maria Jervolino (v7, v14). Legami: sei tolti e sei aggiunti, totale invariato (9.119).
   *Alphabetical order now also checks approximate matches: six wrong attributions fixed, three members recovered.*
+- Omonimi nei voti: 7 degli 8 cognomi ambigui risolti con il nome proprio staccato dall'OCR o per esclusione degli omonimi già presenti nello stesso voto. Legami di voto 9.119 → 9.125; scarto medio dai totali ufficiali 2,61 → 2,26.
+  *Namesakes in votes: 7 of 8 ambiguous surnames resolved; vote edges 9,119 → 9,125.*
 
 ## 1.0.0 — 25.10.2026
 
