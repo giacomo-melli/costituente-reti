@@ -154,11 +154,26 @@ def totale(after, pat):
     v = int(m.group(1))
     return v % 1000 if v > 556 else v          # errori di OCR come «4173» per «173»
 
+# Totali con un «1» letto «4» dall'OCR (es. «434» per «134»): l'aritmetica del riquadro è il
+# giudice. Se il resoconto stampa i votanti e sì + no non torna, si prova a sostituire un solo
+# «4» con «1» in ciascuno dei due totali; la correzione si accetta solo se è l'unica che fa tornare
+# la somma (presenti - astenuti = votanti = sì + no).
+def ripara_totali(si, no, votanti):
+    if None in (si, no, votanti) or si + no == votanti: return si, no
+    varianti = lambda n: [n] + [int(str(n)[:i] + '1' + str(n)[i + 1:]) for i, ch in enumerate(str(n)) if ch == '4']
+    sol = [(a, b) for a in varianti(si) for b in varianti(no) if a + b == votanti]
+    return sol[0] if len(sol) == 1 else (si, no)
+
+# Votazione senza esito: il Presidente annuncia che il numero legale non è stato raggiunto e
+# non comunica i totali (sed084 p. 14, sed104 pp. 30-31, sed177 p. 18, sed296 p. 28).
+NUM_LEGALE = re.compile(r'non\W{0,3}[èeé]\W{0,3}in\W{0,3}nu\W{0,3}mero\W{0,3}\.?legal|numero\W{0,3}legal\w\W{0,3}non\W{0,3}[èeé]\W{0,3}stato\W{0,3}raggiunt|perch[èeé]\W{0,3}il\W{0,3}numero\W{0,3}legal\w\W{0,3}sia\W{0,3}raggiunt', re.I)
+
 # Totali ufficiali stampati nel resoconto ma letti male dall'OCR («1» scambiato per «4»),
 # corretti dopo verifica sull'immagine del PDF. In entrambi i casi l'aritmetica del
 # riquadro conferma il valore giusto: presenti - astenuti = votanti = sì + no.
-TOTALI_CORRETTI = {('sed102', 'si', 147): 117,   # p. 18: 404 - 3 = 401 = 117 + 284
-                   ('sed332', 'no', 246): 216}   # p. 19: 331 - 4 = 327 = 111 + 216
+# sed332 p. 19 (246 per 216) è ora coperto da ripara_totali; sed102 no, perché anche i votanti
+# sono letti male (404 per 401) e la somma non può fare da giudice.
+TOTALI_CORRETTI = {('sed102', 'si', 147): 117}   # p. 18: 404 - 3 = 401 = 117 + 284
 
 # Nomi stampati spezzati dal cambio pagina e abbinati alla persona sbagliata:
 # ricodifica manuale verificata sull'immagine del PDF.
@@ -206,9 +221,16 @@ for s in sedute:
                     righe.append(dict(id_voto=vid, voto=voto, nome_stampato=nm, id_dep=r.id_dep if r is not None else '',
                                       cognome=r.cognome if r is not None else '', abbinamento=how))
                     cnt[voto] += r is not None
+        # due formule per i totali: «Hanno risposto sì / no» e «Voti favorevoli / contrari»
+        t_si = totale(after, r'Hanno\W{0,4}rispost\w{0,2}\W{0,4}s[iìl1]') or totale(after, r'Voti\W{0,3}favorevol\w*')
+        t_no = totale(after, r'Hanno\W{0,4}rispost\w{0,2}\W{0,4}n[o0]') or totale(after, r'Voti\W{0,3}contrar\w*')
+        t_si, t_no = ripara_totali(t_si, t_no, totale(after, r'\bVotanti'))
+        nx = M_SI.search(text, m.end() + 10)
+        legale = NUM_LEGALE.search(text[m.end():nx.start() if nx else m.end() + 40000])
         voti.append(dict(id_voto=vid, seduta=s, data=data, pagina=page_at(pm, m.start()),
-                         si_ufficiali=TOTALI_CORRETTI.get((s, 'si', t_si := totale(after, r'Hanno\W{0,4}rispost\w{0,2}\W{0,4}s[iìl1]')), t_si),
-                         no_ufficiali=TOTALI_CORRETTI.get((s, 'no', t_no := totale(after, r'Hanno\W{0,4}rispost\w{0,2}\W{0,4}n[o0]')), t_no),
+                         si_ufficiali=TOTALI_CORRETTI.get((s, 'si', t_si), t_si),
+                         no_ufficiali=TOTALI_CORRETTI.get((s, 'no', t_no), t_no),
+                         numero_legale_mancato=int(bool(legale) and t_si is None),
                          astenuti_ufficiali=totale(after, r'Si\W{0,3}sono\W{0,3}astenuti'),
                          si_abbinati=cnt.get('sì', 0), no_abbinati=cnt.get('no', 0), astenuti_abbinati=cnt.get('astenuto', 0),
                          congedo_abbinati=cnt.get('congedo', 0), oggetto=re.sub(r'\s+', ' ', oggetto).strip(),
@@ -277,6 +299,7 @@ V['scarto_no'] = V.no_abbinati - V.no_ufficiali
 V['controllo'] = ['senza totali' if pd.isna(a) or pd.isna(b) else ('ok' if abs(a) <= 3 and abs(b) <= 3 else 'da verificare')
                   for a, b in zip(V.scarto_si, V.scarto_no)]
 V['controllo'] = [VERIFICATI.get((sed, pag), c) for sed, pag, c in zip(V.seduta, V.pagina, V.controllo)]
+V.loc[V.numero_legale_mancato == 1, 'controllo'] = 'votazione nulla: numero legale mancato, totali non comunicati'
 os.makedirs(OUT, exist_ok=True)
 V.to_csv(os.path.join(OUT, 'voti.csv'), index=False)
 R.to_csv(os.path.join(OUT, 'voti_nominali.csv'), index=False)
