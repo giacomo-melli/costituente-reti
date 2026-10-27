@@ -13,7 +13,7 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *General fixes to the extractor (see the codebook): new presentation formulas, hyphenation with stray marks, consolidation that merged different amendments by the same signatory, and several false-positive families.*
 - **Tutti i 386 emendamenti con più firmatari controllati sull'immagine** almeno una volta (216 per la prima volta): falsi positivi 4,2%, firmatari errati 4,3%. Una seconda lettura cieca di 50 record concorda con la prima in tutti i casi decidibili (kappa 1,00).
   *All 386 multi-signatory amendments checked against the image; a blind second reading of 50 records agrees in every decidable case.*
-- Emendamenti 718 → 1.397; con 2+ firmatari 329 → 386; legami di co-firma 2.269 → 3.180.
+- Emendamenti 718 → 1.388; con 2+ firmatari 329 → 386; legami di co-firma 2.269 → 3.171.
 
 ### Variabili nuove / New variables
 
@@ -23,14 +23,16 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
 ### File nuovi / New files
 
 - `menzioni_discorso.csv` (EN `speech_mentions.csv`): rete diretta delle menzioni nei discorsi, chi nomina chi in Aula; 9.194 menzioni, 3.743 coppie dirette.
-- `pipeline/tools/test_regole.py`: test di non-regressione delle regole di estrazione (46 passi veri).
+- `pipeline/tools/test_regole.py`: test di non-regressione delle regole di estrazione (53 passi veri, 54 controlli).
 - `pipeline/tools/estrai_menzioni_discorso.py`, `pipeline/tools/coesione_voto.py`, `pipeline/tools/ritaglia.py`.
 - File di verifica in `pipeline/extraction/VERIFICA_*`: recall, precisione, pluri-firmati, kappa, menzioni.
 
 ### Voti / Votes
 
-- Invariati (27 votazioni, 9.119 legami). Aggiunto il controllo di validità con l'indice di Rice per gruppo: PCI 0,996, DC 0,983.
-  *Unchanged; added a Rice-index validity check (PCI 0.996, DC 0.983).*
+- Legami invariati (27 votazioni, 9.119 legami). Aggiunto il controllo di validità con l'indice di Rice per gruppo: PCI 0,996, DC 0,983.
+  *Edges unchanged; added a Rice-index validity check (PCI 0.996, DC 0.983).*
+- Le cinque votazioni «senza totali» sono state lette sull'immagine. Quattro (v4, v10, v13, v23) sono nulle per mancanza del numero legale: nuova variabile `numero_legale_mancato` (EN `quorum_failed`). La quinta (v24) aveva i totali stampati nella formula «Voti favorevoli / contrari», ora letta, con due cifre storpiate dall'OCR corrette dall'aritmetica del riquadro. Controllo: 21 ok, 2 verificati, 4 nulle, 0 senza totali.
+  *The five votes «without totals» were read on the image: four are void for lack of quorum (new variable `quorum_failed`); the fifth had its totals printed as «Voti favorevoli / contrari», now read.*
 
 ## 1.0.0 — 25.10.2026
 

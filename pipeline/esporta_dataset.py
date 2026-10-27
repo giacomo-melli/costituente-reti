@@ -236,14 +236,15 @@ Vt = Vt.rename(columns={'oggetto': 'excerpt_it'})
 Vt.drop(columns=[]).to_csv(os.path.join(IT, 'voti_nodi.csv'), index=False)
 Ev[['id_dep', 'id_voto', 'voto']].to_csv(os.path.join(IT, 'edgelist_voti.csv'), index=False)
 ctrl = lambda c: 'ok' if c == 'ok' else ('no official totals' if c == 'senza totali' else
+       'void: quorum not reached, totals not announced' if str(c).startswith('votazione nulla') else
        ('verified: printed list differs from announced totals' if str(c).startswith('verificato') else 'to check'))
 V_en = Vt.rename(columns={'id_voto': 'id_vote', 'seduta': 'sitting', 'data': 'date', 'pagina': 'pdf_page',
         'si_ufficiali': 'yes_official', 'si_abbinati': 'yes_matched', 'no_ufficiali': 'no_official', 'no_abbinati': 'no_matched',
         'astenuti_ufficiali': 'abstain_official', 'astenuti_abbinati': 'abstain_matched', 'congedo_abbinati': 'leave_matched',
-        'controllo': 'check'})
+        'controllo': 'check', 'numero_legale_mancato': 'quorum_failed'})
 V_en['check'] = V_en.check.map(ctrl)
 V_en[['id_vote', 'sitting', 'date', 'pdf_page', 'label_en', 'on_constitution', 'yes_official', 'yes_matched', 'no_official',
-      'no_matched', 'abstain_matched', 'leave_matched', 'check', 'excerpt_it', 'url_pdf']].to_csv(os.path.join(EN, 'votes_nodes.csv'), index=False)
+      'no_matched', 'abstain_matched', 'leave_matched', 'quorum_failed', 'check', 'excerpt_it', 'url_pdf']].to_csv(os.path.join(EN, 'votes_nodes.csv'), index=False)
 Ev.assign(vote=Ev.voto.map({'sì': 'yes', 'no': 'no', 'astenuto': 'abstain'})) \
   .rename(columns={'id_dep': 'id_member', 'id_voto': 'id_vote'})[['id_member', 'id_vote', 'vote']] \
   .to_csv(os.path.join(EN, 'edgelist_votes.csv'), index=False)
