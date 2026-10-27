@@ -289,7 +289,7 @@ QUELLI = re.compile(r"quel-?\s*li\s+(?:\w+\s+){0,2}$", re.I)
 # non il presentatore di un emendamento. Stessa logica del plurale: il sostantivo deve reggere
 # direttamente il nome, senza due punti, punto e virgola o fine di frase nel mezzo.
 # «proposta» resta fuori di proposito: «la proposta dell'onorevole X» e' spesso un emendamento.
-ATTO_PAROLA = r"(?:parol[ae]|dichiarazion[ei]|osservazion[ei]|intervent[oi]|discors[oi]|relazion[ei]|chiariment[oi]|argoment[oi]|tes[ie]|affermazion[ei]|rilievi|considerazion[ei]|pensiero|parere|critich[ea]|obiezion[ei]|richiest[ae]|domand[ae]|suggeriment[oi]|spiegazion[ei]|eccezion[ei]|avvertenz[ae]|raccomandazion[ei]|preghier[ae]|avviso|cortesia|interruzion[ei]|opinion[ei]|esposizion[ei]|valutazion[ei]|competenz[ae])"
+ATTO_PAROLA = r"(?:parol[ae]|dichiarazion[ei]|osservazion[ei]|intervent[oi]|discors[oi]|relazion[ei]|chiariment[oi]|argoment[oi]|tes[ie]|affermazion[ei]|rilievi|considerazion[ei]|pensiero|parere|critich[ea]|obiezion[ei]|richiest[ae]|domand[ae]|suggeriment[oi]|spiegazion[ei]|eccezion[ei]|avvertenz[ae]|raccomandazion[ei]|preghier[ae]|avviso|cortesia|interruzion[ei]|preoccupazion[ei]|ragion[ei]|dubbi[oi]|perplessit[aà]|inconvenient[ei]|giudizi[oi]|opinion[ei]|esposizion[ei]|valutazion[ei]|competenz[ae])"
 PAROLA_DI = re.compile(r"(?i:" + ATTO_PAROLA + r")\b(?![^;:]{0,40}?\.[\s¶/«(\[»·‘’'\"“”|_-]*[A-ZÀ-Ý])[^;:]{0,40}$")
 
 
@@ -389,8 +389,17 @@ for s in sedute:
             continue
         if re.match(r"dall", m.group(0), re.I) and (
                 re.search(r"(?:accennat|rilevat|osservat|dett|ricordat|sostenut|espress|citat|richiamat|lamentat|affermat|dichiarat|"
+                          r"segnalat|espost|definit|sollevat|prospettat|manifestat|"
                           r"pres[oa]\s+in\s+considerazione|fatt[oa]\s+propri)\w*[\s,]*$", before[-40:], re.I)
                 or re.match(r"[\s,]*(?:nella|in|in\s+sede\s+di)\s+(?:\w+\s+)?(?:Sotto)?[Cc]ommissione", after)):
+            continue
+        # «l'emendamento dell'onorevole Nobile, svolto dall'onorevole Stampacchia», «un emendamento Targetti, svolto
+        # dall'onorevole Carpano», «ripreso dall'onorevole Pignatari»: chi svolge o riprende l'emendamento di un altro
+        # non ne e' il proponente. «L'emendamento gia' svolto dall'onorevole Macrelli» e «presentato e svolto
+        # dall'onorevole X» restano: li' X e' il proponente.
+        if re.match(r"dall", m.group(0), re.I) and re.search(
+                r"(?:dell['’]\s?onorevole\s+[A-ZÀ-Ý]\S+|emendament\w+\s+[A-ZÀ-Ý][a-zà-ÿ]+)[^.;]{0,60}?(?:svolt|illustrat|ripres)\w*[\s,]*$", before[-110:]) \
+                and not re.search(r"presentat\w*\s+e\s+(?:svolt|illustrat)\w*[\s,]*$", before[-40:]):
             continue
         # «gli emendamenti degli onorevoli X, Y e Z»: emendamenti distinti, non firme congiunte
         if elenco_di_atti_distinti(before, m.group(0)[:1]) or atto_di_parola(before, m.group(0)[:1]):
@@ -427,7 +436,7 @@ for s in sedute:
             if mp: testo = mp.group(1).strip().title() + ', ' + testo; esplicito = 1
         # «presentato dagli onorevoli X, Y e da me» / «da me e dagli onorevoli X, Y»: si aggiunge chi parla,
         # cioe' il nome in testa al turno di parola
-        if (re.match(r"[\s.,]*e\s*[.,]?\s*da\s+me\b", after) or re.search(r"\bda\s+me\s+e\s*$", before[-20:])
+        if (re.match(r"[\s.,]*(?:e\s*)?[.,]?\s*da\s+me\b", after) or re.search(r"\bda\s+me\s+e\s*$", before[-20:])
                 or re.match(r"[\s.,]*(?:e\s+)?(?:firmat\w+\s+)?anche\s+da\s+me\b", after)):
             turni = [t for t in re.finditer(r"(?:^|[.¶/]\s*)([A-ZÀ-Ý][A-ZÀ-Ý'’ ]{3,28})\.\s", before[-1500:])
                      if not t.group(1).strip().startswith('PRESIDENTE')]
