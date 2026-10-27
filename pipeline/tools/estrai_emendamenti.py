@@ -178,7 +178,7 @@ def is_signature(c):
 # se non si ammettono, l'elenco dei firmatari si interrompe li' e tutti i nomi successivi vanno persi.
 # fra le parole di un nome: spazio, eventualmente un apice spurio («Creméschi ‘Garlo»); un punto solo se segue
 # un nome proprio («Pajetta. Giancarlo»), altrimenti il nome attraverserebbe la fine della frase
-NAME = r"[A-ZÀ-Ý][\w'’À-ÿ:|¶]+(?:\.\s(?=[a-z])\w+)?(?:(?:\.\s+(?=(?:" + NOMI_RE + r")\b)|\s+[‘’'\"“”]?)[A-ZÀ-Ý][\w'’À-ÿ:|¶]+){0,3}"   # ammette «Miccol:s», «Bo. nino» (rumore OCR)
+NAME = r"[A-ZÀ-Ý][\w'’À-ÿ:|¶]+(?:\.\s(?=[a-z])\w+)?(?:(?:\.\s+(?=(?:" + NOMI_RE + r")\b)|\s+(?:[‘’'\"“”]\s?)?)[A-ZÀ-Ý][\w'’À-ÿ:|¶]+){0,3}"   # ammette «Miccol:s», «Bo. nino» (rumore OCR)
 PRES = re.compile(r"(?:dell['’]\s?onorevole|[Dd]all['’]?\s?onorevole|della\s+onorevole|de\s?gli onorevoli|dagli onorevoli|dalle onorevoli|dell['’]\s?on\.|insie\w{1,3}\s+con\s+gli\s+onorevoli|unitamente\s+(?:agli|con\s+gli|ai)\s+(?:onorevoli|colleghi)|dal\s+collega(?:\s+onorevole)?|dai\s+colleghi(?:\s+onorevoli)?|firm\w+\s+(?:anche\s+)?(?:dei|degli|dai)\s+colleghi)[\s‘'’]+(" + NAME +
                   r"(?:[\s·]*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b|\s*-\s*)[\s¶\-·.‘’'\"“”|$*!:]*(?:(?:dell['’]\s?|della\s+)onorevole[\s‘'’]+)?" + NAME + r")*(?:,?\s*(?:ed|e)\s+altri)?)")
 # Il segno ¶ (riga vuota nel testo appiattito) e' ammesso fra separatore e nome:
@@ -366,7 +366,11 @@ for s in sedute:
         before = text[max(0, m.start() - 1200):m.start()]
         # solo se il contesto immediato parla di un emendamento o di una proposta di testo
         vicino = before[-150:] + ' ' + m.group(0) + ' ' + text[m.end():m.end() + 300]
-        if not re.search(r"emendament|sostitutiv|aggiuntiv|soppressiv|a firma|firmat[oa] dagli|insie\w{1,3}\s+con|propost[ao]\s+presentat|propost[ao] (?:aggiuntiv|sostitutiv|di)", before[-100:] + ' ' + after[:60], re.I):
+        # «Segue l'articolo 7-quinquies, proposto dagli onorevoli Paris, Gullo Rocco...»: articolo aggiuntivo
+        art_nuovo = re.search(r"articol\w*\s+\d+[\w-]{0,12}[\s,]+(?:propost|presentat)[ao]\s*$", before[-60:], re.I)
+        # ...ma non dentro il testo virgolettato di un altro emendamento («Trasferire l'articolo 32-bis proposto dagli…»)
+        art_nuovo = art_nuovo and before[-400:].count('«') <= before[-400:].count('»')
+        if not art_nuovo and not re.search(r"emendament|sostitutiv|aggiuntiv|soppressiv|a firma|firmat[oa] dagli|insie\w{1,3}\s+con|propost[ao]\s+presentat|propost[ao] (?:aggiuntiv|sostitutiv|di)", before[-100:] + ' ' + after[:60], re.I):
             continue
         if NON_EMEND.search(before[-150:] + ' ' + re.split(r"\.[\s¶/]*(?=[A-ZÀ-Ý«])|¶", after[:80])[0]):
             continue
@@ -394,9 +398,14 @@ for s in sedute:
             continue
         if re.match(r"dall", m.group(0), re.I) and (
                 re.search(r"(?:accennat|rilevat|osservat|dett|ricordat|sostenut|espress|citat|richiamat|lamentat|affermat|dichiarat|"
-                          r"segnalat|espost|definit|sollevat|prospettat|manifestat|"
+                          r"segnalat|espost|definit|sollevat|prospettat|manifestat|integrat|"
                           r"pres[oa]\s+in\s+considerazione|fatt[oa]\s+propri)\w*[\s,]*$", before[-40:], re.I)
                 or re.match(r"[\s,]*(?:nella|in|in\s+sede\s+di)\s+(?:\w+\s+)?(?:Sotto)?[Cc]ommissione", after)):
+            continue
+        # «la questione posta dall'onorevole X», «al quesito posto dall'onorevole X»: non e' un emendamento,
+        # salvo che segua la proposta («posta dall'onorevole Alberti con la proposta di aggiungere il seguente comma»)
+        if re.match(r"dall", m.group(0), re.I) and re.search(r"\bpost[ao][\s,]*$", before[-20:], re.I) \
+                and not re.match(r"[^.;]{0,40}(?:propost|emendament|seguent)", after, re.I):
             continue
         # «l'emendamento dell'onorevole Nobile, svolto dall'onorevole Stampacchia», «un emendamento Targetti, svolto
         # dall'onorevole Carpano», «ripreso dall'onorevole Pignatari»: chi svolge o riprende l'emendamento di un altro
