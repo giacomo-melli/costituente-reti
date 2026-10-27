@@ -57,7 +57,7 @@ def match(name, data):
 def scomponi(piece, data):
     """Un pezzo può contenere più nomi fusi dall'OCR («Villani Zanardi»): li separa cercando,
     da sinistra, il cognome più lungo che esiste tra i costituenti, seguito dal nome proprio se c'è."""
-    n = norm(piece).replace('DE UNTERRICHTER JERVOLINO', 'JERVOLINO MARIA').replace('DE UNTERRICHTER', 'JERVOLINO MARIA').replace('SILONE', 'TRANQUILLI').replace('GALLICO SPANO NADIA', 'GALLICO NADIA').replace('SPANO NADIA', 'GALLICO NADIA').replace('GURBI', 'CORBI').replace('GUIDI CINGOLANI ANGELA', 'GUIDI ANGELA').replace('CINGOLANI ANGELA', 'GUIDI ANGELA')   # cognomi da sposate (forma completa per prima, per non raddoppiare); GURBI: OCR di «Corbi» in sed180
+    n = re.sub(r'\b(?:DE )?UNTERRICH\w*(?: JERVOLINO)?\b', 'JERVOLINO MARIA', norm(piece)).replace('SILONE', 'TRANQUILLI').replace('GALLICO SPANO NADIA', 'GALLICO NADIA').replace('SPANO NADIA', 'GALLICO NADIA').replace('GURBI', 'CORBI').replace('GUIDI CINGOLANI ANGELA', 'GUIDI ANGELA').replace('CINGOLANI ANGELA', 'GUIDI ANGELA')   # cognomi da sposate (forma completa per prima, per non raddoppiare); «Unterrichter» anche senza «De» (staccato da un punto spurio in sed102) o storpiato («Unterrichier», sed178); GURBI: OCR di «Corbi» in sed180
     toks = [t for t in n.split() if t]
     toks = [('C' + t[1:]) if (t.startswith('G') and t not in IDX and t not in NOMI_PROPRI and
              (('C' + t[1:]) in IDX or ('C' + t[1:]) in NOMI_PROPRI)) else t for t in toks]   # OCR: «Gairo» per «Cairo»
@@ -247,6 +247,23 @@ STOP_VERBALE = set("""DICHIARO CHIUSA VOTAZIONE VOTAZIONI SEGRETARI SEGRETARIO C
 INVITO PRESIDENTE PROCEDERE RISULTATO NOMINALE SCRUTINIO APPELLO COMUNICO ANNUNCIO SEGUENTE
 PRESENTI VOTANTI MAGGIORANZA ASSEMBLEA SEDUTA CAMERA DEPUTATI DEPUTATO CONGEDO ASTENUTI
 SONO HANNO RISPOSTO RISPONDONO ARTICOLO EMENDAMENTO PRESIDENZA RELATORE MINISTRO""".split())
+def fuori_ordine(R):
+    """Un abbinamento approssimato che rompe l'ordine alfabetico dell'elenco è quasi sempre sbagliato
+    («Vanni» fra Farina e Farini è la coda di «Gio-vanni», non Vanoni; «Massiani» fra Caso e Castelli
+    è Cassiani, non Massini): torna «non trovato» e passa al recupero per fascia alfabetica."""
+    k_di = dict(zip(nomi.id_dep, nomi.k_cogn)); n = 0
+    for _, g in R.groupby(['id_voto', 'voto'], sort=False):
+        idx = list(g.index)
+        chiavi = [k_di.get(R.at[i, 'id_dep'], '') if R.at[i, 'abbinamento'] == 'esatto' else '' for i in idx]
+        for pos, i in enumerate(idx):
+            if R.at[i, 'abbinamento'] != 'approssimato': continue
+            k = k_di.get(R.at[i, 'id_dep'], '')
+            lo = next((chiavi[j] for j in range(pos - 1, -1, -1) if chiavi[j]), '')
+            hi = next((chiavi[j] for j in range(pos + 1, len(idx)) if chiavi[j]), '')
+            if (lo and k < lo) or (hi and k > hi):
+                R.loc[i, ['id_dep', 'cognome', 'abbinamento']] = ['', '', 'non trovato']; n += 1
+    return n
+
 def recupera_fascia(R):
     k_di = dict(zip(nomi.id_dep, nomi.k_cogn))
     uff = {}                       # i totali ufficiali sono il giudice: non si recupera oltre il totale annunciato
@@ -272,11 +289,24 @@ def recupera_fascia(R):
             if not lo or not hi or lo > hi:
                 continue
             band = [k for k in KEYS if lo <= k <= hi and len(IDX[k]) == 1]
-            if not band or len(band) > 8:
+            if not band:
                 continue
-            close = difflib.get_close_matches(t, band, n=1, cutoff=0.6)
+            close = difflib.get_close_matches(t, band, n=1, cutoff=0.6) if len(band) <= 8 else []
+            if not close and len(t) >= 5:
+                # coda di un cognome spezzato dalla sillabazione («Berna- / monti»): unico cognome della fascia che finisce così
+                coda = [k for k in band if k.endswith(t) and k != t]
+                close = coda if len(coda) == 1 else []
+            unito = None
+            if not close and pos + 1 < len(idx) and R.at[idx[pos + 1], 'abbinamento'] == 'non trovato':
+                # cognome doppio spezzato dall'OCR in due pezzi entrambi non trovati («Garpano — Maglioli»):
+                # la stringa unita è lunga e specifica, quindi qui la fascia può essere più ampia
+                t2 = t + re.sub(r'[^A-Z]', '', str(R.at[idx[pos + 1], 'nome_stampato']).upper())
+                close = [k for k in difflib.get_close_matches(t2, band, n=1, cutoff=0.8) if ' ' in IDX[k][0].cognome]
+                unito = idx[pos + 1] if close else None
             if not close:
                 continue
+            if unito is not None:
+                R.at[unito, 'abbinamento'] = 'frammento'; rec['frammento'] += 1
             if close[0] in presenti:        # seconda metà di un cognome composto, già contato
                 R.at[i, 'abbinamento'] = 'frammento'; rec['frammento'] += 1
                 continue
@@ -289,6 +319,7 @@ def recupera_fascia(R):
 _d = R[R.id_dep.astype(str) != ''].duplicated(subset=['id_voto', 'id_dep'], keep='first')
 R.loc[_d[_d].index, ['id_dep', 'abbinamento']] = ['', 'duplicato']
 print('righe duplicate rimosse:', int(_d.sum()))
+print('approssimati fuori ordine alfabetico, riaperti:', fuori_ordine(R))
 print('recupero fascia alfabetica:', recupera_fascia(R))
 
 c = R[R.id_dep.astype(str) != ''].groupby(['id_voto', 'voto']).size().unstack(fill_value=0)

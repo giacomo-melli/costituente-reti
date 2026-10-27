@@ -998,7 +998,6 @@ d11390,v3,yes
 d27810,v3,yes
 d27830,v3,yes
 d27840,v3,yes
-d28640,v3,yes
 d11430,v3,yes
 d27860,v3,yes
 d27900,v3,yes
@@ -2302,6 +2301,7 @@ d11450,v7,no
 d18560,v7,no
 d27770,v7,no
 d17200,v7,no
+d14290,v7,no
 d25740,v7,no
 d25750,v7,no
 d25760,v7,no
@@ -2927,7 +2927,7 @@ d25950,v9,yes
 d27920,v9,yes
 d13300,v9,yes
 d27950,v9,yes
-d3140,v9,yes
+d2930,v9,yes
 d27970,v9,yes
 d12570,v9,yes
 d11810,v9,yes
@@ -4746,6 +4746,7 @@ d11450,v14,no
 d7850,v14,no
 d18560,v14,no
 d17200,v14,no
+d14290,v14,no
 d11300,v14,no
 d25760,v14,no
 d18700,v14,no
@@ -5697,7 +5698,7 @@ d13740,v17,yes
 d28370,v17,yes
 d13840,v17,yes
 d12010,v17,yes
-d19540,v17,yes
+d4810,v17,yes
 d19700,v17,yes
 d28380,v17,yes
 d28390,v17,yes
@@ -5706,7 +5707,6 @@ d10050,v17,yes
 d11480,v17,yes
 d26830,v17,yes
 d28430,v17,yes
-d28120,v17,yes
 d10100,v17,yes
 d28440,v17,yes
 d28450,v17,yes
@@ -6966,7 +6966,6 @@ d17840,v21,yes
 d27220,v21,yes
 d6740,v21,yes
 d27320,v21,yes
-d19350,v21,yes
 d6890,v21,yes
 d12620,v21,yes
 d13090,v21,yes
@@ -7933,6 +7932,7 @@ d12700,v24,yes
 d17230,v24,yes
 d27460,v24,yes
 d27470,v24,yes
+d11320,v24,yes
 d13510,v24,yes
 d7420,v24,yes
 d13590,v24,yes
@@ -8947,7 +8947,7 @@ d27530,v27,no
 d7300,v27,no
 d25490,v27,no
 d12850,v27,no
-d28140,v27,no
+d18290,v27,no
 d7350,v27,no
 d25500,v27,no
 d25520,v27,no
