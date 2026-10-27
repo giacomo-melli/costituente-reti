@@ -383,6 +383,10 @@ for s in sedute:
         # «dall'onorevole X» dopo un participio di discorso («l'inconveniente accennato dall'onorevole X»)
         # o di adozione («fatto proprio dall'onorevole X»: l'emendamento e' di un altro), oppure riferito
         # a una proposta fatta in Commissione: X non e' il presentatore di un emendamento in Aula
+        # «dall'onorevole X, dall'onorevole Y e da altri»: enumerazione di oratori, non presentatori
+        if re.match(r"dall", m.group(0), re.I) and (re.search(r"dall['’]?\s?onorevole\s+[^,;.]{2,40},\s*$", before[-70:], re.I)
+                                                    or re.match(r"\s*,\s*dall['’]?\s?onorevole", after, re.I)):
+            continue
         if re.match(r"dall", m.group(0), re.I) and (
                 re.search(r"(?:accennat|rilevat|osservat|dett|ricordat|sostenut|espress|citat|richiamat|lamentat|affermat|dichiarat|"
                           r"pres[oa]\s+in\s+considerazione|fatt[oa]\s+propri)\w*[\s,]*$", before[-40:], re.I)
