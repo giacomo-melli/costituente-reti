@@ -319,6 +319,28 @@ def recupera_fascia(R):
 _d = R[R.id_dep.astype(str) != ''].duplicated(subset=['id_voto', 'id_dep'], keep='first')
 R.loc[_d[_d].index, ['id_dep', 'abbinamento']] = ['', 'duplicato']
 print('righe duplicate rimosse:', int(_d.sum()))
+def omonimi_per_esclusione(R):
+    """Un cognome stampato da solo e condiviso da piu' costituenti («Rossi», «Orlando») resta ambiguo; ma una
+    persona vota una volta sola, quindi gli omonimi gia' abbinati altrove nello stesso voto sono esclusi. Se ne
+    resta uno solo in carica quel giorno, e' lui («Rossi» fra Rossi Giuseppe e Rossi Paolo e' Rossi Maria
+    Maddalena; «Orlando» seguito da «Vittorio Emanuele» staccato dall'OCR, dopo Orlando Camillo)."""
+    data_di = dict(zip(V.id_voto, V.data)); n = 0
+    for i in R.index[R.abbinamento == 'ambiguo']:
+        vid = R.at[i, 'id_voto']; d = data_di.get(vid)
+        key = norm(R.at[i, 'nome_stampato']).replace(' ', '')
+        cands = [c for c in IDX.get(key, []) if not d or c.inizio_mandato <= d <= c.fine_mandato]
+        gia = set(R.loc[(R.id_voto == vid) & (R.id_dep.astype(str) != ''), 'id_dep'])
+        rest = [c for c in cands if c.id_dep not in gia]
+        # il nome proprio staccato dall'OCR nella riga successiva («D'Amico — Michele», «Morelli — Nato» per Renato)
+        nx = R.index.get_loc(i) + 1
+        if len(rest) > 1 and nx < len(R) and R.iloc[nx].abbinamento == 'non trovato' and R.iloc[nx].id_voto == vid:
+            t = norm(R.iloc[nx].nome_stampato).replace(' ', '')
+            pn = [c for c in rest if len(t) >= 4 and t in c.k_nome]
+            if len(pn) == 1: rest = pn
+        if len(cands) > 1 and len(rest) == 1:
+            R.loc[i, ['id_dep', 'cognome', 'abbinamento']] = [rest[0].id_dep, rest[0].cognome, 'omonimo risolto']; n += 1
+    return n
+print('omonimi risolti (esclusione o nome staccato):', omonimi_per_esclusione(R))
 print('approssimati fuori ordine alfabetico, riaperti:', fuori_ordine(R))
 print('recupero fascia alfabetica:', recupera_fascia(R))
 

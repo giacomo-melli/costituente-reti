@@ -714,7 +714,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 2,sì,NOVELLA,d22330,Novella,esatto
 2,sì,NUMEROSO,d26550,Numeroso,esatto
 2,sì,ORLANDO CAMILLO,d26590,Orlando,esatto
-2,sì,ORLANDO,,,ambiguo
+2,sì,ORLANDO,d28270,Orlando,omonimo risolto
 2,sì,VITTORIO,,,non trovato
 2,sì,EMANUELE,,,non trovato
 2,sì,PAJETTA GIAN CARLO,d4390,Pajetta,esatto
@@ -1842,7 +1842,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 5,congedo,CINGOLANI,d27610,Cingolani,esatto
 5,congedo,CHIOSTERGI,d25580,Chiostergi,esatto
 5,congedo,CORSINI,d300643,Corsini,esatto
-5,congedo,DAMICO,,,ambiguo
+5,congedo,DAMICO,d7710,D'Amico,omonimo risolto
 5,congedo,MICHELE,,,non trovato
 5,congedo,FIORE,d27880,Fiore,esatto
 5,congedo,FUSCHINI,d25990,Fuschini,esatto
@@ -2261,7 +2261,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 7,sì,MOLE,d28180,Mole',esatto
 7,sì,MOMIGLIANO,d28200,Momigliano,esatto
 7,sì,MONTEMARTINI,d28220,Montemartini,esatto
-7,sì,MORELLI,,,ambiguo
+7,sì,MORELLI,d9440,Morelli,omonimo risolto
 7,sì,NATO,,,non trovato
 7,sì,MORINI,d9450,Morini,esatto
 7,sì,NATOLI LAMANTEA,d26530,Natoli Lamantea,esatto
@@ -2723,7 +2723,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 8,sì,MARINARO,d26340,Marinaro,esatto
 8,sì,MARTINELLI,d15990,Martinelli,esatto
 8,sì,MARZAROTTO,d26360,Marzarotto,esatto
-8,sì,MASTINO,,,ambiguo
+8,sì,MASTINO,d26390,Mastino,omonimo risolto
 8,sì,GESUMINO,,,non trovato
 8,sì,MASTROJANNI,d26400,Mastrojanni,esatto
 8,sì,MAZZA,d9190,Mazza,esatto
@@ -6047,7 +6047,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 17,sì,RODINO MARIO,d11480,Rodino' Di Miglione,esatto
 17,sì,ROMITA,d26830,Romita,esatto
 17,sì,ROSSI GIUSEPPE,d28430,Rossi,esatto
-17,sì,ROSSI,,,ambiguo
+17,sì,ROSSI,d10090,Rossi,omonimo risolto
 17,sì,MANA,,,non trovato
 17,sì,MADDALENA,,,non trovato
 17,sì,ROSSI PAOLO,d10100,Rossi,esatto
@@ -9078,7 +9078,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 26,sì,LACONI,d11820,Laconi,esatto
 26,sì,LANDI,d8800,Landi,esatto
 26,sì,LA ROCCA,d11710,La Rocca,esatto
-26,sì,LEONE,,,ambiguo
+26,sì,LEONE,d8860,Leone,omonimo risolto
 26,sì,FRANCESCO,,,non trovato
 26,sì,LOMBARDI CARLO,d19090,Lombardi,esatto
 26,sì,LONGO,d3470,Longo,esatto
@@ -9491,7 +9491,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 27,no,CAPPI GIUSEPPE,d25470,Cappi,esatto
 27,no,CAPPUGI,d7250,Cappugi,esatto
 27,no,CARBONI ANGELO,d7280,Carboni,esatto
-27,no,CARBONI,,,ambiguo
+27,no,CARBONI,d27520,Carboni,omonimo risolto
 27,no,ENRICO,,,non trovato
 27,no,CARIGNANI,d12450,Carignani,esatto
 27,no,CARISTIA,d27530,Caristia,esatto
