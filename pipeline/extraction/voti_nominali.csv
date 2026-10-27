@@ -564,7 +564,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 2,sì,COLOMBI ARTURO,d18370,Colombi,esatto
 2,sì,COLOMBO EMILIO,d1770,Colombo,esatto
 2,sì,COLONNA,d18390,Colonna Di Paliano,approssimato
-2,sì,LIANO,,,non trovato
+2,sì,LIANO,,,frammento
 2,sì,COLONNETTI,d11360,Colonnetti,esatto
 2,sì,CONCI ELISABETTA,d25630,Conci,esatto
 2,sì,CON DORELLI,d27630,Condorelli,esatto
@@ -1015,7 +1015,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 3,sì,FACCHINETTI,d27810,Facchinetti,esatto
 3,sì,FANTUZZI,d27830,Fantuzzi,esatto
 3,sì,FARINA,d27840,Farina,esatto
-3,sì,VANNI,d28640,Vanoni,approssimato
+3,sì,VANNI,,,non trovato
 3,sì,FARINI CARLO,d11430,Farini,esatto
 3,sì,FERRARI GIACOMO,d27860,Ferrari,esatto
 3,sì,FLECCHIA,d27900,Flecchia,esatto
@@ -2404,8 +2404,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 7,no,DE MICHELE LUIGI,d18560,De Michele,esatto
 7,no,DE MICHELIS PAOLO,d27770,De Michelis,esatto
 7,no,DE PALMA,d17200,De Palma,esatto
-7,no,UNTERRICHTER,,,non trovato
-7,no,MARIA,,,non trovato
+7,no,JERVOLINO MARIA MARIA,d14290,Jervolino,esatto
 7,no,DI FAUSTO,d25740,Di Fausto,esatto
 7,no,DI VITTORIO,d25750,Di Vittorio,esatto
 7,no,DEMINEDO,d25760,Dominedo',approssimato
@@ -3062,7 +3061,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 9,sì,GASPAROTTO,d27920,Gasparotto,esatto
 9,sì,GHIDETTI,d13300,Ghidetti,esatto
 9,sì,GHIDINI,d27950,Ghidini,esatto
-9,sì,GIOHTTI,d3140,Iotti,approssimato
+9,sì,GIOHTTI,d2930,Giolitti,fascia alfabetica
 9,sì,GIUA,d27970,Giua,esatto
 9,sì,GRAZI ENRICO,d12570,Grazi,esatto
 9,sì,GRAZIA VERENIN,d11810,Grazia,esatto
@@ -4990,8 +4989,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 14,no,DE MERCURIO,d7850,De Mercurio,esatto
 14,no,DE MICHELE LUIGI,d18560,De Michele,esatto
 14,no,DE PALMA,d17200,De Palma,esatto
-14,no,UNTERRICHIER,,,non trovato
-14,no,MARIA,,,non trovato
+14,no,JERVOLINO MARIA MARIA,d14290,Jervolino,esatto
 14,no,DE VITA,d11300,De Vita,esatto
 14,no,DOMINEDO,d25760,Dominedo',esatto
 14,no,ERMINI,d18700,Ermini,esatto
@@ -6040,7 +6038,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 17,sì,PORZIO,d28370,Porzio,esatto
 17,sì,PRATOLONGO,d13840,Pratolongo,esatto
 17,sì,PRESSINOTTI,d12010,Pressinotti,esatto
-17,sì,PRELL,d19540,Pella,approssimato
+17,sì,PRELL,d4810,Preti,fascia alfabetica
 17,sì,PREZIOSI,d19700,Preziosi,esatto
 17,sì,PRIOLO,d28380,Priolo,esatto
 17,sì,PUCCI,d28390,Pucci,esatto
@@ -6050,7 +6048,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 17,sì,ROMITA,d26830,Romita,esatto
 17,sì,ROSSI GIUSEPPE,d28430,Rossi,esatto
 17,sì,ROSSI,,,ambiguo
-17,sì,MANA,d28120,Marina,approssimato
+17,sì,MANA,,,non trovato
 17,sì,MADDALENA,,,non trovato
 17,sì,ROSSI PAOLO,d10100,Rossi,esatto
 17,sì,ROVEDA,d28440,Roveda,esatto
@@ -7392,7 +7390,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 21,sì,BARONTINI ILIO,d27220,Barontini,esatto
 21,sì,BEI ADELE,d6740,Bei,esatto
 21,sì,BERNE,d27320,Bertone,approssimato
-21,sì,MONTI,d19350,Montini,approssimato
+21,sì,MONTI,,,non trovato
 21,sì,BIANCHI BRUNO,d6890,Bianchi,esatto
 21,sì,BONOMELLI,d12620,Bonomelli,esatto
 21,sì,BUCCI,d13090,Bucci,esatto
@@ -8425,8 +8423,8 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 24,sì,CAMANGI,d17230,Camangi,esatto
 24,sì,CANEPA,d27460,Canepa,esatto
 24,sì,CAPORALI,d27470,Caporali,esatto
-24,sì,GARPANO,,,non trovato
-24,sì,MAGLIOLI,,,non trovato
+24,sì,GARPANO,d11320,Carpano Maglioli,fascia alfabetica
+24,sì,MAGLIOLI,,,frammento
 24,sì,CARTIA,d13510,Cartia,esatto
 24,sì,CAVALLOTTI,d7420,Cavallotti,esatto
 24,sì,CEVOLOTTO,d13590,Cevolotto,esatto
@@ -9500,7 +9498,7 @@ id_voto,voto,nome_stampato,id_dep,cognome,abbinamento
 27,no,CARONIA,d7300,Caronia,esatto
 27,no,CARRATELLI,d25490,Carratelli,esatto
 27,no,CASO,d12850,Caso,esatto
-27,no,MASSIANI,d28140,Massini,approssimato
+27,no,MASSIANI,d18290,Cassiani,fascia alfabetica
 27,no,CASTELLI EDGARDO,d7350,Castelli,esatto
 27,no,CASTELLI AVOLIO,d25500,Castelli Avolio,esatto
 27,no,CAVALLI,d25520,Cavalli,esatto

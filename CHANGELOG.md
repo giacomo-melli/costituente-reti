@@ -29,10 +29,12 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
 
 ### Voti / Votes
 
-- Legami invariati (27 votazioni, 9.119 legami). Aggiunto il controllo di validità con l'indice di Rice per gruppo: PCI 0,996, DC 0,983.
-  *Edges unchanged; added a Rice-index validity check (PCI 0.996, DC 0.983).*
+- 27 votazioni. Aggiunto il controllo di validità con l'indice di Rice per gruppo: PCI 0,996, DC 0,983.
+  *Added a Rice-index validity check (PCI 0.996, DC 0.983).*
 - Le cinque votazioni «senza totali» sono state lette sull'immagine. Quattro (v4, v10, v13, v23) sono nulle per mancanza del numero legale: nuova variabile `numero_legale_mancato` (EN `quorum_failed`). La quinta (v24) aveva i totali stampati nella formula «Voti favorevoli / contrari», ora letta, con due cifre storpiate dall'OCR corrette dall'aritmetica del riquadro. Controllo: 21 ok, 2 verificati, 4 nulle, 0 senza totali.
   *The five votes «without totals» were read on the image: four are void for lack of quorum (new variable `quorum_failed`); the fifth had its totals printed as «Voti favorevoli / contrari», now read.*
+- L'ordine alfabetico degli elenchi controlla ora anche gli abbinamenti approssimati: sei nomi attribuiti alla persona sbagliata sono stati corretti (Vanoni, Iotti, Pella, Marina, Massini, Montini tolti; Giolitti, Preti, Cassiani aggiunti), e sono stati recuperati Carpano Maglioli (v24) e Maria Jervolino (v7, v14). Legami: sei tolti e sei aggiunti, totale invariato (9.119).
+  *Alphabetical order now also checks approximate matches: six wrong attributions fixed, three members recovered.*
 
 ## 1.0.0 — 25.10.2026
 
