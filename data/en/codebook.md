@@ -38,8 +38,8 @@ Source texts (debate topics, document titles, occupations as recorded, Wikipedia
 | `edgelist_exchanges.csv` | One-mode interaction network: members speaking on the same page of the record (7,787 pairs) |
 | `edgelist_corapporteurs.csv` | Reports and proposals signed jointly (16 pairs) |
 | `edgelist_substitutions.csv` | Directed network: who replaced whom on a body (99 ties) |
-| `amendments_nodes.csv` | 1,399 amendments tabled in the Assembly, extracted from the records by OCR |
-| `edgelist_amendments.csv` | Two-mode network member × amendment (who signed; 3,182 edges) |
+| `amendments_nodes.csv` | 1,397 amendments tabled in the Assembly, extracted from the records by OCR |
+| `edgelist_amendments.csv` | Two-mode network member × amendment (who signed, with the role of proposer or signatory; 3,180 edges) |
 | `votes_nodes.csv` | 27 roll-call votes, with official totals and check |
 | `edgelist_votes.csv` | Two-mode network member × vote, with the vote cast (yes, no, abstain) |
 | `evidence_wikipedia.csv` | Wikipedia categories and sentences behind the antifascism and Resistance indicators |
@@ -59,6 +59,8 @@ Identifiers: `d` + Chamber id for members, `o` + id for bodies, `t` + number for
 **Substitutions (directed).** `incoming` → `replaced`, with body and date.
 
 **Amendments (two-mode).** Who signed an amendment together: a chosen tie, unlike committee membership. Projected onto members, it measures collaboration in drafting the text.
+
+**Amendments (two-mode, directed).** `edgelist_amendments.csv` has a `role` column: `proposer` for whoever tabled the amendment, `signatory` for those who co-signed it. Projecting only the signatory → proposer edges gives a directed network: who gathers signatures and who gives them. The proposer was compared with the list transcribed from the image for the 131 multi-signatory amendments of the systematic check: it matches in 130 of 131 cases (99.2%, CI 95.8–99.9); the only error («presentato dall'onorevole Gasparotto e da me», where the speaker was placed first) was fixed in the extractor. Of 1,397 amendments, 187 have the proposer given by a formula, 199 by the first name in the list, 1,010 are single-signatory and 1 is not identifiable.
 
 **Roll-call votes (two-mode, signed).** How each member voted in the 27 roll calls. Absences and leave are not edges.
 
@@ -135,6 +137,8 @@ Consistency checks on the whole dataset: no votes or signatures outside a member
 | `article_mentioned` | 1 if the text cites an article of the draft Constitution |
 | `sitting`, `date`, `pdf_page`, `url_pdf` | First mention and link to the page of the record |
 | `source` | `signature block` or `presentation formula` |
+| `id_proposer` | Who tabled the amendment: the name given by a formula («L'onorevole X ha presentato… firmato anche dagli onorevoli», «insieme con», «da me e dagli onorevoli», the name heading the speaking turn) or, failing that, the first printed signatory, who by the record's convention is the proposer. Empty if the first printed name is not matched (unresolved homonym, illegible name): the second signatory is not promoted in its place |
+| `proposer_source` | `formula`, `first in list`, `single signatory` or `not identified` |
 | `amendment_type` | `replace`, `delete`, `add`, `insert` or `undetermined`: the first operation in the opening formula of the text («Sostituirlo col seguente», «Al secondo comma sopprimere…»); if the text does not print it, from the adjective in the presentation («emendamento soppressivo», «articolo aggiuntivo»). Agreement with a blind reading of the image: 29/40 = 72.5% (57.2–83.9). The most frequent error is a full text printed without a verb («la seguente dizione: «…»»), which the extractor leaves `undetermined` and a reader classifies as a replacement: a first-pass coding, to be used with care |
 | `text_it` | Text of the amendment as printed in quotation marks after the presentation formula (or before the signature block), in Italian, with OCR misreadings; `/` separates paragraphs; empty if the page does not print it (139 cases, mostly citations in speeches). On sample 5: 22 texts correct, 6 partial (only a piece, or including the following sentence), 2 wrong, 5 absent, 5 not verifiable from the crop |
 

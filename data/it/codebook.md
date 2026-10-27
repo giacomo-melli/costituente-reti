@@ -36,8 +36,8 @@ Fonti di questo paragrafo: Camera dei deputati, [pagina sull'Assemblea Costituen
 | `edgelist_scambi.csv` | Rete one-mode di interazione: costituenti intervenuti sulla stessa pagina del resoconto (7.787 coppie) |
 | `edgelist_corelatori.csv` | Relazioni e proposte firmate insieme (16 coppie) |
 | `edgelist_sostituzioni.csv` | Rete diretta: chi è subentrato a chi in un organo (99 archi) |
-| `emendamenti_nodi.csv` | 1.399 emendamenti presentati in Aula, estratti dai resoconti con l'OCR, con il testo e il tipo |
-| `edgelist_emendamenti.csv` | Rete two-mode costituente × emendamento (chi ha firmato; 3.182 archi) |
+| `emendamenti_nodi.csv` | 1.397 emendamenti presentati in Aula, estratti dai resoconti con l'OCR, con il testo e il tipo |
+| `edgelist_emendamenti.csv` | Rete two-mode costituente × emendamento (chi ha firmato, con il ruolo di presentatore o firmatario; 3.180 archi) |
 | `voti_nodi.csv` | 27 votazioni per appello nominale, con totali ufficiali e controllo |
 | `edgelist_voti.csv` | Rete two-mode costituente × voto, con il voto espresso (sì, no, astenuto) |
 | `evidenze_wikipedia.csv` | Categorie e frasi di Wikipedia alla base degli indicatori su antifascismo e Resistenza |
@@ -57,6 +57,8 @@ Gli identificativi sono `d` + id Camera per i costituenti, `o` + id per gli orga
 **Sostituzioni (diretta).** `subentrante` → `sostituito`, con organo e data.
 
 **Emendamenti (two-mode).** Chi firma insieme un emendamento: un legame scelto, a differenza dell'appartenenza agli organi. Proiettata sui costituenti, misura la collaborazione nella stesura del testo.
+
+**Emendamenti (two-mode, con direzione).** `edgelist_emendamenti.csv` ha la colonna `ruolo`: `presentatore` per chi presenta l'emendamento, `firmatario` per chi lo sottoscrive. Proiettando solo gli archi firmatario → presentatore si ottiene una rete diretta, chi raccoglie firme e chi le concede. Il presentatore è stato confrontato con l'elenco trascritto sull'immagine per i 131 emendamenti pluri-firmati della verifica sistematica: coincide in 130 casi su 131 (99,2%, IC 95,8–99,9); l'unico errore («presentato dall'onorevole Gasparotto e da me», dove chi parla veniva messo per primo) è stato corretto nell'estrattore. Su 1.397 emendamenti: 187 hanno il presentatore indicato da una formula, 199 dal primo nome dell'elenco, 1.010 sono a firma singola, 1 non è identificabile.
 
 **Voti nominali (two-mode, con segno).** Come ha votato ciascun costituente nelle 27 votazioni per appello nominale. Le assenze e i congedi non sono archi.
 
@@ -133,6 +135,8 @@ Controlli di coerenza su tutto il dataset: nessun voto fuori dal mandato, nessun
 | `articolo_menzionato` | 1 se il testo cita un articolo del progetto di Costituzione |
 | `prima_seduta`, `data`, `pagina`, `url_pdf` | Prima menzione e link alla pagina del resoconto |
 | `fonte` | `firma` (blocco di firma) o `presentazione` (formula di presentazione) |
+| `id_presentatore` | Chi presenta l'emendamento: il nome indicato da una formula («L'onorevole X ha presentato… firmato anche dagli onorevoli», «insieme con», «da me e dagli onorevoli», il nome in testa al turno di parola) o, in mancanza, il primo firmatario stampato, che per convenzione del resoconto è il presentatore. Vuoto se il primo nome stampato non è abbinato (omonimo irrisolto, nome illeggibile): in quel caso il secondo firmatario non viene promosso al suo posto |
+| `presentatore_fonte` | `formula`, `primo dell'elenco`, `firma singola` o `non identificato` |
 | `tipo_emendamento` | `sostituire`, `sopprimere`, `aggiungere`, `inserire` o `non determinato`: la prima operazione nella formula d'apertura del testo («Sostituirlo col seguente», «Al secondo comma sopprimere…»); se il testo non la stampa, dall'aggettivo della presentazione («emendamento soppressivo», «articolo aggiuntivo»). Accordo con la lettura cieca dell'immagine: 29/40 = 72,5% (57,2–83,9). L'errore più frequente è un testo integrale stampato senza verbo («la seguente dizione: «…»»), che l'estrattore lascia `non determinato` e chi legge classifica come sostituzione: è una codifica di primo livello, da usare con prudenza |
 | `testo` | Testo dell'emendamento come stampato fra virgolette dopo la formula di presentazione (o prima del blocco di firma), con i refusi dell'OCR; `/` separa i capoversi; vuoto se la pagina non lo stampa (139 casi, per lo più citazioni nei discorsi). Sul campione 5: 22 testi giusti, 6 parziali (un pezzo solo, o la frase seguente inclusa), 2 sbagliati, 5 assenti, 5 non verificabili dal ritaglio |
 

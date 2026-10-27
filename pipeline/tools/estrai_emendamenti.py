@@ -352,7 +352,7 @@ for s in sedute:
         # la formula d'apertura e' subito prima del testo («Sostituirlo col seguente: «...»»), non in coda al blocco
         k_t = text.rfind('«', 0, m.start() - len(t_em) + 5) if t_em else -1
         formula = text[max(0, k_t - 160):k_t] if k_t > 0 else seg[-200:]
-        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='firma', tipo=tipo, testo_stampato=firma.strip(),
+        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='firma', tipo=tipo, testo_stampato=firma.strip(), pres_esplicito=0,
                          testo_emendamento=t_em, tipo_emendamento=tipo_emendamento(t_em, formula),
                          altri=int(bool(re.search(r'altri', firma, re.I))), articolo_menzionato=arts[-1] if arts else '',
                          contesto=before[-350:].replace('¶', '/'), pos=m.start()))
@@ -396,6 +396,9 @@ for s in sedute:
         if elenco_di_atti_distinti(before, m.group(0)[:1]) or atto_di_parola(before, m.group(0)[:1]):
             continue
         testo = m.group(1).strip()
+        # un nome solo retto da «dell'onorevole / dall'onorevole» e' il proponente; in un elenco il presentatore e'
+        # esplicito solo se lo indica una formula (sotto); altrimenti vale il primo nome stampato
+        esplicito = int(not re.search(r",|;|\be\b|\bed\b", testo))
         # «L'onorevole X ha presentato il seguente emendamento, firmato anche dagli onorevoli...»:
         # il presentatore non è nell'elenco e va aggiunto
         if (re.search(r"firmat[oa]\s+anche|firme\s+anche|firme\s+de", before[-70:], re.I)
@@ -421,17 +424,20 @@ for s in sedute:
             if not mp and (re.match(r"insie|unitam", m.group(0), re.I) or re.search(r"firmat[oa]\s+anche", before[-70:], re.I)):
                 tutti = list(re.finditer(r"[Ll]['’]\s?onorevole[\s.,]+(" + NAME + r")", before[-200:]))
                 mp = tutti[-1] if tutti else None
-            if mp: testo = mp.group(1).strip().title() + ', ' + testo
+            if mp: testo = mp.group(1).strip().title() + ', ' + testo; esplicito = 1
         # «presentato dagli onorevoli X, Y e da me» / «da me e dagli onorevoli X, Y»: si aggiunge chi parla,
         # cioe' il nome in testa al turno di parola
         if (re.match(r"[\s.,]*e\s*[.,]?\s*da\s+me\b", after) or re.search(r"\bda\s+me\s+e\s*$", before[-20:])
                 or re.match(r"[\s.,]*(?:e\s+)?(?:firmat\w+\s+)?anche\s+da\s+me\b", after)):
             turni = [t for t in re.finditer(r"(?:^|[.¶/]\s*)([A-ZÀ-Ý][A-ZÀ-Ý'’ ]{3,28})\.\s", before[-1500:])
                      if not t.group(1).strip().startswith('PRESIDENTE')]
-            if turni: testo = turni[-1].group(1).strip().title() + ', ' + testo
+            # «da me e dagli onorevoli X»: chi parla e' il primo; «X, Y e da me», «firmato anche da me»: l'ultimo
+            if turni:
+                chi = turni[-1].group(1).strip().title()
+                testo = (chi + ', ' + testo) if re.search(r"\bda\s+me\s+e\s*$", before[-20:]) else (testo + ', ' + chi)
         arts = ART.findall(before + m.group(0) + after[:60])
         t_em = testo_dopo(text, m.end())
-        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=testo,
+        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=testo, pres_esplicito=esplicito,
                          testo_emendamento=t_em, tipo_emendamento=tipo_emendamento(t_em, before[-150:] + m.group(0) + after[:80]),
                          altri=int(bool(re.search(r'altri', m.group(1)))), articolo_menzionato=arts[-1] if arts else '',
                          contesto=(before[-200:] + ' [[' + m.group(0) + ']] ' + after).replace('¶', '/'), pos=m.start()))
@@ -449,7 +455,7 @@ for s in sedute:
         # «L'onorevole Dugoni, insieme con gli onorevoli X, Y hanno presentato»: il soggetto e' il primo firmatario
         mp = re.search(r"[Ll]['’]\s?onorevole[\s.,‘'’]+(" + NAME + r")[\s,]*(?:ins\S{1,6}|unitamente)\s+(?:con|a)\s*$", before[-120:])
         if mp: nomi_pres2 = mp.group(1).strip() + ', ' + nomi_pres2
-        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=nomi_pres2,
+        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=nomi_pres2, pres_esplicito=int(bool(mp)),
                          testo_emendamento=t_em, tipo_emendamento=tipo_emendamento(t_em, m.group(0) + after[:80]),
                          altri=int(bool(re.search(r'altri', m.group(1)))), articolo_menzionato=arts[-1] if arts else '',
                          contesto=(before[-200:] + ' [[' + m.group(0) + ']] ' + after).replace('¶', '/'), pos=m.start()))
@@ -465,7 +471,7 @@ for s in sedute:
         t_em = testo_dopo(text, m.end() - 1) if m.group(0).endswith('«') else testo_dopo(text, m.end())
         if m.group('mid') is not None and len(t_em) < 20: continue
         arts = ART.findall(before[-300:] + m.group(0) + after[:200])
-        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=oratore,
+        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=oratore, pres_esplicito=1,
                          testo_emendamento=t_em, tipo_emendamento=tipo_emendamento(t_em, m.group(0) + after[:80]),
                          altri=0, articolo_menzionato=arts[-1] if arts else '',
                          contesto=(before[-200:] + ' [[' + m.group(0) + ']] ' + after).replace('¶', '/'), pos=m.start()))
@@ -476,7 +482,7 @@ for s in sedute:
         if NON_EMEND.search(re.split(r"\.[\s¶/]*(?=[A-ZÀ-Ý«])|¶", after[:150])[0]): continue
         arts = ART.findall(before[-300:] + m.group(0) + after[:200])
         t_em = testo_dopo(text, m.end())
-        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=m.group(1).strip(),
+        recs.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo='emendamento', testo_stampato=m.group(1).strip(), pres_esplicito=1,
                          testo_emendamento=t_em, tipo_emendamento=tipo_emendamento(t_em, m.group(0) + after[:80]),
                          altri=0, articolo_menzionato=arts[-1] if arts else '',
                          contesto=(before[-200:] + ' [[' + m.group(0) + ']] ' + after).replace('¶', '/'), pos=m.start()))
@@ -529,7 +535,10 @@ ok = F[F.id_dep.astype(str).str.startswith('d')]
 R['ids'] = R.index.map(ok.groupby('id_menzione').id_dep.apply(lambda x: '|'.join(sorted(set(x))))).fillna('')
 R['n_nomi'] = R.index.map(F.groupby('id_menzione').size()).fillna(0).astype(int)
 # primo firmatario stampato: il resoconto chiama un emendamento col nome del primo («l'emendamento Fanfani»)
-R['primo'] = R.index.map(ok.sort_values('ordine').groupby('id_menzione').id_dep.first()).fillna('')
+# solo se il primo nome stampato e' stato abbinato: altrimenti (omonimo irrisolto, nome illeggibile) il primo
+# abbinato sarebbe il secondo firmatario, e il presentatore risulterebbe sbagliato senza che nulla lo segnali
+primi = F[F.ordine == 1].set_index('id_menzione').id_dep.astype(str)
+R['primo'] = R.index.map(primi.where(primi.str.startswith('d'), '')).fillna('')
 R['n_abbinati'] = R.ids.map(lambda x: len(x.split('|')) if x else 0)
 R['url_pdf'] = [URL.format(s=s, p=p) for s, p in zip(R.seduta, R.pagina)]
 
@@ -603,6 +612,10 @@ if fusi:
     R['id_emendamento'] = R.id_emendamento.map(lambda x: fusi.get(x, x))
     EM = EM[~EM.id_emendamento.isin(fusi)]
 EM = EM.drop(columns='snum')
+# presentatore: il primo firmatario stampato (convenzione del resoconto); «formula» se almeno una menzione lo indica
+# esplicitamente («L'onorevole X ha presentato… firmato anche dagli», «insieme con», «e da me», turno di parola)
+espl = R[(R.pres_esplicito == 1) & (R.primo != '')].groupby('id_emendamento').primo.apply(set)
+EM['presentatore_formula'] = [int(e.primo in espl.get(e.id_emendamento, set())) for e in EM.itertuples()]
 print('citazioni singole assorbite nell\'emendamento a piu\' firme:', len(fusi))
 
 os.makedirs(OUT, exist_ok=True)
