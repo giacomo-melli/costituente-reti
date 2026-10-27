@@ -96,8 +96,11 @@ Rscript pipeline/ocr_costituente.R
 Rscript pipeline/ocr_400dpi.R
 
 # 3. Estrazione di emendamenti e voti
-python3 pipeline/tools/estrai_emendamenti.py
-python3 pipeline/tools/estrai_voti.py
+python3 pipeline/tools/estrai_emendamenti.py pipeline
+python3 pipeline/tools/estrai_voti.py pipeline
+
+# 3b. Test di non-regressione delle regole (un secondo; da lanciare dopo ogni modifica all'estrattore)
+python3 pipeline/tools/test_regole.py
 
 # 4. File finali, correzioni manuali, etichette e misure di accuratezza
 python3 pipeline/esporta_dataset.py

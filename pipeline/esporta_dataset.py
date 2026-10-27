@@ -29,7 +29,12 @@ FALSI_POSITIVI = [('sed072', ['Perassi']),                               # propo
                   # terzo campione (40 record estratti a caso dopo le correzioni)
                   ('sed089', ['Tupini']),                                # parla come Presidente della prima Sottocommissione
                   ('sed170', ['Lami Starnuti', 'Preti']),                # due emendamenti distinti; il record nasce da una formula di interpello
-                  ('sed262', ['Ruini'])]                                 # parla come Presidente della Commissione
+                  ('sed262', ['Ruini']),                                 # parla come Presidente della Commissione
+                  # --- verifica sull'immagine della pagina dopo le correzioni dell'estrattore (ottobre 2026) ---
+                  ('sed120', ['Moro']),          # «l'emendamento sostitutivo dell'onorevole Laconi, dell'onorevole Moro e di altri
+                                                 # colleghi»: ripresa dell'emendamento Laconi (sed119), non un atto nuovo
+                  ('sed105', ['Martino', 'Labriola', 'Della Seta', 'Caronia', 'Lucifero'])]   # ripresa dell'emendamento
+                                                 # presentato in sed104 (vedi FIRMATARI_CORRETTI): elenco ristampato dal Presidente
 FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul PDF: (seduta, cognomi presenti, elenco giusto, completo)
     ('sed102', ['Guerrieri', 'Zotta', 'Bovetti'], ['Guerrieri Filippo', 'Zotta', 'Carignani', 'Bovetti', 'Cremaschi Carlo'], 1),
     ('sed119', ['Cevolotto', 'Targetti', 'Moro', 'Taviani'],
@@ -50,6 +55,14 @@ FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul P
     ('sed318', ['Rescigno', 'Adonnino', 'Cimenti', 'Lizier', 'Micheli', 'Carbonari', 'Tozzi Condivi'],
            ['Adonnino', 'Coccia', 'Borsellino', 'De Maria', 'Angelucci', 'Carbonari', 'Cimenti', 'Tozzi Condivi',
             'Lizier', 'Cremaschi Carlo', 'Rescigno'], 1),        # «Micheli» apparteneva all'emendamento precedente
+    # --- verificati sull'immagine della pagina (ottobre 2026, seconda tornata) ---
+    # INCERTO: due stampe dello stesso emendamento. In sed104 p23 Martino Gaetano lo dice «presentato dagli
+    # onorevoli Labriola, Della Seta, Lucifero, Corbino e da me»; in sed105 p8 il Presidente lo ristampa come
+    # «degli onorevoli Martino Gaetano, Labriola, Della Seta, Caronia, Lucifero e [a capo di colonna] Corbino».
+    # Si tiene l'elenco piu' lungo, che e' quello letto dalla presidenza; Caronia e' stampato, non dedotto.
+    ('sed104', ['Martino', 'Labriola', 'Della Seta', 'Corbino', 'Lucifero'],
+           ['Martino Gaetano', 'Labriola', 'Della Seta', 'Caronia', 'Lucifero', 'Corbino'], 1),
+    ('sed120', ['Medi'], ['Medi', 'Federici Maria'], 1),   # «l'emendamento degli onorevoli Medi -e Federici Maria»
 ]
 
 # Oggetto dei voti (in inglese). Quelli non elencati restano «to be labelled».
@@ -109,14 +122,30 @@ cogn = nomi.set_index('id_dep').cognome
 E['cogn'] = E.firmatari.map(lambda f: {cogn.get(x, '') for x in str(f).split('|')})
 via = [i for sed, cc in FALSI_POSITIVI for i in E[(E.prima_seduta == sed) & (E.cogn == set(cc))].id_emendamento]
 E = E[~E.id_emendamento.isin(via)].copy(); L = L[~L.id_emendamento.isin(via)]
+def presente(k, cset):
+    """«Rossi Paolo» nella chiave vale per il cognome «Rossi»: la chiave puo' riportare il nome proprio."""
+    return any(k == c or k.startswith(c + ' ') for c in cset)
 for sed, cc, lista, completo in FIRMATARI_CORRETTI:
-    hit = E[(E.prima_seduta == sed) & E.cogn.map(lambda c: set(cc) <= c)]
+    hit = E[(E.prima_seduta == sed) & E.cogn.map(lambda c: all(presente(k, c) for k in cc))]
+    if len(hit) > 1:   # piu' record contengono quei nomi: vale quello che ha esattamente quei nomi
+        hit = hit[hit.cogn.map(lambda c: len(c) == len(cc))]
     if len(hit) != 1: print('  ATTENZIONE: correzione non applicata', sed, cc, len(hit)); continue
     i = hit.id_emendamento.iloc[0]; data = hit.data.iloc[0]
     ids = [x for x in (trova(n, data) for n in lista) if x]
     L = pd.concat([L[L.id_emendamento != i], pd.DataFrame({'id_emendamento': i, 'id_dep': ids})])
     E.loc[E.id_emendamento == i, ['firmatari', 'n_firmatari', 'completo']] = ['|'.join(ids), len(ids), completo]
 print('Correzioni manuali: rimossi', len(via), 'falsi positivi')
+# dopo le correzioni due record possono avere lo stesso elenco (stesso emendamento stampato due volte,
+# la prima con l'elenco troncato): si tiene il primo, come fa l'estrattore per le riletture (±3 sedute)
+E['snum'] = E.prima_seduta.str[3:].astype(int)
+doppi = []
+for f, g in E.sort_values(['snum', 'pagina']).groupby(E.firmatari.map(lambda x: '|'.join(sorted(str(x).split('|'))))):
+    tenuto = None
+    for r in g.itertuples():
+        if tenuto is not None and r.snum - tenuto <= 3: doppi.append(r.id_emendamento)
+        else: tenuto = r.snum
+E = E[~E.id_emendamento.isin(doppi)].drop(columns='snum'); L = L[~L.id_emendamento.isin(doppi)]
+print('Correzioni manuali: uniti', len(doppi), 'doppioni nati dalle correzioni')
 E['id_emendamento'] = 'a' + E.id_emendamento.astype(str)
 L['id_emendamento'] = 'a' + L.id_emendamento.astype(str)
 L = L.drop_duplicates().sort_values(['id_emendamento', 'id_dep'])
