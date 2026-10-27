@@ -33,8 +33,10 @@ FALSI_POSITIVI = [('sed072', ['Perassi']),                               # propo
                   # --- verifica sull'immagine della pagina dopo le correzioni dell'estrattore (ottobre 2026) ---
                   ('sed120', ['Moro']),          # «l'emendamento sostitutivo dell'onorevole Laconi, dell'onorevole Moro e di altri
                                                  # colleghi»: ripresa dell'emendamento Laconi (sed119), non un atto nuovo
-                  ('sed105', ['Martino', 'Labriola', 'Della Seta', 'Caronia', 'Lucifero'])]   # ripresa dell'emendamento
+                  ('sed105', ['Martino', 'Labriola', 'Della Seta', 'Caronia', 'Lucifero']),   # ripresa dell'emendamento
                                                  # presentato in sed104 (vedi FIRMATARI_CORRETTI): elenco ristampato dal Presidente
+                  ('sed310', ['Nitti', 'Bertone'])]   # «eguale emendamento, prima di me, era stato proposto dall'onorevole
+                                                 # Nitti» (Bertone): due emendamenti identici di autori diversi, non una co-firma
 FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul PDF: (seduta, cognomi presenti, elenco giusto, completo)
     ('sed102', ['Guerrieri', 'Zotta', 'Bovetti'], ['Guerrieri Filippo', 'Zotta', 'Carignani', 'Bovetti', 'Cremaschi Carlo'], 1),
     ('sed119', ['Cevolotto', 'Targetti', 'Moro', 'Taviani'],
