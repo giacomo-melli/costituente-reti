@@ -65,6 +65,12 @@ FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul P
     ('sed104', ['Martino', 'Labriola', 'Della Seta', 'Corbino', 'Lucifero'],
            ['Martino Gaetano', 'Labriola', 'Della Seta', 'Caronia', 'Lucifero', 'Corbino'], 1),
     ('sed120', ['Medi'], ['Medi', 'Federici Maria'], 1, 12),   # p12: «l'emendamento degli onorevoli Medi -e Federici Maria»
+    # --- verifica dei pluri-firmati (blocchi 3-4): elenchi che proseguono oltre la colonna o la pagina ---
+    ('sed122', ['Benvenuti', 'Belotti', 'Castelli Avolio', "Dominedo'", 'Cremaschi Carlo', 'Biagioni'],
+           ['Clerici', 'Belotti', "Dominedo'", 'Benvenuti', 'Chatrian', 'Castelli Avolio', 'Biagioni', 'Cremaschi Carlo',
+            'Tosi', 'Balduzzi', 'Mortati', 'Bonomi Paolo'], 1, 34),     # seconda formulazione dell'emendamento Clerici
+    ('sed118', ['Montagnana Mario', 'Pajetta Gian Carlo', 'Foa'],
+           ['Montagnana Mario', 'Foa', 'Pajetta Gian Carlo', 'Pesenti', 'Grieco', 'Laconi'], 1, 1),   # p1 col. destra -> p2 col. sinistra
 ]
 
 # Oggetto dei voti (in inglese). Quelli non elencati restano «to be labelled».

@@ -142,6 +142,8 @@ def flatten(seduta):
             c = re.sub(r'-{1,3}[ \t]*[|.,\'‘’°"`´]{0,2}[ \t]*\n(?:[^\S\n]*[|.,\'‘’°-]*[^\S\n]*\n)*[^\S\n]*[-|.,\'‘’°]{0,2}[^\S\n]*', '', c)
             c = re.sub(r'\bo\W{0,3}n\W{0,2}o\W{0,2}[rt]\W{0,2}e\W{0,2}v\W{0,2}o\W{0,2}l\W{0,2}([ei])\b', r'onorevol\1', c)
             c = re.sub(r'\bonorevo[!|1I]([ei])\b', r'onorevol\1', c)
+            c = re.sub(r'(\w)-[:;]\s+(\w)', r'\1\2', c)                       # «sostan-: ziali»
+            c = re.sub(r"\b(De|Di|Da|Del|Della|Lo|La)['’]?\s*[:.|]\s+(?=[A-ZÀ-Ý][a-zà-ÿ])", r'\1 ', c)   # «De' : Palma»
             c = re.sub(r'\b([Oo])n[oòóô][eéè]?r[eéè]vol([ei])\b', r'\1norevol\2', c)   # «onòérevole»        # «onorevo!e»: la l letta come punto esclamativo   # «ono“revoli», «o- norevoli»
             # cognome spezzato a fine riga con un apice o una barra al posto del trattino
             # («Carpano Ma ‘glioli», «For-‘nara»): senza ricucirlo, l'elenco dei firmatari
@@ -173,7 +175,7 @@ def is_signature(c):
 # se non si ammettono, l'elenco dei firmatari si interrompe li' e tutti i nomi successivi vanno persi.
 NAME = r"[A-ZÀ-Ý][\w'’À-ÿ:|¶]+(?:\.\s(?=[a-z])\w+)?(?:\s+[A-ZÀ-Ý][\w'’À-ÿ:|¶]+){0,3}"   # ammette «Miccol:s», «Bo. nino» (rumore OCR)
 PRES = re.compile(r"(?:dell['’]\s?onorevole|[Dd]all['’]?\s?onorevole|della\s+onorevole|de\s?gli onorevoli|dagli onorevoli|dalle onorevoli|dell['’]\s?on\.|insie\w{1,3}\s+con\s+gli\s+onorevoli|unitamente\s+(?:agli|con\s+gli|ai)\s+(?:onorevoli|colleghi)|dal\s+collega(?:\s+onorevole)?|dai\s+colleghi(?:\s+onorevoli)?|firm\w+\s+(?:anche\s+)?(?:dei|degli|dai)\s+colleghi)[\s‘'’]+(" + NAME +
-                  r"(?:[\s·]*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b|\s*-\s*)[\s¶\-·.‘’'\"“”|$*!:]*(?:(?:dell['’]\s?|della\s+|dall['’]\s?)onorevole[\s‘'’]+)?" + NAME + r")*(?:,?\s*(?:ed|e)\s+altri)?)")
+                  r"(?:[\s·]*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b|\s*-\s*)[\s¶\-·.‘’'\"“”|$*!:]*(?:(?:dell['’]\s?|della\s+)onorevole[\s‘'’]+)?" + NAME + r")*(?:,?\s*(?:ed|e)\s+altri)?)")
 # Il segno ¶ (riga vuota nel testo appiattito) e' ammesso fra separatore e nome:
 # senza, elenchi come «Marinaro e ¶ Rodi» si interrompevano prima dell'ultimo firmatario.
 # «Gli onorevoli X, Y e Z hanno presentato il seguente emendamento»
@@ -357,7 +359,7 @@ for s in sedute:
         # escluse: interrogazioni, interpellanze, mozioni e richieste di votazione (appello nominale, scrutinio segreto).
         # La spia puo' trovarsi anche DOPO i nomi: «...hanno chiesto la votazione per appello nominale»,
         # «Essa porta le firme anche degli onorevoli X, Y, Z» riferito a una richiesta annunciata prima.
-        NON_EM = r"interrogazion|interpellanz|mozion|ordin\w*\W{0,4}del\W{0,4}giorno|risoluzion|appello\W{0,4}nominale|scrutinio segreto|(?:chiest|richiest)\w*\s+(?:la\s+)?votazione|verifica del numero legale|risoluzion"
+        NON_EM = r"interrogazion|interpellanz|mozion|ordin\w*\W{0,4}del\W{0,4}giorno|risoluzion|appello\W{0,4}nominale|scrutinio segreto|(?:chiest|richiest)\w*\W+(?:la\W+)?votazione|s\w?rutinio|verifica del numero legale|risoluzion"
         # dopo l'elenco la spia vale solo nella stessa frase: «Identico emendamento è stato presentato
         # dagli onorevoli X, Y. ¶ È stata chiesta la votazione per appello nominale...» e' un emendamento
         stessa_frase = re.split(r"\.[\s¶/]*(?=[A-ZÀ-Ý«])|¶", after[:160])[0]
@@ -392,7 +394,7 @@ for s in sedute:
             # «l'onorevole X» prima dell'elenco («ha facolta' di svolgerlo l'onorevole Merlin Angelina,
             # la quale, insieme con gli onorevoli...»; «l'onorevole Laconi svolgere il seguente
             # emendamento presentato insieme con gli onorevoli...»)
-            if not mp and re.match(r"insie|unitam", m.group(0), re.I):
+            if not mp and (re.match(r"insie|unitam", m.group(0), re.I) or re.search(r"firmat[oa]\s+anche", before[-70:], re.I)):
                 tutti = list(re.finditer(r"[Ll]['’]\s?onorevole[\s.,]+(" + NAME + r")", before[-200:]))
                 mp = tutti[-1] if tutti else None
             if mp: testo = mp.group(1).strip().title() + ', ' + testo
