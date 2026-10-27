@@ -39,3 +39,6 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 **/_*_v1*.R
+
+# ---- registro di lavoro, fuori dal repository ----
+pipeline/extraction/REGISTRO_NOTTE.md

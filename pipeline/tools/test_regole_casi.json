@@ -1,0 +1,477 @@
+[
+ {
+  "nome": "pres_dagli_onorevoli_poi_appello",
+  "seduta": "sed072",
+  "nota": "presentazione seguita da una richiesta di appello nominale nella frase dopo: l'emendamento resta",
+  "atteso": [
+   [
+    "Amendola",
+    "Grieco",
+    "Iotti",
+    "Laconi"
+   ],
+   [
+    "Basso",
+    "De Michelis",
+    "Gullo Fausto",
+    "Nenni",
+    "Targetti",
+    "Togliatti"
+   ]
+  ],
+  "testo": "a dell'emendamento presentato dagli onorevoli Amendola, Laconi, Iotti Leonilde, Grieco:\n\n« L'Italia è una repubblica democratica di lavoratori». .\n\nIdentico emendamento è stato presentato dagli onorevoli Basso, Targetti, Nenni, De Michelis, Gullo Fausto, Togliatti.\n\nÈ stata chiesta la votazione per appello nominale dagli onorevoli Grieco, Corbi, Longo, Ricci, Scoccimarro, Ravagnan, Musolino, Bardini, Li Causi, -Pajetta Gian Carlo, Mattei Teresa, Assennato, Negro, Pratolongo, Pellegrini.\n\n'PACCIARDI. Chiedo di parlare per dichiarazione di voto.\n\nPRESIDENTE. Ne ha facoltà. <\n\nPACCIARDI. Onorevoli colleghi, la prop"
+ },
+ {
+  "nome": "pres_a_firma_degli",
+  "seduta": "sed072",
+  "nota": "«a firma degli onorevoli»; l'elenco coincide con il blocco di firma stampato nella stessa seduta",
+  "atteso": [
+   [
+    "Amadei",
+    "Basso",
+    "Bernini",
+    "Cacciatore",
+    "Dugoni",
+    "Fogagnolo",
+    "Lupis",
+    "Malagugini",
+    "Merlin Angelina",
+    "Morandi",
+    "Romita",
+    "Sansone",
+    "Targetti",
+    "Tonetti"
+   ]
+  ],
+  "testo": "dell’emendamento Cortese, l’emendamento Basso, Targetti, Nenni ed altri e l'emendamento Caroleo.\n\nSegue l'emendamento a firma degli onorevoli Basso, Bernini, Targetti, Tonetti, Malagugini, Morandi, Sansone, Amadei, Dugoni, Romita, Fogagnolo, Merlin Angelina, Cacciatore, Lupis, il quale, mentre nella sua prima parte fa propria sostanzialmente la formula che abbiamo testé approvata, e può quindi considerarsi limitataniente da questa assorbito, nella seconda parte può e"
+ },
+ {
+  "nome": "pres_a_firma_degli_2",
+  "seduta": "sed085",
+  "nota": "«a firma degli onorevoli», elenco lungo con nomi propri",
+  "atteso": [
+   [
+    "Bonomi Ivanoe",
+    "Buffoni",
+    "Calamandrei",
+    "Cevolotto",
+    "Cianca",
+    "Conti",
+    "Foa",
+    "Giua",
+    "Lombardo",
+    "Natoli Lamantea",
+    "Paris",
+    "Schiavetti",
+    "Vischioni"
+   ]
+  ],
+  "testo": "o disposto dall’articolo 7 ». Per tutte queste ragioni ho presentato l'emendamento. .\n\nPRESIDENTE. È stato presentato il seguente emendamento, a firma degli onorevoli Cianca, Calamandrei, Foa, Schiavetti, Giua, Lombardo Ivan Matteo, Bonomi Ivanoe, Paris, Buffoni, Cevolotto, Vischioni, Conti e Natoli: i\n\n« Sostituire l'articolo col seguente:\n\n«Tutti hanno diritto di professare liberamente la propria fede religiosa, in qualsiasi forma individuale o associata, di farne propaganda e di esercit"
+ },
+ {
+  "nome": "pres2_gli_onorevoli",
+  "seduta": "sed074",
+  "nota": "«Gli onorevoli X, Y e Z hanno proposto»",
+  "atteso": [
+   [
+    "Basso",
+    "Malagugini",
+    "Targetti"
+   ]
+  ],
+  "testo": "e ancora nel suo emendaniento. RODINO’ MARIO. Non insistiamo e aderiamo senz'altro all'’emendamento Moro.\n\nPRESIDENTE. Gli onorevoli Basso, Targetti e Malagugini hanno proposto di sostituire l'articolo 6 col seguente:\n\n« La Repubblica garantisce i diritti essenziali dell'uomo nella sua vita individuale ed associata e richiede l’adempimento dei doveri di solidarietà politic"
+ },
+ {
+  "nome": "firmato_anche_ha_ora_presentato",
+  "seduta": "sed083",
+  "nota": "«L'onorevole X ha ora presentato... firmato anche dagli onorevoli»: il presentatore va aggiunto (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Colitto",
+    "Corsini",
+    "De Falco",
+    "Marinaro",
+    "Mazza",
+    "Miccolis",
+    "Patricolo",
+    "Perugi",
+    "Rodi",
+    "Tumminelli"
+   ]
+  ],
+  "testo": "presente l'onorevole proponente, l'emendamento si intende decaduto. L'onorevole Patricolo ha ora presentato il seguente emendamento, firmato anche dagli onorevoli Colitto, Perugi, Mazza, De Falco_ Miccolis, Corsini, Tumminelli, Marinaro e\n\nRodi:\n\n«La condizione giuridica dellò straniero è regolata dalla legge. ”\n\n«Lo straniero perseguitato nel proprio paese per azioni commesse in. difesa delle libertà garentite dalla Costituzione"
+ },
+ {
+  "nome": "e_da_me",
+  "seduta": "sed104",
+  "nota": "«presentato dagli onorevoli X, Y e da me»: si aggiunge chi parla (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Corbino",
+    "Della Seta",
+    "Labriola",
+    "Lucifero",
+    "Martino Gaetano"
+   ]
+  ],
+  "testo": "la per appello nominale.\n\nMARTINO GAETANO. Chiedo di parlare.\n\nPRESIDENTE. Ne ha facoltà.\n\nMARTINO GAETANO. Desidero far notare che questo è un emendamento aggiuntivo al secondo comma dell’articolo, mentre esistono parecchi emendamenti aggiuntivi al primo comma, sui quali non si è ancora votato. Fra gli altri ve ne è uno presentato dagli onorevoli Labriola, Della Seta, Lucifero, Corbino e .da me. Ì\n\n© PRESIDENTE. Mipermetta, onorevole Martino: esis"
+ },
+ {
+  "nome": "congiunzione_e_punto",
+  "seduta": "sed123",
+  "nota": "«Rodnò Mario e. Puoti»: refuso nel cognome e congiunzione con il punto spurio",
+  "atteso": [
+   [
+    "Colitto",
+    "Marina",
+    "Puoti",
+    "Rodino' Di Miglione"
+   ]
+  ],
+  "testo": "resente. S'intende quindi che abbia rinunciato a svolgere il suo emendamento. i Un emendamento soppressivo dell'intero articolo è stato pure presentato dagli onorevoli Marina, Colitto, Rodnò Mario e. Puoti.\n\nL'onorevole Colitto, secondo firmatario dell'emendamento, ha facoltà di svolgerlo.\n\nCOLITTO. Noi abbiamo chiesto, onorevoli colleghi, la. sop"
+ },
+ {
+  "nome": "cognomi_senza_virgola",
+  "seduta": "sed304",
+  "nota": "«Targetti Amadei e Bordon»: due cognomi senza virgola",
+  "atteso": [
+   [
+    "Amadei",
+    "Bordon",
+    "Targetti"
+   ]
+  ],
+  "testo": "pericolo di dare alla Magistratura il carattere di casta chiusa.\n\nPRESIDENTE. Segue l'emendamento sostitutivo presentato dagli onorevoli Targetti Amadei e Bordon:\n\n« Le assunzioni, le promozioni, le assegnazioni, i trasferimenti di sede, i cambiamenti di funzioni dei magistrati ed i procedimenti disciplinari sono di c"
+ },
+ {
+  "nome": "ed_altri",
+  "seduta": "sed083",
+  "nota": "il singolare «l'emendamento» vicino all'elenco prevale sul plurale «emendamenti» della frase prima; chiuso da «ed altri»",
+  "atteso": [
+   [
+    "Basso",
+    "Giua",
+    "Nobili",
+    "Tonello"
+   ]
+  ],
+  "testo": "proposto dì trovare una formula d’accordo tra i varî presentatori. Le stesse ragioni da mne opposte ‘all’emendamento Ravagnan e le riserve per talune delle considerazioni illustrative degli emendamenti Treves e Cappi valgono anche’ per l'emendamento degli onorevoli Basso, Nobili Tito Oro, Giua, Tonello ed altri, che dichiaro — perciò — di non accettare.\n\nPer quanto -poi riguarda l’emendamento proposto dall’onorevole Nobile, ricordo quello. che già ho detto a proposito dell’emendamento da lui presentato all"
+ },
+ {
+  "nome": "neg_plurale_ritirati",
+  "seduta": "sed082",
+  "nota": "«Gli emendamenti degli onorevoli Gabrieli e Caroleo sono stati ritirati»: atti distinti",
+  "atteso": [],
+  "testo": "otazione la. proposta dell’onorevole Bulloni di aggiungere alla fine del secondo comma le parole: «salvo il caso di flagranza di reato ».\n\n(Non: è approvata).\n\nPassiamo alla votazione del 3° comma. Gli emendamenti degli onorevoli Gabrieli e Caroleo sono stati ritirati.\n\nRestano i seguenti emendamenti:\n\nAl terzo comma, sostituire le parole: autorità di pubblica sicurezza, con /e seguenti: autor"
+ },
+ {
+  "nome": "neg_plurale_accoglimento",
+  "seduta": "sed088",
+  "nota": "«l'accoglimento degli emendamenti degli onorevoli Cavallari e Montagnana»: atti distinti",
+  "atteso": [],
+  "testo": "ono ancora più grave, più pesante, il quinto comma proposto dalla Commissione.  La Gommissione a questo riguardo non si è trovata d’accordo. Non è d'accordo per la soppressione; non è d’accordo per l’accoglimento degli emendamenti degli onorevoli Cavallari e Montagnana. Se devo esprimere il pensiero della Commissione, questa è favorevole al testo del'progetto. .\n\nPersonalmente io mi rendo con"
+ },
+ {
+  "nome": "neg_plurale_ricordati",
+  "seduta": "sed072",
+  "nota": "«i ricordati emendamenti degli onorevoli Clerici e Crispo»: atti distinti",
+  "atteso": [],
+  "testo": "liberale Crispo lo posponevano alla materia trattata nel terzo comma, relativo alla sovranità. :\n\nInfine, al terzo comma, si rimprovera di essere posposto alla materia del secondo, come risulta dai ricordati emendamenti degli onorevoli Clerici e Crispo.\n\nSempre al terzo comma, si muove qualche appunto a proposito della dizione, specie in materia di det"
+ },
+ {
+  "nome": "neg_atto_osservazioni",
+  "seduta": "sed050",
+  "nota": "«le osservazioni dell'onorevole Calamandrei»: atto di parola",
+  "atteso": [],
+  "testo": "olo italiano, che giustamente aspira di vedere riconosciuto nella sua. Costituzione l’esistenza del'patto fondamentale fra Chiesa: e Stato italiano.‘ .\n\nOnorevoli colleghi, ho seguito con attenzione le osservazioni dell’onorevole professor Calamandrei sulle contradizioni  esisténti in tema di rifefimenti' ai Trattati Lateranensi; se noi, esaminando quei trattati, dobbiamo rife"
+ },
+ {
+  "nome": "neg_atto_parole",
+  "seduta": "sed054",
+  "nota": "«le parole dell'onorevole Mastrojanni»: atto di parola",
+  "atteso": [],
+  "testo": "esto risalta anche dal resconto stenografico — che egli si è espresso con elevale e nobili parole nei riguardi del lavoro e dei lavoratori.\n\nCiò tengo a confermare, perché qualche giornale ha inteso travisare le parole dell’onorevole Mastrojanni, e non in buona fede. Io non farò uso del linguaggio giuridico, perché non lo conosco, onorevoli colleghi; parlerò così alla buona, come"
+ },
+ {
+  "nome": "neg_quelli_degli",
+  "seduta": "sed084",
+  "nota": "«quelli degli onorevoli Lami Starnuti e Caroleo»: atti distinti",
+  "atteso": [],
+  "testo": "uterlo nel merito quando verrà il turno dell'articolo 13. _\n\nCAPPI. D'accordo.\n\n‘ 'TUPINI, Presidente della prima Sottocommissione. Allora esaminiamo gli emendamenti proposti per l’articolo 12.\n\n| Basta leggere quelli degli onorevoli. Lami Starnuti e Caroleo, per capire subito che essi hanno valore puramente formale. Vogliamo proprio insistere in queste modificazioni di-forma? ,\n\nL’onorevole*Caroleo' propone: . .\n\n« Tutti hanno"
+ },
+ {
+  "nome": "neg_quelli_degli_2",
+  "seduta": "sed086",
+  "nota": "«in quelli degli onorevoli Binni, Pajetta, La Rocca...»: atti distinti",
+  "atteso": [],
+  "testo": "nti respinti contenevano una parte, che viene oggi ripro- l'o-P__———m&__t——_—m—___—_TT_T—T_—r_—t———=@é@@@t@@t@ i titti. posta in alcuni, anzi in quasi tutti gli emendamenti ché sono stati presentati, particolarmente in quelli degli onorevoli Binni, PajeltaLa Rocca, Laconi e Cianca. La parte che ha formato oggetto di votazione riguarda precisamente due punti: 1°) la eliminazione della formula «in quanto non contrastino con l'ordinamento g"
+ },
+ {
+  "nome": "neg_quelli_proposti_dagli",
+  "seduta": "sed075",
+  "nota": "«Quelli proposti dagli onorevoli Crispo, Basso, Bassano e Patricolo»: atti distinti",
+  "atteso": [],
+  "testo": "per facilitare ‘ le successive votazioni... .\n\n° Fra gli emendamenti ve ne sono tre, quelli degli onorevoli Della Seta, Calamandrei e Lami Starnuti, che sono sostitutivi dell’ifitero articolo. na\n\nQuelli proposti dagli onorevoli Crispo, Basso, Bassano e Patricolo sono sostitutivi dei primi due commi. . L'onorevole Lucifero e l'onorevole Nobili Tito Oro hanno invece proposto di trasferire all’articolo 14 il te"
+ },
+ {
+  "nome": "neg_rispettivamente",
+  "seduta": "sed116",
+  "nota": "«due emendamenti presentati rispettivamente dagli onorevoli Villani e Romano» (controllato sull'immagine)",
+  "atteso": [],
+  "testo": "materia, se mai, di discussione :a proposito dell'articolo 37. i . E poiché ho la parola, se il Presidente -permette, vorrei dire qualcosa per definire la nostra posizione anche per i due emendamenti presentati rispettivamente . dagli onorevoli Villani e Romano. Ì PRESIDENTE. Prosegua pure. ‘ FANFANI. L'onorevole Villani proporie la variante, rispetto al testo della Commissione della parola « disciplina ». + Ora, a'noi sem"
+ },
+ {
+  "nome": "neg_assorbiti_gli_emendamenti",
+  "seduta": "sed306",
+  "nota": "«assorbiti gli emendamenti. « degli onorevoli Federici, Villabruna...»: punto spurio dell'OCR, atti distinti",
+  "atteso": [],
+  "testo": "e il suo emendamento ?\n\nADONNINO. Vi rinunzio.\n\nPRESIDENTE. Dopo la presentazione :del nuovo testo della Commissione, sono da cons derarsi assorbiti gli emendamenti. «degli onorevoli Federici Maria, Villabruna, Ruggiero Carlo, Geuna. Gli emendamenti delle onorevoli Bianchi B'anca e Merlin Angelina erano soppressivi soltanto in parte: quindi pensosi possano r'prcsentare i loro e"
+ },
+ {
+  "nome": "neg_dichiarazioni_punto_spurio",
+  "seduta": "sed319",
+  "nota": "«dichiarazioni . dell'onorevole Ruini» resta atto di parola; l'articolo aggiuntivo di Mortati nello stesso passo e' un emendamento",
+  "atteso": [
+   [
+    "Mortati"
+   ]
+  ],
+  "testo": "che espressione al riguardo, ma non è il caso di farne una norma vera e propria nella Costituzione.\n\n. PRESIDENTE. Onorevole Tozzi Condivi, dopo le dichiarazioni dell’onorevole Ruini insiste ancora sull’articolo aggiuntivo dell’onorevole Mortati?\n\nTOZZI CONDIVI. Dopo le dichiarazioni . dell’onorevole Ruini lo ritiro, purché se ne tenga conto nel coordinamento. , PRESIDENTE. Segue un articolo aggiuntivo proposto dall'onorevole Codi"
+ },
+ {
+  "nome": "neg_cortesia",
+  "seduta": "sed122",
+  "nota": "«la cortesia formale dell'onorevole Di Vittorio»: atto di parola",
+  "atteso": [],
+  "testo": "errata, che possano sbarrargli il. passo: non. c'è. che il genio umano, il quale ne ‘carpisce i, segreti e ne fa dono, a tutta l’umanità... . _.. . Gi si accusa di fascismo, e non posso: non rilevare la cortesia formale dell’onorevole Di Vittorio, il quale.ha detto che io, svolgendo il mio emendamento, ho sostenuto dei criterî fascisti. Io credo che molti dei deputati dell’estrema sinistra e di altri settori conosca"
+ },
+ {
+  "nome": "neg_interruzione",
+  "seduta": "sed084",
+  "nota": "«(Interruzione dell'onorevole Conti)»",
+  "atteso": [],
+  "testo": "zione del numero legale, in occasione di ogni votazione che si debba eseguire; e, ciò può giovare a sottolineare il numero degli assenti. Dato ciò, la richiesta dell’onorèvole Andreotti avrà seguito. (Interruzione dell'onorevole Conti). ° .\n\nSi dà inizio all’appello nominale sull'emendamento proposto dagli onorevoli Ravagnan, Laconi e Grieco così formulato:\n\n« Sostituire il secondo comma col seguente:\n\n«Lo"
+ },
+ {
+  "nome": "neg_odg_presentato_dagli",
+  "seduta": "sed141",
+  "nota": "ordine del giorno presentato dagli onorevoli Grieco e Laconi",
+  "atteso": [],
+  "testo": "onomie regionali, presterà ossequio alla voce della storia e dirà che non vuole condannarsi all’impotenza e alla morte. (Vivi applausi — Congratulazioni).\n\nPRESIDENTE. Segue l’ordine del giorno\n\n‘’ presentato dagli onorevoli Grieco e Laconi, del seguente tenore: °\n\n«L’Assemblea Costituente riconosce la necessità di effettuare un ampio decentramento amministrativo democratico dello Stato, a mezzo della creazione dell'Ente Regione, avente facoltà legislativa di integrazione e di attuazi"
+ },
+ {
+  "nome": "neg_odg_degli",
+  "seduta": "sed147",
+  "nota": "«l'ordine del giorno degli onorevoli Nitti e Rubilli»",
+  "atteso": [],
+  "testo": "RESIDENTE. Chiedo all’onorevole Castiglia se mantiene gli emendamenti anche per l’ordine del giorno Rubilli-Nitti.\n\nCASTIGLIA. Il fatto che noi chiediamo l'inserzione della stessa dizione anche nell'ordine del giorno degli onorevoli Nitti e Rubilli dimostra che non possiamo accedere alla richiesta formulata dall'onorevole Lussu e dagli altri colleghi. \\\n\nRUBILLI. Chiedo di parlare.\n\nPRESIDENTE. Ne ha facoltà.\n\nRUBILLI. Non cr"
+ },
+ {
+  "nome": "neg_interrogazione",
+  "seduta": "sed081",
+  "nota": "interrogazione degli onorevoli Bellavista e Bonino al Ministro",
+  "atteso": [],
+  "testo": "cati di passaggio, ma è e deve essere considerata come il simbolo di una missione alta e solenne, necessaria e proficua. (Vivi applausî). PRESIDENTE. Segue l’interrogazione degli onorevoli Bellavista e Bonino, al Ministro dei trasporti, « per sapere i motivi per i quali, con grave pregiudizio per la campagna agrumaria- siciliana in corso e dell'economia nazionale e regionale, non si restituiscono al compartimento ferroviario di Palerm"
+ },
+ {
+  "nome": "neg_appello_nominale_dagli",
+  "seduta": "sed072",
+  "nota": "la richiesta di appello nominale non e' un emendamento (resta solo quello della frase prima)",
+  "atteso": [
+   [
+    "Basso",
+    "De Michelis",
+    "Gullo Fausto",
+    "Nenni",
+    "Targetti",
+    "Togliatti"
+   ]
+  ],
+  "testo": "mocratica di lavoratori». .\n\nIdentico emendamento è stato presentato dagli onorevoli Basso, Targetti, Nenni, De Michelis, Gullo Fausto, Togliatti.\n\nÈ stata chiesta la votazione per appello nominale dagli onorevoli Grieco, Corbi, Longo, Ricci, Scoccimarro, Ravagnan, Musolino, Bardini, Li Causi, -Pajetta Gian Carlo, Mattei Teresa, Assennato, Negro, Pratolongo, Pellegrini.\n\n'PACCIARDI. Chiedo di parlare per dichiarazione di voto.\n\nPRESIDENTE. Ne ha facoltà. <"
+ },
+ {
+  "nome": "neg_appello_nominale_richiesta",
+  "seduta": "sed072",
+  "nota": "«hanno presentato richiesta di votazione per appello nominale»",
+  "atteso": [],
+  "testo": "per fondamento il lavoro ».\n\nL'emendamento Fanfani conserva la dizione « fondata sul lavoro ».\n\nPongo dunque in votazione l’emendamento La Malfa.\n\nGli onorevoli Persico, Cevolotto ed altri, hanno presentato richiesta di votazione per appello nominale, e poiché contiene le 15 firme regolamentari, io sono tenuto a darvi corso. Tuttavia devo far presente agli onorevoli colleghi che forse un nuovo appello nominale — di cui del resto non voglio anticipare i risultati"
+ },
+ {
+  "nome": "neg_ruini_presidente",
+  "seduta": "sed050",
+  "nota": "Ruini parla come Presidente della Commissione",
+  "atteso": [],
+  "testo": "ratori » se queste parole non servissero-'in altre Costituzioni a designare forme. di economia che non corrispondono alla realtà italiana. Non so quali siano’ queste .altre ‘ Costituzioni. ., | o)\n\n‘RUINI, Presidente della Commissione.\n\n° Quella jugoslava, per esempio. . 4\n\n. * LACONÎ. .A. me non consta che nella Costituzione jugoslava ci sia una ‘denominazione di questo genere, sebbene l’abbia letta attentamente. Certo questa d"
+ },
+ {
+  "nome": "neg_tupini_presidente",
+  "seduta": "sed081",
+  "nota": "Tupini parla come Presidente della prima Sottocommissione",
+  "atteso": [],
+  "testo": "ato, di un sospettato, di un indiziato, significa implicitamente ammettere che la legge penale non sia sufficiente e capace a reprimere delitti di tal natura. Sono rimasti per il passato impuniti ?\n\nTUPINI, Presidente della prima Sottocommissione. Purtroppo.\n\nVERONI. L’onorevole Tupini dice « purtroppo » ma, siccome non si può immaginare. che ancora oggi debbano restare impuniti come per il passato, e particolarmente durante il tragico regim"
+ },
+ {
+  "nome": "singolo_segue_emendamento",
+  "seduta": "sed119",
+  "nota": "«Segue l'emendamento dell'onorevole Bubbio»: atto a se', non va assorbito nell'elenco di 28 firme",
+  "atteso": [
+   [
+    "Bubbio"
+   ]
+  ],
+  "testo": "nto, già svolto, dell’onorevole Cortese: i «Dopo le parole: a parità di lavoro, aggiungere le altre: e di rendimento ». Segue l'emendamento dell'onorevole Bubbio: i i « Alla fine del secondo periodo, sostituire. alle parole: adempimento della sua essenziale funzione familiare, le seguenti: adempimento delle sue essenziali funzioni materne e familiari » . - i L’onorevole Bubbio:"
+ },
+ {
+  "nome": "sillabazione_presentatore_turno",
+  "seduta": "sed250",
+  "nota": "«Mora--/'nino» e presentatore nel turno di parola «LACONI. Presento...»",
+  "atteso": [
+   [
+    "Dozza",
+    "Iotti",
+    "La Rocca",
+    "Laconi",
+    "Mattei",
+    "Minella",
+    "Montagnana Rita",
+    "Moranino",
+    "Nenni",
+    "Togliatti"
+   ]
+  ],
+  "testo": "LACONI. Presento all'Assemblea il se-\nguente emendamento aggiuntivo firmato an-\nche dai colleghi La Rocca, Togliatti, Mora--\n'nino, Dozza, Nenni, Minella Angiola, Mattei\nTeresa, Jotti Leonilde e Montagnana Rita:\n\n«I deputati alla Costituente che abbiano\nsofferto almeno cinque anni di carcere per\nuna condanna del tribunale speciale per\nmotivi politici sono senatori di diritto del\nprimo Senato della Repubblica »."
+ },
+ {
+  "nome": "ricucitura_apice_a_capo",
+  "seduta": "sed188",
+  "nota": "«Carpano Ma-/'glioli», «For-/-'nara» (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Amadei",
+    "Bonomelli",
+    "Cacciatore",
+    "Carpano Maglioli",
+    "Dugoni",
+    "Fornara",
+    "Jacometti",
+    "Mariani Enrico",
+    "Priolo",
+    "Tega",
+    "Vernocchi"
+   ]
+  ],
+  "testo": "PRESIDENTE. E stato presentato un\nemendamento al nuovo testo a firma degli\nonorevoli Amadei, Jacometti, Carpano Ma-\n'glioli, Dugoni, Tega, Priolo, Vernocchi, For-\n-'nara, Cacciatore, Mariani Enrico e Bono-\nmelli, cosi formulato:\n\n« Alle parole: e le coordina con quelle\nesercitate dalla Regione, sostituire: coordina\ncon esse quelle esercitate dalla Regione »."
+ },
+ {
+  "nome": "fine_frase_prima_di_gli_onorevoli",
+  "seduta": "sed321",
+  "nota": "«...pervenute. Gli onorevoli»: il plurale «proposte» della frase prima non regge l'elenco",
+  "atteso": [
+   [
+    "Cifaldi",
+    "Costa",
+    "Costantini",
+    "Grieco",
+    "Nobile",
+    "Nobili"
+   ]
+  ],
+  "testo": "Prima di passare all'esame dell'ultima\nnorma transitoria, esaminiamo le ultime pro-\n\n| poste aggiuntive pervenute. Gli onorevoli\nNobile, Cifaldi, Grieco, Nobili Tito Oro,\nCosta, Costantini, hanno proposto il seguente\narticolo aggiuntivo: i\n\n« Nessuna variazione al numero e alle\ncircoscrizioni delle Regioni potra essere apportata »."
+ },
+ {
+  "nome": "insieme_con_presentatore_svolgere",
+  "seduta": "sed119",
+  "nota": "«l'onorevole Laconi svolgere il seguente emendamento presentato insieme con gli onorevoli...»",
+  "atteso": [
+   [
+    "Cevolotto",
+    "Laconi",
+    "Moro",
+    "Targetti",
+    "Taviani"
+   ]
+  ],
+  "testo": "Potrebbe, intanto, l'onorevole Laconi svolgere il seguente emendamento presentato insieme con gli onorevoli Cevolotto, Targetti, Moro, Taviani: + «Sostituirlo col seguente:\n\n« Ogni cittadino inabile al lavoro e sprovvisto dei mezzi necessari per vivere ha diritto al mantenimento »."
+ },
+ {
+  "nome": "insieme_con_la_quale",
+  "seduta": "sed119",
+  "nota": "«l'onorevole Merlin Angelina, la quale, insieme con gli onorevoli...»; Mariani resta omonimo irrisolto",
+  "atteso": [
+   [
+    "Barbareschi",
+    "Carmagnola",
+    "Costantini",
+    "De Michelis",
+    "Merighi",
+    "Merlin Angelina",
+    "Vischioni"
+   ]
+  ],
+  "testo": "«... ed assicurare alla madre ed al fanciullo una speciale, adeguata protezione ». in assenza delle altre firmatarie, ha facoltà di svolgerlo l'onorevole Merlin Angelina, la quale, insieme con gli onorevoli Barba. reschi, Carmagnola, Mariani, Vischioni, De Michelis, Costantini, Merighi, ha anche proposto di sopprimere, alla seconda proposi- zione dell'articolo, la parola: «essenziale »."
+ },
+ {
+  "nome": "blocco_firma_sillabato_segno_spurio",
+  "seduta": "sed126",
+  "nota": "blocco di firma con «MARAZ-'» / «- ZA»: senza la ricucitura si perdeva per intero (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Arcaini",
+    "Avanzini",
+    "Balduzzi",
+    "Bertola",
+    "Castelli",
+    "Cavalli",
+    "Cremaschi Carlo",
+    "Ferreri",
+    "Firrao",
+    "Franceschini",
+    "Mannironi",
+    "Marazza",
+    "Martinelli",
+    "Sampietro",
+    "Vanoni",
+    "Vicentini"
+   ]
+  ],
+  "testo": "ndamento ? i ADONNINO. Lo ritiro. PRESIDENTE. Onorevole Mazza, lo ritira anche lei? . MAZZA. Lo ritiro anch'io, dando esempio al mio collega democristiano di una maggiore cristianità. (Si ride). i\n\nPRESIDENTE. L’onorevole Persico ha mantenuto soltanto il secondo comma del suo emendamento aggiuntivo:\n\n«Ogni impegno dello Stato verso i suoi creditori è inviolabile ». | . Lo pongo in votazione. ‘ .\n\nDOMINEDÒ. Chiedo di parlare per dichiarazione di voto. ‘ i\n\nPRESIDENTE. Ne ha facoltà.\n\nDOMINEDÒ. Dichiaro che, per quanto concerne la formulazione dell'emendamento, la quale a nostro avviso già rientra nel sistema generale del diritto, noi, considerandola superflua o addirittura -equivocabile, voteremo contro. . .\n\n(L'emendamento non è approvato).\n\n: PRESIDENTE. L’emendamento Salerno, il quale avéva chiesto di integrarlo con quello Nobile, si intende assorbito.‘\n\n‘L’articolo 44, nel suo complesso, ‘risulta dunque così approvato: . ,\n\n«La Repubblica incoraggia e tutela il. ‘ risparmio in tutte .le sue forme; favorisce l’accesso del risparmio popolare alla proprietà dell’abitazione, alla proprietà, diretta coltivatrice, al: diretto ed indiretto investimento’ azionario nei grandi complessi produttivi del: Paese; disciplina, coordina e controlla.\n\n| l'esercizio del credito ». ‘\n\n\n\nVi sono ora le seguenti proposte di arti:\ncoli aggiuntivi: i A i\n; ART ... : .\n\n«Tutti quanti partecipano alla vita eco-\nnomica, sociale o -politica dello Stato sono\n\n|. tenuti al pagamento dei tributi in rapporto\nalla loro effettiva capacità contributiva, salvo\nle esenzioni e le prerogative previste dalle\nleggi. . i\n. « CASTELLI EpaaRDO, VANONI, MARAZ-'\n\n- ZA, VICENTINI, MARTINELLI, AR-\nCAINI, CAVALLI, MANNIRONI, AVAN-\nZINI, FIRRAO, CREMASCHI, FRANCE-\n\nLO SCHINI, FERRERI, SAMPIETRO, BAL-\n| .DUZZI, BERTOLA »."
+ },
+ {
+  "nome": "elenco_28_firme_dc",
+  "seduta": "sed119",
+  "nota": "elenco di 28 firme con tre cognomi spezzati a fine riga (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Andreotti",
+    "Balduzzi",
+    "Belotti",
+    "Benvenuti",
+    "Bosco Lucarelli",
+    "Bubbio",
+    "Cappi",
+    "Cappugi",
+    "Carbonari",
+    "Cavalli",
+    "Clerici",
+    "Codacci Pisanelli",
+    "Colonnetti",
+    "Cremaschi Carlo",
+    "Fuschini",
+    "Giordani",
+    "Guerrieri Filippo",
+    "Malvestiti",
+    "Manzini",
+    "Martinelli",
+    "Meda",
+    "Merlin Umberto",
+    "Micheli",
+    "Montini",
+    "Mortati",
+    "Perlingieri",
+    "Togni",
+    "Zerbi"
+   ]
+  ],
+  "testo": "lavoro, sia la retribuzione del lavoro stesso.\n\nPRESIDENTE. Gli onorevoli Meda Luigi,\nCappugi, Codacci Pisanelli, Malvestiti, Cle-.\nrici, Zerbi, Giordani, Belotti, Colonnetti,\nCarbonari, Bosco Lucarelli, Martinelli, Bub-\nbio, Micheli, Montini, Perlingieri, Merlin Um-\nberto, Balduzzi, Guerrieri Filippo, Cavalli,\nBenvenuti, Togni, Manzini Raimondo, Fu-\nschini, Mortati, Cappi, Andreotti, Cremaschi\nCarlo, hanno presentato il seguente emen-\ndamento:\n\n« Sostituire il secondo comma col seguente:\n« Lo Stato riconosce e garantisce ai lavo-\nratori il diritto al riposo festivo »."
+ }
+]
