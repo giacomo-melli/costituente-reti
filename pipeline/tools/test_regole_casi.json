@@ -684,5 +684,50 @@
    ]
   ],
   "testo": "tto anche il nuovo testo del Comitato di redazione, penso che egli rinunzi a questo emendamento.\n\nTARGETTI. D’accordo: l'emendamento è assorbito dal nuovo testo presentato e svolto dall’onorevole Umberto Merlin e da me sottoscritto, PRESIDENTE. L'onorevole Della Seta ha presentato il seguente emendamento:\n\n« Dopo il primo comma"
+ },
+ {
+  "nome": "articolo_aggiuntivo_proposto_dagli",
+  "seduta": "sed343",
+  "nota": "«Segue l'articolo 7-quinquies, proposto dagli onorevoli Paris, Gullo Rocco, La ‘ Malfa…»: articolo aggiuntivo con sei firme (controllato sull'immagine); apice spurio dentro «La Malfa»",
+  "atteso": [
+   [
+    "Corsi",
+    "Gullo Rocco",
+    "La Malfa",
+    "Paris",
+    "Persico",
+    "Treves"
+   ]
+  ],
+  "testo": " l’emendamento Adonnino — Numeroso testè letto. \n\n (Dopo prova e controprova, non è approvato). ” : \n\n Segue- 1’ articolo 7-quinquies, proposto dagli onorevoli Paris, Gullo Rocco, La ‘ Malfa, Corsi, Treves e Persico, del seguente \" tenore: \n\n « Sopprimere il secondo e il terzo comma dell'articolo 42 del decreto legislativo luogotenenziale 10 marzo 1946, n. 74». \n\n Do lettura, per meglio chiarire la proposta, del secondo "
+ },
+ {
+  "nome": "neg_integrato_dall",
+  "seduta": "sed321",
+  "nota": "«l'emendamento aggiuntivo dell'onorevole Nitti, integrato dall'onorevole Ruini»: e' di Nitti (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Nitti"
+   ]
+  ],
+  "testo": "si rende necessario ‘in conseguenza del nuovo ordinamento ». i Î \n\n (È approvato). ’ \n\n Qui si inserisce l'emendamento aggiuntivo dell'onorevole Nitti, integrato dall’onorevole Ruini: ° ‘ «Le Regioni, per la formazione: dei loro uffici, trarranno il personale occorrente dalle Amministrazioni dello Stato e da quelle degli enti locali, salvo il caso di necessità ». \n\n Lo pongo in votazione. . ì \n\n (È ap"
+ },
+ {
+  "nome": "neg_quesito_posto_dall",
+  "seduta": "sed316",
+  "nota": "«Al quesito posto dall'onorevole Moro»: non e' un emendamento",
+  "atteso": [],
+  "testo": "uta sull’emendamento dell'onorevole Gullo: \n\n PRESIDENTE. Al quesito posto dall'onorevole Moro debbo dare una risposta. Dirò subito che non comprendo per quali ragioni l'onorevole Moro lo abbia posto in questa sede. Abbia"
+ },
+ {
+  "nome": "posta_con_la_proposta",
+  "seduta": "sed251",
+  "nota": "«la questione posta dall'onorevole Alberti con la proposta di aggiungere il seguente comma»: e' un emendamento di Alberti",
+  "atteso": [
+   [
+    "Alberti Antonio"
+   ]
+  ],
+  "testo": "ta testè si è quindi deciso che del Senato non faranno parte Senatori di diritto. \n\n * Resta, tuttavia, ancora aperta la questionè posta dall'onorevole Alberti con la proposta di aggiungere il seguente comma: \n\n « Cinque, Senatori sono. nominati a vita . dal Capo dello Stato fra coloro che, con meriti insigni, nel carnpo sociale, scientifico, artistico, letterario hanno"
  }
 ]
