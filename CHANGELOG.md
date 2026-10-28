@@ -11,11 +11,11 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *Recall measured for the first time on 14 randomly drawn sittings read in full: 67% on the validation sample (90% for multi-signatory amendments, which alone produce edges), up from 57% in 1.0.0.*
 - **Correzioni generali all'estrattore**, tutte documentate nel codebook: la formula «L'onorevole X ha presentato il seguente emendamento», le forme «dall'onorevole», «della onorevole», «dal collega», «unitamente agli onorevoli», le proposte di chi parla, la sillabazione con segni spuri, il consolidamento che fondeva emendamenti diversi dello stesso firmatario, e diverse famiglie di falsi positivi (elenchi di oratori, atti distinti, interrogazioni, richieste di votazione).
   *General fixes to the extractor (see the codebook): new presentation formulas, hyphenation with stray marks, consolidation that merged different amendments by the same signatory, and several false-positive families.*
-- **Tutti i 390 emendamenti con più firmatari controllati sull'immagine** almeno una volta (216 per la prima volta): falsi positivi 4,2%, firmatari errati 4,3%. Una seconda lettura cieca di 50 record concorda con la prima in tutti i casi decidibili (kappa 1,00).
-  *All 390 multi-signatory amendments checked against the image; a blind second reading of 50 records agrees in every decidable case.*
+- **Tutti i 394 emendamenti con più firmatari controllati sull'immagine** almeno una volta (216 per la prima volta): falsi positivi 4,2%, firmatari errati 4,3%. Una seconda lettura cieca di 50 record concorda con la prima in tutti i casi decidibili (kappa 1,00).
+  *All 394 multi-signatory amendments checked against the image; a blind second reading of 50 records agrees in every decidable case.*
 - **Emendamenti a firma singola**: due campioni ciechi sull'immagine (60 + 50). Nel secondo, dopo le correzioni del primo, gli errori veri sono 2/48 (4,2%), più 4 record nati da una citazione nel discorso di un altro, che corrispondono comunque a un emendamento vero di quella persona. Corrette tre nuove famiglie, recuperati due elenchi pluri-firmati (sed124, sed343).
   *Singles: two blind image samples; in the second, 2/48 true errors (4.2%) plus 4 records born from a citation of a real amendment. Three more families fixed, two multi-signatory lists recovered.*
-- Emendamenti 718 → 1.404; con 2+ firmatari 329 → 390; legami di co-firma 2.269 → 3.197.
+- Emendamenti 718 → 1.408; con 2+ firmatari 329 → 394; legami di co-firma 2.269 → 3.275.
 
 ### Variabili nuove / New variables
 
