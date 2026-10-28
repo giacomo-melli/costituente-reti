@@ -20,6 +20,8 @@ nomi = pd.read_csv(os.path.join(QUI, 'tools', 'costituenti_nomi.csv'))
 # ---------- correzioni manuali dalla verifica a campione ----------
 # Individuate per seduta e cognomi (gli id cambiano tra un'estrazione e l'altra).
 FALSI_POSITIVI = [('sed072', ['Perassi']),                               # proposta citata nel dibattito
+                  ('sed073', ['Dozza', 'Cosattini']),   # «il criterio proposto dagli onorevoli Dozza e Cosattini»: due emendamenti distinti, citati insieme
+                  ('sed189', ['Arcaini']),      # p20 e p23 citano l'emendamento Arcaini-Scoca-Cappi di p18, non un atto a se'
                   ('sed075', ['Della Seta', 'Calamandrei', 'Lami Starnuti']),   # tre emendamenti distinti
                   ('sed299', ['Ruini']),                                # parla come Presidente della Commissione
                   # secondo campione (verifica dei 26 casi residui): gli altri FP individuati
@@ -44,6 +46,13 @@ FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul P
     ('sed186', ['Nobile', 'Porzio'], ['Nobile', 'Porzio', 'Di Gloria', 'Persico', 'Bernini', 'Veroni', 'Morelli Renato',
            'Gasparotto', 'Lami Starnuti', 'Corsi', 'Finocchiaro Aprile', 'Giannini', 'Massini'], 0),
     # --- verificati sull'immagine della pagina (ottobre 2026): elenchi interrotti dall'OCR ---
+    # sed189 p18: «L'onorevole Arcaini ha fatto pervenire un emendamento anche a firma degli onorevoli Scoca, Cappi ed altri»:
+    # manca il presentatore, l'elenco resta troncato
+    ('sed189', ['Scoca', 'Cappi'], ['Arcaini', 'Scoca', 'Cappi'], 0, 18),
+    # sed196 p5: «proposto dagli onorevoli Mastino Pietro, Lussu, Corsi, Schiavetti, Mannironi, De Vita, Mastino Ge-/sumino,
+    # Abozzi, Simonini, Bruni»: l'OCR spezza «Ge-/sumino» e perde gli ultimi quattro nomi
+    ('sed196', ['Lussu', 'Corsi', 'Schiavetti'], ['Mastino Pietro', 'Lussu', 'Corsi', 'Schiavetti', 'Mannironi', 'De Vita',
+           'Mastino Gesumino', 'Abozzi', 'Simonini', 'Bruni'], 1, 5),
     # sed106 (Mattarella, Zerbi, Lazzati... 10 firme): dall'ottobre 2026 l'estrattore produce l'elenco completo da solo
     # (prima menzione in sed105 p25, formula «Abbiamo presentato ... firmato anche dagli onorevoli»)
     ('sed119', ['Vischioni', 'Merighi', 'Barbareschi', 'Carmagnola', 'Costantini', 'De Michelis'],
@@ -81,29 +90,31 @@ FIRMATARI_CORRETTI = [                       # elenco stampato, verificato sul P
 
 # Oggetto dei voti (in inglese). Quelli non elencati restano «to be labelled».
 ETICHETTE = {
-    1: "Art. 1: 'a democratic Republic of workers'", 2: 'Art. 7: the Lateran Pacts',
-    3: 'Ravagnan-Laconi-Grieco amendment: right of asylum',
-    4: 'Della Seta amendment: definition of secret associations',
-    5: 'Amendment on the equality of religious confessions',
-    6: 'Ghidini amendment: only the judiciary may seize the press',
-    7: 'Orlando motion: leave schools out of the Constitution', 8: 'Zotta amendment: equality of spouses',
-    9: 'Rossi amendment: private schools', 10: 'Dossetti amendment: right to found private schools',
-    11: "Corbino-Marchesi amendment: private schools 'at no cost to the State'",
-    12: 'Cairo amendment: military service not compulsory', 13: 'Motion on currency exchange',
-    14: 'Nobile: deletion of a whole paragraph (regional powers)',
-    15: "Regional powers: 'agriculture and forests'", 16: "Regional powers: 'trade'",
-    17: 'Laconi amendment', 18: 'Piccioni-Moro motion on parliamentary democracy',
-    19: 'Deletion of Art. 72, para. 2 (abrogative referendum)',
-    20: 'Bozzi amendment, para. 2 (absolute majority)',
-    21: 'La Rocca amendment: composition of the Government',
-    22: 'Schiavetti amendment: temporary limits on voting rights for fascist responsibilities',
-    23: 'Benedettini motion (bill against fascist and monarchist activity)',
-    24: 'Gullo article: powers of the Minister of the Interior',
-    25: 'Lami Starnuti amendment: composition of the Senate',
-    26: 'Gullo proposal: delete para. 1 of draft Art. 128',
-    27: 'Nenni: commission of inquiry (not on the Constitution)',
+    ('sed072', 16): "Art. 1: 'a democratic Republic of workers'", ('sed075', 50): 'Art. 7: the Lateran Pacts',
+    ('sed084', 4): 'Ravagnan-Laconi-Grieco amendment: right of asylum',
+    ('sed084', 13): 'Della Seta amendment: definition of secret associations',
+    ('sed086', 17): 'Amendment on the equality of religious confessions',
+    ('sed088', 24): 'Ghidini amendment: only the judiciary may seize the press',
+    ('sed102', 16): 'Orlando motion: leave schools out of the Constitution', ('sed102', 54): 'Zotta amendment: equality of spouses',
+    ('sed104', 21): 'Rossi amendment: private schools', ('sed104', 26): 'Dossetti amendment: right to found private schools',
+    ('sed105', 15): "Corbino-Marchesi amendment: private schools 'at no cost to the State'",
+    ('sed129', 35): 'Cairo amendment: military service not compulsory', ('sed177', 17): 'Motion on currency exchange',
+    ('sed178', 16): 'Nobile: deletion of a whole paragraph (regional powers)',
+    ('sed180', 13): "Regional powers: 'agriculture and forests'", ('sed180', 16): "Regional powers: 'trade'",
+    ('sed188', 15): 'Laconi amendment', ('sed229', 8): 'Piccioni-Moro motion on parliamentary democracy',
+    ('sed260', 13): 'Deletion of Art. 72, para. 2 (abrogative referendum)',
+    ('sed269', 18): 'Bozzi amendment, para. 2 (absolute majority)',
+    ('sed270', 18): 'La Rocca amendment: composition of the Government',
+    ('sed277', 7): 'Schiavetti amendment: temporary limits on voting rights for fascist responsibilities',
+    ('sed296', 27): 'Benedettini motion (bill against fascist and monarchist activity)',
+    ('sed301', 7): 'Gullo article: powers of the Minister of the Interior',
+    ('sed311', 29): 'Lami Starnuti amendment: composition of the Senate',
+    ('sed315', 25): 'Gullo proposal: delete para. 1 of draft Art. 128',
+    ('sed332', 17): 'Nenni: commission of inquiry (not on the Constitution)',
+    ('sed073', 20): 'Cosattini amendment: municipal pharmacies (bill, not on the Constitution)',
+    ('sed187', 16): 'Scoccimarro-Veroni amendment: extraordinary property tax (bill, not on the Constitution)',
 }
-NON_COSTITUZIONE = {13, 23, 27}
+NON_COSTITUZIONE = {('sed177', 17), ('sed296', 27), ('sed332', 17), ('sed073', 20), ('sed187', 16)}   # chiave: (seduta, pagina), stabile se si aggiungono votazioni
 
 # ---------- funzioni ----------
 def trova(nome, data):
@@ -221,10 +232,15 @@ for r in DEC.get('emendamenti_ed_altri', pd.DataFrame()).itertuples():
     if str(r.DECISIONE).startswith(NESSUNO): continue
     s0, p0, f0 = r.chiave.split('|', 2)
     hit = E[(E.prima_seduta == s0) & (E.pagina == int(p0)) & E.firmatari.map(lambda f: set(f0.split('|')) <= set(str(f).split('|')))]
+    if len(hit) > 1: hit = hit[hit.firmatari == f0] if (hit.firmatari == f0).sum() == 1 else hit[hit.completo == 0]
     if len(hit) != 1: print('  ATTENZIONE: decisione non applicata', r.caso, len(hit)); continue
     i = hit.id_emendamento.iloc[0]; fs = str(hit.firmatari.iloc[0]).split('|')
-    nuovi = [x for x in (id_da_etichetta(n, hit.data.iloc[0]) for n in str(r.DECISIONE).split(';') if n.strip()) if x and x not in fs]
-    E.loc[E.id_emendamento == i, ['firmatari', 'n_firmatari', 'completo']] = ['|'.join(fs + nuovi), len(fs) + len(nuovi), 1]
+    if str(r.DECISIONE).startswith('elenco già completo'):      # «ed altri» non stampato: l'elenco e' completo cosi'
+        E.loc[E.id_emendamento == hit.id_emendamento.iloc[0], 'completo'] = 1; n_dec += 1; continue
+    voci = [n.strip() for n in str(r.DECISIONE).split(';') if n.strip()]
+    tronco = any(v.lower() in ('ed altri', 'e altri') for v in voci)      # nomi aggiunti, ma l'elenco stampato resta troncato
+    nuovi = [x for x in (id_da_etichetta(n, hit.data.iloc[0]) for n in voci if n.lower() not in ('ed altri', 'e altri')) if x and x not in fs]
+    E.loc[E.id_emendamento == i, ['firmatari', 'n_firmatari', 'completo']] = ['|'.join(fs + nuovi), len(fs) + len(nuovi), 0 if tronco else 1]
     L = pd.concat([L, pd.DataFrame({'id_emendamento': i, 'id_dep': nuovi})]); corretti.add(i); n_dec += 1
 if DEC: print('Decisioni a mano applicate agli emendamenti:', n_dec)
 print('Correzioni manuali: rimossi', len(via), 'falsi positivi')
@@ -358,22 +374,32 @@ print('Altri atti:', len(A), A.tipo_atto.value_counts().to_dict(), '| legami:', 
 Vt = pd.read_csv(os.path.join(EST, 'voti.csv'))
 Ev = pd.read_csv(os.path.join(EST, 'edgelist_voti.csv'))
 n_dv = 0
+import re as _re
+_vid = {(a, int(b)): i for i, a, b in zip(Vt.id_voto, Vt.seduta, Vt.pagina)}
+def vid_di(r):
+    """numero della votazione dalla seduta e dalla pagina del collegamento: i numeri cambiano se si aggiungono sedute"""
+    m_ = _re.search(r'/(sed\d+)/[^#]*#page=(\d+)', str(r.link_pagina))
+    return _vid.get((m_.group(1), int(m_.group(2)))) if m_ else int(r.id_voto[1:])
 for r in DEC.get('voti_nomi', pd.DataFrame()).itertuples():
     if str(r.DECISIONE).startswith(NESSUNO): continue
-    vid = int(r.id_voto[1:]); x = id_da_etichetta(r.DECISIONE, Vt.set_index('id_voto').data.get(vid))
+    vid = vid_di(r)
+    if vid is None: print('  ATTENZIONE: votazione non trovata', r.caso); continue
+    x = id_da_etichetta(r.DECISIONE, Vt.set_index('id_voto').data.get(vid))
     if x and not ((Ev.id_voto == vid) & (Ev.id_dep == x)).any() and r.voto in ('sì', 'no', 'astenuto'):
         Ev = pd.concat([Ev, pd.DataFrame([dict(id_voto=vid, id_dep=x, voto=r.voto)])], ignore_index=True); n_dv += 1
 for r in DEC.get('voti_approssimati', pd.DataFrame()).itertuples():
     d = str(r.DECISIONE).strip()
     if d.startswith('giusto'): continue
-    vid = int(r.id_voto[1:]); vecchio = r.chiave.split('|')[3]
+    vid = vid_di(r); vecchio = r.chiave.split('|')[-1]
+    if vid is None: continue
     Ev = Ev[~((Ev.id_voto == vid) & (Ev.id_dep == vecchio))]; n_dv += 1
     if not d.startswith('sbagliato'):
         x = id_da_etichetta(d, Vt.set_index('id_voto').data.get(vid))
         if x and r.voto in ('sì', 'no', 'astenuto'): Ev = pd.concat([Ev, pd.DataFrame([dict(id_voto=vid, id_dep=x, voto=r.voto)])], ignore_index=True)
 if DEC: print('Decisioni a mano applicate ai voti:', n_dv)
-Vt['label_en'] = Vt.id_voto.map(ETICHETTE).fillna('to be labelled: see source page')
-Vt['on_constitution'] = (~Vt.id_voto.isin(NON_COSTITUZIONE)).astype(int)
+_k = list(zip(Vt.seduta, Vt.pagina))
+Vt['label_en'] = [ETICHETTE.get(k, 'to be labelled: see source page') for k in _k]
+Vt['on_constitution'] = [int(k not in NON_COSTITUZIONE) for k in _k]
 Vt['id_voto'] = 'v' + Vt.id_voto.astype(str); Ev['id_voto'] = 'v' + Ev.id_voto.astype(str)
 Vt = Vt.rename(columns={'oggetto': 'excerpt_it'})
 Vt.drop(columns=[]).to_csv(os.path.join(IT, 'voti_nodi.csv'), index=False)

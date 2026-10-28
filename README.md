@@ -165,15 +165,22 @@ announced in the chamber, reported in `voti_nodi.csv`.*
 - Gli emendamenti coprono le sedute dell'Aula, non i lavori delle commissioni.
 - Gli elenchi di firmatari chiusi da «ed altri» sono marcati `completo = 0`:
   i firmatari successivi non sono noti.
-- Interrogazioni, interpellanze, mozioni, risoluzioni e ordini del giorno sono
-  esclusi per costruzione, anche quando portano firme multiple.
+- Interrogazioni, interpellanze, mozioni, ordini del giorno e richieste di
+  votazione non entrano nella rete degli emendamenti: formano uno strato a parte
+  (`altri_atti_nodi.csv`, `edgelist_altri_atti.csv`).
+- Il dataset contiene circa due terzi degli emendamenti stampati nelle sedute
+  trascritte, nove su dieci di quelli con più firmatari (gli unici che creano
+  legami): le misure di volume della rete sono limiti inferiori.
 - Il riconoscimento dei nomi è ottimo ma non perfetto: il codebook riporta la
   distribuzione dei tipi di abbinamento.
 
 *Amendments cover sittings of the chamber, not committee work. Signatory lists
 ending in «ed altri» (and others) are flagged `complete = 0`. Parliamentary
-questions, interpellations, motions, resolutions and orders of the day are out
-of scope by construction, even when multiply signed. Name matching is good but
+questions, interpellations, motions, orders of the day and vote requests are kept
+out of the amendment network and form a separate layer (`other_acts_nodes.csv`).
+The dataset holds about two thirds of the amendments printed in the transcribed
+sittings, nine in ten of the multi-signatory ones: network volume measures are
+lower bounds. Name matching is good but
 not perfect; the codebook reports the distribution of match types.*
 
 ---

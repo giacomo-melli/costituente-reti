@@ -165,6 +165,9 @@ def flatten(seduta):
             # («Carpano Ma ‘glioli», «For-‘nara»): senza ricucirlo, l'elenco dei firmatari
             # si interrompe li'. Richiede 2-4 lettere prima, per non toccare «L'onorevole».
             c = re.sub(r"\b([A-ZÀ-Ý][a-zà-ÿ]{1,3})\s*[‘'’|-]+\s*\n?\s*([a-zà-ÿ]{2,})\b", r"\1\2", c)
+            # punto esclamativo spurio a fine riga dentro un elenco («Giua! / e Balduzzi», sed117): l'elenco si interrompeva
+            c = re.sub(r"(?<=[a-zà-ÿ])[!|]+(?=[ \t]*\n\s*e\s+[A-ZÀ-Ý])", '', c)
+            c = re.sub(r'\b(ed|e)\s+a[sf]tri\b', r'\1 altri', c)     # «Giannini, Maffioli ed astri» (sed117)
             c = re.sub(r'\n\s*\n', ' ¶ ', c)
             c = re.sub(r'\s*\n\s*', ' ', c)
             pagemap.append((len(text), p))
@@ -474,7 +477,7 @@ for s in sedute:
         esplicito = int(not re.search(r",|;|\be\b|\bed\b", testo))
         # «L'onorevole X ha presentato il seguente emendamento, firmato anche dagli onorevoli...»:
         # il presentatore non è nell'elenco e va aggiunto
-        if (re.search(r"firmat[oa]\s+anche|firme\s+anche|firme\s+de", before[-70:], re.I)
+        if (re.search(r"firmat[oa]\s+anch[eèé]|firme\s+anch[eèé]|firme\s+de|firme\W*$", before[-70:], re.I)
                 or re.match(r"(?:insie|firm|unitam)", m.group(0), re.I)):
             # due forme: «L'onorevole X ha presentato ... firmato anche dagli onorevoli Y, Z»
             # e «Segue l'emendamento dell'onorevole X, firmato anche dagli onorevoli Y, Z»
@@ -484,7 +487,18 @@ for s in sedute:
             c1 = ultimo(r"[Ll]['’]\s?onorevole[\s.,]+(" + NAME + r")[\s.,]+ha[\s,]+(?:(?:ora|anche|pure|gia|già|poi|inoltre)[\s,]+){0,2}(?:presentato|proposto|sostituito)", before[-400:])
             c2 = ultimo(r"emendamento[\s,]+dell['’]\s?onorevole[\s.,]+(" + NAME + r")[\s,]*(?:che\s+)?(?:reca\s+anche\s+le\s*|firmat)", before[-250:])
             # fra le due forme vale quella che finisce piu' vicino all'elenco (le finestre sono allineate alla fine)
-            mp = max([x for x in (c1, c2) if x], key=lambda x: x.end() - len(x.string), default=None)
+            # «È stato presentato dall'onorevole Crispo, che lo ha già svolto, il seguente emendamento, che reca anche le firme…» (sed298)
+            c3 = ultimo(r"presentat[oa]\s+dal\S{0,3}\s*l?['’]?\s?onorevole[\s.,]+(" + NAME + r")[\s,]", before[-250:])
+            mp = max([x for x in (c1, c2, c3) if x], key=lambda x: x.end() - len(x.string), default=None)
+            # «VIGORELLI. … A questo scopo presenterò il seguente emendamento, firmato anche dagli onorevoli…» (sed169):
+            # verbo in prima persona subito prima dell'elenco, il presentatore e' chi parla
+            if not mp and re.search(r"\b(?:presento|presenterò|presentero|ho\s+presentato|propongo|proporrò)\b[^.¶]{0,80}$", before[-120:], re.I):
+                chi = chi_parla(text, m.start())
+                if not chi:   # turno di parola senza riga vuota prima («…Ne ha facoltà. VIGORELLI. Onorevoli colleghi…»)
+                    tt = list(re.finditer(r"(?:^|[.,;:¶/]\s*)([A-ZÀ-Ý][A-ZÀ-Ý'’]{3,20}(?: [A-ZÀ-Ý][A-ZÀ-Ý'’]{2,20})?)\.\s+(?=[A-ZÀ-Ý])",
+                                          text[max(0, m.start() - 10000):m.start()]))
+                    if tt and not tt[-1].group(1).startswith('PRESIDENTE'): chi = tt[-1].group(1).title()
+                if chi: mp = re.match(r"(.+)", chi)
             # terza forma: il presentatore è il nome in testa al turno di parola
             # («LACONI. Presento all'Assemblea il seguente emendamento firmato anche dai colleghi X, Y»)
             if not mp:
@@ -494,10 +508,15 @@ for s in sedute:
             # «l'onorevole X» prima dell'elenco («ha facolta' di svolgerlo l'onorevole Merlin Angelina,
             # la quale, insieme con gli onorevoli...»; «l'onorevole Laconi svolgere il seguente
             # emendamento presentato insieme con gli onorevoli...»)
-            if not mp and (re.match(r"insie|unitam", m.group(0), re.I) or re.search(r"firmat[oa]\s+anche", before[-70:], re.I)):
+            # («Non essendo presenti gli altri firmatari, l'onorevole Rubilli ha facoltà di svolgere il seguente emendamento
+            # che reca anche le firme degli onorevoli…», sed196)
+            if not mp and (re.match(r"insie|unitam", m.group(0), re.I) or re.search(r"firmat[oa]\s+anch[eèé]|reca\s+anche\s+le\s*\W?\s*firme", before[-70:], re.I)):
                 tutti = list(re.finditer(r"[Ll]['’]\s?onorevole[\s.,]+(" + NAME + r")", before[-200:]))
                 mp = tutti[-1] if tutti else None
-            if mp: testo = mp.group(1).strip().title() + ', ' + testo; esplicito = 1
+            # «l'onorevole X ha facoltà di svolgere il seguente emendamento che reca anche le firme degli onorevoli…»: X e' un
+            # firmatario che svolge l'emendamento perche' gli altri sono assenti, non necessariamente il primo (sed196)
+            if mp and re.search(r"svolger\w*[^.]{0,60}reca\s+anche", before[-160:], re.I): testo = testo.rstrip(' :;.,') + ', ' + mp.group(1).strip().title()
+            elif mp: testo = mp.group(1).strip().title() + ', ' + testo; esplicito = 1
         # «presentato dagli onorevoli X, Y e da me» / «da me e dagli onorevoli X, Y»: si aggiunge chi parla,
         # cioe' il nome in testa al turno di parola
         if (re.match(r"[\s.,]*(?:e\s*)?[.,]?\s*da\s+me\b", after) or re.search(r"\bda\s+me\s+e\s*$", before[-20:])
@@ -560,6 +579,13 @@ for s in sedute:
                          altri=0, articolo_menzionato=arts[-1] if arts else '',
                          contesto=(before[-200:] + ' [[' + m.group(0) + ']] ' + after).replace('¶', '/'), pos=m.start()))
 
+# «L'Assemblea Costituente invita la Commissione di coordinamento a…» (sed279, presentato come «proposta»): e' un ordine
+# del giorno, non un emendamento; va nello strato degli altri atti
+ODG_TESTO = re.compile(r"^\W{0,4}L['’]\s?Assemblea(?:\s+Costituente)?[\s,.]+(?:invita|delibera|fa\s+voti|afferma|ritiene|considerat|ritenut)", re.I)
+for r in [r for r in recs if ODG_TESTO.search(str(r.get('testo_emendamento') or ''))]:
+    altri_atti.append(dict(seduta=r['seduta'], data=r['data'], pagina=r['pagina'], fonte=r['fonte'], tipo_atto='ordine del giorno',
+                           testo_stampato=r['testo_stampato'], contesto=r['contesto']))
+recs = [r for r in recs if not ODG_TESTO.search(str(r.get('testo_emendamento') or ''))]
 R = pd.DataFrame(recs)
 if R.empty:                                   # nessun record (succede solo su corpora di prova minimi)
     os.makedirs(OUT, exist_ok=True)
@@ -656,6 +682,11 @@ for i, r in R[R.fonte == 'presentazione'].sort_values(['snum', 'pos']).iterrows(
     # a se', non la ripresa dell'elenco di 28 firme in cui Bubbio e' tredicesimo
     hit = [e for e in near.itertuples() if s <= set(e.firmatari.split('|')) and (len(s) > 1 or e.primo == r.ids)
            and stesso_testo(e.testo, r.testo_emendamento)]
+    # «Taviani, Ermini ed altri» nella stessa seduta di un elenco completo che li contiene: e' lo stesso atto anche se le due
+    # menzioni citano pezzi diversi del testo («per coordinare le attivita' economiche» / «ai fini dell'utilita' generale», sed124)
+    if not hit and r.altri and len(s) >= 2:
+        hit = [e for e in near.itertuples() if e.prima_seduta == r.seduta and s < set(e.firmatari.split('|'))
+               and (e.pagina == r.pagina or stesso_testo(e.testo, r.testo_emendamento))]
     if not hit:
         hit = [e for e in near.itertuples() if e.firmatari == r.ids and stesso_testo(e.testo, r.testo_emendamento)] if len(near) else []
     if hit:
@@ -686,6 +717,16 @@ for e in EM[EM.n_firmatari == 1].itertuples():
     pezzo = lambda c: isinstance(c.testo, str) and len(_n(c.testo).replace(' ', '')) >= 8 and _n(c.testo).replace(' ', '') in _n(e.testo).replace(' ', '')
     cand = [c for c in cand.itertuples() if stesso_testo(c.testo, e.testo) and (not ha_testo(e.testo) or ha_testo(c.testo) or pezzo(c))]
     if cand: fusi[e.id_emendamento] = cand[0].id_emendamento
+# «Taviani, Ermini ed altri» (elenco troncato) nella stessa seduta dell'elenco completo che contiene quei nomi con lo stesso
+# primo firmatario: e' lo stesso atto (sed124 p4, le due menzioni citano pezzi diversi del testo)
+n_tronchi = 0
+for e in EM[(EM.completo == 0) & (EM.n_firmatari >= 2)].itertuples():
+    if e.id_emendamento in fusi: continue
+    s = set(e.firmatari.split('|'))
+    cand = [c for c in EM[(EM.prima_seduta == e.prima_seduta) & (EM.primo == e.primo) & (EM.id_emendamento != e.id_emendamento)].itertuples()
+            if s < set(c.firmatari.split('|')) and c.id_emendamento not in fusi and (c.pagina == e.pagina or stesso_testo(c.testo, e.testo))]
+    if len(cand) == 1: fusi[e.id_emendamento] = cand[0].id_emendamento; n_tronchi += 1
+print('elenchi troncati assorbiti nell\'elenco completo della stessa seduta:', n_tronchi)
 if fusi:
     R['id_emendamento'] = R.id_emendamento.map(lambda x: fusi.get(x, x))
     EM = EM[~EM.id_emendamento.isin(fusi)]

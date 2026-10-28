@@ -823,5 +823,73 @@
    ]
   ],
   "testo": " (È approvato). . \n\n Vi è una proposta di articolo 8-bîis, a firma degli onorevoli Schiavetti, Fiorentino, Faralli, Pistoia, Giua, Farini, Carpano Maglioli, Pieri, Fedeli Aldo, Nenni, Priolo e Togliatti, del seguente tenore: o \n\n «Nei casi previsti dall'articolo 1 il Ministro dell’interno, mentre dispone la de- _rr—————————————————— e z-zrTTr_— mey n"
+ },
+ {
+  "nome": "presentero_firmato_anche",
+  "seduta": "sed169",
+  "nota": "«VIGORELLI. … presenterò il seguente emendamento, firmato anchè dagli onorevoli…»: il presentatore e' chi parla, anche senza riga vuota prima del turno (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Corsi",
+    "D'Aragona",
+    "Preti",
+    "Tremelloni",
+    "Vigorelli"
+   ]
+  ],
+  "testo": "PRESIDENTE. È iscritto a parlare l'onorevole Vigorelli. Ne ha facoltà, \nVIGORELLI. Onorevoli colleghi, mi limito a poche osservazioni.\nA questo scopo presenterò il seguente\nemendamento, firmato anchè dagli onòrevoli\nCorsì,. D'Aragona, Tremelloni, Preti:\n\n ART. 68-bîs.\n\n« Sono esenti dall’imposta i patrimoni mobiliari ed immobiliari delle istituzioni »"
+ },
+ {
+  "nome": "presentato_dal_reca_firme",
+  "seduta": "sed298",
+  "nota": "«È stato presentato dall'onorevole Crispo, che lo ha già svolto, il seguente emendamento, che reca anche le firme degli onorevoli…» (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Bozzi",
+    "Ciampitti",
+    "Costantini",
+    "Crispo",
+    "Perrone Capano",
+    "Rubilli",
+    "Villabruna"
+   ]
+  ],
+  "testo": "‘ PRESIDENTE. È stato presentato dal'\nl'onorevole Crispo, che lo ha' già svolto, il\n\n{ ‘seguente emendamento, che reca anche ' le\n‘firme degli onorevoli Perrone’ Capano, Vil-\n\n| labruna, Bozzi, Rubilli, Ciampitti e Costantini:\n\n« Sostituirlo col seguente: «Chiunque promuove la ricostituzione del disciolto partito fascista »"
+ },
+ {
+  "nome": "esclamativo_a_fine_riga",
+  "seduta": "sed117",
+  "nota": "«Giua! / e Balduzzi»: il punto esclamativo spurio interrompeva l'elenco (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Avanzini",
+    "Balduzzi",
+    "Bernini",
+    "Bocconi",
+    "Cianca",
+    "Giua",
+    "Lussu",
+    "Macrelli",
+    "Nasi",
+    "Sardiello"
+   ]
+  ],
+  "testo": "PRESIDENTE. L'emendamento presentato\ndagli onorevoli Macrelli, Avanzini, Nasi, Ber.\nnini, Lussu, Sardiello; Gianca, Bocconi, Giua!\ne Balduzzi, cui ha fatto cenno : l'onorevole!\n.Corbi, è del seguente tenore: ì\n. «Dopo la lettera c) del terzo comma, aggiungere le seguenti: le Commissioni di revisione »"
+ },
+ {
+  "nome": "svolge_reca_anche_le_firme",
+  "seduta": "sed196",
+  "nota": "«l'onorevole Rubilli ha facoltà di svolgere il seguente emendamento che reca anche le firme degli onorevoli…»: Rubilli e' firmatario (controllato sull'immagine)",
+  "atteso": [
+   [
+    "Bozzi",
+    "Cifaldi",
+    "Crispo",
+    "Morelli Renato",
+    "Perrone Capano",
+    "Rubilli"
+   ]
+  ],
+  "testo": "Non essendo presenti gli altri firmatari,\nl'onorevole Rubilli ha facoltà di svolgere il\nseguente emendamento che reca anche le fir-\nme degli onorevoli Grispo, Morelli Renato,\nBozzi, Cifaldi, Perrone Capano:\n\n« Aggiungere dopo il primo comma il se-\nguente: « Per i fabbricati soggetti a regime vincolistico l'aliquota è del 2 per cento »"
  }
 ]
