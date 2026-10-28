@@ -1,0 +1,1389 @@
+id_emendamento,seduta,pagina,articolo_menzionato,articoli_in_discussione,articolo_in_discussione,controllo
+172,sed060,6,,,,senza articolo
+173,sed060,8,4,,,senza ordine dei lavori
+174,sed060,10,5,,,senza ordine dei lavori
+175,sed060,32,,75,75,senza articolo
+176,sed060,32,36,75,75,discordante
+177,sed064,18,,,,senza articolo
+178,sed066,12,,,,senza articolo
+179,sed070,16,5,,,senza ordine dei lavori
+1,sed072,4,1,,,senza ordine dei lavori
+2,sed072,4,,,,senza articolo
+3,sed072,4,,,,senza articolo
+4,sed072,4,,,,senza articolo
+5,sed072,5,,,,senza articolo
+6,sed072,5,,,,senza articolo
+7,sed072,5,,,,senza articolo
+8,sed072,5,,,,senza articolo
+180,sed072,2,,,,senza articolo
+182,sed072,4,4,,,senza ordine dei lavori
+183,sed072,6,,,,senza articolo
+184,sed072,8,,,,senza articolo
+185,sed072,9,,,,senza articolo
+186,sed072,9,,,,senza articolo
+187,sed072,10,,,,senza articolo
+188,sed072,11,,,,senza articolo
+189,sed072,11,,,,senza articolo
+190,sed074,3,1,6,6,discordante
+191,sed074,3,1,6,6,discordante
+193,sed074,3,1,6,6,discordante
+194,sed074,5,6,6,6,coerente
+195,sed074,5,6,6,6,coerente
+196,sed074,5,6,6,6,coerente
+197,sed074,5,6,6,6,coerente
+198,sed074,9,3,6,6,discordante
+199,sed074,10,6,6,6,coerente
+200,sed074,11,,6,6,senza articolo
+201,sed074,13,,6;2,6,senza articolo
+202,sed074,13,,6;2,6,senza articolo
+203,sed074,13,4,6;2,2,discordante
+204,sed074,15,,2,2,senza articolo
+205,sed074,16,5,2,2,discordante
+206,sed074,18,,4,4,senza articolo
+207,sed074,18,,4,4,senza articolo
+208,sed074,19,,4,4,senza articolo
+209,sed074,21,,4,4,senza articolo
+9,sed075,2,,,,senza articolo
+10,sed075,2,,,,senza articolo
+11,sed075,2,,,,senza articolo
+12,sed075,2,14,,,senza ordine dei lavori
+210,sed075,2,14,,,senza ordine dei lavori
+211,sed075,7,,,,senza articolo
+212,sed075,9,,,,senza articolo
+213,sed075,9,,,,senza articolo
+214,sed075,15,,5,5,senza articolo
+215,sed075,16,7,5,5,discordante
+216,sed075,44,7,5,5,discordante
+217,sed078,8,411,,,senza ordine dei lavori
+218,sed080,14,13,,,senza ordine dei lavori
+219,sed080,23,14,,,senza ordine dei lavori
+221,sed082,13,8,8,8,coerente
+222,sed082,13,8,8,8,coerente
+223,sed082,15,8,8,8,coerente
+224,sed082,15,8,8,8,coerente
+225,sed082,17,8,8,8,coerente
+226,sed082,18,,8,8,senza articolo
+227,sed082,18,,8,8,senza articolo
+228,sed082,19,8,8,8,coerente
+229,sed082,19,8,8,8,coerente
+230,sed082,19,8,8,8,coerente
+231,sed082,21,8,8,8,coerente
+232,sed082,21,8,8,8,coerente
+233,sed082,22,,8,8,senza articolo
+234,sed082,22,,8,8,senza articolo
+235,sed082,23,8,8,8,coerente
+236,sed082,23,,8,8,senza articolo
+237,sed082,26,,8,8,senza articolo
+238,sed082,27,,8,8,senza articolo
+239,sed082,31,,8,8,senza articolo
+240,sed083,5,9,9,9,coerente
+241,sed083,5,9,9,9,coerente
+242,sed083,6,,9,9,senza articolo
+243,sed083,7,10,9;10,10,coerente
+244,sed083,8,,10,10,senza articolo
+245,sed083,8,,10,10,senza articolo
+246,sed083,8,,10,10,senza articolo
+247,sed083,9,,10,10,senza articolo
+248,sed083,9,,10,10,senza articolo
+249,sed083,10,,10,10,senza articolo
+250,sed083,11,441,10,10,discordante
+251,sed083,11,,10,10,senza articolo
+252,sed083,11,,10,10,senza articolo
+253,sed083,12,,10,10,senza articolo
+254,sed083,13,,10,10,senza articolo
+255,sed083,14,11,10,10,discordante
+256,sed083,14,11,10,10,discordante
+257,sed083,14,,10,10,senza articolo
+258,sed083,15,,10,10,senza articolo
+259,sed083,16,22,10,10,discordante
+260,sed083,16,22,10,10,discordante
+261,sed083,17,11,10,10,discordante
+262,sed083,19,412,10,10,discordante
+263,sed083,20,,10,10,senza articolo
+264,sed084,6,,,,senza articolo
+265,sed084,6,10,,,senza ordine dei lavori
+266,sed084,8,,,,senza articolo
+267,sed084,8,,,,senza articolo
+268,sed084,9,12,12,12,coerente
+269,sed084,10,,12;13,13,senza articolo
+270,sed084,12,13,13,13,coerente
+271,sed084,12,,13,13,senza articolo
+13,sed085,16,,,,senza articolo
+14,sed085,16,,,,senza articolo
+272,sed085,14,414,,,senza ordine dei lavori
+274,sed085,16,,,,senza articolo
+275,sed085,16,,,,senza articolo
+276,sed085,17,14,14,14,coerente
+277,sed085,19,7,14,14,discordante
+278,sed085,19,7,14,14,discordante
+279,sed086,6,7,,,senza ordine dei lavori
+280,sed086,6,,,,senza articolo
+281,sed086,7,,,,senza articolo
+282,sed086,8,,,,senza articolo
+283,sed087,5,,16,16,senza articolo
+284,sed087,8,,16,16,senza articolo
+285,sed087,12,,16,16,senza articolo
+286,sed087,13,,16,16,senza articolo
+287,sed087,13,,16,16,senza articolo
+288,sed087,15,,16,16,senza articolo
+289,sed087,15,,16,16,senza articolo
+290,sed087,19,,16,16,senza articolo
+291,sed087,19,,16,16,senza articolo
+292,sed087,20,,16,16,senza articolo
+293,sed087,20,,16,16,senza articolo
+294,sed087,20,,16,16,senza articolo
+295,sed087,22,16,16,16,coerente
+296,sed088,2,16,,,senza ordine dei lavori
+297,sed088,3,16,,,senza ordine dei lavori
+299,sed088,4,,16,16,senza articolo
+300,sed088,6,16,16,16,coerente
+301,sed088,25,,16,16,senza articolo
+302,sed088,26,,16,16,senza articolo
+303,sed088,26,,16,16,senza articolo
+304,sed088,27,16,16,16,coerente
+305,sed088,30,,16,16,senza articolo
+306,sed088,31,,16,16,senza articolo
+307,sed088,32,,16,16,senza articolo
+308,sed088,32,,16,16,senza articolo
+15,sed089,3,48,17,17,discordante
+16,sed089,3,48,17,17,discordante
+17,sed089,5,19,17;19,19,coerente
+18,sed089,5,19,17;19,19,coerente
+19,sed089,5,19,17;19,19,coerente
+20,sed089,17,,21,21,senza articolo
+21,sed089,17,,21,21,senza articolo
+22,sed089,17,104,21,21,discordante
+309,sed089,2,,17,17,senza articolo
+310,sed089,5,19,17;19,19,coerente
+311,sed089,5,103,17;19,,discordante
+312,sed089,5,,17;19,19,senza articolo
+313,sed089,7,19,19,19,coerente
+314,sed089,8,20,19;20,20,coerente
+315,sed089,8,20,19;20,20,coerente
+316,sed089,9,,20,20,senza articolo
+317,sed089,9,,20,20,senza articolo
+318,sed089,9,,20,20,senza articolo
+319,sed089,9,,20,20,senza articolo
+320,sed089,10,,20,20,senza articolo
+321,sed089,10,,20,20,senza articolo
+322,sed089,10,,20,20,senza articolo
+323,sed089,10,,20,20,senza articolo
+324,sed089,11,,20,20,senza articolo
+325,sed089,11,,20,20,senza articolo
+326,sed089,13,,20,20,senza articolo
+327,sed089,13,,20,20,senza articolo
+328,sed089,14,,20,20,senza articolo
+329,sed089,15,20,20;21,20,coerente
+330,sed089,15,20,20;21,20,coerente
+331,sed089,15,,20;21,21,senza articolo
+332,sed089,15,,20;21,21,senza articolo
+333,sed089,16,21,21,21,coerente
+334,sed089,16,,21,21,senza articolo
+335,sed089,17,104,21,21,discordante
+336,sed089,22,21,21,21,coerente
+337,sed090,1,22,,,senza ordine dei lavori
+338,sed090,2,22,,,senza ordine dei lavori
+339,sed090,2,,,,senza articolo
+340,sed090,2,,,,senza articolo
+341,sed090,2,22,,,senza ordine dei lavori
+342,sed090,3,,,,senza articolo
+343,sed090,4,19,,,senza ordine dei lavori
+344,sed090,7,16,,,senza ordine dei lavori
+345,sed090,8,19,,,senza ordine dei lavori
+346,sed090,10,,,,senza articolo
+347,sed090,10,,,,senza articolo
+348,sed090,11,,,,senza articolo
+349,sed090,11,22,,,senza ordine dei lavori
+350,sed090,11,19,,,senza ordine dei lavori
+351,sed090,16,,,,senza articolo
+352,sed094,14,,,,senza articolo
+353,sed095,1,23,,,senza ordine dei lavori
+23,sed097,1,,,,senza articolo
+24,sed102,23,,23,23,senza articolo
+25,sed102,23,,23,23,senza articolo
+26,sed102,23,,23,23,senza articolo
+27,sed102,23,,23,23,senza articolo
+28,sed102,27,,23,23,senza articolo
+30,sed102,30,,23,23,senza articolo
+31,sed102,30,,23,23,senza articolo
+32,sed102,30,,23,23,senza articolo
+33,sed102,30,,23,23,senza articolo
+34,sed102,30,24,23,23,discordante
+35,sed102,37,25,25,25,coerente
+36,sed102,37,25,25,25,coerente
+37,sed102,37,25,25,25,coerente
+38,sed102,37,25,25,25,coerente
+39,sed102,37,25,25,25,coerente
+40,sed102,57,25-bis,25,25,coerente
+355,sed102,22,23,23,23,coerente
+356,sed102,22,23,23,23,coerente
+357,sed102,23,,23,23,senza articolo
+358,sed102,23,,23,23,senza articolo
+359,sed102,24,,23,23,senza articolo
+360,sed102,24,,23,23,senza articolo
+361,sed102,24,,23,23,senza articolo
+362,sed102,25,23,23,23,coerente
+363,sed102,25,23,23,23,coerente
+364,sed102,28,,23,23,senza articolo
+365,sed102,30,,23,23,senza articolo
+366,sed102,30,,23,23,senza articolo
+367,sed102,31,23,23,23,coerente
+368,sed102,31,25,23,23,discordante
+369,sed102,32,24,23,23,discordante
+371,sed102,33,25,23;25,25,coerente
+372,sed102,34,,25,25,senza articolo
+373,sed102,35,24,25,25,discordante
+374,sed102,37,25,25,25,coerente
+375,sed102,39,,25,25,senza articolo
+376,sed102,39,2,25,25,discordante
+377,sed102,40,,25,25,senza articolo
+378,sed102,45,25,25,25,coerente
+379,sed102,52,23,25;23,23,coerente
+380,sed102,53,,23;24,,senza articolo
+381,sed102,56,25,24;25,25,coerente
+382,sed102,56,25,24;25,25,coerente
+41,sed103,21,,,,senza articolo
+42,sed103,25,,,,senza articolo
+43,sed103,29,,,,senza articolo
+44,sed103,29,,,,senza articolo
+45,sed103,29,,,,senza articolo
+383,sed103,2,29,,,senza ordine dei lavori
+384,sed103,5,,,,senza articolo
+385,sed103,5,,,,senza articolo
+387,sed103,14,26,,,senza ordine dei lavori
+388,sed103,15,26,,,senza ordine dei lavori
+389,sed103,15,26,,,senza ordine dei lavori
+390,sed103,17,34,,,senza ordine dei lavori
+392,sed103,19,,,,senza articolo
+393,sed103,19,27,,,senza ordine dei lavori
+394,sed103,21,,,,senza articolo
+395,sed103,21,,,,senza articolo
+396,sed103,21,,,,senza articolo
+397,sed103,21,,,,senza articolo
+398,sed103,21,,,,senza articolo
+399,sed103,23,27,,,senza ordine dei lavori
+400,sed103,25,27,,,senza ordine dei lavori
+401,sed103,29,,,,senza articolo
+46,sed104,9,27,,,senza ordine dei lavori
+402,sed104,10,26,,,senza ordine dei lavori
+403,sed104,10,,,,senza articolo
+404,sed104,10,,,,senza articolo
+405,sed104,11,,,,senza articolo
+406,sed104,11,,,,senza articolo
+407,sed104,12,,,,senza articolo
+408,sed104,13,27,27,27,coerente
+409,sed104,19,,27,27,senza articolo
+410,sed104,23,,27,27,senza articolo
+411,sed104,25,,27,27,senza articolo
+412,sed104,25,,27,27,senza articolo
+47,sed105,22,28,28,28,coerente
+48,sed105,22,28,28,28,coerente
+49,sed105,22,,28,28,senza articolo
+50,sed105,22,,28,28,senza articolo
+51,sed105,23,28,28,28,coerente
+52,sed105,26,,28,28,senza articolo
+413,sed105,2,,27,27,senza articolo
+414,sed105,6,,27,27,senza articolo
+415,sed105,8,,27,27,senza articolo
+416,sed105,17,,27,27,senza articolo
+417,sed105,18,,27,27,senza articolo
+418,sed105,21,28,27;28,28,coerente
+419,sed105,22,,28,28,senza articolo
+420,sed105,22,,28,28,senza articolo
+421,sed105,22,,28,28,senza articolo
+422,sed105,23,,28,28,senza articolo
+423,sed105,23,28,28,28,coerente
+424,sed105,25,,28,28,senza articolo
+425,sed105,25,,28,28,senza articolo
+426,sed105,25,,28,28,senza articolo
+427,sed105,25,,28,28,senza articolo
+428,sed105,26,,28,28,senza articolo
+429,sed105,26,,28,28,senza articolo
+430,sed105,26,28,28,28,coerente
+431,sed105,27,,28,28,senza articolo
+432,sed105,27,,28,28,senza articolo
+433,sed106,6,28,28,28,coerente
+434,sed106,6,28,28,28,coerente
+435,sed106,7,,28,28,senza articolo
+436,sed106,7,,28,28,senza articolo
+437,sed106,8,,28,28,senza articolo
+438,sed106,8,,28,28,senza articolo
+439,sed106,16,,28,28,senza articolo
+440,sed106,23,,28,28,senza articolo
+441,sed106,24,,28;29,28,senza articolo
+442,sed106,25,29,29,29,coerente
+443,sed106,29,29,29,29,coerente
+444,sed106,31,29,29,29,coerente
+445,sed106,33,,29,29,senza articolo
+446,sed109,13,,,,senza articolo
+447,sed109,23,44,,,senza ordine dei lavori
+449,sed113,12,36,,,senza ordine dei lavori
+450,sed113,19,,,,senza articolo
+451,sed115,21,,,,senza articolo
+452,sed115,22,36,,,senza ordine dei lavori
+453,sed115,25,30,,,senza ordine dei lavori
+454,sed116,3,3,30,30,discordante
+455,sed116,3,37,30,30,discordante
+456,sed116,3,37,30,30,discordante
+457,sed116,3,44,30,30,discordante
+458,sed116,4,44,30,30,discordante
+459,sed116,5,,30,30,senza articolo
+460,sed116,5,10,30,30,discordante
+463,sed116,7,37,30,30,discordante
+464,sed116,9,34,30,30,discordante
+465,sed116,10,,30,30,senza articolo
+466,sed116,11,,30,30,senza articolo
+467,sed116,12,,30,30,senza articolo
+468,sed116,13,,30,30,senza articolo
+469,sed116,15,84,30,30,discordante
+470,sed116,15,31,30,30,discordante
+471,sed116,15,,30,30,senza articolo
+472,sed116,17,,30,30,senza articolo
+473,sed116,20,,30,30,senza articolo
+474,sed116,22,,30,30,senza articolo
+475,sed116,23,10,30,30,discordante
+477,sed116,25,,30,30,senza articolo
+478,sed116,26,45,30,30,discordante
+480,sed116,29,31,30;31,31,coerente
+481,sed116,29,,30;31,31,senza articolo
+482,sed116,32,,31,31,senza articolo
+53,sed118,25,45,31,31,discordante
+483,sed118,1,31,,,senza ordine dei lavori
+484,sed118,3,31,,,senza ordine dei lavori
+485,sed119,2,,,,senza articolo
+486,sed119,2,,,,senza articolo
+487,sed119,3,,,,senza articolo
+488,sed119,3,,,,senza articolo
+489,sed119,3,,,,senza articolo
+490,sed119,4,,,,senza articolo
+491,sed119,9,,32,32,senza articolo
+492,sed119,10,32-bis,32,32,coerente
+493,sed119,11,32,32,32,coerente
+494,sed119,13,33,32;33,33,coerente
+495,sed119,15,,33,33,senza articolo
+496,sed119,16,,33,33,senza articolo
+497,sed119,16,,33,33,senza articolo
+498,sed119,17,,33,33,senza articolo
+499,sed119,17,,33,33,senza articolo
+500,sed119,17,,33,33,senza articolo
+501,sed119,19,,33,33,senza articolo
+502,sed119,21,34,33;34,34,coerente
+503,sed119,22,,34,34,senza articolo
+504,sed120,2,,34,34,senza articolo
+505,sed120,2,,34,34,senza articolo
+506,sed120,2,,34,34,senza articolo
+507,sed120,5,33-bis,34,34,discordante
+508,sed120,6,,34,34,senza articolo
+509,sed120,9,,34,34,senza articolo
+510,sed120,10,,34,34,senza articolo
+511,sed120,11,,34,34,senza articolo
+512,sed120,12,,34,34,senza articolo
+513,sed120,12,,34,34,senza articolo
+514,sed120,14,34,34,34,coerente
+515,sed120,16,,34,34,senza articolo
+516,sed120,17,,34,34,senza articolo
+517,sed120,17,,34,34,senza articolo
+518,sed120,17,,34,34,senza articolo
+519,sed120,17,33,34,34,discordante
+520,sed120,18,,34,34,senza articolo
+521,sed120,19,,34,34,senza articolo
+522,sed120,20,,34,34,senza articolo
+523,sed120,22,,34,34,senza articolo
+524,sed120,22,,34,34,senza articolo
+525,sed120,24,,34,34,senza articolo
+526,sed120,27,,34,34,senza articolo
+527,sed120,28,,34,34,senza articolo
+528,sed120,28,,34,34,senza articolo
+529,sed120,29,,34,34,senza articolo
+530,sed120,30,85,34,34,discordante
+531,sed120,34,,34,34,senza articolo
+532,sed122,5,36,,,senza ordine dei lavori
+533,sed122,7,,,,senza articolo
+534,sed122,9,,,,senza articolo
+535,sed122,10,36,,,senza ordine dei lavori
+536,sed122,14,,,,senza articolo
+537,sed122,14,,,,senza articolo
+538,sed122,14,,,,senza articolo
+539,sed122,16,,,,senza articolo
+540,sed122,16,,,,senza articolo
+541,sed122,18,,,,senza articolo
+542,sed122,21,,,,senza articolo
+543,sed122,24,,,,senza articolo
+544,sed122,25,,,,senza articolo
+545,sed122,29,,,,senza articolo
+546,sed122,30,,,,senza articolo
+547,sed122,31,36,,,senza ordine dei lavori
+548,sed122,34,,,,senza articolo
+549,sed122,34,,,,senza articolo
+550,sed123,1,36-bis,,,senza ordine dei lavori
+551,sed123,2,37,37,37,coerente
+552,sed123,3,89,37,37,discordante
+553,sed123,6,,37,37,senza articolo
+554,sed123,9,34,37,37,discordante
+555,sed123,9,37,37,37,coerente
+557,sed123,12,,37,37,senza articolo
+558,sed123,15,,88,88,senza articolo
+559,sed123,17,,88,88,senza articolo
+560,sed123,17,,88,88,senza articolo
+561,sed123,19,,88,88,senza articolo
+562,sed123,20,,88,88,senza articolo
+563,sed123,20,,88,88,senza articolo
+564,sed123,22,38,88,88,discordante
+565,sed123,22,,88,88,senza articolo
+566,sed123,23,,88,88,senza articolo
+567,sed123,23,,88,88,senza articolo
+568,sed123,23,42,88,88,discordante
+569,sed123,23,44,88,88,discordante
+570,sed123,26,,88,88,senza articolo
+571,sed123,26,,88,88,senza articolo
+572,sed124,2,40,40,40,coerente
+573,sed124,2,,40,40,senza articolo
+574,sed124,2,,40,40,senza articolo
+575,sed124,2,,40,40,senza articolo
+576,sed124,2,,40,40,senza articolo
+577,sed124,2,,40,40,senza articolo
+578,sed124,3,40,40,40,coerente
+579,sed124,3,,40,40,senza articolo
+580,sed124,4,38,40,40,discordante
+581,sed124,4,,40,40,senza articolo
+582,sed124,5,,40,40,senza articolo
+583,sed124,5,,40,40,senza articolo
+584,sed124,6,,40;4,,senza articolo
+585,sed124,11,,4,4,senza articolo
+586,sed124,12,,4,4,senza articolo
+587,sed124,12,,4,4,senza articolo
+588,sed124,15,,4,4,senza articolo
+589,sed124,15,,4,4,senza articolo
+590,sed124,18,,4,4,senza articolo
+591,sed124,22,,4,4,senza articolo
+592,sed124,22,,4,4,senza articolo
+593,sed124,22,,4,4,senza articolo
+594,sed124,26,,4,4,senza articolo
+595,sed124,29,,4,4,senza articolo
+597,sed124,30,,4,4,senza articolo
+598,sed125,1,42,,,senza ordine dei lavori
+599,sed125,2,,,,senza articolo
+600,sed125,3,42,,,senza ordine dei lavori
+601,sed125,4,,,,senza articolo
+602,sed125,4,,,,senza articolo
+603,sed125,8,,,,senza articolo
+604,sed125,10,,,,senza articolo
+605,sed125,13,,,,senza articolo
+606,sed125,19,,43,43,senza articolo
+607,sed125,19,43,43,43,coerente
+608,sed125,20,,43,43,senza articolo
+609,sed125,20,,43,43,senza articolo
+610,sed125,20,,43,43,senza articolo
+611,sed125,24,,43,43,senza articolo
+612,sed125,26,,43,43,senza articolo
+613,sed125,28,43,43,43,coerente
+614,sed125,31,,43,43,senza articolo
+615,sed125,32,,43,43,senza articolo
+54,sed126,3,44,,,senza ordine dei lavori
+55,sed126,25,44,,,senza ordine dei lavori
+616,sed126,3,,,,senza articolo
+617,sed126,4,,,,senza articolo
+619,sed126,4,,,,senza articolo
+620,sed126,4,,,,senza articolo
+621,sed126,7,,,,senza articolo
+622,sed126,8,,,,senza articolo
+623,sed126,8,,,,senza articolo
+624,sed126,11,,,,senza articolo
+625,sed126,12,18,,,senza ordine dei lavori
+626,sed126,13,,,,senza articolo
+628,sed127,8,,49,49,senza articolo
+56,sed128,28,,,,senza articolo
+57,sed128,29,,,,senza articolo
+630,sed128,22,,,,senza articolo
+631,sed128,25,,,,senza articolo
+632,sed128,27,45,,,senza ordine dei lavori
+635,sed128,28,,,,senza articolo
+638,sed128,29,,,,senza articolo
+640,sed128,31,,,,senza articolo
+641,sed128,31,,,,senza articolo
+642,sed128,31,,,,senza articolo
+643,sed128,32,,,,senza articolo
+644,sed128,33,,,,senza articolo
+645,sed128,33,,,,senza articolo
+646,sed128,36,,,,senza articolo
+58,sed129,28,,49,49,senza articolo
+59,sed129,28,,49,49,senza articolo
+60,sed129,29,,49,49,senza articolo
+61,sed129,29,,49,49,senza articolo
+62,sed129,29,,49,49,senza articolo
+647,sed129,4,46,46,46,coerente
+648,sed129,4,46,46,46,coerente
+650,sed129,5,,46,46,senza articolo
+651,sed129,8,47,46;47,47,coerente
+652,sed129,8,47,46;47,47,coerente
+654,sed129,10,47,47,47,coerente
+655,sed129,10,47,47,47,coerente
+656,sed129,10,47,47,47,coerente
+657,sed129,11,,47,47,senza articolo
+658,sed129,11,,47,47,senza articolo
+659,sed129,13,47,47,47,coerente
+660,sed129,18,47-bis,47;48,47,coerente
+661,sed129,21,,48,48,senza articolo
+662,sed129,21,,48,48,senza articolo
+663,sed129,21,,48,48,senza articolo
+664,sed129,23,48,48;49,48,coerente
+665,sed129,23,,48;49,,senza articolo
+666,sed129,23,49,48;49,49,coerente
+667,sed129,24,49,49,49,coerente
+668,sed129,24,49,49,49,coerente
+669,sed129,25,6,49,49,discordante
+670,sed129,25,,49,49,senza articolo
+671,sed129,25,,49,49,senza articolo
+672,sed129,26,,49,49,senza articolo
+673,sed129,29,,49,49,senza articolo
+674,sed129,29,,49,49,senza articolo
+675,sed129,30,,49,49,senza articolo
+676,sed129,37,,49,49,senza articolo
+677,sed129,41,,49,49,senza articolo
+64,sed130,6,,50,50,senza articolo
+678,sed130,2,50,50,50,coerente
+680,sed130,4,,50,50,senza articolo
+681,sed130,4,50,50,50,coerente
+682,sed130,6,,50,50,senza articolo
+683,sed130,6,,50,50,senza articolo
+684,sed130,6,,50,50,senza articolo
+685,sed130,8,50,50,50,coerente
+686,sed130,10,,50,50,senza articolo
+688,sed130,10,,50,50,senza articolo
+689,sed130,11,,50,50,senza articolo
+690,sed130,16,,50,50,senza articolo
+691,sed130,20,,50,50,senza articolo
+692,sed130,20,,50,50,senza articolo
+693,sed131,4,,,,senza articolo
+694,sed149,15,,,,senza articolo
+695,sed164,3,2,106,106,discordante
+696,sed164,3,2,106,106,discordante
+697,sed164,4,4,106,106,discordante
+698,sed164,4,4,106,106,discordante
+699,sed164,6,,106,106,senza articolo
+700,sed164,7,10,106,106,discordante
+701,sed164,12,125,107,107,discordante
+702,sed164,12,,107,107,senza articolo
+703,sed164,12,,107,107,senza articolo
+704,sed164,12,,107,107,senza articolo
+705,sed164,14,,107,107,senza articolo
+706,sed164,15,,107,107,senza articolo
+707,sed164,15,120-bis,107,107,discordante
+708,sed164,15,107,107,107,coerente
+709,sed164,16,,107,107,senza articolo
+710,sed164,17,,107,107,senza articolo
+711,sed164,21,,107,107,senza articolo
+712,sed164,21,,107,107,senza articolo
+713,sed164,22,,107,107,senza articolo
+714,sed164,24,107,107,107,coerente
+715,sed164,35,108,108,108,coerente
+716,sed164,35,,108,108,senza articolo
+717,sed164,36,108,108,108,coerente
+718,sed164,36,108,108,108,coerente
+719,sed164,41,,108,108,senza articolo
+720,sed168,5,108,,,senza ordine dei lavori
+721,sed168,11,108,109,109,discordante
+722,sed168,15,111,109,109,discordante
+723,sed168,20,,109,109,senza articolo
+724,sed168,21,124,109,109,discordante
+725,sed168,21,109,109,109,coerente
+726,sed168,22,109,109,109,coerente
+727,sed168,23,109,109,109,coerente
+728,sed168,25,109,109,109,coerente
+729,sed168,26,109,109,109,coerente
+730,sed170,4,109,,,senza ordine dei lavori
+731,sed170,6,,,,senza articolo
+732,sed170,13,,,,senza articolo
+733,sed170,14,,,,senza articolo
+734,sed170,16,,,,senza articolo
+735,sed171,20,,,,senza articolo
+736,sed171,21,,,,senza articolo
+737,sed171,23,112,,,senza ordine dei lavori
+738,sed171,23,,,,senza articolo
+739,sed171,23,,,,senza articolo
+741,sed173,10,,,,senza articolo
+742,sed173,12,,,,senza articolo
+743,sed173,14,,,,senza articolo
+744,sed173,15,,,,senza articolo
+745,sed173,16,,,,senza articolo
+746,sed173,18,109,,,senza ordine dei lavori
+747,sed173,22,,,,senza articolo
+748,sed173,23,,,,senza articolo
+749,sed173,23,109,,,senza ordine dei lavori
+750,sed176,4,,,,senza articolo
+752,sed176,12,,,,senza articolo
+753,sed176,12,,,,senza articolo
+754,sed176,12,,,,senza articolo
+755,sed176,12,,,,senza articolo
+756,sed176,12,,,,senza articolo
+757,sed176,18,,,,senza articolo
+758,sed176,23,,,,senza articolo
+759,sed176,23,,,,senza articolo
+760,sed178,2,109,,,senza ordine dei lavori
+761,sed178,6,,,,senza articolo
+762,sed178,9,,,,senza articolo
+763,sed178,9,,,,senza articolo
+764,sed178,9,,,,senza articolo
+765,sed178,10,,,,senza articolo
+766,sed178,18,,,,senza articolo
+767,sed180,1,109,,,senza ordine dei lavori
+768,sed180,1,109,,,senza ordine dei lavori
+769,sed180,2,,,,senza articolo
+771,sed180,15,,,,senza articolo
+772,sed180,15,,,,senza articolo
+773,sed182,2,,,,senza articolo
+774,sed182,2,,,,senza articolo
+775,sed182,3,74,,,senza ordine dei lavori
+776,sed182,3,,,,senza articolo
+777,sed182,3,,,,senza articolo
+778,sed182,3,109,,,senza ordine dei lavori
+779,sed182,3,109,,,senza ordine dei lavori
+780,sed182,9,,,,senza articolo
+781,sed182,11,,112,112,senza articolo
+782,sed182,13,,112,112,senza articolo
+783,sed182,13,109,112,112,discordante
+784,sed182,15,109,112,112,discordante
+785,sed182,17,,112,112,senza articolo
+65,sed183,17,18,17;18,18,coerente
+66,sed183,17,,17;18,,senza articolo
+786,sed183,2,,9,9,senza articolo
+787,sed183,2,,9,9,senza articolo
+788,sed183,3,,9,9,senza articolo
+789,sed183,3,,9,9,senza articolo
+790,sed183,4,,9,9,senza articolo
+791,sed183,8,10,9,9,discordante
+792,sed183,9,40,9;11,9,discordante
+793,sed183,11,,12,12,senza articolo
+794,sed183,13,,14,14,senza articolo
+795,sed183,13,,14,14,senza articolo
+796,sed183,15,17,17,17,coerente
+797,sed183,21,,18,18,senza articolo
+798,sed183,22,,18,18,senza articolo
+799,sed183,25,,22,22,senza articolo
+800,sed183,26,,22;23,23,senza articolo
+801,sed183,27,,23;24,23,senza articolo
+802,sed183,28,,24,24,senza articolo
+803,sed183,30,,26,26,senza articolo
+804,sed183,31,,26;27,27,senza articolo
+805,sed186,2,113,,,senza ordine dei lavori
+806,sed186,2,,,,senza articolo
+807,sed186,3,,,,senza articolo
+808,sed186,5,,,,senza articolo
+809,sed186,5,,,,senza articolo
+810,sed186,6,113,,,senza ordine dei lavori
+811,sed186,9,,,,senza articolo
+812,sed186,9,,,,senza articolo
+813,sed186,15,,,,senza articolo
+814,sed186,18,,,,senza articolo
+815,sed186,18,,,,senza articolo
+816,sed186,20,113,,,senza ordine dei lavori
+817,sed186,22,113,,,senza ordine dei lavori
+818,sed186,22,,,,senza articolo
+819,sed186,22,113,,,senza ordine dei lavori
+820,sed186,26,,,,senza articolo
+821,sed186,34,,,,senza articolo
+822,sed188,2,114,114,114,coerente
+823,sed188,3,61,114,114,discordante
+824,sed188,3,61,114,114,discordante
+825,sed188,3,,114,114,senza articolo
+826,sed188,3,,114,114,senza articolo
+827,sed188,3,,114,114,senza articolo
+828,sed188,3,,114,114,senza articolo
+829,sed188,3,,114,114,senza articolo
+830,sed188,4,114,114;115,114,coerente
+831,sed188,5,115,115,115,coerente
+832,sed188,5,112,115,115,discordante
+833,sed188,5,115,115,115,coerente
+834,sed188,8,,116,116,senza articolo
+835,sed188,8,,116,116,senza articolo
+836,sed188,8,,116,116,senza articolo
+67,sed190,18,120,120,120,coerente
+68,sed190,18,120,120,120,coerente
+69,sed190,18,120,120,120,coerente
+70,sed190,21,121,120,120,discordante
+71,sed190,21,121,120,120,discordante
+837,sed190,10,,118;120,118,senza articolo
+838,sed190,18,120,120,120,coerente
+839,sed190,19,120,120,120,coerente
+840,sed190,20,,120,120,senza articolo
+841,sed190,20,120,120,120,coerente
+842,sed190,22,121,120,120,discordante
+843,sed190,23,142,120,120,discordante
+844,sed190,24,,120,120,senza articolo
+846,sed190,24,,120,120,senza articolo
+847,sed190,25,125,120,120,discordante
+848,sed190,26,,120,120,senza articolo
+849,sed190,26,120,120,120,coerente
+850,sed192,2,30,54,54,discordante
+851,sed192,3,,54,54,senza articolo
+852,sed192,4,,54,54,senza articolo
+853,sed192,4,10,54,54,discordante
+854,sed192,9,,54,54,senza articolo
+855,sed192,12,,54,54,senza articolo
+856,sed192,16,,53,53,senza articolo
+857,sed192,18,,53;54,53,senza articolo
+858,sed192,18,30,53;54,54,discordante
+859,sed192,18,54,53;54,54,coerente
+860,sed192,20,54,54,54,coerente
+861,sed192,23,31,55;56,56,discordante
+862,sed195,4,124,123;124,124,coerente
+863,sed195,4,12,123;124,124,discordante
+864,sed195,4,,123;124,,senza articolo
+865,sed195,5,,124,124,senza articolo
+866,sed195,7,,124,124,senza articolo
+867,sed229,2,55,,,senza ordine dei lavori
+868,sed229,10,52,52,52,coerente
+869,sed229,10,52,52,52,coerente
+870,sed229,12,53,53,53,coerente
+871,sed229,14,53,53,53,coerente
+872,sed229,15,97,53,53,discordante
+873,sed229,17,54,53;54,54,coerente
+874,sed229,17,54,53;54,54,coerente
+875,sed229,17,54,53;54,54,coerente
+876,sed229,18,,54,54,senza articolo
+877,sed231,8,55,55,55,coerente
+879,sed231,10,,55,55,senza articolo
+880,sed231,10,,55,55,senza articolo
+881,sed231,11,,55,55,senza articolo
+882,sed231,13,52,55,55,discordante
+883,sed231,13,,55,55,senza articolo
+884,sed231,14,55,55,55,coerente
+885,sed231,14,,55,55,senza articolo
+886,sed231,15,,55,55,senza articolo
+887,sed231,15,,55,55,senza articolo
+888,sed231,18,,55,55,senza articolo
+889,sed231,20,,55,55,senza articolo
+890,sed231,23,,55,55,senza articolo
+891,sed231,25,,55,55,senza articolo
+892,sed231,25,,55,55,senza articolo
+893,sed231,26,,55,55,senza articolo
+894,sed231,29,55,55,55,coerente
+895,sed231,31,,55,55,senza articolo
+896,sed231,31,,55,55,senza articolo
+897,sed233,2,,55,55,senza articolo
+898,sed248,28,55,55,55,coerente
+899,sed249,2,55,,,senza ordine dei lavori
+900,sed249,4,55,,,senza ordine dei lavori
+901,sed249,7,55,,,senza ordine dei lavori
+902,sed249,7,55,,,senza ordine dei lavori
+903,sed249,8,,,,senza articolo
+72,sed250,19,,55,55,senza articolo
+904,sed250,5,55,,,senza ordine dei lavori
+905,sed250,18,55,55,55,coerente
+906,sed250,19,,55,55,senza articolo
+907,sed250,24,,55,55,senza articolo
+908,sed251,4,,,,senza articolo
+909,sed251,9,,,,senza articolo
+910,sed252,2,,56,56,senza articolo
+911,sed252,2,56,56,56,coerente
+912,sed252,3,,56,56,senza articolo
+913,sed252,3,,56,56,senza articolo
+914,sed252,7,,56,56,senza articolo
+915,sed252,7,,56,56,senza articolo
+916,sed252,7,,56,56,senza articolo
+917,sed252,7,,56,56,senza articolo
+918,sed252,8,,56,56,senza articolo
+919,sed252,9,,56,56,senza articolo
+920,sed252,10,,56,56,senza articolo
+921,sed252,14,57,56,56,discordante
+922,sed252,15,,56;58,58,senza articolo
+923,sed252,15,,56;58,,senza articolo
+924,sed252,15,,56;58,58,senza articolo
+925,sed252,16,,58,58,senza articolo
+926,sed252,17,,58,58,senza articolo
+927,sed252,17,,58,58,senza articolo
+928,sed252,18,58,58,58,coerente
+929,sed252,30,,58,58,senza articolo
+930,sed252,30,,58,58,senza articolo
+931,sed253,5,64,60;64,64,coerente
+932,sed253,6,,64,64,senza articolo
+934,sed253,14,,64;62,64,senza articolo
+935,sed253,15,62,62;63,62,coerente
+936,sed253,15,63,62;63,63,coerente
+937,sed253,16,78,63,63,discordante
+938,sed253,17,78,63,63,discordante
+939,sed254,4,63,64;65,,discordante
+940,sed254,4,,64;65,,senza articolo
+941,sed254,4,,64;65,65,senza articolo
+942,sed254,4,,64;65,65,senza articolo
+943,sed254,5,,65,65,senza articolo
+944,sed256,2,,,,senza articolo
+945,sed256,8,67,67,67,coerente
+946,sed257,2,68,69,69,discordante
+947,sed257,2,69,69,69,coerente
+948,sed257,3,,69,69,senza articolo
+949,sed257,3,,69,69,senza articolo
+950,sed257,4,,69,69,senza articolo
+951,sed257,5,,69,69,senza articolo
+952,sed257,8,,69,69,senza articolo
+953,sed257,8,,69,69,senza articolo
+954,sed257,9,69,69,69,coerente
+955,sed257,10,,69,69,senza articolo
+956,sed257,12,,69,69,senza articolo
+957,sed257,16,69,69,69,coerente
+958,sed258,2,,,,senza articolo
+959,sed259,8,,69;70,70,senza articolo
+960,sed259,11,,70,70,senza articolo
+961,sed259,13,,70,70,senza articolo
+962,sed259,15,,70,70,senza articolo
+963,sed259,17,,70,70,senza articolo
+964,sed259,17,,70,70,senza articolo
+965,sed259,21,,70,70,senza articolo
+966,sed260,3,,72,72,senza articolo
+967,sed260,4,,72,72,senza articolo
+968,sed260,4,,72,72,senza articolo
+969,sed260,5,,72,72,senza articolo
+970,sed261,10,,72,72,senza articolo
+971,sed261,12,,72,72,senza articolo
+972,sed261,15,72,72;73,72,coerente
+973,sed261,15,73,72;73,73,coerente
+974,sed261,17,74,73;74,74,coerente
+975,sed261,17,74-bis,73;74,74,coerente
+976,sed261,22,74-bis,74,74,coerente
+977,sed261,23,74,74,74,coerente
+978,sed262,5,,,,senza articolo
+979,sed262,8,,,,senza articolo
+980,sed262,9,,,,senza articolo
+981,sed262,10,,,,senza articolo
+982,sed262,10,,,,senza articolo
+983,sed262,13,82,,,senza ordine dei lavori
+984,sed262,14,,,,senza articolo
+985,sed262,15,,75,75,senza articolo
+986,sed262,16,,75;76;77,,senza articolo
+987,sed262,16,,75;76;77,76,senza articolo
+988,sed262,16,,75;76;77,,senza articolo
+989,sed262,16,77,75;76;77,77,coerente
+990,sed262,18,,77,77,senza articolo
+991,sed262,19,,77,77,senza articolo
+992,sed262,20,,77,77,senza articolo
+993,sed262,22,,77,77,senza articolo
+994,sed262,22,,77,77,senza articolo
+995,sed262,22,,77,77,senza articolo
+996,sed262,25,78,78,78,coerente
+997,sed263,6,88,,,senza ordine dei lavori
+998,sed265,6,52,75,75,discordante
+999,sed265,7,,75,75,senza articolo
+1000,sed265,10,,75,75,senza articolo
+1001,sed265,11,,75,75,senza articolo
+1003,sed265,14,,75,75,senza articolo
+1004,sed265,15,,75,75,senza articolo
+1005,sed265,16,6,75,75,discordante
+1006,sed265,16,6,75,75,discordante
+1007,sed265,17,,75,75,senza articolo
+1008,sed265,18,,75,75,senza articolo
+1009,sed265,18,75,75,75,coerente
+1010,sed266,6,,,,senza articolo
+1011,sed266,9,,,,senza articolo
+1012,sed266,13,,75,75,senza articolo
+1013,sed266,14,75,75,75,coerente
+1014,sed266,15,,75,75,senza articolo
+1015,sed266,17,,75;79,79,senza articolo
+1016,sed266,17,,75;79,,senza articolo
+1017,sed266,18,,79,79,senza articolo
+1018,sed266,19,,79,79,senza articolo
+1019,sed266,20,,79,79,senza articolo
+1020,sed266,21,,79,79,senza articolo
+1021,sed266,23,79,79,79,coerente
+1022,sed267,7,79,,,senza ordine dei lavori
+1023,sed268,2,,,,senza articolo
+1024,sed268,3,,80,80,senza articolo
+1025,sed268,3,80,80,80,coerente
+1026,sed268,3,,80,80,senza articolo
+1027,sed268,4,80,80;81,80,coerente
+1028,sed268,5,,81,81,senza articolo
+1029,sed268,5,,81,81,senza articolo
+1030,sed268,5,,81,80,senza articolo
+1031,sed268,5,82,81,81,discordante
+1032,sed268,5,,81,81,senza articolo
+1033,sed268,6,,81,81,senza articolo
+1034,sed268,8,81,81,81,coerente
+1035,sed268,8,,81,81,senza articolo
+1036,sed268,8,,81,81,senza articolo
+1037,sed268,9,,81;82,,senza articolo
+1038,sed268,12,,82;83,82,senza articolo
+1039,sed268,12,81,82;83,82,discordante
+1040,sed268,13,83,83,83,coerente
+1042,sed268,16,,83,83,senza articolo
+1043,sed268,17,,83,83,senza articolo
+1044,sed268,19,,83,83,senza articolo
+1045,sed268,19,,83,83,senza articolo
+1046,sed268,19,,83,83,senza articolo
+1047,sed268,20,,83,83,senza articolo
+1048,sed268,20,,83,83,senza articolo
+1049,sed268,20,,83,83,senza articolo
+1050,sed268,23,741,83,83,discordante
+1051,sed268,28,,84,84,senza articolo
+1052,sed268,29,58,84,84,discordante
+1053,sed268,29,84,84,84,coerente
+1054,sed269,6,84,,,senza ordine dei lavori
+1055,sed269,8,,86,86,senza articolo
+1056,sed269,10,83,86,86,discordante
+1057,sed269,12,,86,86,senza articolo
+1058,sed269,12,74,86,86,discordante
+1059,sed269,18,71,86,86,discordante
+1060,sed270,1,79,,,senza ordine dei lavori
+1061,sed270,4,,67;85,67,senza articolo
+1062,sed270,4,,67;85,67,senza articolo
+1063,sed270,4,85,67;85,85,coerente
+1064,sed270,6,,85,85,senza articolo
+1065,sed270,7,,85,85,senza articolo
+1066,sed270,7,,85,85,senza articolo
+1067,sed270,8,,85,85,senza articolo
+1068,sed270,10,85,85,85,coerente
+1069,sed270,10,,85,85,senza articolo
+1070,sed270,14,86,85;86,86,coerente
+1071,sed270,14,86,85;86,86,coerente
+1072,sed270,14,,85;86,86,senza articolo
+1073,sed271,5,,,,senza articolo
+1074,sed271,6,,,,senza articolo
+1075,sed271,6,,,,senza articolo
+1076,sed271,10,,87,87,senza articolo
+1077,sed271,10,87,87,87,coerente
+1078,sed271,10,,87,87,senza articolo
+1079,sed271,11,,87,87,senza articolo
+1080,sed271,11,,87,87,senza articolo
+1081,sed271,14,,87,87,senza articolo
+1082,sed271,15,,87,87,senza articolo
+1083,sed271,16,87,87,87,coerente
+1084,sed272,4,88,,,senza ordine dei lavori
+1085,sed272,12,,,,senza articolo
+1086,sed272,17,,84,84,senza articolo
+1087,sed272,18,,84,84,senza articolo
+1088,sed272,19,,84,84,senza articolo
+1089,sed272,19,,84,84,senza articolo
+1090,sed272,19,,84,84,senza articolo
+1091,sed272,20,,84,84,senza articolo
+1092,sed272,24,52,84;52,52,coerente
+1093,sed272,27,52,52;64,52,coerente
+1094,sed272,28,,64;89,,senza articolo
+1095,sed272,29,,89,89,senza articolo
+1096,sed272,30,89,89,89,coerente
+1097,sed272,36,,90,90,senza articolo
+1098,sed272,38,94,90,90,discordante
+1099,sed272,39,,90,90,senza articolo
+1100,sed272,39,,90,90,senza articolo
+1101,sed272,41,,90,90,senza articolo
+1102,sed273,2,,,,senza articolo
+1103,sed273,2,,,,senza articolo
+1104,sed273,3,,,,senza articolo
+1105,sed273,3,,,,senza articolo
+1106,sed273,7,,93,93,senza articolo
+1107,sed273,7,,93,93,senza articolo
+1108,sed273,7,,93,93,senza articolo
+1109,sed273,8,95,93,93,discordante
+1110,sed276,9,,4,4,senza articolo
+1111,sed276,9,,4,4,senza articolo
+1112,sed276,10,,4,4,senza articolo
+1113,sed276,10,64,4,4,discordante
+1114,sed276,12,,4,4,senza articolo
+1115,sed276,12,,4,4,senza articolo
+1116,sed276,13,,4,4,senza articolo
+1117,sed276,18,47,4,4,discordante
+1118,sed276,18,45,4,4,discordante
+1119,sed276,19,45,4,4,discordante
+1120,sed277,5,45,,,senza ordine dei lavori
+1121,sed277,10,,,,senza articolo
+1122,sed277,11,,,,senza articolo
+1123,sed277,11,,,,senza articolo
+1124,sed277,32,123,,,senza ordine dei lavori
+1125,sed277,36,125,,,senza ordine dei lavori
+1126,sed277,42,,,,senza articolo
+1127,sed278,3,108,,,senza ordine dei lavori
+1128,sed278,3,,,,senza articolo
+1129,sed278,4,,,,senza articolo
+1130,sed278,5,,,,senza articolo
+1131,sed278,11,,,,senza articolo
+1132,sed278,13,108,,,senza ordine dei lavori
+1133,sed283,3,,,,senza articolo
+1134,sed283,6,,,,senza articolo
+1135,sed283,14,,,,senza articolo
+1136,sed284,4,95,,,senza ordine dei lavori
+1137,sed286,9,,97,97,senza articolo
+1138,sed286,11,,97,97,senza articolo
+1139,sed287,14,98,,,senza ordine dei lavori
+1140,sed289,16,,,,senza articolo
+1141,sed289,18,48,,,senza ordine dei lavori
+1142,sed293,14,,,,senza articolo
+1143,sed296,16,,2,2,senza articolo
+1144,sed296,17,1,2,2,discordante
+73,sed297,27,,,,senza articolo
+74,sed297,27,,,,senza articolo
+75,sed297,29,94,94,94,coerente
+76,sed297,29,,94,94,senza articolo
+77,sed297,30,,94,94,senza articolo
+78,sed297,30,,94,94,senza articolo
+79,sed297,30,,94,94,senza articolo
+80,sed297,30,,94,94,senza articolo
+81,sed297,30,,94,94,senza articolo
+82,sed297,30,,94,94,senza articolo
+83,sed297,30,,94,94,senza articolo
+84,sed297,30,,94,94,senza articolo
+85,sed297,30,,94,94,senza articolo
+86,sed297,30,,94,94,senza articolo
+1145,sed297,27,,,,senza articolo
+1146,sed297,29,,94,94,senza articolo
+1147,sed297,30,,94,94,senza articolo
+1148,sed297,31,,94,94,senza articolo
+1149,sed297,33,,94,94,senza articolo
+1150,sed297,34,13,94,94,discordante
+1151,sed297,34,13,94,94,discordante
+1152,sed297,34,13,94,94,discordante
+1153,sed297,34,13,94,94,discordante
+1154,sed297,34,94,94,94,coerente
+1155,sed297,34,94,94,94,coerente
+1156,sed297,37,,94,94,senza articolo
+1157,sed297,38,,94,94,senza articolo
+87,sed299,13,,,,senza articolo
+88,sed299,13,,,,senza articolo
+89,sed299,15,,,,senza articolo
+90,sed299,15,,,,senza articolo
+91,sed299,16,95,,,senza ordine dei lavori
+92,sed299,16,95,,,senza ordine dei lavori
+93,sed299,16,95,,,senza ordine dei lavori
+94,sed299,22,,,,senza articolo
+95,sed299,22,,,,senza articolo
+96,sed299,22,,,,senza articolo
+97,sed299,22,,,,senza articolo
+98,sed299,22,,,,senza articolo
+99,sed299,22,,,,senza articolo
+100,sed299,22,,,,senza articolo
+101,sed299,22,,,,senza articolo
+102,sed299,22,,,,senza articolo
+103,sed299,22,,,,senza articolo
+104,sed299,22,,,,senza articolo
+105,sed299,22,,,,senza articolo
+106,sed299,22,,,,senza articolo
+107,sed299,22,,,,senza articolo
+1158,sed299,4,94,,,senza ordine dei lavori
+1159,sed299,9,,,,senza articolo
+1160,sed299,10,,,,senza articolo
+1161,sed299,12,,,,senza articolo
+1162,sed299,13,95,,,senza ordine dei lavori
+1163,sed299,14,,,,senza articolo
+1164,sed299,15,,,,senza articolo
+1165,sed299,16,95,,,senza ordine dei lavori
+1166,sed299,18,,,,senza articolo
+1167,sed299,18,95,,,senza ordine dei lavori
+1168,sed299,19,,,,senza articolo
+1169,sed299,20,,,,senza articolo
+1170,sed299,27,,,,senza articolo
+1171,sed299,28,,,,senza articolo
+1172,sed299,28,,,,senza articolo
+1173,sed299,28,,,,senza articolo
+108,sed301,17,96,96,96,coerente
+109,sed301,17,96,96,96,coerente
+110,sed301,17,96,96,96,coerente
+111,sed301,17,,96,96,senza articolo
+112,sed301,17,,96,96,senza articolo
+113,sed301,17,,96,96,senza articolo
+1174,sed301,4,,8,8,senza articolo
+1175,sed301,5,,8,8,senza articolo
+1176,sed301,6,1,8,8,discordante
+1177,sed301,9,1,8,8,discordante
+1178,sed301,14,,9,9,senza articolo
+1179,sed301,14,,9,9,senza articolo
+1180,sed301,17,,96,96,senza articolo
+1181,sed301,17,94,96,96,discordante
+1182,sed301,21,,96,96,senza articolo
+1183,sed301,22,,96,96,senza articolo
+1184,sed301,23,,96,96,senza articolo
+1185,sed302,7,,,,senza articolo
+1186,sed302,9,95,,,senza ordine dei lavori
+1187,sed302,17,,,,senza articolo
+1188,sed303,14,94,,,senza ordine dei lavori
+1189,sed303,18,96,,,senza ordine dei lavori
+115,sed304,12,,,,senza articolo
+116,sed304,12,,,,senza articolo
+117,sed304,13,,,,senza articolo
+118,sed304,13,,,,senza articolo
+119,sed304,16,,,,senza articolo
+1190,sed304,2,,,,senza articolo
+1191,sed304,3,97,,,senza ordine dei lavori
+1192,sed304,4,,,,senza articolo
+1193,sed304,7,,,,senza articolo
+1194,sed304,7,97,,,senza ordine dei lavori
+1195,sed304,8,,,,senza articolo
+1196,sed304,8,95,,,senza ordine dei lavori
+1197,sed304,8,,,,senza articolo
+1198,sed304,13,,,,senza articolo
+1199,sed304,13,,,,senza articolo
+1200,sed304,15,,,,senza articolo
+1201,sed304,16,,,,senza articolo
+1203,sed304,18,,,,senza articolo
+1204,sed304,18,97-bis,,,senza ordine dei lavori
+1205,sed304,19,97,,,senza ordine dei lavori
+1206,sed304,22,,,,senza articolo
+1207,sed305,2,,,,senza articolo
+1208,sed305,10,,,,senza articolo
+1209,sed305,11,,,,senza articolo
+1210,sed305,12,,,,senza articolo
+1211,sed305,13,,,,senza articolo
+1212,sed305,20,,,,senza articolo
+1213,sed306,2,,,,senza articolo
+1214,sed306,2,,,,senza articolo
+1215,sed306,2,,,,senza articolo
+1216,sed306,3,48,,,senza ordine dei lavori
+1217,sed306,4,,,,senza articolo
+1218,sed306,4,,,,senza articolo
+1219,sed306,4,,,,senza articolo
+1220,sed306,7,,,,senza articolo
+1221,sed306,8,,,,senza articolo
+1222,sed306,8,,,,senza articolo
+1223,sed306,9,,,,senza articolo
+1224,sed306,9,,,,senza articolo
+1225,sed306,10,,,,senza articolo
+1226,sed306,12,,,,senza articolo
+1227,sed306,15,,,,senza articolo
+1228,sed306,17,,,,senza articolo
+1229,sed306,17,,,,senza articolo
+1230,sed306,20,,,,senza articolo
+120,sed307,5,,99,99,senza articolo
+121,sed307,5,,99,99,senza articolo
+122,sed307,5,,99,99,senza articolo
+123,sed307,5,,99,99,senza articolo
+124,sed307,5,,99,99,senza articolo
+125,sed307,5,,99,99,senza articolo
+126,sed307,5,,99,99,senza articolo
+127,sed307,5,,99,99,senza articolo
+128,sed307,6,,99,99,senza articolo
+129,sed307,6,,99,99,senza articolo
+130,sed307,6,,99,99,senza articolo
+131,sed307,14,100,99;100,100,coerente
+132,sed307,14,,99;100,99,senza articolo
+133,sed307,14,,99;100,,senza articolo
+134,sed307,14,,99;100,,senza articolo
+135,sed307,14,,99;100,,senza articolo
+1231,sed307,3,,99,99,senza articolo
+1232,sed307,3,,99,99,senza articolo
+1233,sed307,5,,99,99,senza articolo
+1234,sed307,5,,99,99,senza articolo
+1235,sed307,6,,99,99,senza articolo
+1236,sed307,6,,99,99,senza articolo
+1237,sed307,6,99,99,99,coerente
+1238,sed307,7,,99,99,senza articolo
+1239,sed307,13,,99,99,senza articolo
+1240,sed307,13,,99,99,senza articolo
+1241,sed307,13,,99,99,senza articolo
+1242,sed307,14,,99;100,100,senza articolo
+1243,sed307,14,,99;100,,senza articolo
+1244,sed307,16,100,100,100,coerente
+1245,sed307,18,,100,100,senza articolo
+1246,sed308,1,404,,,senza ordine dei lavori
+1247,sed308,2,,,,senza articolo
+1248,sed308,3,,,,senza articolo
+1249,sed308,4,96,,,senza ordine dei lavori
+1250,sed308,5,,,,senza articolo
+1251,sed308,5,,,,senza articolo
+1252,sed308,13,,,,senza articolo
+136,sed309,2,,102,102,senza articolo
+137,sed309,2,,102,102,senza articolo
+139,sed309,6,,102,102,senza articolo
+140,sed309,6,,102,102,senza articolo
+141,sed309,12,95,102,102,discordante
+142,sed309,40,21,108,108,discordante
+143,sed309,40,21,108,108,discordante
+144,sed309,40,21,108,108,discordante
+145,sed309,41,21,108;105,,discordante
+1253,sed309,2,102,102,102,coerente
+1254,sed309,3,,102,102,senza articolo
+1255,sed309,6,,102,102,senza articolo
+1256,sed309,7,102,102,102,coerente
+1257,sed309,10,169,102,102,discordante
+1258,sed309,15,,102,102,senza articolo
+1259,sed309,21,,102,102,senza articolo
+1261,sed309,31,,102,102,senza articolo
+1262,sed309,32,,102,102,senza articolo
+1263,sed309,35,,102,102,senza articolo
+1264,sed309,36,102,102,102,coerente
+1265,sed309,36,102,102,102,coerente
+1266,sed309,38,,102;108,102,senza articolo
+1267,sed309,38,103,102;108,108,discordante
+1268,sed309,40,,108,108,senza articolo
+1269,sed309,41,21,108;105,108,discordante
+1270,sed309,43,99,105,105,discordante
+1271,sed309,43,,105,105,senza articolo
+1272,sed310,2,426,,,senza ordine dei lavori
+1273,sed310,2,426,,,senza ordine dei lavori
+1274,sed310,8,,,,senza articolo
+1275,sed310,9,,,,senza articolo
+1276,sed310,9,,,,senza articolo
+1277,sed310,9,,,,senza articolo
+1278,sed310,10,74,,,senza ordine dei lavori
+1279,sed310,11,,,,senza articolo
+1280,sed310,12,,,,senza articolo
+1281,sed310,18,,,,senza articolo
+146,sed311,17,,127,127,senza articolo
+147,sed311,18,,127,127,senza articolo
+148,sed311,18,,127,127,senza articolo
+149,sed311,18,,127,127,senza articolo
+150,sed311,18,,127,127,senza articolo
+151,sed311,18,,127,127,senza articolo
+1282,sed311,2,,,,senza articolo
+1283,sed311,5,126,,,senza ordine dei lavori
+1284,sed311,18,,127,127,senza articolo
+1285,sed311,19,,127,127,senza articolo
+1286,sed311,19,,127,127,senza articolo
+1287,sed311,19,,127,127,senza articolo
+1288,sed311,20,127,127,127,coerente
+1289,sed311,22,,127,127,senza articolo
+1290,sed311,28,,127,127,senza articolo
+1291,sed312,1,127,,,senza ordine dei lavori
+152,sed313,5,,128,128,senza articolo
+153,sed313,5,,128,128,senza articolo
+1292,sed313,3,127,128,128,discordante
+1293,sed313,5,,128,128,senza articolo
+1294,sed313,5,,128,128,senza articolo
+1295,sed313,7,,128,128,senza articolo
+1296,sed313,7,428-bis,128,128,discordante
+154,sed315,4,,127,127,senza articolo
+155,sed315,4,,127,127,senza articolo
+156,sed315,16,,127;128,,senza articolo
+157,sed315,16,,127;128,,senza articolo
+158,sed315,16,,127;128,,senza articolo
+159,sed315,16,,127;128,,senza articolo
+160,sed315,17,,128,128,senza articolo
+161,sed315,17,,128,128,senza articolo
+1297,sed315,2,127,,,senza ordine dei lavori
+1298,sed315,7,,127,127,senza articolo
+1299,sed315,8,,127,127,senza articolo
+1300,sed315,8,,127,127,senza articolo
+1301,sed315,10,,127,127,senza articolo
+1302,sed315,11,,127,127,senza articolo
+1303,sed315,15,,127,127,senza articolo
+1304,sed315,15,,127,127,senza articolo
+1305,sed315,18,,128,128,senza articolo
+1306,sed315,21,,128,128,senza articolo
+1307,sed315,27,128,128,128,coerente
+1308,sed316,1,,,,senza articolo
+1309,sed316,4,,,,senza articolo
+1310,sed316,7,129,71;129,129,coerente
+1311,sed316,8,,129,129,senza articolo
+1312,sed316,8,129,129,129,coerente
+1313,sed316,10,,129,129,senza articolo
+1314,sed316,11,,129,129,senza articolo
+1315,sed317,2,126,126,126,coerente
+1316,sed317,6,,130,130,senza articolo
+1317,sed317,6,,130,130,senza articolo
+1318,sed317,13,130-bis,130,130,coerente
+1319,sed317,14,,130,130,senza articolo
+1320,sed317,21,134,131,131,discordante
+1321,sed317,22,131,131,131,coerente
+162,sed318,9,,118,118,senza articolo
+163,sed318,9,,118,118,senza articolo
+164,sed318,9,,118,118,senza articolo
+165,sed318,15,,118;122,,senza articolo
+166,sed318,15,,118;122,,senza articolo
+167,sed318,15,,118;122,,senza articolo
+1322,sed318,2,,,,senza articolo
+1323,sed318,3,1417,,,senza ordine dei lavori
+1324,sed318,4,,,,senza articolo
+1325,sed318,5,,,,senza articolo
+1326,sed318,6,,117,117,senza articolo
+1327,sed318,7,,117;118,118,senza articolo
+1328,sed318,8,,118,118,senza articolo
+1329,sed318,8,118,118,118,coerente
+1330,sed318,14,,118,118,senza articolo
+1331,sed318,15,,118;122,122,senza articolo
+1332,sed318,17,,122,122,senza articolo
+1333,sed318,17,,122,122,senza articolo
+1334,sed318,17,,122,122,senza articolo
+168,sed319,4,,,,senza articolo
+169,sed319,4,,,,senza articolo
+170,sed319,30,50,125;50,50,coerente
+1335,sed319,3,,,,senza articolo
+1336,sed319,4,,,,senza articolo
+1337,sed319,5,,,,senza articolo
+1338,sed319,6,,,,senza articolo
+1339,sed319,11,,,,senza articolo
+1341,sed319,13,,,,senza articolo
+1342,sed319,14,,,,senza articolo
+1343,sed319,14,,,,senza articolo
+1344,sed319,16,,125,125,senza articolo
+1345,sed319,16,,125,125,senza articolo
+1346,sed319,17,,125,125,senza articolo
+1347,sed319,17,,125,125,senza articolo
+1348,sed319,17,,125,125,senza articolo
+1349,sed319,18,,125,125,senza articolo
+1350,sed319,18,,125,125,senza articolo
+1351,sed319,18,,125,125,senza articolo
+1352,sed319,18,123,125,125,discordante
+1353,sed319,19,,125,125,senza articolo
+1354,sed319,20,125,125,125,coerente
+1355,sed319,21,123,125,125,discordante
+1356,sed319,22,125,125,125,coerente
+1357,sed319,22,1425,125,125,discordante
+1358,sed319,27,,125,125,senza articolo
+1359,sed319,27,,125,125,senza articolo
+1360,sed319,27,,125,125,senza articolo
+1361,sed319,30,50,125;50,50,coerente
+1362,sed319,31,50,50,50,coerente
+1363,sed320,5,,2,2,senza articolo
+1364,sed320,5,,2,2,senza articolo
+1365,sed320,9,,2,2,senza articolo
+1366,sed320,16,94,2,2,discordante
+1367,sed321,4,,,,senza articolo
+1368,sed321,7,,,,senza articolo
+1369,sed321,12,,,,senza articolo
+1370,sed321,16,,,,senza articolo
+1371,sed321,19,,,,senza articolo
+1372,sed321,22,,,,senza articolo
+1373,sed321,23,,,,senza articolo
+1374,sed321,24,,,,senza articolo
+1375,sed321,24,102,,,senza ordine dei lavori
+1376,sed321,24,,,,senza articolo
+1377,sed321,25,,,,senza articolo
+1378,sed321,26,,,,senza articolo
+1379,sed321,26,,,,senza articolo
+1380,sed321,26,109,,,senza ordine dei lavori
+1381,sed321,26,,,,senza articolo
+1382,sed321,27,,,,senza articolo
+1383,sed321,29,,,,senza articolo
+1384,sed321,30,,,,senza articolo
+1385,sed321,34,123,,,senza ordine dei lavori
+1386,sed321,35,57,,,senza ordine dei lavori
+1387,sed321,35,126,,,senza ordine dei lavori
+1388,sed321,36,127,,,senza ordine dei lavori
+1389,sed322,7,,,,senza articolo
+1390,sed322,7,,,,senza articolo
+1391,sed322,15,,,,senza articolo
+1392,sed322,17,,,,senza articolo
+1393,sed322,17,,,,senza articolo
+1394,sed322,18,,,,senza articolo
+1395,sed322,18,,,,senza articolo
+1396,sed328,5,,7,7,senza articolo
+1397,sed328,5,,7,7,senza articolo
+1398,sed328,6,,7,7,senza articolo
+1399,sed328,8,,18;12,12,senza articolo
+1400,sed328,9,,12,12,senza articolo
+1401,sed328,9,,12,12,senza articolo
+171,sed329,2,,,,senza articolo
+1402,sed329,6,58,,,senza ordine dei lavori
+1403,sed329,8,,,,senza articolo
+1404,sed329,10,,,,senza articolo
+1405,sed330,16,3,,,senza ordine dei lavori
+1406,sed330,22,,,,senza articolo
+1407,sed342,3,,,,senza articolo
+1408,sed342,4,,,,senza articolo
+1409,sed342,15,,,,senza articolo
+1410,sed342,16,,,,senza articolo
+1411,sed342,16,,,,senza articolo
+1412,sed343,5,15,,,senza ordine dei lavori
+1413,sed343,7,15,,,senza ordine dei lavori
+1414,sed343,7,15,,,senza ordine dei lavori
+1415,sed343,7,16,,,senza ordine dei lavori
+1416,sed343,10,,,,senza articolo
+1417,sed343,12,3-bis,,,senza ordine dei lavori
+1418,sed343,13,15,,,senza ordine dei lavori
+1419,sed343,22,97,3-ter,3-ter,discordante
+1420,sed343,22,17,3-ter,3-ter,discordante
+1421,sed343,22,17,3-ter,3-ter,discordante
+1422,sed343,23,7,3-ter;7,7,coerente
+1423,sed343,26,57,8-bis,8-bis,discordante
+1424,sed343,26,57,8-bis,8-bis,discordante
+1425,sed343,27,57,8-bis,8-bis,discordante
+1426,sed343,28,,8-bis,8-bis,senza articolo
+1427,sed343,28,57,8-bis,8-bis,discordante
+1428,sed343,28,57,8-bis,8-bis,discordante
+1429,sed343,33,,8-bis,8-bis,senza articolo
+1430,sed343,34,57,8-bis,8-bis,discordante
+1431,sed346,6,113,,,senza ordine dei lavori
