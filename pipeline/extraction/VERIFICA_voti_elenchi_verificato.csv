@@ -1,0 +1,20 @@
+voto,seduta,elenco,nomi_mancanti_trovati,nomi_stampati,totale_ufficiale
+v3,sed075,sì,Marinaro («Mari-/naro» oltre il cambio di pagina),350,350
+v4,sed084,no,Federici Maria («Fede-/rici»); Tumminelli («l'umminelli»),169,169
+v7,sed088,sì,Cevolotto («Ce. - volotto»),102,102
+v8,sed102,no,Togliatti («To-/gliatti»),283,284 (il resoconto stampa un nome in meno)
+v10,sed104,no,Carbonari («Gar-- bonari»); Cotellessa («Ca-- tellessa»),223,223
+v15,sed178,no,nessuno,179,178 (il resoconto stampa un nome in più)
+v16,sed180,no,Spano («Spa- .| no»),179,179
+v17,sed180,sì/no,Zappelli stampato in entrambi gli elenchi: lasciato mancante,163/164,169/175 (elenchi incompleti nel resoconto)
+v18,sed187,sì,Lussu («lussu»),152,152
+v19,sed188,sì,Sereni («Se- - reni»),173,173
+v19,sed188,no,nessuno,190,191 (il resoconto stampa un nome in meno)
+v22,sed269,sì,De Maria («De. Maria»),197,197
+v23,sed270,sì/no,Bertone nei no (duplicato cancellato per errore),90/266,90/258 (il resoconto stampa 8 no in più)
+v27,sed311,sì/no,Mastino Pietro (no); Cosattini stampato in entrambi gli elenchi,92/194,92/194
+v29,sed332,no,nessuno,215,216 (il resoconto stampa un nome in meno)
+v5,sed084,sì/no/astenuti,nessuno,41/220/2,votazione nulla
+v11,sed104,sì/no/astenuti,Mariani Enrico (no; «Longhena Mariani Enrico»),226/22/2,votazione nulla
+v14,sed177,sì/no/astenuti,"Cartia (sì); Vicentini (no, assente dall'OCR)",140/20/12,votazione nulla
+v25,sed296,sì/no/astenuti,"Barontini Ilio, Montagnana Mario (no; Montalbano tolto); Conti astenuto per errata corrige di sed312",30/203/1+1,votazione nulla
