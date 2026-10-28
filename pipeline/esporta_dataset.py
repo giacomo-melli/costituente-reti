@@ -248,6 +248,10 @@ E['id_presentatore'] = [p if p and p in str(f).split('|') else '' for p, f in zi
 E['presentatore_fonte'] = ['non identificato' if not p else 'firma singola' if n == 1 else 'formula' if fm == 1 else 'primo dell\'elenco'
                            for p, n, fm in zip(E.id_presentatore, E.n_firmatari, E.presentatore_formula.fillna(0))]
 print('Presentatore:', E.presentatore_fonte.value_counts().to_dict())
+# esito (tools/esito_emendamenti.py): si cerca solo dove la formula e' univoca; il resto e' «non determinato»
+_es = pd.read_csv(os.path.join(EST, 'esiti.csv')).set_index('id_emendamento').esito
+E['esito'] = E.id_emendamento.map(_es).fillna('non determinato')
+print('Esito:', E.esito.value_counts().to_dict())
 E['id_emendamento'] = 'a' + E.id_emendamento.astype(str)
 L['id_emendamento'] = 'a' + L.id_emendamento.astype(str)
 L = L.drop_duplicates().sort_values(['id_emendamento', 'id_dep'])
@@ -256,7 +260,7 @@ L['ruolo'] = ['presentatore' if pres.get(e, '') == d else 'firmatario' for e, d 
 
 E_it = E.rename(columns={'firmatari': 'firmatari_id'})[['id_emendamento', 'firmatari_id', 'n_firmatari', 'completo',
         'articolo_menzionato', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf', 'id_presentatore', 'presentatore_fonte',
-        'tipo_emendamento', 'testo']]
+        'tipo_emendamento', 'esito', 'testo']]
 E_it.to_csv(os.path.join(IT, 'emendamenti_nodi.csv'), index=False)
 L[['id_dep', 'id_emendamento', 'ruolo']].to_csv(os.path.join(IT, 'edgelist_emendamenti.csv'), index=False)
 E_en = E_it.drop(columns='firmatari_id').rename(columns={
@@ -268,9 +272,11 @@ E_en['proposer_source'] = E_en.presentatore_fonte.map({'formula': 'formula', 'fi
                                                       "primo dell'elenco": 'first in list', 'non identificato': 'not identified'})
 E_en['amendment_type'] = E_en.tipo_emendamento.map({'sostituire': 'replace', 'sopprimere': 'delete', 'aggiungere': 'add',
                                                     'inserire': 'insert', 'non determinato': 'undetermined'})
+E_en['outcome'] = E_en.esito.map({'approvato': 'approved', 'respinto': 'rejected', 'ritirato': 'withdrawn',
+                                  'decaduto (assente)': 'lapsed (proposer absent)', 'assorbito': 'absorbed', 'non determinato': 'undetermined'})
 E_en = E_en.rename(columns={'testo': 'text_it'})
 E_en[['id_amendment', 'n_signatories', 'complete', 'source', 'sitting', 'date', 'pdf_page', 'article_mentioned', 'url_pdf',
-      'id_proposer', 'proposer_source', 'amendment_type', 'text_it']] \
+      'id_proposer', 'proposer_source', 'amendment_type', 'outcome', 'text_it']] \
     .to_csv(os.path.join(EN, 'amendments_nodes.csv'), index=False)
 L.assign(role=L.ruolo.map({'presentatore': 'proposer', 'firmatario': 'signatory'})) \
     .rename(columns={'id_dep': 'id_member', 'id_emendamento': 'id_amendment'})[['id_member', 'id_amendment', 'role']] \

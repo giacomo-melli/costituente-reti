@@ -10,6 +10,7 @@
 #   menzioni.csv, menzioni_nomi.csv   tutte le occorrenze trovate, per il controllo
 #   VERIFICA.csv               tutti gli emendamenti, con link al PDF
 #   VERIFICA_campione.csv      40 emendamenti estratti a caso da controllare a mano
+#   esiti.csv                  esito di ogni emendamento (approvato, respinto, ritirato, decaduto, assorbito)
 #   voti.csv, voti_nominali.csv, edgelist_voti.csv   voti per appello nominale (chi ha votato sì, no, astenuto)
 # =====================================================================
 import os, sys, subprocess
@@ -19,7 +20,7 @@ QUI = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(QUI, 'extraction')
 S = os.path.join(QUI, 'tools')
 
-for script in ['estrai_emendamenti.py', 'prepara_verifica.py', 'estrai_voti.py']:
+for script in ['estrai_emendamenti.py', 'esito_emendamenti.py', 'prepara_verifica.py', 'estrai_voti.py']:
     r = subprocess.run([sys.executable, os.path.join(S, script), QUI, OUT], capture_output=True, text=True)
     print(r.stdout)
     if r.returncode != 0:
