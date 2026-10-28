@@ -255,6 +255,11 @@ print('Esito:', E.esito.value_counts().to_dict())
 _ca = pd.read_csv(os.path.join(EST, 'controllo_articolo.csv'), dtype=str).fillna('')
 _ca['id_emendamento'] = _ca.id_emendamento.astype(int)
 E['articolo_in_discussione'] = E.id_emendamento.map(_ca.set_index('id_emendamento').articolo_in_discussione).fillna('')
+_tv = pd.read_csv(os.path.join(EST, 'articoli_tavola.csv'), dtype=str).fillna('')
+_tv['id_emendamento'] = _tv.id_emendamento.astype(int); _tv = _tv.set_index('id_emendamento')
+E['materia'] = E.id_emendamento.map(_tv.materia).fillna('')
+E['articolo_costituzione'] = E.id_emendamento.map(_tv.articolo_costituzione).fillna('')
+E['controllo_data'] = E.id_emendamento.map(_tv.tavola).fillna('')
 E['id_emendamento'] = 'a' + E.id_emendamento.astype(str)
 L['id_emendamento'] = 'a' + L.id_emendamento.astype(str)
 L = L.drop_duplicates().sort_values(['id_emendamento', 'id_dep'])
@@ -262,23 +267,27 @@ pres = E.set_index('id_emendamento').id_presentatore
 L['ruolo'] = ['presentatore' if pres.get(e, '') == d else 'firmatario' for e, d in zip(L.id_emendamento, L.id_dep)]
 
 E_it = E.rename(columns={'firmatari': 'firmatari_id'})[['id_emendamento', 'firmatari_id', 'n_firmatari', 'completo',
-        'articolo_menzionato', 'articolo_in_discussione', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf', 'id_presentatore', 'presentatore_fonte',
+        'articolo_menzionato', 'articolo_in_discussione', 'materia', 'articolo_costituzione', 'controllo_data', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf', 'id_presentatore', 'presentatore_fonte',
         'tipo_emendamento', 'esito', 'testo']]
 E_it.to_csv(os.path.join(IT, 'emendamenti_nodi.csv'), index=False)
 L[['id_dep', 'id_emendamento', 'ruolo']].to_csv(os.path.join(IT, 'edgelist_emendamenti.csv'), index=False)
 E_en = E_it.drop(columns='firmatari_id').rename(columns={
     'id_emendamento': 'id_amendment', 'n_firmatari': 'n_signatories', 'completo': 'complete',
-    'articolo_menzionato': 'article_mentioned', 'articolo_in_discussione': 'article_under_discussion', 'prima_seduta': 'sitting', 'data': 'date', 'pagina': 'pdf_page', 'fonte': 'source'})
+    'articolo_menzionato': 'article_mentioned', 'articolo_in_discussione': 'article_under_discussion', 'materia': 'subject_title',
+    'articolo_costituzione': 'constitution_article', 'controllo_data': 'date_check', 'prima_seduta': 'sitting', 'data': 'date', 'pagina': 'pdf_page', 'fonte': 'source'})
 E_en['source'] = E_en.source.map({'firma': 'signature block', 'presentazione': 'presentation formula'})
 E_en['id_proposer'] = E_en.id_presentatore
 E_en['proposer_source'] = E_en.presentatore_fonte.map({'formula': 'formula', 'firma singola': 'single signatory',
                                                       "primo dell'elenco": 'first in list', 'non identificato': 'not identified'})
 E_en['amendment_type'] = E_en.tipo_emendamento.map({'sostituire': 'replace', 'sopprimere': 'delete', 'aggiungere': 'add',
                                                     'inserire': 'insert', 'non determinato': 'undetermined'})
+E_en['date_check'] = E_en.date_check.map({'data coerente': 'date consistent', 'unico articolo discusso quel giorno': 'only article discussed that day',
+    'giorno senza articoli del progetto': 'day without draft articles', 'data discordante': 'date inconsistent', 'non determinato': 'undetermined', '': ''})
+E_en['subject_title'] = E_en.subject_title.str.replace('Disposizioni generali', 'General provisions').str.replace('Parte', 'Part').str.replace('Titolo', 'Title').str.replace('Sez.', 'Sect.')
 E_en['outcome'] = E_en.esito.map({'approvato': 'approved', 'respinto': 'rejected', 'ritirato': 'withdrawn',
                                   'decaduto (assente)': 'lapsed (proposer absent)', 'assorbito': 'absorbed', 'non determinato': 'undetermined'})
 E_en = E_en.rename(columns={'testo': 'text_it'})
-E_en[['id_amendment', 'n_signatories', 'complete', 'source', 'sitting', 'date', 'pdf_page', 'article_mentioned', 'article_under_discussion', 'url_pdf',
+E_en[['id_amendment', 'n_signatories', 'complete', 'source', 'sitting', 'date', 'pdf_page', 'article_mentioned', 'article_under_discussion', 'subject_title', 'constitution_article', 'date_check', 'url_pdf',
       'id_proposer', 'proposer_source', 'amendment_type', 'outcome', 'text_it']] \
     .to_csv(os.path.join(EN, 'amendments_nodes.csv'), index=False)
 L.assign(role=L.ruolo.map({'presentatore': 'proposer', 'firmatario': 'signatory'})) \
