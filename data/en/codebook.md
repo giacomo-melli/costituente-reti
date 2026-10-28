@@ -141,6 +141,23 @@ Almost all errors belonged to general families, fixed in the extractor: lists of
 
 **Two versions of the networks.** Every edge in `edgelist_amendments.csv` and `edgelist_votes.csv` carries a `matching` column, the criterion by which the name was recognised: `exact`, `exact+party`, `prefix`, `namesake+cosignatures` and `namesake+sitting` (resolved namesakes), `approximate`, `alphabetical band`, `namesake resolved`, `manual correction` (list read on the image), `manual decision` (from the open-cases sheet). The `*_conservative.csv` files keep only `exact`, `exact+party` and `manual correction`. Showing that a result holds on both versions is the most direct answer to the objection that the data come from OCR; `pipeline/extraction/incertezza_rete.csv` does the same in a continuous way (see below).
 
+**Uncertainty of network statistics.** `pipeline/tools/incertezza_rete.py` propagates the errors measured on the image to the statistics of the co-signature network: in 1,000 replicates it removes each multi-signatory amendment with probability 0.042 (false positives) and each signature with probability 0.043 (wrong signatories). Results (`pipeline/extraction/incertezza_rete.csv`; observed, conservative version, 95% interval of the replicates):
+
+| Statistic | Observed | Conservative | 95% CI |
+|---|---|---|---|
+| Density of the projection | 0.042 | 0.041 | 0.035–0.040 |
+| Mean degree | 24.6 | 23.7 | 20.2–23.1 |
+| Degree centralization | 0.191 | 0.189 | 0.145–0.193 |
+| Share of ties within the same group | 0.654 | 0.656 | 0.640–0.711 |
+| Homophily (observed / chance share) | 3.24 | 3.25 | 3.17–3.52 |
+| Reciprocity signatory → proposer | 0.102 | 0.098 | 0.084–0.103 |
+
+Structural measures (homophily, reciprocity) change little; volume measures (density, degree) fall by about a tenth when errors are removed, because errors add ties. The calculation does not simulate recall: the transcribed sittings contain about two thirds of the printed amendments, and the missing ties lower density and degree in a way these replicates do not measure.
+
+**Coverage.** The corpus contains the 173 sittings in which the index of proceedings records amendments or votes, out of 373 sittings of the Assembly. Comparison with the Chamber's table of preparatory works (dates on which each draft article was discussed) shows that 16 sittings held on days when the draft was discussed — almost always the morning sitting of a day whose afternoon sitting is transcribed — are not in the corpus: their amendments are all missing, and the recall measured within transcribed sittings (67%) does not account for them. The list of the 200 untranscribed sittings, with this flag and the PDF address, is in `pipeline/sedute_non_trascritte.csv`; `pipeline/tools/scarica_pdf_mancanti.py` downloads them for OCR. Lists closed by «ed altri» (`complete = 0`) number 32, 24 of them with at least two signatories: ties with the unnamed signatories are missing.
+
+**External validation.** No printed index listing amendments by name exists in usable form; the Chamber's table of preparatory works gives articles and dates, not proposers. Two external judges are used all the same: the correlation with the activity pages of the Chamber's index (above) and the table, which confirms the subject and the discussion date of the amended article.
+
 **Open cases and manual decisions.** Cases the extraction cannot settle — surnames shared by several members with no first name or co-signatories to help (Gullo, Mastino, Mariani, Merlin, Cortese), illegible names, lists closed by «ed altri», unmatched names in votes, approximate matches — are collected by `pipeline/tools/prepara_casi_aperti.py` into `pipeline/CASI_APERTI.xlsx`, with a link to the page and the possible choices. Decisions written in the sheet, taken by looking at the page, are applied by `esporta_dataset.py` at every export and stay in the repository, so every manual choice is documented and reversible.
 
 **OCR quality by page.** `pipeline/tools/qualita_ocr.py` gives each page the share of words (4+ letters) occurring at least 20 times in the corpus — a word garbled by OCR is almost always rare — and the share of stray characters; the result is in `pipeline/extraction/qualita_pagine.csv` (3,275 pages; median 0.89, 5th percentile 0.79). The score does not predict extraction errors: across the 492 records checked on the image, wrong ones fall on pages of almost identical quality to correct ones (0.905 vs 0.908; permutation test p = 0.22). Errors depend on formulas and context, not on how legible the page is; the file is there for anyone wanting to drop the worst pages in a robustness check.
