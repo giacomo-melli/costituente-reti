@@ -88,6 +88,15 @@ Servono R con i pacchetti `tesseract`, `pdftools` e `magick`, Python 3 con
 Chamber's site. You need R with `tesseract`, `pdftools` and `magick`, Python 3
 with `pandas`, `numpy` and `pillow`, and Tesseract with the Italian language.*
 
+Tutto in un comando, da qualunque cartella (gli script trovano da soli la cartella del repository):
+*Everything in one command, from any folder:*
+
+```bash
+caffeinate -i bash ~/Documents/Papers/SNA-Dataset/Costituenti/aggiorna_dati.sh   # --senza-ocr per saltare l'OCR
+```
+
+Oppure i singoli passi, dalla cartella del repository / *or step by step, from the repository folder*:
+
 ```bash
 # 1. OCR a 300 dpi di tutte le sedute (lungo: molte ore)
 Rscript pipeline/ocr_costituente.R
