@@ -20,7 +20,7 @@ QUI = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(QUI, 'extraction')
 S = os.path.join(QUI, 'tools')
 
-for script in ['estrai_emendamenti.py', 'esito_emendamenti.py', 'controllo_articolo.py', 'prepara_verifica.py', 'estrai_voti.py']:
+for script in ['estrai_emendamenti.py', 'esito_emendamenti.py', 'controllo_articolo.py', 'tavola_articoli.py', 'prepara_verifica.py', 'estrai_voti.py']:
     r = subprocess.run([sys.executable, os.path.join(S, script), QUI, OUT], capture_output=True, text=True)
     print(r.stdout)
     if r.returncode != 0:
