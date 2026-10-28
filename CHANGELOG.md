@@ -15,7 +15,7 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *All 388 multi-signatory amendments checked against the image; a blind second reading of 50 records agrees in every decidable case.*
 - **Emendamenti a firma singola**: due campioni ciechi sull'immagine (60 + 50). Nel secondo, dopo le correzioni del primo, gli errori veri sono 2/48 (4,2%), più 4 record nati da una citazione nel discorso di un altro, che corrispondono comunque a un emendamento vero di quella persona. Corrette tre nuove famiglie, recuperati due elenchi pluri-firmati (sed124, sed343).
   *Singles: two blind image samples; in the second, 2/48 true errors (4.2%) plus 4 records born from a citation of a real amendment. Three more families fixed, two multi-signatory lists recovered.*
-- Emendamenti 718 → 1.385; con 2+ firmatari 329 → 388; legami di co-firma 2.269 → 3.176.
+- Emendamenti 718 → 1.384; con 2+ firmatari 329 → 388; legami di co-firma 2.269 → 3.175.
 
 ### Variabili nuove / New variables
 

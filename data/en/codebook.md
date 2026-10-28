@@ -38,8 +38,8 @@ Source texts (debate topics, document titles, occupations as recorded, Wikipedia
 | `edgelist_exchanges.csv` | One-mode interaction network: members speaking on the same page of the record (7,787 pairs) |
 | `edgelist_corapporteurs.csv` | Reports and proposals signed jointly (16 pairs) |
 | `edgelist_substitutions.csv` | Directed network: who replaced whom on a body (99 ties) |
-| `amendments_nodes.csv` | 1,385 amendments tabled in the Assembly, extracted from the records by OCR |
-| `edgelist_amendments.csv` | Two-mode network member × amendment (who signed, with the role of proposer or signatory; 3,176 edges) |
+| `amendments_nodes.csv` | 1,384 amendments tabled in the Assembly, extracted from the records by OCR |
+| `edgelist_amendments.csv` | Two-mode network member × amendment (who signed, with the role of proposer or signatory; 3,175 edges) |
 | `speech_mentions.csv` | Directed network of mentions in speeches: who, speaking in the Assembly, names whom (9,194 mentions) |
 | `votes_nodes.csv` | 27 roll-call votes, with official totals and check |
 | `edgelist_votes.csv` | Two-mode network member × vote, with the vote cast (yes, no, abstain) |
@@ -61,7 +61,7 @@ Identifiers: `d` + Chamber id for members, `o` + id for bodies, `t` + number for
 
 **Amendments (two-mode).** Who signed an amendment together: a chosen tie, unlike committee membership. Projected onto members, it measures collaboration in drafting the text.
 
-**Amendments (two-mode, directed).** `edgelist_amendments.csv` has a `role` column: `proposer` for whoever tabled the amendment, `signatory` for those who co-signed it. Projecting only the signatory → proposer edges gives a directed network: who gathers signatures and who gives them. The proposer was compared with the list transcribed from the image for the 131 multi-signatory amendments of the systematic check: it matches in 130 of 131 cases (99.2%, CI 95.8–99.9); the only error («presentato dall'onorevole Gasparotto e da me», where the speaker was placed first) was fixed in the extractor. Of 1,385 amendments, 186 have the proposer given by a formula, 202 by the first name in the list, 996 are single-signatory and 1 is not identifiable.
+**Amendments (two-mode, directed).** `edgelist_amendments.csv` has a `role` column: `proposer` for whoever tabled the amendment, `signatory` for those who co-signed it. Projecting only the signatory → proposer edges gives a directed network: who gathers signatures and who gives them. The proposer was compared with the list transcribed from the image for the 131 multi-signatory amendments of the systematic check: it matches in 130 of 131 cases (99.2%, CI 95.8–99.9); the only error («presentato dall'onorevole Gasparotto e da me», where the speaker was placed first) was fixed in the extractor. Of 1,384 amendments, 186 have the proposer given by a formula, 202 by the first name in the list and 996 are single-signatory.
 
 **Mentions in speeches (directed).** Who, speaking in the Assembly, names another member: «l'onorevole X», «dell'/dall'/all'onorevole X», «il collega X», «on. X». Unlike co-signature it is an asymmetric, unagreed tie, and measures who is taken as a reference in the debate. The speaker is the name heading the speaking turn, also when the heading is printed inline («…(Approvazioni). PRESIDENTE. Pongo in votazione…»); turns of the President of the Assembly are excluded, because almost all are procedural («Ha facoltà di parlare l'onorevole X»), as are self-mentions. `mention_type` distinguishes mentions concerning an amendment, speech acts («le dichiarazioni dell'onorevole X», the same phrases the amendment extractor discards), stage directions in the record («(Interruzione dell'onorevole X)», which record an interaction but are not the speaker's words) and others. Code: `tools/estrai_menzioni_discorso.py`, which uses the same reading and name-matching rules as the amendment extractor.
 

@@ -111,6 +111,8 @@ def resolve_group(names, data):
     return out
 
 NOMI_RE = '|'.join(sorted({re.escape(x.split()[0]) for x in nomi.nome if isinstance(x, str) and len(x.split()[0]) >= 4} | {'Giancarlo', 'Garlo', 'Carlo'}, key=len, reverse=True))
+COGNOMI_MIN = {c.lower() for c in nomi.cognome}
+COGNOMI_OMONIMI = {c.lower() for c, n in nomi.cognome.value_counts().items() if n > 1}
 def split_names(s):
     s = re.sub(r'\b(ed|e)\s+altri\b', '', s, flags=re.I)
     s = re.sub(r"\b(?:dell['’]\s?|della\s+|dall['’]\s?)onorevole\b", '', s, flags=re.I)   # elenco che ripete «dell'onorevole»
@@ -120,7 +122,18 @@ def split_names(s):
     s = re.sub(r'(\w)[|¶]\s*(\w)', r'\1\2', s)   # cognome spezzato dall'a capo: Ma|glioli
     s = re.sub(r'\b(?!(?:e|ed)\.)([A-Za-z]{1,3})\.\s+(?=[A-Z])', r'\1', s)   # sillabe spezzate dall'OCR (DE Mr. CHELIS), non la congiunzione «e.»
     parts = re.split(r",|;|\.\s+(?=[A-ZÀ-Ý])|\s\bed?\b(?:['’.]?\s|-\s*(?=[A-ZÀ-Ý]))", s)   # anche «e-Carboni»   # anche «e'» ed «e.» con il segno spurio dell'OCR
-    return [p.strip(" .:-'’\"|°_") for p in parts if len(re.sub(r'[^A-Za-zÀ-ÿ]', '', p)) >= 3]
+    parts = [re.sub(r"\s+", ' ', re.sub(r"(?<=\s)(?!d[aei]\b)[a-z]{1,2}(?=\s|$)", ' ', ' ' + p)).strip(" .:-'’\"|°_") for p in parts]   # rumore OCR («DE o . MARIA»)
+    out = []
+    for p in parts:
+        # «DE o . MARIA»: una particella rimasta sola si riattacca al pezzo che segue
+        if out and out[-1].upper() in ('DE', 'DI', 'LA', 'LO', 'DEL', 'DELLA'):
+            out[-1] = out[-1] + ' ' + p; continue
+        # «Bianchi , Bianca»: un nome proprio da solo, che non e' anche un cognome, completa il cognome condiviso
+        # da piu' costituenti che lo precede (non «Jacini, Gabriele», dove Gabriele e' l'OCR di Gabrieli)
+        if out and re.fullmatch(r"(?:" + NOMI_RE + r")", p, flags=re.I) and p.lower() not in COGNOMI_MIN and out[-1].lower() in COGNOMI_OMONIMI:
+            out[-1] = out[-1] + ' ' + p; continue
+        out.append(p)
+    return [p for p in out if len(re.sub(r'[^A-Za-zÀ-ÿ]', '', p)) >= 3]
 
 # ---------- testo continuo per seduta ----------
 COGN_RE = re.compile(r'\b(' + '|'.join(sorted({re.escape(c) for c in nomi.cognome if len(c) >= 4}, key=len, reverse=True)) + r')\b', re.I)
@@ -419,6 +432,9 @@ for s in sedute:
         if elenco_di_atti_distinti(before, m.group(0)[:1]) or atto_di_parola(before, m.group(0)[:1]):
             continue
         testo = m.group(1).strip()
+        # «dell'onorevole Gullo, ¶ UBERTI. Chiedo di parlare»: il maiuscolo dopo il paragrafo e' il turno di parola che segue
+        if text[m.end():m.end() + 2].startswith('.'):
+            testo = re.sub(r"[\s,;]*¶[\s.,'‘’|]*[A-ZÀ-Ý][A-ZÀ-Ý'’ ]{2,30}$", '', testo)
         # un nome solo retto da «dell'onorevole / dall'onorevole» e' il proponente; in un elenco il presentatore e'
         # esplicito solo se lo indica una formula (sotto); altrimenti vale il primo nome stampato
         esplicito = int(not re.search(r",|;|\be\b|\bed\b", testo))
