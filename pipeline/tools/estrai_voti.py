@@ -224,7 +224,17 @@ for s in sedute:
         # due formule per i totali: «Hanno risposto sì / no» e «Voti favorevoli / contrari»
         t_si = totale(after, r'Hanno\W{0,4}rispost\w{0,2}\W{0,4}s[iìl1]') or totale(after, r'Voti\W{0,3}favorevol\w*')
         t_no = totale(after, r'Hanno\W{0,4}rispost\w{0,2}\W{0,4}n[o0]') or totale(after, r'Voti\W{0,3}contrar\w*')
-        t_si, t_no = ripara_totali(t_si, t_no, totale(after, r'\bVotanti'))
+        # i votanti si leggono dal riquadro, oppure si ricavano da presenti - astenuti quando l'OCR sporca la riga
+        # («Votanti 20 320», sed187): si prova con entrambi
+        def ultimo_numero(pat):
+            # l'ultimo numero fra l'etichetta e la parola successiva: «Votanti 20 320» -> 320, «Astenuti ...0... 2» -> 2
+            m_ = re.search(pat + r"([^A-Za-z]{0,30})", after)
+            n_ = re.findall(r"\d{1,3}", m_.group(1)) if m_ else []
+            return int(n_[-1]) if n_ else None
+        _pres, _ast = ultimo_numero(r'\bPresenti(?!\W{0,4}e\W)'), ultimo_numero(r'\bAstenuti')
+        for _vot in (totale(after, r'\bVotanti'), ultimo_numero(r'\bVotanti'), (_pres - _ast) if _pres and _ast is not None else None):
+            _r = ripara_totali(t_si, t_no, _vot)
+            if _vot and None not in _r and sum(_r) == _vot: t_si, t_no = _r; break
         nx = M_SI.search(text, m.end() + 10)
         legale = NUM_LEGALE.search(text[m.end():nx.start() if nx else m.end() + 40000])
         voti.append(dict(id_voto=vid, seduta=s, data=data, pagina=page_at(pm, m.start()),

@@ -17,7 +17,11 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *Singles: two blind image samples; in the second, 2/48 true errors (4.2%) plus 4 records born from a citation of a real amendment. Three more families fixed, two multi-signatory lists recovered.*
 - Nuove famiglie corrette nell'estrattore: due punti dopo «dagli onorevoli:», verbo con accento spurio, «proposta di articolo… a firma degli», emendamento letto dopo un'interpellanza, blocco di emendamenti dopo un altro atto, singoli con testo proprio non più assorbiti in un elenco dello stesso primo firmatario (17 emendamenti distinti tornano separati), «fatto ‘proprio» con apice spurio.
   *More extractor families fixed; four lists of up to 42 signatories recovered.*
-- Emendamenti 718 → 1.408; con 2+ firmatari 329 → 394; legami di co-firma 2.269 → 3.275.
+- **16 sedute aggiunte** (giorni di discussione del progetto che mancavano al corpus, ora 189 sedute): 126 emendamenti, 33 con più firmatari, tutti controllati sull'immagine; 2 falsi positivi e 4 elenchi incompleti trovati e corretti con sei nuove regole generali (formula al futuro «presenterò… firmato anche dagli», «presentato dall'onorevole X… reca anche le firme», «ha facoltà di svolgere… reca anche le firme», punto esclamativo spurio a fine riga, «ed astri», accento spurio). Un elenco troncato da «ed altri» nella stessa pagina dell'elenco completo è ora unito a quello.
+  *16 sittings added (189 in all): 126 amendments, all 33 multi-signatory ones checked on the image; six more general rules.*
+- **Casi aperti decisi tutti** sull'immagine (`pipeline/CASI_APERTI.xlsx`), con l'elenco degli incerti nel codebook; le decisioni non dipendono più dalla numerazione dei voti e restano nel foglio.
+  *All open cases decided on the image; uncertain ones listed in the codebook.*
+- Emendamenti 718 → 1.533; con 2+ firmatari 329 → 426; legami di co-firma 2.269 → 3.549.
 
 ### Variabili nuove / New variables
 
@@ -31,11 +35,11 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
 
 ### File nuovi / New files
 
-- `menzioni_discorso.csv` (EN `speech_mentions.csv`): rete diretta delle menzioni nei discorsi, chi nomina chi in Aula; 9.194 menzioni, 3.743 coppie dirette.
-- `pipeline/tools/test_regole.py`: test di non-regressione delle regole di estrazione (62 passi veri, 63 controlli).
+- `menzioni_discorso.csv` (EN `speech_mentions.csv`): rete diretta delle menzioni nei discorsi, chi nomina chi in Aula; 9.824 menzioni, 3.995 coppie dirette.
+- `pipeline/tools/test_regole.py`: test di non-regressione delle regole di estrazione (66 passi veri, 67 controlli).
 - `pipeline/tools/estrai_menzioni_discorso.py`, `pipeline/tools/coesione_voto.py`, `pipeline/tools/ritaglia.py`, `pipeline/tools/qualita_ocr.py` (qualità dell'OCR per pagina, `pipeline/extraction/qualita_pagine.csv`).
 - File di verifica in `pipeline/extraction/VERIFICA_*`: recall, precisione, pluri-firmati, kappa, menzioni, singoli, esiti, articolo, altri atti.
-- `altri_atti_nodi.csv`, `edgelist_altri_atti.csv` (EN `other_acts_nodes.csv`, `edgelist_other_acts.csv`): strato multiplex di 842 atti co-firmati che non sono emendamenti.
+- `altri_atti_nodi.csv`, `edgelist_altri_atti.csv` (EN `other_acts_nodes.csv`, `edgelist_other_acts.csv`): strato multiplex di 897 atti co-firmati che non sono emendamenti.
 - `edgelist_*_conservativa.csv` (EN `*_conservative.csv`): reti con i soli abbinamenti esatti o corretti a mano.
 - `data/graphml/`: le sei reti in GraphML; `R/00_build_networks.R`: gli oggetti `igraph`.
 - `pipeline/CASI_APERTI.xlsx` e `pipeline/tools/prepara_casi_aperti.py`: i casi da decidere sulla pagina; le decisioni si applicano a ogni esportazione.
@@ -45,11 +49,13 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
 
 ### Voti / Votes
 
-- 27 votazioni. Aggiunto il controllo di validità con l'indice di Rice per gruppo: PCI 0,996, DC 0,983.
-  *Added a Rice-index validity check (PCI 0.996, DC 0.983).*
-- Le cinque votazioni «senza totali» sono state lette sull'immagine. Quattro (v4, v10, v13, v23) sono nulle per mancanza del numero legale: nuova variabile `numero_legale_mancato` (EN `quorum_failed`). La quinta (v24) aveva i totali stampati nella formula «Voti favorevoli / contrari», ora letta, con due cifre storpiate dall'OCR corrette dall'aritmetica del riquadro. Controllo: 21 ok, 2 verificati, 4 nulle, 0 senza totali.
+- 29 votazioni (2 dalle sedute aggiunte, sed073 e sed187). **Le votazioni sono rinumerate in ordine di seduta**: gli `id_voto` della 1.0.0 non corrispondono più; si riabbinano con seduta e pagina. Aggiunto il controllo di validità con l'indice di Rice per gruppo: PCI 0,996, DC 0,985.
+  *29 votes; **votes are renumbered in sitting order** (re-match 1.0.0 `id_vote` by sitting and page). Rice-index validity check (PCI 0.996, DC 0.985).*
+- Totali di sed187 letti male dall'OCR (452/468) ricavati dall'ultimo numero dopo l'etichetta e da presenti meno astenuti (152/168, confermati sull'immagine). Decisioni sulla pagina: 11 voti aggiunti (uno incerto, Fuschini in sed187), due abbinamenti approssimati corretti (Bernamonti, Montagnana). Legami di voto 9.778.
+  *sed187 totals repaired; 11 votes added and 2 approximate matches corrected from page decisions; 9,778 vote edges.*
+- Le cinque votazioni «senza totali» sono state lette sull'immagine. Quattro (v5, v11, v14, v25 nella numerazione attuale) sono nulle per mancanza del numero legale: nuova variabile `numero_legale_mancato` (EN `quorum_failed`). La quinta (v26) aveva i totali stampati nella formula «Voti favorevoli / contrari», ora letta, con due cifre storpiate dall'OCR corrette dall'aritmetica del riquadro. Controllo: 21 ok, 2 verificati, 4 nulle, 0 senza totali.
   *The five votes «without totals» were read on the image: four are void for lack of quorum (new variable `quorum_failed`); the fifth had its totals printed as «Voti favorevoli / contrari», now read.*
-- L'ordine alfabetico degli elenchi controlla ora anche gli abbinamenti approssimati: sei nomi attribuiti alla persona sbagliata sono stati corretti (Vanoni, Iotti, Pella, Marina, Massini, Montini tolti; Giolitti, Preti, Cassiani aggiunti), e sono stati recuperati Carpano Maglioli (v24) e Maria Jervolino (v7, v14). Legami: sei tolti e sei aggiunti, totale invariato (9.119).
+- L'ordine alfabetico degli elenchi controlla ora anche gli abbinamenti approssimati: sei nomi attribuiti alla persona sbagliata sono stati corretti (Vanoni, Iotti, Pella, Marina, Massini, Montini tolti; Giolitti, Preti, Cassiani aggiunti), e sono stati recuperati Carpano Maglioli (v26) e Maria Jervolino (v8, v15; numerazione attuale). Legami: sei tolti e sei aggiunti, totale invariato (9.119).
   *Alphabetical order now also checks approximate matches: six wrong attributions fixed, three members recovered.*
 - Omonimi nei voti: 7 degli 8 cognomi ambigui risolti con il nome proprio staccato dall'OCR o per esclusione degli omonimi già presenti nello stesso voto. Legami di voto 9.119 → 9.125; scarto medio dai totali ufficiali 2,61 → 2,26.
   *Namesakes in votes: 7 of 8 ambiguous surnames resolved; vote edges 9,119 → 9,125.*

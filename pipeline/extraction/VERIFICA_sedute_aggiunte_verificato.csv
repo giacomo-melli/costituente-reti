@@ -1,0 +1,32 @@
+seduta,pagina,elenco_stampato,verdetto,confronto_con_estrazione,correzione
+sed073,16,Dozza|Cosattini,falso positivo,nessun elenco: due emendamenti distinti citati insieme («il criterio proposto dagli onorevoli Dozza e Cosattini»),FALSI_POSITIVI
+sed117,2,"Giannini, Maffioli, Russo Perez, Rodinò Mario, Coppa, Mazza, Puoti, Sampietro, Fuschini, Proia, Leone Giovanni",vero,giusto,
+sed117,2,"Corbi, Bibolotti",vero,giusto,
+sed117,4,"Giannini, Maffioli ed altri",vero,«ed astri» non letto come «ed altri»,regola: ed astri
+sed117,17,"Proia, Giannini",vero,"giusto (Corbi «ha aderito», non firmatario)",
+sed117,22,"Macrelli, Avanzini, Nasi, Bernini, Lussu, Sardiello, Cianca, Bocconi, Giua e Balduzzi",vero,giusto,
+sed117,22,"Macrelli, Avanzini, Nasi, Bernini, Lussu, Sardiello, Cianca, Bocconi, Giua e Balduzzi",vero,manca Balduzzi («Giua! / e Balduzzi»),regola: esclamativo a fine riga
+sed117,25,"Malagugini, Corbi, Andreotti, Balduzzi, Giannini, Siles, Proia",vero,giusto,
+sed169,18,"(Vigorelli, chi parla), Corsi, D'Aragona, Tremelloni, Preti",vero,manca il presentatore Vigorelli («presenterò… firmato anchè dagli»),regola: presenterò / turno senza riga vuota
+sed179,4,"Pesenti, Valiani, Barbareschi, Lombardi Riccardo",vero,giusto,
+sed179,4,"Pesenti, Valiani, Lombardi Riccardo",vero,giusto,
+sed179,6,"Pesenti, Valiani, Lombardi Riccardo, Foa",vero,giusto,
+sed179,7,"Crispo, Morelli Renato, Bozzi, Cifaldi",vero,giusto,
+sed179,8,"Dominedò, Micheli, Carbonari, Valenti, Coccia, Adonnino, Alberti, Ambrosini, Balduzzi",vero,giusto,
+sed179,15,"Pesenti, Valiani, Lombardi Riccardo e Foa",vero,giusto,
+sed187,7,"Tozzi Condivi, Arcangeli, Ponti, Franceschini, Angelucci, Cappi, Foresi, Cotellessa, Rescigno e Cremaschi Carlo",vero,giusto,
+sed187,9,"Scoccimarro (da me), Pesenti, Lombardi",citazione,emendamento vero citato nel discorso; testo errato,tenuto come citazione
+sed187,12,Scoccimarro e Veroni,vero,giusto,
+sed196,11,"Rubilli, Crispo, Morelli Renato, Bozzi, Cifaldi, Perrone Capano",vero,manca Rubilli («ha facoltà di svolgere… reca anche le firme»),regola: svolgere / reca anche le firme
+sed196,11,"Pesenti, Scoccimarro, Lombardi Riccardo, Foa, Valiani e Piemonte",vero,giusto,
+sed196,30,"Pesenti, Scoccimarro, Lombardi Riccardo, Foa, Valiani e Piemonte",vero,giusto,
+sed196,35,"Crispo, Morelli Renato, Bozzi, Cifaldi, Perrone Capano e Rubilli",vero,giusto; stesso emendamento di sed196 p11,unito
+sed196,36,"Micheli, Valenti, Fantoni, Tessitori, Marconi, Pallastrelli, Canepa",vero,giusto,
+sed196,36,"Vigorelli, D'Aragona, Preti, Corsi e Tremelloni",vero,giusto,
+sed279,8,"Macrelli, Badini Confalonieri, Braschi, Reale Vito, Cosattini, Laconi, Fornara, De Mercurio, Spallicci, Vischioni, Pacciardi",falso positivo,«proposta» che e' un ordine del giorno («L'Assemblea Costituente invita…»),regola: testo d'ordine del giorno -> altri atti
+sed298,5,"Crispo, Perrone Capano, Villabruna, Bozzi, Rubilli, Ciampitti e Costantini",vero,manca Crispo («presentato dall'onorevole Crispo… reca anche le firme»),regola: presentato dall'onorevole / reca anche le firme
+sed298,10,"Puoti, Coppa, Castiglia",vero,giusto,
+sed298,11,Colitto e Bellavista,citazione,emendamento del 22 maggio 1947 citato da Laconi,tenuto come citazione
+sed300,4,"CRISPO, PERRONE CAPANO, VILLABRUNA, BOZZI, RUBILLI, CIAMPITTI, COSTANTINI",vero,giusto,
+sed300,7,"Crispo, Perrone Capano, Villabruna, Bozzi, Rubilli, Ciampitti e Costantini",vero,giusto,
+sed300,11,"Fedeli Aldo, Vigna, Malagugini, Tomba, Costa e Caldera",vero,giusto,

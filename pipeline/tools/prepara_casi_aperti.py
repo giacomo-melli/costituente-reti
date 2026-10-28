@@ -94,7 +94,7 @@ for (vid, voto), g in N.groupby(['id_voto', 'voto'], sort=False):
                           file_locale=f'pipeline/pdf/{sed_v[vid]}.pdf, dalla pagina {pag_v[vid]} (elenco del «{voto}»)',
                           nome_stampato=r.nome_stampato, tra=f'{lo} … {hi}',
                           cosa_fare="Trova il nome nell'elenco stampato del voto indicato (è in ordine alfabetico, fra i due nomi della colonna «tra»). Scegli il costituente; «nessuno» se è una parola del verbale o un pezzo di un nome già contato.",
-                          opzioni=' | '.join(opz + [NESSUNO]), DECISIONE='', nota='', chiave=f'{vid}|{voto}|{r.nome_stampato}|{p}'))
+                          opzioni=' | '.join(opz + [NESSUNO]), DECISIONE='', nota='', chiave=f'{sed_v[vid]}|{pag_v[vid]}|{voto}|{r.nome_stampato}|{(g.nome_stampato[:p] == r.nome_stampato).sum()}'))
 fogli['voti_nomi'] = pd.DataFrame(righe)
 
 # ---------- 4. voti: abbinamenti approssimati ----------
@@ -110,7 +110,7 @@ for (vid, voto), g in N.groupby(['id_voto', 'voto'], sort=False):
                           abbinato_a=ETI.get(r.id_dep, r.id_dep), metodo=r.abbinamento, tra=f'{lo} … {hi}',
                           cosa_fare="Controlla che il nome stampato sia proprio la persona abbinata. Lascia vuoto o scegli «giusto» se lo è; altrimenti scegli «sbagliato: scarta» o scrivi «Cognome Nome» della persona giusta.",
                           opzioni='giusto | sbagliato: scarta | <Cognome Nome>', DECISIONE='', nota='',
-                          chiave=f'{vid}|{voto}|{r.nome_stampato}|{r.id_dep}'))
+                          chiave=f'{sed_v[vid]}|{pag_v[vid]}|{voto}|{r.nome_stampato}|{r.id_dep}'))
 fogli['voti_approssimati'] = pd.DataFrame(righe)
 
 # ---------- 5. casi incerti gia' decisi in modo provvisorio ----------
@@ -125,6 +125,7 @@ fogli['incerti'] = pd.DataFrame([
 
 # ---------- decisioni gia' prese: si riportano per chiave ----------
 vecchie = {}
+righe_vecchie = {}   # righe decise: si tengono anche se il caso non e' piu' generato (es. gia' risolto dalla decisione stessa)
 if os.path.exists(OUT):
     wb0 = load_workbook(OUT)
     for nome in wb0.sheetnames:
@@ -132,7 +133,9 @@ if os.path.exists(OUT):
         if 'chiave' not in hdr or 'DECISIONE' not in hdr: continue
         ic, idd, inn = hdr.index('chiave'), hdr.index('DECISIONE'), hdr.index('nota')
         for row in ws.iter_rows(min_row=2, values_only=True):
-            if row[idd] or row[inn]: vecchie[(nome, row[ic])] = (row[idd] or '', row[inn] or '')
+            if row[idd] or row[inn]:
+                vecchie[(nome, row[ic])] = (row[idd] or '', row[inn] or '')
+                righe_vecchie.setdefault(nome, []).append(dict(zip(hdr, row)))
 
 wb = Workbook(); ws0 = wb.active; ws0.title = 'LEGGIMI'
 testo = [
@@ -154,9 +157,13 @@ ws0['A1'].font = Font(bold=True, size=14); ws0.column_dimensions['A'].width = 12
 giallo = PatternFill('solid', fgColor='FFF2CC')
 for nome, df in fogli.items():
     ws = wb.create_sheet(nome)
-    if df.empty: ws.cell(1, 1, 'nessun caso'); continue
-    for (n, k), (d, nt) in vecchie.items():
-        if n == nome: df.loc[df.chiave == k, ['DECISIONE', 'nota']] = [d, nt]
+    if df.empty and not righe_vecchie.get(nome): ws.cell(1, 1, 'nessun caso'); continue
+    if 'chiave' in df:
+        for (n, k), (d, nt) in vecchie.items():
+            if n == nome: df.loc[df.chiave == k, ['DECISIONE', 'nota']] = [d, nt]
+    gia = set(df.chiave) if 'chiave' in df else set()
+    extra = [r for r in righe_vecchie.get(nome, []) if r.get('chiave') not in gia]
+    if extra: df = pd.concat([df, pd.DataFrame(extra)[[c for c in (df.columns if len(df.columns) else extra[0]) if c in extra[0]]]], ignore_index=True)
     cols = list(df.columns)
     for j, c in enumerate(cols, 1):
         ws.cell(1, j, c).font = Font(bold=True)
