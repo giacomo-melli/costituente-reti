@@ -21,7 +21,7 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *16 sittings added (189 in all): 126 amendments, all 33 multi-signatory ones checked on the image; six more general rules.*
 - **Casi aperti decisi tutti** sull'immagine (`pipeline/CASI_APERTI.xlsx`), con l'elenco degli incerti nel codebook; le decisioni non dipendono più dalla numerazione dei voti e restano nel foglio.
   *All open cases decided on the image; uncertain ones listed in the codebook.*
-- Emendamenti 718 → 1.533; con 2+ firmatari 329 → 426; legami di co-firma 2.269 → 3.549.
+- Emendamenti 718 → 1.532; con 2+ firmatari 329 → 426; legami di co-firma 2.269 → 3.547.
 
 ### Variabili nuove / New variables
 
@@ -53,6 +53,10 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *29 votes; **votes are renumbered in sitting order** (re-match 1.0.0 `id_vote` by sitting and page). Rice-index validity check (PCI 0.996, DC 0.985).*
 - Totali di sed187 letti male dall'OCR (452/468) ricavati dall'ultimo numero dopo l'etichetta e da presenti meno astenuti (152/168, confermati sull'immagine). Decisioni sulla pagina: 11 voti aggiunti (uno incerto, Fuschini in sed187), due abbinamenti approssimati corretti (Bernamonti, Montagnana). Legami di voto 9.778.
   *sed187 totals repaired; 11 votes added and 2 approximate matches corrected from page decisions; 9,778 vote edges.*
+- **Elenchi dei voti letti nome per nome** sull'immagine (30 elenchi, 18 votazioni): 25 nomi mancanti recuperati con regole generali (cognome spezzato a fine riga con segni spuri, iniziale minuscola, rifiuti dell'OCR davanti al nome, cognome preso per nome proprio, «Si sono astenulì», duplicati), un nome assente dall'OCR aggiunto a mano, un errata corrige del resoconto applicato (Conti astenuto in sed296). Totali degli astenuti letti dal riquadro. 18 votazioni su 25 coincidono ora esattamente con i totali; le differenze restanti sono nel resoconto stampato. Legami di voto 9.797.
+  *Vote lists read name by name on the image: 25 missing names recovered by general rules; 18 of 25 votes now match the totals exactly, the rest differ in the printed record itself.*
+- **Esiti delle votazioni per appello nominale** collegati all'emendamento votato: 9 esiti in più. Recuperato un emendamento con 15 firme (sed105, «senza oneri per lo Stato»).
+  *Roll-call outcomes linked to the amendment voted on; a 15-signature amendment recovered.*
 - Le cinque votazioni «senza totali» sono state lette sull'immagine. Quattro (v5, v11, v14, v25 nella numerazione attuale) sono nulle per mancanza del numero legale: nuova variabile `numero_legale_mancato` (EN `quorum_failed`). La quinta (v26) aveva i totali stampati nella formula «Voti favorevoli / contrari», ora letta, con due cifre storpiate dall'OCR corrette dall'aritmetica del riquadro. Controllo: 21 ok, 2 verificati, 4 nulle, 0 senza totali.
   *The five votes «without totals» were read on the image: four are void for lack of quorum (new variable `quorum_failed`); the fifth had its totals printed as «Voti favorevoli / contrari», now read.*
 - L'ordine alfabetico degli elenchi controlla ora anche gli abbinamenti approssimati: sei nomi attribuiti alla persona sbagliata sono stati corretti (Vanoni, Iotti, Pella, Marina, Massini, Montini tolti; Giolitti, Preti, Cassiani aggiunti), e sono stati recuperati Carpano Maglioli (v26) e Maria Jervolino (v8, v15; numerazione attuale). Legami: sei tolti e sei aggiunti, totale invariato (9.119).

@@ -1279,6 +1279,7 @@
 <edge source="d27400" target="v2"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d25430" target="v2"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d11800" target="v2"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d25440" target="v2"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d1250" target="v2"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d7210" target="v2"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d25470" target="v2"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -1611,6 +1612,7 @@
 <edge source="d26300" target="v3"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d26330" target="v3"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28120" target="v3"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d26340" target="v3"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d15990" target="v3"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d26360" target="v3"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28140" target="v3"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -2092,6 +2094,7 @@
 <edge source="d27800" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d8020" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d200365" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d8120" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d25870" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d25920" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d8250" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -2179,6 +2182,7 @@
 <edge source="d5860" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d10650" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d12110" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d10690" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28590" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28600" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28610" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -2595,6 +2599,7 @@
 <edge source="d27080" target="v6"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d10810" target="v6"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28680" target="v6"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d25700" target="v6"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d200021" target="v6"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d17750" target="v6"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d6460" target="v6"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -2761,6 +2766,7 @@
 <edge source="d18170" target="v7"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d7280" target="v7"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d27540" target="v7"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d13590" target="v7"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d25580" target="v7"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d7520" target="v7"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d25590" target="v7"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -3413,6 +3419,7 @@
 <edge source="d12510" target="v8"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d13480" target="v8"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28560" target="v8"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d14140" target="v8"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d27030" target="v8"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28570" target="v8"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d10630" target="v8"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -4028,6 +4035,7 @@
 <edge source="d25470" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d7250" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d18170" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d27500" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d12450" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d27530" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d7300" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -4052,6 +4060,7 @@
 <edge source="d27630" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d12220" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d12020" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d7610" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d1930" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d7620" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d7750" target="v10"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -4446,6 +4455,7 @@
 <edge source="d11520" target="v11"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d27850" target="v11"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d26240" target="v11"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d9060" target="v11"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d9140" target="v11"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d11770" target="v11"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28190" target="v11"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -5275,9 +5285,9 @@
 <edge source="d10810" target="v13"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d17240" target="v13"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28690" target="v13"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
-<edge source="d4180" target="v13"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
-<edge source="d11870" target="v13"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
-<edge source="d6210" target="v13"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d4180" target="v13"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
+<edge source="d11870" target="v13"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
+<edge source="d6210" target="v13"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
 <edge source="d25270" target="v14"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d13360" target="v14"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d6370" target="v14"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -5436,6 +5446,7 @@
 <edge source="d13120" target="v14"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d26840" target="v14"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28610" target="v14"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d13910" target="v14"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d17750" target="v14"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
 <edge source="d6520" target="v14"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
 <edge source="d27640" target="v14"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
@@ -5564,6 +5575,7 @@
 <edge source="d28190" target="v15"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28200" target="v15"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d9380" target="v15"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d28220" target="v15"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28230" target="v15"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d19360" target="v15"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d9440" target="v15"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -5919,6 +5931,7 @@
 <edge source="d11530" target="v16"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d3080" target="v16"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d8730" target="v16"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d28020" target="v16"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d18970" target="v16"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d3250" target="v16"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d18990" target="v16"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -6169,6 +6182,7 @@
 <edge source="d10380" target="v16"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d13000" target="v16"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d10410" target="v16"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d28530" target="v16"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28540" target="v16"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d27000" target="v16"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d12510" target="v16"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -6345,7 +6359,6 @@
 <edge source="d20330" target="v17"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d17240" target="v17"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d6210" target="v17"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
-<edge source="d11640" target="v17"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d10890" target="v17"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28690" target="v17"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d27120" target="v17"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -6594,6 +6607,7 @@
 <edge source="d26240" target="v18"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d3470" target="v18"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d14030" target="v18"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d28070" target="v18"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d26250" target="v18"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28080" target="v18"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d26260" target="v18"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -6989,6 +7003,7 @@
 <edge source="d28490" target="v19"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d26920" target="v19"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d12810" target="v19"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d10380" target="v19"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d13000" target="v19"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d10410" target="v19"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28540" target="v19"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -7144,6 +7159,7 @@
 <edge source="d11870" target="v19"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d9730" target="v19"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d13720" target="v19"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d19540" target="v19"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d9770" target="v19"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d13670" target="v19"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d26660" target="v19"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -7961,6 +7977,7 @@
 <edge source="d13230" target="v22"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d27750" target="v22"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d7830" target="v22"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d2180" target="v22"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d11450" target="v22"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d7850" target="v22"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d18560" target="v22"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -8489,6 +8506,7 @@
 <edge source="d28220" target="v23"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d11420" target="v23"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d9430" target="v23"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d19350" target="v23"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d9450" target="v23"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d4180" target="v23"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d9460" target="v23"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
@@ -9180,6 +9198,7 @@
 <edge source="d12530" target="v25"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28680" target="v25"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d27800" target="v25"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
+<edge source="d27640" target="v25"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
 <edge source="d6540" target="v26"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d27200" target="v26"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d17840" target="v26"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -9498,7 +9517,6 @@
 <edge source="d27350" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d27410" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d27590" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
-<edge source="d27680" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d25650" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d27690" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d12260" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -9553,6 +9571,7 @@
 <edge source="d9610" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28260" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d9620" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d9710" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d28320" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d4610" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d19570" target="v27"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -9788,6 +9807,7 @@
 <edge source="d27390" target="v28"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d12800" target="v28"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d11320" target="v28"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
+<edge source="d18370" target="v28"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d25650" target="v28"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d27690" target="v28"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d12260" target="v28"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -10389,7 +10409,7 @@
 <edge source="d25710" target="v29"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
 <edge source="d28250" target="v29"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
 <edge source="d27120" target="v29"><data key="e_segno">0</data><data key="e_voto">astenuto</data></edge>
-<edge source="d8120" target="v4"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
+<edge source="d27320" target="v23"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d13510" target="v14"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d25990" target="v18"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d6370" target="v21"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
@@ -10397,7 +10417,6 @@
 <edge source="d27220" target="v25"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d7750" target="v26"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 <edge source="d28150" target="v27"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
-<edge source="d18370" target="v28"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d11490" target="v23"><data key="e_segno">1</data><data key="e_voto">sì</data></edge>
 <edge source="d19330" target="v25"><data key="e_segno">-1</data><data key="e_voto">no</data></edge>
 </graph>
