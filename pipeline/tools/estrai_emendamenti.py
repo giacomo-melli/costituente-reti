@@ -586,6 +586,7 @@ R['url_pdf'] = [URL.format(s=s, p=p) for s, p in zip(R.seduta, R.pagina)]
 # stesso articolo) è contato una volta. Le formule di presentazione con almeno un nome sono
 # assorbite da un blocco se i loro firmatari ne sono un sottoinsieme (stessa seduta o le 3 vicine);
 # altrimenti diventano un emendamento a sé (completo se senza «ed altri»).
+R_tutte = R.copy()                 # tutte le menzioni, anche senza nomi abbinati: servono al foglio dei casi aperti
 R = R[R.n_abbinati > 0].copy()
 R['snum'] = R.seduta.str[3:].astype(int)
 def _n(t): return re.sub(r'[^a-z ]', '', unicodedata.normalize('NFKD', str(t)).encode('ascii', 'ignore').decode().lower())[:250]
@@ -660,6 +661,8 @@ print('citazioni singole assorbite nell\'emendamento a piu\' firme:', len(fusi))
 os.makedirs(OUT, exist_ok=True)
 R.drop(columns=['pos', 'snum']).to_csv(os.path.join(OUT, 'menzioni.csv'), index=False)
 F.to_csv(os.path.join(OUT, 'menzioni_nomi.csv'), index=False)
+R_tutte['id_emendamento'] = R.id_emendamento.reindex(R_tutte.index)
+R_tutte.drop(columns=['pos']).to_csv(os.path.join(OUT, 'menzioni_tutte.csv'), index_label='id_menzione')
 EM.to_csv(os.path.join(OUT, 'emendamenti.csv'), index=False)
 two = EM.assign(id_dep=EM.firmatari.str.split('|')).explode('id_dep')[['id_emendamento', 'id_dep']]
 two.to_csv(os.path.join(OUT, 'edgelist_emendamenti.csv'), index=False)
