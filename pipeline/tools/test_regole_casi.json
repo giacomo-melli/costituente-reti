@@ -729,5 +729,33 @@
    ]
   ],
   "testo": "ta testè si è quindi deciso che del Senato non faranno parte Senatori di diritto. \n\n * Resta, tuttavia, ancora aperta la questionè posta dall'onorevole Alberti con la proposta di aggiungere il seguente comma: \n\n « Cinque, Senatori sono. nominati a vita . dal Capo dello Stato fra coloro che, con meriti insigni, nel carnpo sociale, scientifico, artistico, letterario hanno"
+ },
+ {
+  "nome": "nome_proprio_staccato_omonimo",
+  "seduta": "sed261",
+  "nota": "«Bianchi , Bianca» nell'elenco: Bianchi Bianca, non un omonimo irrisolto; «Jacini, Gabriele» (sed186) resta Gabrieli",
+  "atteso": [
+   [
+    "Bianchi Bianca",
+    "Buffoni",
+    "Carpano Maglioli",
+    "Condorelli",
+    "Cosattini",
+    "Lami Starnuti",
+    "Lucifero",
+    "Morelli Renato",
+    "Persico",
+    "Preti",
+    "Rossi Paolo"
+   ]
+  ],
+  "testo": "anti alla votazione ». ‘ Ha facoltà di svolgerli. i \n\n NOBILI TITO ORO. Li ritiro. \n\n PRESIDENTE. Vi è, infine, ancora un emendamento, presentato dagli onorevoli Rossi Paolo, Lucifero, Persico, Buffoni, Cosaitini, Carpano Maglioli, Bianchi , Bianca, \n\n . Morelli Renato, Lami Starnuti, Preti, Condorelli, del seguente tenore: \n\n «Al secondo comma sostituire le parole: due quinti, con: tre quinti ». \n\n L'onorevole Rossi Paol"
+ },
+ {
+  "nome": "neg_turno_dopo_elenco",
+  "seduta": "sed301",
+  "nota": "«aderisco a quello dell'onorevole Gullo, ¶ UBERTI. Chiedo di parlare»: Uberti e' il turno di parola che segue",
+  "atteso": [],
+  "testo": "parlare. \n\n PRESIDENTE, Ne ha facoltà. I SCHIAVETTI. Ritiro il min emendamento e aderisco a quello dell'onorevole Gullo, \n\n UBERTI. Chiedo di parlare. \n\n PRESIDENTE. Ne ha facoltà. \n\n UBERTI. Trasferiamo "
  }
 ]
