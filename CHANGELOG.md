@@ -27,6 +27,7 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
 - `edgelist_emendamenti.csv`, `edgelist_voti.csv`: `abbinamento` (criterio di riconoscimento del nome). EN: `matching`.
 - `costituenti_nodi.csv`: `commissione_75`, `sottocommissione`, `comitato_redazione`, `ruolo_commissione`; `voti_in_carica`, `voti_presente`, `voti_congedo`, `voti_assente`, `quota_presenza`; `eletto_camera_1948`. EN: `committee_75`, `subcommittee`, `drafting_committee`, `committee_role`, `votes_in_office`, `votes_present`, `votes_on_leave`, `votes_absent`, `share_present`, `elected_chamber_1948`.
 - `voti_nodi.csv`: `numero_legale_mancato`. EN: `quorum_failed`.
+- `gruppi_periodi.csv` (EN `group_spells.csv`) e `gruppo_alla_data` negli archi di co-firma e di voto (EN `group_at_date`); `viaf_id` nei costituenti.
 
 ### File nuovi / New files
 

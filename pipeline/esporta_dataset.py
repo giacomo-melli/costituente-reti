@@ -280,8 +280,20 @@ E_it = E.rename(columns={'firmatari': 'firmatari_id'})[['id_emendamento', 'firma
         'articolo_menzionato', 'articolo_in_discussione', 'materia', 'articolo_costituzione', 'controllo_data', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf', 'id_presentatore', 'presentatore_fonte',
         'tipo_emendamento', 'esito', 'testo']]
 E_it.to_csv(os.path.join(IT, 'emendamenti_nodi.csv'), index=False)
-L[['id_dep', 'id_emendamento', 'ruolo', 'abbinamento']].to_csv(os.path.join(IT, 'edgelist_emendamenti.csv'), index=False)
-L[L.abbinamento.isin(CONSERVATIVO)][['id_dep', 'id_emendamento', 'ruolo', 'abbinamento']].to_csv(os.path.join(IT, 'edgelist_emendamenti_conservativa.csv'), index=False)
+# gruppo parlamentare alla data della firma (punto 11), dalle adesioni della Camera
+sys.path.insert(0, os.path.join(QUI, 'tools'))
+if os.path.exists(os.path.join(QUI, 'fonti', 'camera_adesioni_gruppi.csv')):
+    from gruppi_periodi import gruppo_alla_data, P as _GP
+    _GP.to_csv(os.path.join(IT, 'gruppi_periodi.csv'), index=False)
+    _GP.rename(columns={'id_dep': 'id_member', 'gruppo': 'group', 'inizio': 'start', 'fine': 'end', 'motivo_termine': 'end_reason'}).to_csv(os.path.join(EN, 'group_spells.csv'), index=False)
+    _dt = E.set_index('id_emendamento').data
+    L['gruppo_alla_data'] = [gruppo_alla_data(d, _dt.get(e)) for d, e in zip(L.id_dep, L.id_emendamento)]
+    _gf = pd.read_csv(os.path.join(IT, 'costituenti_nodi.csv')).set_index('id_dep').gruppo_finale
+    print('Firme con gruppo alla data diverso dal gruppo finale:', int((L.gruppo_alla_data != L.id_dep.map(_gf)).sum()), 'su', len(L))
+else:
+    L['gruppo_alla_data'] = ''
+L[['id_dep', 'id_emendamento', 'ruolo', 'abbinamento', 'gruppo_alla_data']].to_csv(os.path.join(IT, 'edgelist_emendamenti.csv'), index=False)
+L[L.abbinamento.isin(CONSERVATIVO)][['id_dep', 'id_emendamento', 'ruolo', 'abbinamento', 'gruppo_alla_data']].to_csv(os.path.join(IT, 'edgelist_emendamenti_conservativa.csv'), index=False)
 E_en = E_it.drop(columns='firmatari_id').rename(columns={
     'id_emendamento': 'id_amendment', 'n_firmatari': 'n_signatories', 'completo': 'complete',
     'articolo_menzionato': 'article_mentioned', 'articolo_in_discussione': 'article_under_discussion', 'materia': 'subject_title',
@@ -305,9 +317,9 @@ MATCH_EN = {'esatto': 'exact', 'esatto+partito': 'exact+party', 'prefisso': 'pre
             'ambiguo+seduta': 'namesake+sitting', 'approssimato': 'approximate', 'approssimato+partito': 'approximate+party',
             'correzione manuale': 'manual correction', 'decisione manuale': 'manual decision', 'fascia alfabetica': 'alphabetical band',
             'omonimo risolto': 'namesake resolved', 'frammento': 'fragment'}
-_Len = L.assign(role=L.ruolo.map({'presentatore': 'proposer', 'firmatario': 'signatory'}), matching=L.abbinamento.map(MATCH_EN)) \
+_Len = L.rename(columns={'gruppo_alla_data': 'group_at_date'}).assign(role=L.ruolo.map({'presentatore': 'proposer', 'firmatario': 'signatory'}), matching=L.abbinamento.map(MATCH_EN)) \
     .rename(columns={'id_dep': 'id_member', 'id_emendamento': 'id_amendment'})
-_Len[['id_member', 'id_amendment', 'role', 'matching']].to_csv(os.path.join(EN, 'edgelist_amendments.csv'), index=False)
+_Len[['id_member', 'id_amendment', 'role', 'matching', 'group_at_date']].to_csv(os.path.join(EN, 'edgelist_amendments.csv'), index=False)
 _Len[L.abbinamento.isin(CONSERVATIVO).values][['id_member', 'id_amendment', 'role', 'matching']].to_csv(os.path.join(EN, 'edgelist_amendments_conservative.csv'), index=False)
 
 # ---------- menzioni nei discorsi (tools/estrai_menzioni_discorso.py) ----------
@@ -372,8 +384,10 @@ _vn = _vn[_vn.abbinamento.isin(_RV)].assign(r=lambda d: d.abbinamento.map(_RV.in
 _bv = _vn.set_index(['id_voto', 'id_dep']).abbinamento
 Ev['abbinamento'] = [_bv.get((v, d), 'decisione manuale') for v, d in zip(Ev.id_voto, Ev.id_dep)]
 print('Abbinamento degli archi di voto:', Ev.abbinamento.value_counts().to_dict())
-Ev[['id_dep', 'id_voto', 'voto', 'abbinamento']].to_csv(os.path.join(IT, 'edgelist_voti.csv'), index=False)
-Ev[Ev.abbinamento.isin({'esatto', 'correzione manuale'})][['id_dep', 'id_voto', 'voto', 'abbinamento']].to_csv(os.path.join(IT, 'edgelist_voti_conservativa.csv'), index=False)
+_dv = Vt.set_index('id_voto').data
+Ev['gruppo_alla_data'] = [gruppo_alla_data(d, _dv.get(v)) for d, v in zip(Ev.id_dep, Ev.id_voto)] if 'gruppo_alla_data' in globals() else ''
+Ev[['id_dep', 'id_voto', 'voto', 'abbinamento', 'gruppo_alla_data']].to_csv(os.path.join(IT, 'edgelist_voti.csv'), index=False)
+Ev[Ev.abbinamento.isin({'esatto', 'correzione manuale'})][['id_dep', 'id_voto', 'voto', 'abbinamento', 'gruppo_alla_data']].to_csv(os.path.join(IT, 'edgelist_voti_conservativa.csv'), index=False)
 ctrl = lambda c: 'ok' if c == 'ok' else ('no official totals' if c == 'senza totali' else
        'void: quorum not reached, totals not announced' if str(c).startswith('votazione nulla') else
        ('verified: printed list differs from announced totals' if str(c).startswith('verificato') else 'to check'))
@@ -384,9 +398,9 @@ V_en = Vt.rename(columns={'id_voto': 'id_vote', 'seduta': 'sitting', 'data': 'da
 V_en['check'] = V_en.check.map(ctrl)
 V_en[['id_vote', 'sitting', 'date', 'pdf_page', 'label_en', 'on_constitution', 'yes_official', 'yes_matched', 'no_official',
       'no_matched', 'abstain_matched', 'leave_matched', 'quorum_failed', 'check', 'excerpt_it', 'url_pdf']].to_csv(os.path.join(EN, 'votes_nodes.csv'), index=False)
-_Ven = Ev.assign(vote=Ev.voto.map({'sì': 'yes', 'no': 'no', 'astenuto': 'abstain'}), matching=Ev.abbinamento.map(MATCH_EN)) \
+_Ven = Ev.rename(columns={'gruppo_alla_data': 'group_at_date'}).assign(vote=Ev.voto.map({'sì': 'yes', 'no': 'no', 'astenuto': 'abstain'}), matching=Ev.abbinamento.map(MATCH_EN)) \
   .rename(columns={'id_dep': 'id_member', 'id_voto': 'id_vote'})
-_Ven[['id_member', 'id_vote', 'vote', 'matching']].to_csv(os.path.join(EN, 'edgelist_votes.csv'), index=False)
+_Ven[['id_member', 'id_vote', 'vote', 'matching', 'group_at_date']].to_csv(os.path.join(EN, 'edgelist_votes.csv'), index=False)
 _Ven[Ev.abbinamento.isin({'esatto', 'correzione manuale'}).values][['id_member', 'id_vote', 'vote', 'matching']].to_csv(os.path.join(EN, 'edgelist_votes_conservative.csv'), index=False)
 
 print('\nEmendamenti:', len(E), '| con 2+ firmatari:', int((E.n_firmatari >= 2).sum()), '| legami:', len(L))
