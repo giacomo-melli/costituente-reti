@@ -257,6 +257,20 @@ Codifiche automatiche: le sezioni Opere, Note e Bibliografia sono escluse, ma re
 | `cost_grado_proiez`, `cost_eigenvector`, `cost_betweenness` | Solo organi costituzionali |
 | `presidenze_organi`, `incarichi_ufficio` | Presidenze; cariche (presidente, vice, segretario, questore) |
 
+### Commissione per la Costituzione e presenza agli appelli
+
+| Variabile | Descrizione |
+|---|---|
+| `commissione_75` | 1 se ha fatto parte della Commissione per la Costituzione in qualunque momento (97 persone, per le sostituzioni) |
+| `sottocommissione` | `I`, `II`, `III` (più d'una separate da «;») |
+| `comitato_redazione` | Comitato di redazione, detto «dei 18» (20 persone nel tempo) |
+| `ruolo_commissione` | Carica più alta nella Commissione o nei suoi organi: `presidente`, `vicepresidente`, `segretario`, `componente` |
+| `voti_in_carica` | Votazioni per appello nominale tenute mentre era in carica (su 27) |
+| `voti_presente`, `voti_congedo`, `voti_assente` | Ha risposto sì, no o si è astenuto; era in congedo; non risulta in nessun elenco. Le votazioni nulle per mancanza del numero legale contano, perché la chiama c'è stata |
+| `quota_presenza` | `voti_presente / voti_in_carica`. Un nome stampato ma non abbinato fa risultare assente chi ha votato: l'errore è quello misurato sui totali ufficiali (in media 2,3 nomi su circa 350 per votazione). Terracini, Presidente dell'Assemblea dal febbraio 1947, non compare mai negli elenchi |
+
+Fonte: `edgelist.csv` (organi o621–o625) e `edgelist_voti.csv`; calcolate da `pipeline/tools/arricchisci_costituenti.py`.
+
 ### Attività e interazioni
 
 | Variabile | Descrizione |
