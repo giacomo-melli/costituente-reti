@@ -292,8 +292,9 @@ L = L.drop_duplicates().sort_values(['id_emendamento', 'id_dep'])
 pres = E.set_index('id_emendamento').id_presentatore
 L['ruolo'] = ['presentatore' if pres.get(e, '') == d else 'firmatario' for e, d in zip(L.id_emendamento, L.id_dep)]
 
+E['fonte_atto'] = E.fonte_atto.fillna('decisione manuale') if 'fonte_atto' in E else 'non determinato'
 E_it = E.rename(columns={'firmatari': 'firmatari_id'})[['id_emendamento', 'firmatari_id', 'n_firmatari', 'completo',
-        'articolo_menzionato', 'articolo_in_discussione', 'materia', 'articolo_costituzione', 'controllo_data', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf', 'id_presentatore', 'presentatore_fonte',
+        'articolo_menzionato', 'articolo_in_discussione', 'materia', 'articolo_costituzione', 'controllo_data', 'prima_seduta', 'data', 'pagina', 'fonte', 'fonte_atto', 'url_pdf', 'id_presentatore', 'presentatore_fonte',
         'tipo_emendamento', 'esito', 'testo']]
 E_it.to_csv(os.path.join(IT, 'emendamenti_nodi.csv'), index=False)
 # gruppo parlamentare alla data della firma (punto 11), dalle adesioni della Camera
@@ -316,6 +317,7 @@ E_en = E_it.drop(columns='firmatari_id').rename(columns={
     'articolo_costituzione': 'constitution_article', 'controllo_data': 'date_check', 'prima_seduta': 'sitting', 'data': 'date', 'pagina': 'pdf_page', 'fonte': 'source'})
 E_en['source'] = E_en.source.map({'firma': 'signature block', 'presentazione': 'presentation formula'})
 E_en['id_proposer'] = E_en.id_presentatore
+E_en['record_origin'] = E_en.fonte_atto.map({'lettura': 'reading', 'proponente': 'proposer', 'citazione': 'citation', 'decisione manuale': 'manual decision', 'non determinato': 'undetermined'})
 E_en['proposer_source'] = E_en.presentatore_fonte.map({'formula': 'formula', 'firma singola': 'single signatory',
                                                       "primo dell'elenco": 'first in list', 'non identificato': 'not identified'})
 E_en['amendment_type'] = E_en.tipo_emendamento.map({'sostituire': 'replace', 'sopprimere': 'delete', 'aggiungere': 'add',
@@ -326,7 +328,7 @@ E_en['subject_title'] = E_en.subject_title.str.replace('Disposizioni generali', 
 E_en['outcome'] = E_en.esito.map({'approvato': 'approved', 'respinto': 'rejected', 'ritirato': 'withdrawn',
                                   'decaduto (assente)': 'lapsed (proposer absent)', 'assorbito': 'absorbed', 'non determinato': 'undetermined'})
 E_en = E_en.rename(columns={'testo': 'text_it'})
-E_en[['id_amendment', 'n_signatories', 'complete', 'source', 'sitting', 'date', 'pdf_page', 'article_mentioned', 'article_under_discussion', 'subject_title', 'constitution_article', 'date_check', 'url_pdf',
+E_en[['id_amendment', 'n_signatories', 'complete', 'source', 'record_origin', 'sitting', 'date', 'pdf_page', 'article_mentioned', 'article_under_discussion', 'subject_title', 'constitution_article', 'date_check', 'url_pdf',
       'id_proposer', 'proposer_source', 'amendment_type', 'outcome', 'text_it']] \
     .to_csv(os.path.join(EN, 'amendments_nodes.csv'), index=False)
 MATCH_EN = {'esatto': 'exact', 'esatto+partito': 'exact+party', 'prefisso': 'prefix', 'ambiguo+cofirme': 'namesake+cosignatures',

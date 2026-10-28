@@ -21,11 +21,11 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *16 sittings added (189 in all): 126 amendments, all 33 multi-signatory ones checked on the image; six more general rules.*
 - **Casi aperti decisi tutti** sull'immagine (`pipeline/CASI_APERTI.xlsx`), con l'elenco degli incerti nel codebook; le decisioni non dipendono più dalla numerazione dei voti e restano nel foglio.
   *All open cases decided on the image; uncertain ones listed in the codebook.*
-- Emendamenti 718 → 1.532; con 2+ firmatari 329 → 426; legami di co-firma 2.269 → 3.547.
+- Emendamenti 718 → 1.529; con 2+ firmatari 329 → 426; legami di co-firma 2.269 → 3.544.
 
 ### Variabili nuove / New variables
 
-- `emendamenti_nodi.csv`: `testo` (testo stampato dell'emendamento), `tipo_emendamento` (sostituire, sopprimere, aggiungere, inserire), `id_presentatore`, `presentatore_fonte`. EN: `text_it`, `amendment_type`, `id_proposer`, `proposer_source`.
+- `emendamenti_nodi.csv`: `testo` (testo stampato dell'emendamento), `tipo_emendamento` (sostituire, sopprimere, aggiungere, inserire), `id_presentatore`, `presentatore_fonte`, `fonte_atto`. EN: `text_it`, `amendment_type`, `id_proposer`, `proposer_source`, `record_origin`.
 - `edgelist_emendamenti.csv`: `ruolo` (presentatore / firmatario), per la rete diretta di chi raccoglie e chi concede firme. EN: `role`.
 - `emendamenti_nodi.csv`: `esito` (approvato, respinto, ritirato, decaduto, assorbito; assegnato al 17%, convalida 26/30), `articolo_in_discussione` (dall'ordine dei lavori, convalida 14/20), `materia` e `articolo_costituzione` (dalla tavola della Camera progetto → Costituzione, materia giusta 17/18), `controllo_data`. EN: `outcome`, `article_under_discussion`, `subject_title`, `constitution_article`, `date_check`.
 - `edgelist_emendamenti.csv`, `edgelist_voti.csv`: `abbinamento` (criterio di riconoscimento del nome). EN: `matching`.
@@ -57,6 +57,8 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *Vote lists read name by name on the image: 25 missing names recovered by general rules; 18 of 25 votes now match the totals exactly, the rest differ in the printed record itself.*
 - **Esiti delle votazioni per appello nominale** collegati all'emendamento votato: 9 esiti in più. Recuperato un emendamento con 15 firme (sed105, «senza oneri per lo Stato»).
   *Roll-call outcomes linked to the amendment voted on; a 15-signature amendment recovered.*
+- **Origine del record** (`fonte_atto`, EN `record_origin`): lettura del Presidente, proponente o citazione nel discorso di un altro. 25 citazioni lette sull'immagine: 22 emendamenti veri; corrette due famiglie («illustrato dall'onorevole X» per l'emendamento di chi parla, «presieduta dall'onorevole X»; abbinamento per una lettera prima che per prefisso). Emendamenti 1.529, legami 3.544.
+  *New variable `record_origin`; 22 of 25 citation records are real amendments; two more error families fixed.*
 - Le cinque votazioni «senza totali» sono state lette sull'immagine. Quattro (v5, v11, v14, v25 nella numerazione attuale) sono nulle per mancanza del numero legale: nuova variabile `numero_legale_mancato` (EN `quorum_failed`). La quinta (v26) aveva i totali stampati nella formula «Voti favorevoli / contrari», ora letta, con due cifre storpiate dall'OCR corrette dall'aritmetica del riquadro. Controllo: 21 ok, 2 verificati, 4 nulle, 0 senza totali.
   *The five votes «without totals» were read on the image: four are void for lack of quorum (new variable `quorum_failed`); the fifth had its totals printed as «Voti favorevoli / contrari», now read.*
 - L'ordine alfabetico degli elenchi controlla ora anche gli abbinamenti approssimati: sei nomi attribuiti alla persona sbagliata sono stati corretti (Vanoni, Iotti, Pella, Marina, Massini, Montini tolti; Giolitti, Preti, Cassiani aggiunti), e sono stati recuperati Carpano Maglioli (v26) e Maria Jervolino (v8, v15; numerazione attuale). Legami: sei tolti e sei aggiunti, totale invariato (9.119).
