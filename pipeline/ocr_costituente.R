@@ -10,7 +10,7 @@
 #   1. Solo la prima volta: esegui la SEZIONE 0 (togli i #).
 #   2. Esegui tutto lo script (Cmd + Shift + Invio).
 #   3. Puoi interromperlo e rilanciarlo: riparte da dove era arrivato.
-# Tempo stimato: alcune ore per tutte le 173 sedute (circa 4.000 pagine).
+# Tempo stimato: alcune ore per tutte le 189 sedute (circa 4.500 pagine).
 # =====================================================================
 
 # ---- SEZIONE 0: installazione (solo la prima volta) ------------------
@@ -23,6 +23,10 @@ DPI <- 300
 CORE <- max(1, parallel::detectCores() - 2)   # pagine trascritte in parallelo
 
 sedute <- c(49,50,52,54,55,56,58,59,60,62,64,66,68,69,70,72,74,75,76,78,80,81,82,83,84,85,86,87,88,89,90,92,93,94,95,97,98,99,100,101,102,103,104,105,106,109,113,115,116,118,119,120,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,143,147,149,164,168,170,171,173,176,177,178,180,182,183,185,186,188,190,192,195,213,215,216,218,220,222,224,226,229,231,233,248,249,250,251,252,253,254,256,257,258,259,260,261,262,263,265,266,267,268,269,270,271,272,273,276,277,278,281,282,283,284,286,287,288,289,290,292,293,294,296,297,299,301,302,303,304,305,306,307,308,309,310,311,312,313,315,316,317,318,319,320,321,322,328,329,330,332,342,343,346)
+# Sedute tenute nei giorni in cui si discuteva il progetto di Costituzione ma non comprese nella prima selezione
+# (l'altra seduta di un giorno di cui una seduta era trascritta): vedi pipeline/sedute_non_trascritte.csv
+sedute_aggiunte <- c(71,73,117,121,167,169,172,179,181,187,189,196,230,279,298,300)
+sedute <- sort(unique(c(sedute, sedute_aggiunte)))
 
 # ---- SEZIONE 2: funzioni -----------------------------------------------
 library(pdftools); library(tesseract); library(magick)

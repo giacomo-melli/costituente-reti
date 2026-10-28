@@ -15,19 +15,32 @@ Cosa cambia in ogni versione del dataset, così chi cita una versione sa che cos
   *All 394 multi-signatory amendments checked against the image; a blind second reading of 50 records agrees in every decidable case.*
 - **Emendamenti a firma singola**: due campioni ciechi sull'immagine (60 + 50). Nel secondo, dopo le correzioni del primo, gli errori veri sono 2/48 (4,2%), più 4 record nati da una citazione nel discorso di un altro, che corrispondono comunque a un emendamento vero di quella persona. Corrette tre nuove famiglie, recuperati due elenchi pluri-firmati (sed124, sed343).
   *Singles: two blind image samples; in the second, 2/48 true errors (4.2%) plus 4 records born from a citation of a real amendment. Three more families fixed, two multi-signatory lists recovered.*
+- Nuove famiglie corrette nell'estrattore: due punti dopo «dagli onorevoli:», verbo con accento spurio, «proposta di articolo… a firma degli», emendamento letto dopo un'interpellanza, blocco di emendamenti dopo un altro atto, singoli con testo proprio non più assorbiti in un elenco dello stesso primo firmatario (17 emendamenti distinti tornano separati), «fatto ‘proprio» con apice spurio.
+  *More extractor families fixed; four lists of up to 42 signatories recovered.*
 - Emendamenti 718 → 1.408; con 2+ firmatari 329 → 394; legami di co-firma 2.269 → 3.275.
 
 ### Variabili nuove / New variables
 
 - `emendamenti_nodi.csv`: `testo` (testo stampato dell'emendamento), `tipo_emendamento` (sostituire, sopprimere, aggiungere, inserire), `id_presentatore`, `presentatore_fonte`. EN: `text_it`, `amendment_type`, `id_proposer`, `proposer_source`.
 - `edgelist_emendamenti.csv`: `ruolo` (presentatore / firmatario), per la rete diretta di chi raccoglie e chi concede firme. EN: `role`.
+- `emendamenti_nodi.csv`: `esito` (approvato, respinto, ritirato, decaduto, assorbito; assegnato al 17%, convalida 26/30), `articolo_in_discussione` (dall'ordine dei lavori, convalida 14/20), `materia` e `articolo_costituzione` (dalla tavola della Camera progetto → Costituzione, materia giusta 17/18), `controllo_data`. EN: `outcome`, `article_under_discussion`, `subject_title`, `constitution_article`, `date_check`.
+- `edgelist_emendamenti.csv`, `edgelist_voti.csv`: `abbinamento` (criterio di riconoscimento del nome). EN: `matching`.
+- `costituenti_nodi.csv`: `commissione_75`, `sottocommissione`, `comitato_redazione`, `ruolo_commissione`; `voti_in_carica`, `voti_presente`, `voti_congedo`, `voti_assente`, `quota_presenza`; `eletto_camera_1948`. EN: `committee_75`, `subcommittee`, `drafting_committee`, `committee_role`, `votes_in_office`, `votes_present`, `votes_on_leave`, `votes_absent`, `share_present`, `elected_chamber_1948`.
+- `voti_nodi.csv`: `numero_legale_mancato`. EN: `quorum_failed`.
 
 ### File nuovi / New files
 
 - `menzioni_discorso.csv` (EN `speech_mentions.csv`): rete diretta delle menzioni nei discorsi, chi nomina chi in Aula; 9.194 menzioni, 3.743 coppie dirette.
-- `pipeline/tools/test_regole.py`: test di non-regressione delle regole di estrazione (57 passi veri, 58 controlli).
+- `pipeline/tools/test_regole.py`: test di non-regressione delle regole di estrazione (62 passi veri, 63 controlli).
 - `pipeline/tools/estrai_menzioni_discorso.py`, `pipeline/tools/coesione_voto.py`, `pipeline/tools/ritaglia.py`, `pipeline/tools/qualita_ocr.py` (qualità dell'OCR per pagina, `pipeline/extraction/qualita_pagine.csv`).
-- File di verifica in `pipeline/extraction/VERIFICA_*`: recall, precisione, pluri-firmati, kappa, menzioni.
+- File di verifica in `pipeline/extraction/VERIFICA_*`: recall, precisione, pluri-firmati, kappa, menzioni, singoli, esiti, articolo, altri atti.
+- `altri_atti_nodi.csv`, `edgelist_altri_atti.csv` (EN `other_acts_nodes.csv`, `edgelist_other_acts.csv`): strato multiplex di 842 atti co-firmati che non sono emendamenti.
+- `edgelist_*_conservativa.csv` (EN `*_conservative.csv`): reti con i soli abbinamenti esatti o corretti a mano.
+- `data/graphml/`: le sei reti in GraphML; `R/00_build_networks.R`: gli oggetti `igraph`.
+- `pipeline/CASI_APERTI.xlsx` e `pipeline/tools/prepara_casi_aperti.py`: i casi da decidere sulla pagina; le decisioni si applicano a ogni esportazione.
+- `pipeline/sedute_non_trascritte.csv`, `pipeline/tools/scarica_pdf_mancanti.py`, `pipeline/tools/scarica_fonti_esterne.py`: sedute e dati da scaricare con la rete.
+- `pipeline/fonti/`: tavola della Camera progetto → Costituzione; eletti alla Camera nel 1948.
+- `paper/data_note.md`: bozza della nota sul dataset.
 
 ### Voti / Votes
 
