@@ -137,6 +137,40 @@ def wilson(k, n, z=1.96):
 import subprocess, sys
 print(subprocess.run([sys.executable, os.path.join(QUI, 'tools', 'valuta_campioni.py'), EST], capture_output=True, text=True).stdout)
 
+# ---------- decisioni prese a mano sul foglio CASI_APERTI.xlsx (tools/prepara_casi_aperti.py) ----------
+DEC = {}
+f_dec = os.path.join(QUI, 'CASI_APERTI.xlsx')
+if os.path.exists(f_dec):
+    for foglio, df in pd.read_excel(f_dec, sheet_name=None, dtype=str).items():
+        if 'DECISIONE' in df:
+            DEC[foglio] = df[df.DECISIONE.notna() & (df.DECISIONE.str.strip() != '')]
+    print('Decisioni a mano lette:', {k: len(v) for k, v in DEC.items() if len(v)})
+_sd = pd.read_csv(os.path.join(QUI, 'tools', 'sedute_date.csv')); sedute_date = dict(zip(_sd.iloc[:, 0], _sd.iloc[:, 1]))
+NESSUNO = ('nessuno', 'non è un emendamento', 'nessun elenco completo stampato', 'giusto')
+def id_da_etichetta(t, data=None):
+    """«Cognome Nome» scelto dal menu -> id_dep (anche solo il cognome, se univoco alla data)."""
+    t = str(t).strip()
+    c = nomi[(nomi.cognome + ' ' + nomi.nome) == t]
+    if len(c) == 1: return c.id_dep.iloc[0]
+    x = trova(t, data or '1947-06-01')
+    return x
+def dec(foglio, chiave):
+    d = DEC.get(foglio)
+    if d is None or d.empty: return None
+    x = d[d.chiave == chiave]
+    return x.DECISIONE.iloc[0].strip() if len(x) else None
+_m = dec('incerti', 'sed322_massa')
+if _m:
+    for k, voce in enumerate(FIRMATARI_CORRETTI):
+        if voce[0] == 'sed322':
+            lista = [x for x in voce[2] if x != 'Mazza'] + ([] if _m.startswith('nessuno') else [_m])
+            FIRMATARI_CORRETTI[k] = (voce[0], voce[1], lista) + tuple(voce[3:])
+_m = dec('incerti', 'sed104_martino')
+if _m and 'senza Caronia' in _m:
+    for k, voce in enumerate(FIRMATARI_CORRETTI):
+        if voce[0] == 'sed104':
+            FIRMATARI_CORRETTI[k] = (voce[0], voce[1], [x for x in voce[2] if x != 'Caronia']) + tuple(voce[3:])
+
 # ---------- emendamenti ----------
 E = pd.read_csv(os.path.join(EST, 'emendamenti.csv'))
 L = pd.read_csv(os.path.join(EST, 'edgelist_emendamenti.csv'))
@@ -159,6 +193,40 @@ for sed, cc, lista, completo, *pag in FIRMATARI_CORRETTI:      # quinto elemento
     L = pd.concat([L[L.id_emendamento != i], pd.DataFrame({'id_emendamento': i, 'id_dep': ids})])
     E.loc[E.id_emendamento == i, ['firmatari', 'n_firmatari', 'completo', 'primo', 'presentatore_formula']] = ['|'.join(ids), len(ids), completo, ids[0], 0]
     corretti.add(i)
+# firmatari aggiunti o emendamenti creati dalle decisioni del foglio
+n_dec = 0
+d_em = DEC.get('emendamenti_nomi', pd.DataFrame())
+for r in d_em.itertuples():
+    if str(r.DECISIONE).startswith(NESSUNO): continue
+    sed, pag = r.seduta, int(float(r.pagina))
+    if isinstance(r.chiave_emendamento, str) and r.chiave_emendamento:
+        s0, p0, f0 = r.chiave_emendamento.split('|', 2)
+        hit = E[(E.prima_seduta == s0) & (E.pagina == int(p0)) & E.firmatari.map(lambda f: set(f0.split('|')) <= set(str(f).split('|')))]
+        if len(hit) != 1: print('  ATTENZIONE: decisione non applicata', r.caso, len(hit)); continue
+        i = hit.id_emendamento.iloc[0]; x = id_da_etichetta(r.DECISIONE, hit.data.iloc[0])
+        if not x or x in str(hit.firmatari.iloc[0]).split('|'): continue
+        E.loc[E.id_emendamento == i, ['firmatari', 'n_firmatari']] = [hit.firmatari.iloc[0] + '|' + x, hit.n_firmatari.iloc[0] + 1]
+        L = pd.concat([L, pd.DataFrame({'id_emendamento': [i], 'id_dep': [x]})]); corretti.add(i); n_dec += 1
+    else:
+        data = sedute_date.get(sed)
+        x = id_da_etichetta(r.DECISIONE, data)
+        if not x: continue
+        i = int(E.id_emendamento.max()) + 1
+        E = pd.concat([E, pd.DataFrame([dict(id_emendamento=i, firmatari=x, n_firmatari=1, completo=1, articolo_menzionato='',
+                       prima_seduta=sed, data=data, pagina=pag, fonte='presentazione',
+                       url_pdf=f'https://documenti.camera.it/_dati/costituente/lavori/Assemblea/{sed}/{sed}nc.pdf#page={pag}',
+                       primo=x, testo='', tipo_emendamento='non determinato', presentatore_formula=1, cogn={cogn.get(x, '')})])], ignore_index=True)
+        L = pd.concat([L, pd.DataFrame({'id_emendamento': [i], 'id_dep': [x]})]); n_dec += 1
+for r in DEC.get('emendamenti_ed_altri', pd.DataFrame()).itertuples():
+    if str(r.DECISIONE).startswith(NESSUNO): continue
+    s0, p0, f0 = r.chiave.split('|', 2)
+    hit = E[(E.prima_seduta == s0) & (E.pagina == int(p0)) & E.firmatari.map(lambda f: set(f0.split('|')) <= set(str(f).split('|')))]
+    if len(hit) != 1: print('  ATTENZIONE: decisione non applicata', r.caso, len(hit)); continue
+    i = hit.id_emendamento.iloc[0]; fs = str(hit.firmatari.iloc[0]).split('|')
+    nuovi = [x for x in (id_da_etichetta(n, hit.data.iloc[0]) for n in str(r.DECISIONE).split(';') if n.strip()) if x and x not in fs]
+    E.loc[E.id_emendamento == i, ['firmatari', 'n_firmatari', 'completo']] = ['|'.join(fs + nuovi), len(fs) + len(nuovi), 1]
+    L = pd.concat([L, pd.DataFrame({'id_emendamento': i, 'id_dep': nuovi})]); corretti.add(i); n_dec += 1
+if DEC: print('Decisioni a mano applicate agli emendamenti:', n_dec)
 print('Correzioni manuali: rimossi', len(via), 'falsi positivi')
 # dopo le correzioni due record possono avere lo stesso elenco (stesso emendamento stampato due volte,
 # la prima con l'elenco troncato): si tiene il primo, come fa l'estrattore per le riletture (±3 sedute).
@@ -229,6 +297,21 @@ if os.path.exists(f_md):
 # ---------- voti ----------
 Vt = pd.read_csv(os.path.join(EST, 'voti.csv'))
 Ev = pd.read_csv(os.path.join(EST, 'edgelist_voti.csv'))
+n_dv = 0
+for r in DEC.get('voti_nomi', pd.DataFrame()).itertuples():
+    if str(r.DECISIONE).startswith(NESSUNO): continue
+    vid = int(r.id_voto[1:]); x = id_da_etichetta(r.DECISIONE, Vt.set_index('id_voto').data.get(vid))
+    if x and not ((Ev.id_voto == vid) & (Ev.id_dep == x)).any() and r.voto in ('sì', 'no', 'astenuto'):
+        Ev = pd.concat([Ev, pd.DataFrame([dict(id_voto=vid, id_dep=x, voto=r.voto)])], ignore_index=True); n_dv += 1
+for r in DEC.get('voti_approssimati', pd.DataFrame()).itertuples():
+    d = str(r.DECISIONE).strip()
+    if d.startswith('giusto'): continue
+    vid = int(r.id_voto[1:]); vecchio = r.chiave.split('|')[3]
+    Ev = Ev[~((Ev.id_voto == vid) & (Ev.id_dep == vecchio))]; n_dv += 1
+    if not d.startswith('sbagliato'):
+        x = id_da_etichetta(d, Vt.set_index('id_voto').data.get(vid))
+        if x and r.voto in ('sì', 'no', 'astenuto'): Ev = pd.concat([Ev, pd.DataFrame([dict(id_voto=vid, id_dep=x, voto=r.voto)])], ignore_index=True)
+if DEC: print('Decisioni a mano applicate ai voti:', n_dv)
 Vt['label_en'] = Vt.id_voto.map(ETICHETTE).fillna('to be labelled: see source page')
 Vt['on_constitution'] = (~Vt.id_voto.isin(NON_COSTITUZIONE)).astype(int)
 Vt['id_voto'] = 'v' + Vt.id_voto.astype(str); Ev['id_voto'] = 'v' + Ev.id_voto.astype(str)
