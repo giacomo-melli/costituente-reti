@@ -27,35 +27,47 @@ def salva(nome, v, righe):
         w = csv.writer(f); w.writerow(v); w.writerows(righe)
     print(nome, len(righe), 'righe')
 
-CAM = 'https://dati.camera.it/sparql'
-v, leg = sparql(CAM, """PREFIX ocd: <http://dati.camera.it/ocd/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?leg ?label WHERE { ?leg a ocd:legislatura . OPTIONAL { ?leg rdfs:label ?label } }""")
-salva('camera_legislature.csv', v, leg)
-cost = [l for l, lab in leg if 'ostituent' in (lab + l)]
-if not cost: sys.exit('Legislatura della Costituente non trovata: guarda camera_legislature.csv')
-print('Costituente:', cost[0])
-v, ad = sparql(CAM, f"""PREFIX ocd: <http://dati.camera.it/ocd/>
-SELECT ?deputato ?adesione ?proprieta ?valore WHERE {{
-  ?deputato a ocd:deputato ; ocd:rif_leg <{cost[0]}> ; ocd:aderisce ?adesione .
-  ?adesione ?proprieta ?valore }}""")
-salva('camera_adesioni_gruppi.csv', v, ad)
-# gruppi: etichette dei gruppi a cui le adesioni rimandano
-gruppi = sorted({val for _, _, p, val in ad if val.startswith('http://dati.camera.it/ocd/gruppoParlamentare')})
-righe = []
-for i in range(0, len(gruppi), 40):
-    vals = ' '.join(f'<{g}>' for g in gruppi[i:i + 40])
-    v2, r = sparql(CAM, f"""SELECT ?gruppo ?proprieta ?valore WHERE {{ VALUES ?gruppo {{ {vals} }} ?gruppo ?proprieta ?valore }}""")
-    righe += r; time.sleep(1)
-if gruppi: salva('camera_gruppi.csv', ['gruppo', 'proprieta', 'valore'], righe)
-# VIAF da Wikidata
-qid = []
-with open(os.path.join(RADICE, 'data', 'it', 'costituenti_nodi.csv'), encoding='utf-8') as f:
-    for r in csv.DictReader(f):
-        if r.get('qid'): qid.append(r['qid'])
-WD = 'https://query.wikidata.org/sparql'; out = []
-for i in range(0, len(qid), 150):
-    vals = ' '.join('wd:' + q for q in qid[i:i + 150])
-    v3, r = sparql(WD, f"SELECT ?item ?viaf WHERE {{ VALUES ?item {{ {vals} }} OPTIONAL {{ ?item wdt:P214 ?viaf }} }}")
-    out += [[a.rsplit('/', 1)[-1], b] for a, b in r]; time.sleep(2)
-salva('wikidata_viaf.csv', ['qid', 'viaf'], out)
-print('Fatto. Riapri la sessione di lavoro: i file in pipeline/fonti/ si trasformano in variabili del dataset.')
+def camera():
+    CAM = 'https://dati.camera.it/sparql'
+    v, leg = sparql(CAM, """PREFIX ocd: <http://dati.camera.it/ocd/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    SELECT ?leg ?label WHERE { ?leg a ocd:legislatura . OPTIONAL { ?leg rdfs:label ?label } }""")
+    salva('camera_legislature.csv', v, leg)
+    cost = [l for l, lab in leg if 'ostituent' in (lab + l)]
+    if not cost: raise RuntimeError('Legislatura della Costituente non trovata: guarda camera_legislature.csv')
+    print('Costituente:', cost[0])
+    v, ad = sparql(CAM, f"""PREFIX ocd: <http://dati.camera.it/ocd/>
+    SELECT ?deputato ?adesione ?proprieta ?valore WHERE {{
+      ?deputato a ocd:deputato ; ocd:rif_leg <{cost[0]}> ; ocd:aderisce ?adesione .
+      ?adesione ?proprieta ?valore }}""")
+    salva('camera_adesioni_gruppi.csv', v, ad)
+    # gruppi: etichette dei gruppi a cui le adesioni rimandano
+    gruppi = sorted({val for _, _, p, val in ad if val.startswith('http://dati.camera.it/ocd/gruppoParlamentare')})
+    righe = []
+    for i in range(0, len(gruppi), 40):
+        vals = ' '.join(f'<{g}>' for g in gruppi[i:i + 40])
+        v2, r = sparql(CAM, f"""SELECT ?gruppo ?proprieta ?valore WHERE {{ VALUES ?gruppo {{ {vals} }} ?gruppo ?proprieta ?valore }}""")
+        righe += r; time.sleep(1)
+    if gruppi: salva('camera_gruppi.csv', ['gruppo', 'proprieta', 'valore'], righe)
+
+def wikidata():
+    # VIAF da Wikidata
+    qid = []
+    with open(os.path.join(RADICE, 'data', 'it', 'costituenti_nodi.csv'), encoding='utf-8') as f:
+        for r in csv.DictReader(f):
+            if r.get('qid'): qid.append(r['qid'])
+    WD = 'https://query.wikidata.org/sparql'; out = []
+    for i in range(0, len(qid), 150):
+        vals = ' '.join('wd:' + q for q in qid[i:i + 150])
+        v3, r = sparql(WD, f"SELECT ?item ?viaf WHERE {{ VALUES ?item {{ {vals} }} OPTIONAL {{ ?item wdt:P214 ?viaf }} }}")
+        out += [[a.rsplit('/', 1)[-1], b] for a, b in r]; time.sleep(2)
+    salva('wikidata_viaf.csv', ['qid', 'viaf'], out)
+
+errori = 0
+for nome, f in (('Camera dei deputati', camera), ('Wikidata', wikidata)):
+    try:
+        f()
+    except Exception as e:
+        errori += 1
+        print(f'!!! {nome}: {type(e).__name__}: {e}')
+print('Fatto.' if not errori else 'Finito con errori: vedi sopra.', 'I file sono in pipeline/fonti/.')
+sys.exit(1 if errori == 2 else 0)

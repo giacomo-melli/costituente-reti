@@ -42,3 +42,4 @@ __pycache__/
 
 # ---- registro di lavoro, fuori dal repository ----
 pipeline/extraction/REGISTRO_NOTTE.md
+pipeline/aggiorna_dati.log

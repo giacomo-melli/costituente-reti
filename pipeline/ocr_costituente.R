@@ -18,7 +18,24 @@
 # tesseract::tesseract_download("ita")
 
 # ---- SEZIONE 1: impostazioni -----------------------------------------
-CARTELLA <- path.expand("~/Documents/Insegnamento/Trento ASNA/Costituenti/pipeline")
+# la cartella pipeline/ si trova da sola: e' quella che contiene questo script, comunque lo si lanci
+# (Rscript da qualunque cartella, source() o RStudio); in ultima istanza la posizione abituale del repository
+trova_cartella <- function() {
+  a <- commandArgs(trailingOnly = FALSE)
+  f <- sub("^--file=", "", a[grep("^--file=", a)])
+  if (length(f) && file.exists(f[1])) return(normalizePath(dirname(f[1])))
+  of <- tryCatch(sys.frames()[[1]]$ofile, error = function(e) NULL)
+  if (!is.null(of) && file.exists(of)) return(normalizePath(dirname(of)))
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    p <- tryCatch(rstudioapi::getSourceEditorContext()$path, error = function(e) "")
+    if (nzchar(p)) return(normalizePath(dirname(p)))
+  }
+  for (c in c("pipeline", ".", "~/Documents/Papers/SNA-Dataset/Costituenti/pipeline"))
+    if (file.exists(file.path(c, "esporta_dataset.py"))) return(normalizePath(c))
+  stop("Non trovo la cartella pipeline/: lancia lo script dalla cartella del repository Costituenti")
+}
+CARTELLA <- trova_cartella()
+message("Cartella di lavoro: ", CARTELLA)
 DPI <- 300
 CORE <- max(1, parallel::detectCores() - 2)   # pagine trascritte in parallelo
 
