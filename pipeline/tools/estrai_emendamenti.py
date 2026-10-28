@@ -334,11 +334,21 @@ def elenco_di_atti_distinti(before, nxt=''):
 EMEND_VERB = re.compile(r"sostitu|aggiung|soppri|sopprime|inseri|premett|trasferi|far precedere|far seguire|dopo le parole|dopo la parola|alle parole|alla parola|\bcomma\b|all['’]articolo|articolo aggiuntivo|nuovo testo|testo della Commissione", re.I)
 NON_EMEND = re.compile(r"interrog|interpell|per\s+sapere\b|se\s+non\s+(?:ritenga|ravvisi|creda)|quali\s+provvedimenti|ordin\w*\W{0,4}del\W{0,4}giorno|risoluzion|mozion|lettera aperta|telegramma|impegna il Governo|invita il Governo|fiducia|appello nominale|scrutinio segreto|chiede d['’]\s?interrogare|chiedono d['’]\s?interrogare|\bAl(?:la)?\s+Ministr|\bAi\s+Ministri|Al\s+Presidente\s+del\s+Consiglio", re.I)
 def tipo_testo(seg):
+    # la parte vicina al blocco di firma decide: un'interrogazione o un ordine del giorno letti prima
+    # non fanno di un emendamento («...sono stati presentati i seguenti emendamenti aggiuntivi: «...» CANEVARI, ...») un altro atto
+    if re.search(r"emendament", seg[-700:], re.I) and EMEND_VERB.search(seg[-700:]) and not NON_EMEND.search(seg[-700:]): return 'emendamento'
     if NON_EMEND.search(seg): return 'altro atto'
     return 'emendamento' if EMEND_VERB.search(seg) else 'non classificato'
+def tipo_atto(seg):
+    """Tipo di un atto co-firmato che non e' un emendamento; None se non riconosciuto."""
+    for pat, lab in ((r"interpell", 'interpellanza'), (r"interrog", 'interrogazione'), (r"ordin\w*\W{0,4}del\W{0,4}giorno", 'ordine del giorno'),
+                     (r"mozion", 'mozione'), (r"appello\W{0,4}nominale|s\w?rutinio\W{0,3}segreto|(?:chiest|richiest)\w*\W+(?:\w+\W+){0,3}votazione|numero legale", 'richiesta di votazione')):
+        if re.search(pat, seg, re.I): return lab
+    return None
 URL = 'https://documenti.camera.it/_dati/costituente/lavori/Assemblea/{s}/{s}nc.pdf#page={p}'
 
 recs = []
+altri_atti = []        # strato multiplex: atti co-firmati che non sono emendamenti (punto 12)
 sedute = sorted({os.path.basename(f).split('_')[0] for f in glob.glob(os.path.join(TXT, 'sed*_p*.txt'))})
 for s in sedute:
     text, pm = flatten(s)
@@ -350,11 +360,17 @@ for s in sedute:
                                               r"lettura\s+delle\s+interrogazion|seguenti\s+interrogazion", text)]
     for m in SIG.finditer(text):
         sez = [x for x in SEZ_INTERR if x < m.start()]
-        if sez and not re.search(r"emendament|articolo aggiuntivo", text[sez[-1]:m.start()], re.I): continue
+        interr = bool(sez and not re.search(r"emendament|articolo aggiuntivo", text[sez[-1]:m.start()], re.I))
         # ogni interrogazione si apre con «Il sottoscritto chiede d'interrogare / I sottoscritti chiedono di
         # interpellare»: se la formula sta fra il blocco precedente e questo, il blocco firma un'interrogazione
-        if re.search(r"chied\w*\s+d\W{0,2}i?\s*(?:interrogare|interpellare)", text[max(last_end, m.start() - 4000):m.start()], re.I): continue
+        ch = re.search(r"chied\w*\s+d\W{0,2}i?\s*(interrogare|interpellare)", text[max(last_end, m.start() - 4000):m.start()], re.I)
         firma = m.group(1)
+        if interr or ch:
+            if is_signature(firma):
+                altri_atti.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='firma',
+                                       tipo_atto='interpellanza' if ch and ch.group(1).lower().startswith('interp') else 'interrogazione',
+                                       testo_stampato=firma.strip(), contesto=text[max(0, m.start() - 300):m.start()].replace('¶', '/')))
+            continue
         if not is_signature(firma): continue
         prev = text[max(0, m.start() - 160):m.start()]                     # «MEDA, ..., BAL- «.. DUZZI; ...»:
         k = prev.rfind('«')                                                # « spuria a metà del blocco
@@ -364,7 +380,11 @@ for s in sedute:
         seg = text[max(last_end, m.start() - 1500):m.start()]
         last_end = m.end()
         tipo = tipo_testo(seg)
-        if tipo != 'emendamento': continue
+        if tipo != 'emendamento':
+            ta = tipo_atto(seg[-600:])
+            if ta: altri_atti.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='firma', tipo_atto=ta,
+                                          testo_stampato=firma.strip(), contesto=seg[-300:].replace('¶', '/')))
+            continue
         arts = ART.findall(before)
         t_em = testo_prima(text, m.start())
         # la formula d'apertura e' subito prima del testo («Sostituirlo col seguente: «...»»), non in coda al blocco
@@ -385,7 +405,14 @@ for s in sedute:
         art_nuovo = art_nuovo and before[-400:].count('«') <= before[-400:].count('»')
         if not art_nuovo and not re.search(r"emendament|sostitutiv|aggiuntiv|soppressiv|a firma|firmat[oa] dagli|insie\w{1,3}\s+con|propost[ao]\s+presentat|propost[ao] (?:aggiuntiv|sostitutiv|di)", before[-100:] + ' ' + after[:60], re.I):
             continue
-        if NON_EMEND.search(before[-150:] + ' ' + re.split(r"\.[\s¶/]*(?=[A-ZÀ-Ý«])|¶", after[:80])[0]):
+        # «Segue l'emendamento degli onorevoli X e Y»: se «emendamento» regge direttamente l'elenco, quello che si e' letto prima
+        # (un'interpellanza, un ordine del giorno) non conta
+        regge = re.search(r"emendament\w*\s*$", before[-40:], re.I)
+        if not regge and NON_EMEND.search(before[-150:] + ' ' + re.split(r"\.[\s¶/]*(?=[A-ZÀ-Ý«])|¶", after[:80])[0]):
+            ta = tipo_atto(before[-150:] + ' ' + re.split(r"\.[\s¶/]*(?=[A-ZÀ-Ý«])|¶", after[:80])[0])
+            if ta and re.match(r"(?:de\s?gli|dagli|dalle)\s", m.group(0), re.I):
+                altri_atti.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo_atto=ta,
+                                       testo_stampato=m.group(1).strip(), contesto=(before[-200:] + ' [[' + m.group(0) + ']] ' + after).replace('¶', '/')))
             continue
         # escluse: interrogazioni, interpellanze, mozioni e richieste di votazione (appello nominale, scrutinio segreto).
         # La spia puo' trovarsi anche DOPO i nomi: «...hanno chiesto la votazione per appello nominale»,
@@ -401,6 +428,10 @@ for s in sedute:
                 and not re.search(r"emendament\w*[^.]{0,40}$", before[-60:], re.I)):
             continue
         if re.search(NON_EM, before[-120:], re.I) or re.search(NON_EM, stessa_frase, re.I):
+            ta = tipo_atto(before[-120:] + ' ' + stessa_frase)
+            if ta and re.match(r"(?:de\s?gli|dagli|dalle)\s", m.group(0), re.I):
+                altri_atti.append(dict(seduta=s, data=data, pagina=page_at(pm, m.start()), fonte='presentazione', tipo_atto=ta,
+                                       testo_stampato=m.group(1).strip(), contesto=(before[-200:] + ' [[' + m.group(0) + ']] ' + after).replace('¶', '/')))
             continue
         # «dall'onorevole X» dopo un participio di discorso («l'inconveniente accennato dall'onorevole X»)
         # o di adozione («fatto proprio dall'onorevole X»: l'emendamento e' di un altro), oppure riferito
@@ -646,7 +677,11 @@ EM['snum'] = EM.prima_seduta.str[3:].astype(int)
 fusi = {}
 for e in EM[EM.n_firmatari == 1].itertuples():
     cand = EM[(EM.n_firmatari >= 2) & (EM.primo == e.firmatari) & ((EM.snum - e.snum).abs() <= 3)]
-    cand = [c for c in cand.itertuples() if stesso_testo(c.testo, e.testo)]
+    # una citazione non stampa il testo: un singolo CON testo, davanti a un elenco che non lo stampa, e' un atto a se'
+    # (Mortati, sed120: «Sostituire il secondo comma col seguente…» non e' l'emendamento Mortati-Mazzei di sed123)
+    ha_testo = lambda t: isinstance(t, str) and len(t) >= 25
+    pezzo = lambda c: isinstance(c.testo, str) and len(_n(c.testo).replace(' ', '')) >= 8 and _n(c.testo).replace(' ', '') in _n(e.testo).replace(' ', '')
+    cand = [c for c in cand.itertuples() if stesso_testo(c.testo, e.testo) and (not ha_testo(e.testo) or ha_testo(c.testo) or pezzo(c))]
     if cand: fusi[e.id_emendamento] = cand[0].id_emendamento
 if fusi:
     R['id_emendamento'] = R.id_emendamento.map(lambda x: fusi.get(x, x))
@@ -663,6 +698,17 @@ R.drop(columns=['pos', 'snum']).to_csv(os.path.join(OUT, 'menzioni.csv'), index=
 F.to_csv(os.path.join(OUT, 'menzioni_nomi.csv'), index=False)
 R_tutte['id_emendamento'] = R.id_emendamento.reindex(R_tutte.index)
 R_tutte.drop(columns=['pos']).to_csv(os.path.join(OUT, 'menzioni_tutte.csv'), index_label='id_menzione')
+# ---------- strato multiplex: altri atti co-firmati ----------
+A = pd.DataFrame(altri_atti, columns=['seduta', 'data', 'pagina', 'fonte', 'tipo_atto', 'testo_stampato', 'contesto'])
+ids_a = []
+for r in A.itertuples():
+    ids_a.append('|'.join(sorted({x['id_dep'] for x in resolve_group(split_names(r.testo_stampato), r.data) if str(x.get('id_dep', '')).startswith('d')})))
+A['firmatari'] = ids_a
+A['n_firmatari'] = A.firmatari.map(lambda x: len(x.split('|')) if x else 0)
+A = A[A.n_firmatari >= 1].drop_duplicates(['seduta', 'tipo_atto', 'firmatari']).reset_index(drop=True)
+A.insert(0, 'id_atto', ['t%d' % (i + 1) for i in range(len(A))])
+A.to_csv(os.path.join(OUT, 'altri_atti.csv'), index=False)
+print('altri atti co-firmati:', len(A), A.tipo_atto.value_counts().to_dict(), '| con 2+ firmatari:', int((A.n_firmatari >= 2).sum()))
 EM.to_csv(os.path.join(OUT, 'emendamenti.csv'), index=False)
 two = EM.assign(id_dep=EM.firmatari.str.split('|')).explode('id_dep')[['id_emendamento', 'id_dep']]
 two.to_csv(os.path.join(OUT, 'edgelist_emendamenti.csv'), index=False)

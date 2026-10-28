@@ -303,6 +303,20 @@ if os.path.exists(f_md):
     MD_en.to_csv(os.path.join(EN, 'speech_mentions.csv'), index=False)
     print('Menzioni nei discorsi:', len(MD), '| con parlante e menzionato:', int(((MD.id_parlante != '') & (MD.id_menzionato != '')).sum()))
 
+# ---------- strato multiplex: altri atti co-firmati (interrogazioni, interpellanze, ordini del giorno, mozioni,
+# richieste di votazione), riconosciuti dall'estrattore e tenuti fuori dagli emendamenti ----------
+A = pd.read_csv(os.path.join(EST, 'altri_atti.csv'))
+A[['id_atto', 'tipo_atto', 'seduta', 'data', 'pagina', 'fonte', 'n_firmatari', 'testo_stampato']].to_csv(os.path.join(IT, 'altri_atti_nodi.csv'), index=False)
+LA = A.assign(id_dep=A.firmatari.str.split('|')).explode('id_dep')[['id_dep', 'id_atto']]
+LA.to_csv(os.path.join(IT, 'edgelist_altri_atti.csv'), index=False)
+TIPI = {'interrogazione': 'question', 'interpellanza': 'interpellation', 'ordine del giorno': 'order of the day',
+        'mozione': 'motion', 'richiesta di votazione': 'vote request'}
+A.assign(act_type=A.tipo_atto.map(TIPI), source=A.fonte.map({'firma': 'signature block', 'presentazione': 'presentation formula'})) \
+ .rename(columns={'id_atto': 'id_act', 'seduta': 'sitting', 'data': 'date', 'pagina': 'pdf_page', 'n_firmatari': 'n_signatories', 'testo_stampato': 'printed_names'}) \
+ [['id_act', 'act_type', 'sitting', 'date', 'pdf_page', 'source', 'n_signatories', 'printed_names']].to_csv(os.path.join(EN, 'other_acts_nodes.csv'), index=False)
+LA.rename(columns={'id_dep': 'id_member', 'id_atto': 'id_act'}).to_csv(os.path.join(EN, 'edgelist_other_acts.csv'), index=False)
+print('Altri atti:', len(A), A.tipo_atto.value_counts().to_dict(), '| legami:', len(LA))
+
 # ---------- voti ----------
 Vt = pd.read_csv(os.path.join(EST, 'voti.csv'))
 Ev = pd.read_csv(os.path.join(EST, 'edgelist_voti.csv'))

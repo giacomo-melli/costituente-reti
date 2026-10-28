@@ -1,0 +1,842 @@
+id_act,act_type,sitting,date,pdf_page,source,n_signatories,printed_names
+t1,vote request,sed075,1947-03-25,47,presentation formula,15,"Selvaggi, Cicerone, Puoti, Coppa, Perugi, Penna Ottavia, Colitto, Rodinò Mario, Marina, Maffioli, De Falco, Miccolis, Corsini, Mazza, Vilardi"
+t2,question,sed081,1947-03-29,23,signature block,2,"DI GIOVANNI, CARTIA"
+t3,question,sed081,1947-03-29,23,signature block,1,BIBOLOTTI
+t4,question,sed081,1947-03-29,24,signature block,6,"TARGETTI, De MICHELIS, GIaAcoMETTI, VERNOCCHI, TONELLO, PiSTOIA"
+t5,question,sed081,1947-03-29,24,signature block,4,"PERRONE CAPANO, CIFALDI, BADINI CONFALONIERI, CONDORELLI"
+t6,question,sed081,1947-03-29,24,signature block,1,PASTORE RAFFAELE
+t7,question,sed081,1947-03-29,24,signature block,1,MANCINI
+t8,question,sed081,1947-03-29,35,signature block,2,"DI VITTORIO, LIZZADRI"
+t9,question,sed081,1947-03-29,35,signature block,2,"MontaLBANO, D'AMICO MICHELE"
+t10,question,sed081,1947-03-29,35,signature block,1,COSATTINI
+t11,question,sed081,1947-03-29,36,signature block,1,MASTROJANNI
+t12,question,sed081,1947-03-29,36,signature block,1,MARZAROTTO
+t13,question,sed081,1947-03-29,36,signature block,1,BONFANTINI
+t14,question,sed081,1947-03-29,36,signature block,1,CIMENTI
+t15,question,sed081,1947-03-29,37,signature block,1,CAMANGI
+t16,question,sed081,1947-03-29,37,signature block,1,CARBONARI
+t17,question,sed081,1947-03-29,37,signature block,2,"CARBONARI, FANTONI"
+t18,question,sed081,1947-03-29,38,signature block,1,MUSOLINO
+t19,question,sed081,1947-03-29,38,signature block,15,"BUBBIO, BALDUZZI, SAMPIETRO, BoVETTI, GORTANI, QUARELLO, STELLA, BaRAccO, BuraTo, GIACCHERO, RAIMONDI, BELOTTI, BELLATO, ""Tozzi CONDIVI, FERRARIO CELESTINO"
+t20,question,sed081,1947-03-29,38,signature block,6,"Mariani FRANCESCO, De MICHELIS PaoLo, PisToIa, FEDELI ALDO, ViSCHIONI, BIANCHI COSTANTE"
+t21,question,sed083,1947-04-11,27,signature block,1,FOGAGNOLO
+t22,question,sed083,1947-04-11,27,signature block,1,BÀDINI CONFALONIERI
+t23,question,sed083,1947-04-11,27,signature block,1,CAPUA
+t24,question,sed083,1947-04-11,27,signature block,1,BERTINI
+t25,question,sed083,1947-04-11,27,signature block,1,RIVERA
+t26,question,sed083,1947-04-11,28,signature block,1,LACONI
+t27,question,sed083,1947-04-11,28,signature block,1,COLONNETTI
+t28,question,sed083,1947-04-11,29,signature block,1,ABOZZI
+t29,question,sed083,1947-04-11,29,signature block,1,SELVAGGI
+t30,question,sed083,1947-04-11,29,signature block,1,MARINARO
+t31,question,sed083,1947-04-11,29,signature block,1,SANTI
+t32,question,sed083,1947-04-11,29,signature block,1,CAMANGI
+t33,question,sed083,1947-04-11,29,signature block,1,PERA
+t34,question,sed083,1947-04-11,30,signature block,1,BOSI
+t35,question,sed083,1947-04-11,30,signature block,1,MASTROJANNI
+t36,question,sed083,1947-04-11,30,signature block,1,GRIECO
+t37,question,sed083,1947-04-11,30,signature block,1,BASILE
+t38,question,sed083,1947-04-11,30,signature block,1,GUARIENTO
+t39,question,sed083,1947-04-11,31,signature block,1,CICERONE
+t40,question,sed083,1947-04-11,31,signature block,1,PAOLUCCI
+t41,question,sed083,1947-04-11,32,signature block,1,ANDREOTTI
+t42,question,sed083,1947-04-11,33,signature block,1,CANNIZZO
+t43,question,sed083,1947-04-11,33,signature block,1,SCOTTI ALESSANDRO
+t44,question,sed083,1947-04-11,33,signature block,1,MARTINO GAETANO
+t45,question,sed083,1947-04-11,33,signature block,1,CIFALDI
+t46,question,sed083,1947-04-11,34,signature block,1,NATOLI
+t47,question,sed083,1947-04-11,34,signature block,1,MAZZA
+t48,question,sed083,1947-04-11,34,signature block,1,MUSOLINO
+t49,question,sed083,1947-04-11,35,signature block,1,COLITTO
+t50,interpellation,sed083,1947-04-11,35,signature block,2,"COCCIA, CARIGNANI"
+t51,question,sed084,1947-04-11,15,signature block,6,"MASSsINI, FARINI, D'ONOFRIO, PERTINI, BARBARESCHI, GRIECO"
+t52,question,sed084,1947-04-11,15,signature block,16,"GRILLI, BADINI CONFALONIERI, BonoMI IVANOE, CIFALDI, TREMELLONI, CHIARAMELLO, È CALOSSO, GHIDINI, ° CANEVARI, DE CARO RAFFAELE, RUGGIERO, D'ARAGONA, Carro, Rossi PAoLO, DI GLORIA, VERONI"
+t53,vote request,sed084,1947-04-11,4,presentation formula,3,"Ravagnan, Laconi e Grieco"
+t54,question,sed085,1947-04-12,12,signature block,16,"GRILLI, BADINI CONFALONIERI, BoNOMI IVANOE, CIFALDI, TREMELLONI, CHIARAMELLO, CALOSSO, GHIDINI, CANEVARI, DE Caro RAFFAELE, RuGGIiERO, D'ARAGONA, Carro, Rossi PaoLo, DI GLORIA, VERONI"
+t55,question,sed087,1947-04-14,23,signature block,6,"PIEMONTE, PARIS, RUGGIERO, CHIARA_ MELLO, GRILLI, CANEVARI"
+t56,question,sed087,1947-04-14,23,signature block,9,"BASTIANETTO, COSTANTINI, PoNTI, RÀVAGNAN, FRANCESCHINI, SARTOR, GHIDETTI, TONETTI, FERRARESE"
+t57,question,sed087,1947-04-14,23,signature block,3,"CAMPOSARCUNO, COLITTO, CIAMPITTI"
+t58,question,sed087,1947-04-14,24,signature block,10,"BERTOLA, ‘BINNI, Lozza, SILIPO, CREMascHI CarLo, ‘GIUA, FARINA, PLATONE, FRANCESCHINI, FOA"
+t59,question,sed087,1947-04-14,24,signature block,8,"BERTOLA, CREMASCHI CARLO, FRANCESCHINI, TUMMINELLI, Lozza, BInNI, GIUA, FOA"
+t60,question,sed087,1947-04-14,24,signature block,2,"CANEVARI, CALOSSO"
+t61,question,sed087,1947-04-14,24,signature block,3,"MiccoLis, RoDI, TUMMINELLI"
+t62,question,sed087,1947-04-14,24,signature block,1,TUMMINELLI
+t63,question,sed087,1947-04-14,25,signature block,1,GOTELLI ANGELA
+t64,question,sed087,1947-04-14,25,signature block,1,"MÉpA LUIGI, CREMASCHI' CARLO"
+t65,question,sed087,1947-04-14,25,signature block,1,SULLO
+t66,question,sed087,1947-04-14,25,signature block,1,MAZZA
+t67,question,sed087,1947-04-14,25,signature block,1,PUOTI
+t68,question,sed087,1947-04-14,25,signature block,1,MARIANI FRANCESCO
+t69,question,sed087,1947-04-14,26,signature block,1,FRANCESCHINI
+t70,question,sed087,1947-04-14,26,signature block,1,BITOSSI
+t71,question,sed087,1947-04-14,26,signature block,1,TIERI
+t72,question,sed087,1947-04-14,27,signature block,1,LONGHENA
+t73,question,sed087,1947-04-14,27,signature block,1,BINNI
+t74,question,sed087,1947-04-14,27,signature block,8,"CORBINO, QUINTIERI QUINTO, PATRIcoLo, Coppa Ezio, FUSCO, BADINI CONFALONIERI, RODI, CIFALDI"
+t75,vote request,sed088,1947-04-14,24,presentation formula,17,"Cairo, Bassano, Morini, Ruini, Preti, Calosso, Tremelloni, Ruggiero, Bocconi, Carboni, Foa, Veroni, Filippini, Canevari, Ghidini, Zanardi, Taddia"
+t76,question,sed089,1947-04-15,24,signature block,3,"MONTAGNANA MARIO, RoveDA, FLECCHIA"
+t77,question,sed089,1947-04-15,25,signature block,2,"DI VITTORIO, LIZZADRI"
+t78,question,sed089,1947-04-15,25,signature block,1,CICERONE
+t79,vote request,sed089,1947-04-15,23,presentation formula,2,"Leone Giovanni, Badini Confalonieri e altri"
+t80,question,sed092,1947-04-17,24,signature block,1,BUBBIO
+t81,question,sed092,1947-04-17,24,signature block,2,"BUBBIO, BELLATO"
+t82,question,sed092,1947-04-17,25,signature block,1,CAMANGI
+t83,question,sed092,1947-04-17,25,signature block,2,"LOMBARDI CARLO, FARINA"
+t84,question,sed092,1947-04-17,25,signature block,1,PuoTI
+t85,question,sed092,1947-04-17,25,signature block,1,MASTROJANNI
+t86,question,sed092,1947-04-17,25,signature block,1,CASTELLI AVOLIO
+t87,question,sed092,1947-04-17,25,signature block,1,PAOLÙCCI
+t88,question,sed094,1947-04-18,19,signature block,2,"LOZZA, SILIPO"
+t89,question,sed094,1947-04-18,19,signature block,1,LIZZADRI
+t90,question,sed094,1947-04-18,19,signature block,5,"CARBONI, PERSICO, CAIRO, BINNI, | PRETI"
+t91,question,sed094,1947-04-18,19,signature block,1,BELLAVISTA
+t92,question,sed094,1947-04-18,19,signature block,1,TRIPEPI
+t93,question,sed094,1947-04-18,20,signature block,1,GHIDETTI
+t94,question,sed094,1947-04-18,20,signature block,1,TOMBA
+t95,question,sed098,1947-04-21,21,signature block,1,MORINI
+t96,question,sed098,1947-04-21,22,signature block,1,TONELLO
+t97,question,sed098,1947-04-21,22,signature block,7,"CANEPA, RossI PaoLo, TREVES, NENNI, BARBARESCHI, ‘ CALOSSO, PERA"
+t98,question,sed098,1947-04-21,22,signature block,1,BELLATO
+t99,question,sed098,1947-04-21,22,signature block,1,BUBBIO
+t100,question,sed098,1947-04-21,22,signature block,1,PAOLUCCI
+t101,question,sed098,1947-04-21,22,signature block,1,ABOZZI
+t102,question,sed098,1947-04-21,23,signature block,1,LOPARDI
+t103,question,sed098,1947-04-21,23,signature block,1,PIEMONTE
+t104,question,sed100,1947-04-22,23,signature block,1,FERRARESE
+t105,question,sed100,1947-04-22,23,signature block,1,PERSICO
+t106,question,sed100,1947-04-22,23,signature block,1,PIEMONTE
+t107,question,sed100,1947-04-22,23,signature block,1,PERUGI
+t108,question,sed100,1947-04-22,23,signature block,1,MARTINO GAETANO
+t109,question,sed100,1947-04-22,24,signature block,1,GHIDETTI
+t110,question,sed100,1947-04-22,24,signature block,1,SARDIELLO
+t111,question,sed100,1947-04-22,7,presentation formula,2,"Silipo, Musolinò; Man"
+t112,question,sed101,1947-04-22,39,signature block,5,"SCALFARO, .CONDORELLI, BASSANO, ! BeLLUSCI, MASTINO PIETRO"
+t113,question,sed101,1947-04-22,39,signature block,1,L'UCIFERO
+t114,question,sed103,1947-04-24,31,signature block,1,MAZZA
+t115,question,sed103,1947-04-24,31,signature block,4,"BETTIOL, Gui, Costa, MARCHESI"
+t116,question,sed103,1947-04-24,31,signature block,1,RIVERA
+t117,question,sed103,1947-04-24,31,signature block,3,"MACRELLI, SARDIELLO, CONTI"
+t118,question,sed103,1947-04-24,32,signature block,1,CANEPA
+t119,question,sed103,1947-04-24,33,signature block,2,"BERTOLA, PASTORE GIULIO"
+t120,question,sed103,1947-04-24,34,signature block,7,"GORTANI, FANTONI, TESSITORI, PIEMONTE, GARLATO, PAT, SCHIRATTI"
+t121,question,sed103,1947-04-24,34,signature block,1,MARINARO
+t122,question,sed103,1947-04-24,34,signature block,1,LOPARDI
+t123,question,sed103,1947-04-24,34,signature block,2,"BINNI, PRETI"
+t124,question,sed103,1947-04-24,34,signature block,3,"BERTOLA, PASTORE GIULIO, SAMPIETRO"
+t125,question,sed103,1947-04-24,35,signature block,1,PAOLUCCI
+t126,question,sed103,1947-04-24,35,signature block,1,BALDUZZI
+t127,question,sed103,1947-04-24,35,signature block,1,BUBBIO
+t128,question,sed103,1947-04-24,35,signature block,1,RICCIO STEFANO
+t129,vote request,sed104,1947-04-28,17,presentation formula,18,"Preti, Barbereschi, Gullo Rocco, Salerno, Crispo, Nasi, Lami Starnuti, Faralli, Saragat, Treves, Grilli, Damiani, Valiani, Lombardi, Caporali, Malagugini, Foa, Carpano, Grazia"
+t130,vote request,sed104,1947-04-28,20,presentation formula,13,"Gullo Rocco, Grilli, Crispo, Grazia, Spallicci, Villani, Calosso, Di Gloria, Persico, .Bocconi, Veroni, Nasi, Pera e altri"
+t131,question,sed105,1947-04-29,29,signature block,1,DI VITTORIO
+t132,vote request,sed105,1947-04-29,14,presentation formula,2,"Corbino, Marchesi ed altri"
+t133,question,sed106,1947-04-30,32,signature block,1,NITTI
+t134,question,sed106,1947-04-30,32,signature block,2,"MORINI, SAMPIETRO"
+t135,question,sed106,1947-04-30,33,signature block,3,"CRISPO, CIFALDI, CORTESE"
+t136,question,sed106,1947-04-30,33,signature block,1,COLITTO
+t137,question,sed106,1947-04-30,34,signature block,3,"FIORITTO, LoPARDI, MANCINI"
+t138,question,sed106,1947-04-30,34,signature block,22,"DOMINEDÒ, CANEVARI, CARBONI, TREÈ MELLONI, PALLASTRELLI, BELOTTI, CassIaNI, Bozzi, REALE VIro, BaDINI CONFALONIERI, CIAMPITTI, REsciGNo, De FALCO, CLERICI, CIMENTI, BUBBIO, VALENTI, ANGELUCCI; FoRESI, SiLES, CORTESE, PUOTI, ZOTTA"
+t139,question,sed106,1947-04-30,34,signature block,1,COCCIA
+t140,question,sed106,1947-04-30,34,signature block,1,NASI
+t141,question,sed106,1947-04-30,34,signature block,1,MATTEOTTI MATTEO
+t142,question,sed106,1947-04-30,34,signature block,1,VENDITTI
+t143,question,sed106,1947-04-30,35,signature block,1,ABOZZI
+t144,question,sed106,1947-04-30,35,signature block,1,BEI ADELE
+t145,question,sed106,1947-04-30,35,signature block,1,MASTROJANNI
+t146,question,sed106,1947-04-30,35,signature block,1,PIEMONTE
+t147,question,sed106,1947-04-30,35,signature block,1,BENCIVENGA
+t148,question,sed106,1947-04-30,35,signature block,1,NOBILE
+t149,question,sed106,1947-04-30,36,signature block,1,CANEPA
+t150,question,sed106,1947-04-30,36,signature block,1,SELVAGGI
+t151,question,sed106,1947-04-30,36,signature block,1,CHIARAMELLO
+t152,question,sed106,1947-04-30,37,signature block,1,VISCHIONI
+t153,question,sed106,1947-04-30,37,signature block,1,PAOLUCCI
+t154,question,sed106,1947-04-30,39,signature block,1,ZUCCARINI
+t155,question,sed106,1947-04-30,39,signature block,1,GRILLI
+t156,question,sed106,1947-04-30,39,signature block,1,FANTONI
+t157,question,sed106,1947-04-30,39,signature block,1,DE FALCO
+t158,question,sed106,1947-04-30,39,signature block,1,CASTELLI AVOLIO
+t159,question,sed106,1947-04-30,40,signature block,2,"CRISPO, CORTESE"
+t160,question,sed106,1947-04-30,40,signature block,1,SCHIRATTI
+t161,question,sed106,1947-04-30,40,signature block,1,MARCHESI
+t162,question,sed106,1947-04-30,40,signature block,9,"CALAMANDREI, CIANCA, MASTINO PIETRO, LOMBARDI RICCARDO, CODIGNOLA, Lussu, Giua, Foa, PRIOLO"
+t163,question,sed109,1947-05-03,35,signature block,1,PERSICO
+t164,question,sed109,1947-05-03,35,signature block,1,ZACCAGNINI
+t165,question,sed109,1947-05-03,36,signature block,1,MACRELLI
+t166,question,sed113,1947-05-06,39,signature block,2,"MiccoLIs, Ropr, AJroLDI; DE CARO, ‘ TRULLI"
+t167,question,sed113,1947-05-06,40,signature block,1,MAZZA
+t168,question,sed113,1947-05-06,40,signature block,10,"DE MARTINO, CORSANEGO, COLITTO, i Dominenò, MAsTINO GESUMINO, Roi MANO, Bozzi, Cappi, Frrrao, No: TARIANNI"
+t169,question,sed113,1947-05-06,40,signature block,2,"VILLABRUNA, BADÎNI CONFALONIERI"
+t170,question,sed113,1947-05-06,40,signature block,1,RUBILLI
+t171,question,sed113,1947-05-06,41,signature block,1,CICERONE
+t172,question,sed113,1947-05-06,41,signature block,1,De MERCURIO
+t173,question,sed113,1947-05-06,41,signature block,1,AYROLDI
+t174,question,sed115,1947-05-07,26,signature block,2,"CACCURI, MONTERISI"
+t175,question,sed115,1947-05-07,26,signature block,10,"De MERCURIO, MORINI, ‘PAOLUCCI, Ca: i MANGI, ReALE Viro, BERNABEI, DE | Vira, Carro, RopINÒ MARIO, ABOZZI, CARBONI"
+t176,question,sed115,1947-05-07,27,signature block,1,MARIANI FRANCESCO
+t177,question,sed115,1947-05-07,27,signature block,1,CAMANGI
+t178,question,sed115,1947-05-07,27,signature block,1,DUGONI
+t179,question,sed115,1947-05-07,27,signature block,1,COTELLESSA
+t180,question,sed115,1947-05-07,28,signature block,1,PERRONE CAPANO
+t181,question,sed116,1947-05-08,36,signature block,1,MARTINO GAETANO
+t182,question,sed116,1947-05-08,36,signature block,3,"MORINI, AMADEI, GAIRO"
+t183,question,sed116,1947-05-08,36,signature block,2,"MORINI, CAIRO"
+t184,question,sed116,1947-05-08,36,signature block,1,FILIPPINI
+t185,question,sed116,1947-05-08,36,signature block,3,"Rossi PaoLO, CANEPA, PERA"
+t186,question,sed116,1947-05-08,37,signature block,1,MONTEMARTINI
+t187,question,sed116,1947-05-08,37,signature block,1,RESCIGNO
+t188,question,sed116,1947-05-08,37,signature block,4,"PAT, GUARIENTO, FERRARESE, AVANZINI"
+t189,question,sed116,1947-05-08,37,signature block,1,ROSSI PAOLO
+t190,question,sed116,1947-05-08,37,signature block,1,MARINARO
+t191,question,sed118,1947-05-09,26,signature block,5,"PastoRe RarFaAELE, SiLipo, Muso_ ©‘. LINO, ALLEGATO, IMPERIALR"
+t192,question,sed118,1947-05-09,26,signature block,1,DE PALMA
+t193,question,sed118,1947-05-09,26,signature block,13,"SCHIAVETTI, SARAGAT, BIANCHI BIANCA, CIANCA, ZUCCARINI, Fox, CALOSso, LomBarpr' RIiccARDO,' CALAMANDREI, BENNANI, CEVOLOTTO, BINNI, VALIANI, MACRELLI, CORBI"
+t194,question,sed118,1947-05-09,26,signature block,1,ROVEDA
+t195,question,sed120,1947-05-10,36,signature block,2,"CANEPA, PERA"
+t196,question,sed120,1947-05-10,36,signature block,4,"CrIsPo, Ropinò Mario, MAZZA, RicCIO STEFANO"
+t197,question,sed120,1947-05-10,37,signature block,1,BERTOLA
+t198,question,sed122,1947-05-12,43,signature block,1,MORINI
+t199,question,sed122,1947-05-12,43,signature block,1,De MERCURIO
+t200,question,sed122,1947-05-12,43,signature block,1,MAZZA
+t201,question,sed122,1947-05-12,43,signature block,1,PUOTI
+t202,question,sed122,1947-05-12,44,signature block,1,DE FALCO
+t203,question,sed122,1947-05-12,44,signature block,3,"RAVAGNAN, GHIDETTI, PELLEGRINI"
+t204,question,sed122,1947-05-12,44,signature block,1,* FRANCESCHINI
+t205,question,sed122,1947-05-12,45,signature block,2,"MALAGUGINI, PIEMONTE"
+t206,question,sed122,1947-05-12,45,signature block,1,EINAUDI
+t207,question,sed122,1947-05-12,45,signature block,1,MERLIN ANGELINA
+t208,question,sed122,1947-05-12,45,signature block,2,"CARBONI, ‘DE PALMA"
+t209,question,sed122,1947-05-12,46,signature block,1,CORBI
+t210,question,sed123,1947-05-13,28,signature block,1,PARRI
+t211,question,sed124,1947-05-13,30,signature block,1,TRIPEPI
+t212,question,sed124,1947-05-13,31,signature block,1,RICCIO STEFANO
+t213,question,sed124,1947-05-13,31,signature block,2,"CAPPELLETTI, CODIGNOLA"
+t214,question,sed124,1947-05-13,31,signature block,1,BADINI CONFALONIERI
+t215,question,sed125,1947-05-14,33,signature block,1,BERTINI
+t216,vote request,sed125,1947-05-14,31,presentation formula,15,"Gronchi, Pastore Giulio, Togni, Storchi, Fanfani, Benvenuti, Franceschini, Codacci Pisanelli, Firrao, Salizzoni, Bianchini Laura, Mannironi, Federici Maria, Saggin e Montini"
+t217,vote request,sed128,1947-05-21,40,presentation formula,18,"Mariani, Merlin Lina, Musotto, Jotti Leonilde, Ravagnan, Barontini Ilio, Faralli, Fogagnolo, Maffi, Pistoia, Assennato, Pellegrini, Secchia, Tonetti, Fioritto, Vischioni, Fiorentino, Li Causi, Togliatti"
+t218,vote request,sed129,1947-05-22,33,presentation formula,14,"Chiaramello, Morini, Calosso, Momigliano, Filippini, Persico, Caporali, Canevari, Longhena, Pera, Carestia, Cairo, Labriola, e Villani"
+t219,vote request,sed129,1947-05-22,37,presentation formula,20,"Colitto, Sullo, Maffioli, Rodi, Corbino, Rognoni, Corsini, Abozzi, Caso, Bencivenga, Lucifero, Russò Perez, Coppa, Miccolis, De Falco, Garoleo, Siles, Bellavista, Giacchero, Lagravinese Pasquale"
+t220,vote request,sed129,1947-05-22,37,presentation formula,2,"Cairo, Chiatamello"
+t221,order of the day,sed129,1947-05-22,42,presentation formula,7,"Chatrian, Togliatti, Malagugini, Basso, Tonello, Rossi Paolo e Caroleo:"
+t222,order of the day,sed147,1947-06-12,5,signature block,1,ABOZZI
+t223,order of the day,sed147,1947-06-12,18,presentation formula,2,Castiglia e Cannizzo
+t224,question,sed164,1947-06-27,43,signature block,2,"MUSOLINO, SILIPO"
+t225,question,sed164,1947-06-27,43,signature block,1,SARDIELLO
+t226,question,sed164,1947-06-27,44,signature block,2,"PrIOLO, MANCINI PIETRO"
+t227,question,sed164,1947-06-27,44,signature block,1,Russo PEREZ
+t228,question,sed164,1947-06-27,44,signature block,1,COSTANTINI
+t229,question,sed164,1947-06-27,45,signature block,1,MALAGUGINI
+t230,question,sed164,1947-06-27,45,signature block,1,PERSICO
+t231,question,sed164,1947-06-27,46,signature block,1,GRIECO
+t232,question,sed164,1947-06-27,46,signature block,1,NOBILE
+t233,question,sed164,1947-06-27,46,signature block,1,SCOTTI ALESSANDRO
+t234,question,sed164,1947-06-27,46,signature block,1,DI GLORIA
+t235,question,sed164,1947-06-27,47,signature block,1,TERRANOVA
+t236,question,sed164,1947-06-27,47,signature block,4,"BuBBIO, BARACCO, STELLA, QUARELLO"
+t237,question,sed164,1947-06-27,47,signature block,2,"DUGONI, VERNOCCHI"
+t238,question,sed164,1947-06-27,47,signature block,1,CORBI
+t239,question,sed164,1947-06-27,47,signature block,1,CAMANGI
+t240,question,sed164,1947-06-27,48,signature block,1,GUERRIERI FILIPPO
+t241,question,sed164,1947-06-27,48,signature block,1,GRILLI
+t242,question,sed164,1947-06-27,48,signature block,1,RESCIGNO
+t243,order of the day,sed164,1947-06-27,21,presentation formula,2,Bozzi e Grassi
+t244,question,sed168,1947-07-01,30,signature block,1,PELLEGRINI
+t245,question,sed168,1947-07-01,30,signature block,1,MAZZA
+t246,question,sed168,1947-07-01,30,signature block,1,'CORSI
+t247,question,sed168,1947-07-01,31,signature block,1,VERNOCCHI
+t248,question,sed168,1947-07-01,31,signature block,1,GIOLITTI
+t249,question,sed168,1947-07-01,31,signature block,1,MASTROJANNI
+t250,question,sed168,1947-07-01,32,signature block,1,BARBARESCHI
+t251,question,sed168,1947-07-01,32,signature block,1,Z'UCCARINI
+t252,question,sed168,1947-07-01,32,signature block,1,STELLA
+t253,question,sed168,1947-07-01,33,signature block,1,GUERRIERI FILIPPO
+t254,question,sed168,1947-07-01,33,signature block,2,"BIANCHI COSTANTINO, ROSELLI"
+t255,question,sed170,1947-07-02,17,signature block,2,"BETTIOL, LAZZATI"
+t256,question,sed170,1947-07-02,17,signature block,1,ZACCAGNINI
+t257,question,sed170,1947-07-02,18,signature block,1,SCOTTI FRANCESCO
+t258,question,sed170,1947-07-02,18,signature block,1,FERRARESE
+t259,question,sed170,1947-07-02,19,signature block,1,BASILE
+t260,order of the day,sed170,1947-07-02,14,presentation formula,2,Lami Starnuti e Preti
+t261,vote request,sed170,1947-07-02,15,presentation formula,27,"Nobile, Costantini, Ruggeri, Ferrari, Sicignano, Ricci, Pastore Giulio, Rubilli, Musolino, Fedeli Armando, Tonello, Landi, Barontini. Ilio, Barontini Anelito, Maffioli, De Filpo, Colombi Arturo, Corbino, Alberganti, Gavina, Morelli Renato, Bolognesi, Bei Adele, Binni, Roveda, Nobili Tito Oro, Fornara. i"
+t262,interpellation,sed171,1947-07-03,25,signature block,6,"Li CAUSI, MONTALBANO, LOMBARDI Riccarpo, NAsI, SANSONE, FIORE"
+t263,question,sed171,1947-07-03,25,signature block,1,JACOMETTI
+t264,question,sed171,1947-07-03,25,signature block,2,"MONTEMARTINI, FERRERI"
+t265,question,sed171,1947-07-03,25,signature block,1,POLLASTRINI ELETTRA
+t266,question,sed171,1947-07-03,26,signature block,1,SULLO FIORENTINO
+t267,question,sed171,1947-07-03,26,signature block,1,CARBONARI
+t268,vote request,sed171,1947-07-03,16,presentation formula,28,"Moranino, Rossi Maria Maddalena, Bibelotti, Negro, Landi, Li Causi, Bucci, De Filpo, Assennato, Barontini Ilio, Dozza, Fedeli Armando, Farini, Ricci, Pratolongo, Giannini, Abozzi, Castiglia, Venditti, Colitto, Coppa, Condorelli, Trulli, Mastrojanni, Perugi, Silipo, Miccolis, Patritolo"
+t269,question,sed171,1947-07-03,24,presentation formula,3,"D'Onofrio, Minio e Gallico Spano Nadia"
+t270,question,sed173,1947-07-04,26,signature block,1,MERLIN LINA
+t271,question,sed173,1947-07-04,26,signature block,1,MALAGUGINI
+t272,question,sed173,1947-07-04,26,signature block,1,MICCOLIS
+t273,question,sed173,1947-07-04,26,signature block,1,RECCA
+t274,question,sed173,1947-07-04,26,signature block,1,PRIOLO
+t275,question,sed173,1947-07-04,27,signature block,1,LAMI STARNUTI
+t276,question,sed173,1947-07-04,27,signature block,2,"GOTELLI ANGELA, GUERRIERI FILIPPO"
+t277,question,sed173,1947-07-04,27,signature block,1,BRASCHI
+t278,question,sed173,1947-07-04,27,signature block,1,DE MERCURIO
+t279,question,sed173,1947-07-04,28,signature block,1,CARBONI ANGELO
+t280,question,sed173,1947-07-04,28,signature block,1,MONTEMARTINI
+t281,question,sed173,1947-07-04,28,signature block,1,MUSOLINO
+t282,question,sed173,1947-07-04,28,signature block,1,CAMANGI
+t283,question,sed173,1947-07-04,29,signature block,1,GASPAROTTO
+t284,question,sed173,1947-07-04,29,signature block,1,ZOTTA
+t285,question,sed173,1947-07-04,29,signature block,1,SCOTTI ALESSANDRO
+t286,question,sed173,1947-07-04,29,signature block,1,SCOCA
+t287,question,sed176,1947-07-08,24,signature block,1,BELLATO
+t288,question,sed176,1947-07-08,25,signature block,1,RICCIO STEFANO
+t289,question,sed176,1947-07-08,25,signature block,1,LONGHENA
+t290,question,sed176,1947-07-08,25,signature block,1,BRUNI
+t291,question,sed176,1947-07-08,25,signature block,1,RESCIGNO
+t292,question,sed176,1947-07-08,25,signature block,1,FERRARESE
+t293,question,sed176,1947-07-08,25,signature block,1,ROSELLI
+t294,vote request,sed176,1947-07-08,22,presentation formula,2,Zuccarini e Caronia
+t295,question,sed178,1947-07-09,20,signature block,1,PERSICO
+t296,question,sed178,1947-07-09,20,signature block,1,BASILE
+t297,question,sed180,1947-07-10,17,signature block,2,"NuMEROSso, DE MICHELE"
+t298,question,sed180,1947-07-10,17,signature block,3,"NuMEROso, DE MICHELE, CASO"
+t299,question,sed180,1947-07-10,17,signature block,1,FARALLI
+t300,question,sed180,1947-07-10,18,signature block,3,"Gaso, NUMEROSO, TITOMANLIO VITTORIA, DE MICHELE"
+t301,question,sed180,1947-07-10,18,signature block,8,"Lozza, PRETI, BINNI, CODIGNOLA, BERNINI, CONDORELLI, CIFALDI, + PARRI"
+t302,question,sed180,1947-07-10,18,signature block,3,"TREMELLONI, D'ARAGONA, TREVES"
+t303,question,sed180,1947-07-10,18,signature block,1,CAROLEO
+t304,question,sed180,1947-07-10,18,signature block,1,CANNIZZO
+t305,question,sed180,1947-07-10,19,signature block,3,"BAZOLI, BULLONI, MONTINI"
+t306,question,sed180,1947-07-10,19,signature block,3,"SULLO, PREZIOSI, DE MERCURIO"
+t307,question,sed180,1947-07-10,19,signature block,2,"GUERRIERI FILIPPO, GOTELLI ANGELA"
+t308,question,sed180,1947-07-10,20,signature block,1,FUSCO
+t309,question,sed180,1947-07-10,20,signature block,1,CODIGNOLA
+t310,question,sed180,1947-07-10,20,signature block,2,"CODIGNOLA, CORBI"
+t311,question,sed180,1947-07-10,21,signature block,1,CORTESE
+t312,vote request,sed180,1947-07-10,15,presentation formula,16,"Micheli, Cappi, Coccia, Belotti, Schiratti, Monticelli, Morelli Luigi, Piccioni, Fuschini, Vigo, Scotti Alessandro, Caroleo, Tessitòri, Angelucci, Pastore Giulio e Tosi"
+t313,question,sed182,1947-07-11,26,signature block,37,"FRANCESCHINI, LIZIER, FERRARESE, Baracco, PONTI, CARBONARI, FANTONI, VALMARANA, SCHIRATTI, RAPELLI, ALBERTI, RUMOR, GIACCHERO, CAPPELLETTI, ‘ UBERTI, MICHELI, Sartor, TESSITORI, DEL CURTO, GiorDANI,, GUERRIERI FILIPPO, DoMINEDÒ, Moro, FIRRAO, VALENTI, STELLA, BASTIANETTI, MONTICELLI, Tosato, BaLpuzzi, CaAPPUGI, FABRIANI, BELLATO, BURATO, MARZAROTTO, CreEMascHI CarLo, BiaGIONI"
+t314,question,sed182,1947-07-11,27,signature block,1,BULLONI
+t315,question,sed182,1947-07-11,27,signature block,1,PERUGI
+t316,question,sed182,1947-07-11,27,signature block,1,VINCIGUERRA
+t317,question,sed182,1947-07-11,27,signature block,1,BRASCHI
+t318,question,sed183,1947-07-12,33,signature block,9,"GaLLICO SPANO NADIA, MERLIN LINA, MONTAGNANA RITA, MATTEI TERESA, Bri ApELE, NocE TERESA, POLLASTRINI ELETTRA, IOTTI LEONILDE, MinELLA AncioLA, Rossi MARIA MADDALENA"
+t319,question,sed183,1947-07-12,33,signature block,1,DI GIOVANNI
+t320,question,sed183,1947-07-12,34,signature block,3,"Caso, DE MicHELE, NUMEROSO"
+t321,question,sed183,1947-07-12,34,signature block,2,"MERLIN ANGELINA, FIORENTINO GIOSUÈ"
+t322,question,sed183,1947-07-12,34,signature block,2,"BRASCHI, PALLASTRELLI"
+t323,question,sed183,1947-07-12,34,signature block,2,"MEZZADRA, LOMBARDI CARLO"
+t324,question,sed186,1947-07-15,35,signature block,1,STAMPACCHIA
+t325,question,sed186,1947-07-15,36,signature block,1,MASTROJSANNI
+t326,question,sed186,1947-07-15,36,signature block,1,BENCIVENGA
+t327,question,sed186,1947-07-15,36,signature block,1,CAPPI
+t328,question,sed186,1947-07-15,37,signature block,1,AZZI
+t329,question,sed186,1947-07-15,37,signature block,1,CAMANGI
+t330,question,sed186,1947-07-15,37,signature block,1,NOBILE
+t331,question,sed186,1947-07-15,38,signature block,1,DUGONI
+t332,question,sed186,1947-07-15,38,signature block,1,SILIPO
+t333,question,sed186,1947-07-15,38,signature block,1,GUERRIERI FILIPPO
+t334,interpellation,sed190,1947-07-17,28,signature block,3,"CODIGNOLA, LAMI STARNUTI, CARBONI, | LUSSU"
+t335,question,sed190,1947-07-17,29,signature block,1,RIVERA
+t336,question,sed190,1947-07-17,29,signature block,2,"BULLONI, CAPPI"
+t337,question,sed190,1947-07-17,30,signature block,1,BORSELLINO
+t338,question,sed190,1947-07-17,30,signature block,1,FERRERI
+t339,question,sed190,1947-07-17,31,signature block,1,DI FAUSTO
+t340,question,sed190,1947-07-17,31,signature block,1,NOBILE
+t341,question,sed190,1947-07-17,31,signature block,1,BIAGIONI
+t342,question,sed190,1947-07-17,31,signature block,1,FERRARESE
+t343,question,sed190,1947-07-17,32,signature block,1,JACINI
+t344,question,sed190,1947-07-17,33,signature block,1,SARDIELLO
+t345,question,sed190,1947-07-17,33,signature block,1,RICCIO STEFANO
+t346,vote request,sed190,1947-07-17,2,presentation formula,3,"Cremaschi Carlo, Uberti, Camposarcuno ed altri"
+t347,question,sed192,1947-07-18,25,signature block,7,"VIGORELLI, BASTIANETTO, FACCHINETTI, FANTUZZI, CARIGNANI, CAVALLARI, RUSso PEREZ"
+t348,question,sed192,1947-07-18,25,signature block,6,"CAVALLARI, Russo PEREZ, BASTIANETTO, FANTUZZI, GIACcHÈRO, CARIGNANI"
+t349,question,sed192,1947-07-18,25,signature block,7,"CARIGNANI, BASTIANETTO, GIACCIHÈRo, FACCHINETTI, CAVALLARI, FANTUZZI, RUSSO PEREZ"
+t350,question,sed192,1947-07-18,26,signature block,4,"BASTIANETTO, GIACCHÈRO, CARIGNANI, Russo PEREZ"
+t351,question,sed192,1947-07-18,26,signature block,1,MICCOLIS
+t352,question,sed192,1947-07-18,26,signature block,12,"Caso, Corpa, CAPUA, De MARIA, MERIGHI, FoRNARA, SPALLICCI, MARCONI, Rivera, CAVALLOTTI, MAFFI, DeL CuRTO"
+t353,question,sed192,1947-07-18,26,signature block,2,"CONDORELLI, BONINO"
+t354,question,sed192,1947-07-18,26,signature block,1,DI GIOVANNI
+t355,question,sed192,1947-07-18,27,signature block,1,SARDIELLO
+t356,question,sed192,1947-07-18,27,signature block,1,COTELLESSA
+t357,question,sed192,1947-07-18,28,signature block,1,LAMI STARNUTI
+t358,question,sed192,1947-07-18,28,signature block,1,COLITTO
+t359,question,sed192,1947-07-18,29,signature block,1,BUBBIO
+t360,question,sed192,1947-07-18,29,signature block,2,"Russo PEREZ, BUBBIO"
+t361,question,sed192,1947-07-18,29,signature block,1,RESCIGNO
+t362,question,sed213,1947-09-10,24,signature block,1,MARTINO GAETANO
+t363,question,sed213,1947-09-10,24,signature block,1,BELLAVISTA
+t364,question,sed213,1947-09-10,25,signature block,1,FIORE
+t365,question,sed213,1947-09-10,25,signature block,2,"MOLINELLI, RUGGERI LUIGI"
+t366,question,sed213,1947-09-10,25,signature block,1,SCHIAVETTI
+t367,question,sed215,1947-09-11,30,signature block,1,SCOTTI ALESSANDRO
+t368,question,sed215,1947-09-11,30,signature block,1,JACOMETTI
+t369,question,sed215,1947-09-11,30,signature block,1,DI GLORIA
+t370,question,sed215,1947-09-11,30,signature block,1,PERSICO
+t371,interpellation,sed216,1947-09-12,36,signature block,1,SANSONE
+t372,interpellation,sed216,1947-09-12,36,signature block,1,VERNOCCHI
+t373,interpellation,sed216,1947-09-12,36,signature block,1,CALOSSO
+t374,interpellation,sed216,1947-09-12,36,signature block,1,SCOTTI ALESSANDRO
+t375,question,sed216,1947-09-12,37,signature block,2,"ABOZZI, MASTINO PIETRO"
+t376,question,sed216,1947-09-12,37,signature block,1,ABOZZI
+t377,question,sed216,1947-09-12,37,signature block,1,ARATA
+t378,question,sed218,1947-09-15,12,signature block,1,RODINÒ MARIO
+t379,question,sed218,1947-09-15,12,signature block,1,RUSSO PEREZ
+t380,question,sed218,1947-09-15,12,signature block,1,LA GRAVINESE NICOLA
+t381,question,sed218,1947-09-15,13,signature block,1,PAOLUCCI
+t382,question,sed218,1947-09-15,13,signature block,1,IMPERIALE
+t383,question,sed218,1947-09-15,13,signature block,1,TRIPEPI
+t384,question,sed218,1947-09-15,13,signature block,1,SALVATORE
+t385,interpellation,sed220,1947-09-16,26,signature block,8,"SiLipo, GuLLO Fausto, MuSOLINO, MANCINI, SARDIELLO, PRIOLO, GAROLEO, MAZZEI"
+t386,question,sed220,1947-09-16,26,signature block,1,MONTEMARTINI
+t387,question,sed220,1947-09-16,26,signature block,1,SALVATORE
+t388,question,sed220,1947-09-16,26,signature block,1,MARCHESI
+t389,question,sed220,1947-09-16,26,signature block,1,MERIGHI
+t390,question,sed220,1947-09-16,27,signature block,1,BULLONI
+t391,question,sed220,1947-09-16,27,signature block,1,PRIOLO
+t392,question,sed220,1947-09-16,27,signature block,1,MAZZEI
+t393,question,sed220,1947-09-16,27,signature block,1,COSTANTINI
+t394,question,sed220,1947-09-16,27,signature block,2,"SCOTTI ALESSANDRO, GRILLI"
+t395,question,sed220,1947-09-16,28,signature block,1,GIUA
+t396,question,sed220,1947-09-16,28,signature block,1,ALDISIO
+t397,question,sed220,1947-09-16,28,signature block,2,"MASTINO GESUMINO, CARBONI ENRICO"
+t398,question,sed220,1947-09-16,28,signature block,4,"COLONNETTI, GIaccHERO, FIRRAO, DI FAUSTO"
+t399,order of the day,sed222,1947-09-17,29,signature block,13,"PIGNATARI, LONGHENA , CAPORALI, CARBONI, VIGORELLI, VILLANI, PERsIco, REALE, CRISPO, FILIPPINI, PRETI, LAMI STARNUTI, ZANARDI, PARIS"
+t400,question,sed222,1947-09-17,29,signature block,1,MAZZEI
+t401,question,sed222,1947-09-17,29,signature block,1,SAPIENZA
+t402,question,sed222,1947-09-17,29,signature block,13,"SULLO, LETTIERI, GIORDANI, MAZZA, * MATTARELLA, CASTELLI AvOLIO, CoDACCI PISANELLI, BUBBIO, CASSIANI, TRIMARCHI, DE Caro GERARDO, GaLATI, RODINÒ Ucg"
+t403,question,sed224,1947-09-18,23,signature block,1,CIFALDI
+t404,question,sed224,1947-09-18,24,signature block,1,SILIPO
+t405,question,sed224,1947-09-18,24,signature block,1,BETTIOL
+t406,question,sed224,1947-09-18,24,signature block,1,LONGHENA
+t407,question,sed224,1947-09-18,24,signature block,1,MUSOLINO
+t408,question,sed224,1947-09-18,25,signature block,1,BONINO
+t409,question,sed224,1947-09-18,25,signature block,1,SULLO
+t410,question,sed224,1947-09-18,26,signature block,1,ARCANGELI
+t411,question,sed224,1947-09-18,26,signature block,1,FABRIANI
+t412,interpellation,sed226,1947-09-19,36,signature block,1,NOBILE
+t413,question,sed226,1947-09-19,37,signature block,6,"MasTINO Pietro, LUSSU, .ABOZZI, .  Grua, MURGIA, MANNIRONI, CORSI"
+t414,question,sed226,1947-09-19,37,signature block,7,"MANNIRONI, MasTINO PiETRO, LUSSU, MastINo GESUMINO, CARBONI ENi RICO, CHIEFFI, MURGIA"
+t415,question,sed226,1947-09-19,38,signature block,6,"Dozza, ZANARDI, TEGA, GRAZIA, BERNINI, COLOMBI ARTURO"
+t416,question,sed226,1947-09-19,39,signature block,3,"LAGRAVINESE PASQUALE, RopI, LA GRaVINESE NICOLA, AYROLDI"
+t417,question,sed226,1947-09-19,39,signature block,1,MAZZA
+t418,question,sed226,1947-09-19,39,signature block,1,SILIPO
+t419,question,sed226,1947-09-19,39,signature block,1,FERRERI
+t420,question,sed226,1947-09-19,39,signature block,1,MARTINO GAETANO
+t421,question,sed226,1947-09-19,39,signature block,1,FERRARESE
+t422,question,sed226,1947-09-19,39,signature block,1,BELLATO
+t423,question,sed226,1947-09-19,40,signature block,1,CAMPOSARCUNO
+t424,question,sed226,1947-09-19,40,signature block,4,"CAMPOSARCUNO, CIAMPITTI, COLITTO, MORELLI RENATO"
+t425,question,sed229,1947-09-23,20,signature block,2,"De MARIA, CODACCI PISANELLI"
+t426,question,sed229,1947-09-23,21,signature block,1,SULLO
+t427,question,sed229,1947-09-23,21,signature block,2,"CARBONI ANGELO, PERSICO"
+t428,question,sed229,1947-09-23,21,signature block,1,AYROLDI
+t429,question,sed229,1947-09-23,21,signature block,7,"GALOSSO, * MOMIGLIANO, .SAPIENZA, BrancHI BIANCA, BocconI, CORSI, ° LAMI STARNUTI"
+t430,question,sed229,1947-09-23,21,signature block,3,"SULLO, GORTANI, QUINTIERI ADOLFO"
+t431,question,sed229,1947-09-23,22,signature block,6,"MANNIRONI, MASTINO GESUMINO, CARBONI EnRICO, MURGIA, CHIEFFI, 7. LUSSU"
+t432,order of the day,sed229,1947-09-23,3,presentation formula,2,Laconi e Grieco
+t433,order of the day,sed229,1947-09-23,8,presentation formula,2,Piccioni e Moro:
+t434,question,sed231,1947-09-24,41,signature block,4,"MACRELLI, CHIOSTERGI, SPALLICCI, PACCIARDI"
+t435,question,sed231,1947-09-24,41,signature block,1,MORINI
+t436,question,sed231,1947-09-24,41,signature block,1,ZAPPELLI
+t437,question,sed231,1947-09-24,42,signature block,1,CARBONI ANGELO
+t438,question,sed231,1947-09-24,42,signature block,1,CASTELLI AVOLIO
+t439,question,sed231,1947-09-24,42,signature block,1,CAROLEO
+t440,order of the day,sed231,1947-09-24,31,presentation formula,14,"Lami Starnuti, Binni, Morini, Rossi Paolo, Treves, Longhena, Bennani, Canevari, Bocconi, Caporali, Villani, Zanardi, Momigliano e Filippini:"
+t441,order of the day,sed233,1947-09-25,27,signature block,10,"CANEVARI, SARAGAT, ZAGARIS VicoRELLI, SIMONINI, PERSICO, PIEMONTE, VILLANI, CARTIA, LAMI STARNUTI, CAIRO"
+t442,question,sed233,1947-09-25,27,signature block,1,RIVERA
+t443,question,sed233,1947-09-25,27,signature block,1,PIEMONTE
+t444,question,sed233,1947-09-25,27,signature block,6,"GASPAROTTO, BELOTTI, VICENTINI, CRE© MASCHI CARLO, VIGORELLI, ZERBI"
+t445,question,sed233,1947-09-25,28,signature block,1,SILIPO
+t446,order of the day,sed248,1947-10-07,12,signature block,19,"NITTI, RUBILLI, PERSICO, LACONI, GuLLo FAUSTO, QUINTIERI QUINTO, Nasi, Bozzi, GrIECO, TOGLIATTI, CIFALDI, REALE VITO, VIGNA, MOLÈ, Perrone CapANO, BASILE, Russo PEREZ, DUGONI, COLITTO"
+t447,question,sed248,1947-10-07,30,signature block,1,FROGGIO
+t448,question,sed248,1947-10-07,30,signature block,2,"COLOMBO, ZOTTA"
+t449,question,sed248,1947-10-07,30,signature block,1,PERSICO
+t450,question,sed248,1947-10-07,31,signature block,1,VALENTI
+t451,question,sed248,1947-10-07,31,signature block,1,LOZZA
+t452,vote request,sed249,1947-10-08,7,presentation formula,4,"Uberti, Dominedò, Moro, Bertone ed altri"
+t453,question,sed250,1947-10-08,30,signature block,6,"Rossi PAOLO, LAMI STARNUTI,' SEGALA, MAZZONI, CARBONI ANGELO, PERSICO"
+t454,question,sed250,1947-10-08,31,signature block,1,MANCINI
+t455,question,sed250,1947-10-08,31,signature block,1,RopINò MARIO
+t456,question,sed250,1947-10-08,31,signature block,1,DI FAUSTO
+t457,question,sed250,1947-10-08,32,signature block,1,GHIDETTI
+t458,question,sed252,1947-10-09,30,signature block,1,MEZZADRA
+t459,question,sed252,1947-10-09,30,signature block,1,PRETI
+t460,question,sed252,1947-10-09,30,signature block,1,GUERRIERI FILIPPO
+t461,question,sed252,1947-10-09,31,signature block,1,CAMPOSARCUNO
+t462,question,sed252,1947-10-09,31,signature block,1,BASTIANETTO
+t463,question,sed252,1947-10-09,32,signature block,1,GALATI
+t464,question,sed252,1947-10-09,32,signature block,1,MASTROJANNI
+t465,question,sed254,1947-10-10,30,signature block,1,MONTICELLI
+t466,question,sed254,1947-10-10,30,signature block,1,DI FAUSTO
+t467,question,sed254,1947-10-10,30,signature block,1,ARATA
+t468,question,sed254,1947-10-10,31,signature block,1,GUERRIERI FILIPPO
+t469,question,sed254,1947-10-10,31,signature block,1,RoDINÒ MARIO
+t470,question,sed257,1947-10-14,20,signature block,1,COLITTO
+t471,question,sed257,1947-10-14,20,signature block,1,BRASCHI
+t472,question,sed257,1947-10-14,20,signature block,1,ERMINI
+t473,vote request,sed258,1947-10-15,2,presentation formula,20,"Lucifero, Colitto, Rodinò Mario, Mastrojanni, Corsini, - Penna Ottavia, Rodi, Abozzi, Miccolis, Russo Perez, Lombardi Riccardo, Veroni, Mazza, Nasi, Foa, Rognoni, Bencivenga; Zuccarini, Cevolotto, De Vita"
+t474,question,sed259,1947-10-15,32,signature block,1,MATTARELLA
+t475,question,sed259,1947-10-15,32,signature block,1,GHIDETTI
+t476,question,sed259,1947-10-15,33,signature block,1,SAPIENZA
+t477,question,sed259,1947-10-15,33,signature block,1,SCOTTI ALESSANDRO
+t478,question,sed259,1947-10-15,33,signature block,2,"SCOTTI ALESSANDRO, CAROLEO"
+t479,question,sed259,1947-10-15,33,signature block,2,"DE CARO RAFFAELE, CIFALDI"
+t480,question,sed259,1947-10-15,34,signature block,1,CORSI
+t481,question,sed259,1947-10-15,34,signature block,1,CORTESE
+t482,question,sed259,1947-10-15,34,signature block,1,COLITTO
+t483,question,sed259,1947-10-15,35,signature block,1,BELOTTI
+t484,question,sed259,1947-10-15,35,signature block,1,BARONTINI ANELITO
+t485,question,sed261,1947-10-16,24,signature block,4,"PATRISSI, FRESA, PuUoTI, DE FALCO"
+t486,question,sed261,1947-10-16,24,signature block,1,SCALFARO
+t487,question,sed261,1947-10-16,24,signature block,1,CAMANGI
+t488,question,sed261,1947-10-16,24,signature block,23,"BELOTTI, DOMINEDÒ, CARBONARI, CIMENTI, CLERICI, MALVESTITI, FERRArIO CELESTINO, SAMPIETRO, BALDUZZI, BovETTI, QUARELLO, SCALp FARO, BURATO, GORTANI, RAPELLI, BENVENUTI, VALENTI, FoRESI, CoLoMBo EMILIO, ZACCAGNINI, RAIMONDI, MONTICELLI, RopI, GiacCHERO"
+t489,question,sed261,1947-10-16,24,signature block,1,CARBONARI
+t490,question,sed261,1947-10-16,24,signature block,1,COLITTO
+t491,question,sed262,1947-10-17,32,signature block,1,MORINI
+t492,question,sed262,1947-10-17,32,signature block,1,PACCIARDI
+t493,question,sed262,1947-10-17,33,signature block,1,BENCIVENGA
+t494,question,sed262,1947-10-17,33,signature block,2,"SCARPA, FORNARA"
+t495,question,sed262,1947-10-17,34,signature block,1,CLERICI
+t496,question,sed262,1947-10-17,34,signature block,1,FILIPPINI
+t497,question,sed262,1947-10-17,34,signature block,1,CAROLEO
+t498,question,sed262,1947-10-17,34,signature block,1,CAMANGI
+t499,question,sed262,1947-10-17,34,signature block,1,PRIOLO
+t500,question,sed263,1947-10-18,17,signature block,4,"Fusco, De MICHELE, NUMEROSO, CASO"
+t501,question,sed263,1947-10-18,17,signature block,1,BRASCHI
+t502,question,sed263,1947-10-18,19,signature block,1,GORTANI
+t503,question,sed266,1947-10-21,25,signature block,2,"CARONIA, DOMINEDÒ"
+t504,question,sed266,1947-10-21,25,signature block,1,SANSONE
+t505,question,sed266,1947-10-21,25,signature block,1,RICCIO STEFANO
+t506,question,sed266,1947-10-21,26,signature block,1,MANNIRONI
+t507,question,sed266,1947-10-21,26,signature block,1,PASTORE RAFFAELE
+t508,question,sed266,1947-10-21,26,signature block,6,"‘GLERICI, MEDA, LAZZATI, CASTELLI EpGARDO, BALDUZZI, SAMPIETRO"
+t509,question,sed266,1947-10-21,27,signature block,1,MOLINELLI
+t510,question,sed266,1947-10-21,27,signature block,1,PERSICO
+t511,question,sed266,1947-10-21,27,signature block,1,GORTANI
+t512,question,sed268,1947-10-22,33,signature block,2,"CARONIA, DOMINEDÒ"
+t513,question,sed268,1947-10-22,33,signature block,1,SANSONE
+t514,question,sed268,1947-10-22,35,signature block,1,SAMPIETRO
+t515,question,sed268,1947-10-22,35,signature block,33,"ROSELLI, MANNIRONI, DE ISNTERRICHTER JERVOLINO MARIA, SAMPIETRO, .  SALIZZONI, MonTINI, RESTIvO, VIaLE, CAPPI, BASTIANETTO, CARBONI ENRICO, RUMOR, DE MARTA, LA PIRA, . CopaAccI PISANELLI, SALVATORE, DoMINEDÒ, DE PALMA, STELLA; BaRACCO, AVANZINI, VALENTI, GIORDANI, SAGGIN, SARTOR, GuI, Conci ELISABETTA, SCALFARO, BERTOLA,. SILES, MORELLI LUIGI, FirRA0, BUBi BIO, Moro"
+t516,question,sed268,1947-10-22,35,signature block,1,LACONI
+t517,question,sed268,1947-10-22,35,signature block,1,DI GLORIA
+t518,question,sed268,1947-10-22,35,signature block,1,FERRERI
+t519,question,sed270,1947-10-23,21,signature block,6,"SPALLICCI, DE MERCURIO, PAOLUCCI, “— DeLLa Seta, MACRELLI, FACCHINETTI, FORTUNA"
+t520,question,sed270,1947-10-23,21,signature block,1,PERRONE CAPANO
+t521,question,sed270,1947-10-23,21,signature block,2,"PASTORE RAFFAELE, ASSENNATO"
+t522,question,sed270,1947-10-23,21,signature block,1,RICCIO
+t523,question,sed270,1947-10-23,21,signature block,1,DI GLORIA
+t524,question,sed270,1947-10-23,22,signature block,1,SANTI
+t525,question,sed270,1947-10-23,22,signature block,2,"SIMONINI, D'ARAGONA"
+t526,question,sed270,1947-10-23,22,signature block,1,RUBILLI
+t527,question,sed270,1947-10-23,22,signature block,1,CIFALDI
+t528,question,sed270,1947-10-23,22,signature block,1,MONTALBANO
+t529,vote request,sed270,1947-10-23,16,presentation formula,15,"Bettiol, Siles, Lizier, Coppi, Angelucci, Bosco Lucarelli, Rapelli, Monticelli, Bertone, Restagno, Rodinò Ugo, Recca, De Michele, Chieffi, De Martino, Jervolino"
+t530,question,sed272,1947-10-24,41,signature block,1,PRIOLO
+t531,question,sed272,1947-10-24,41,signature block,8,"SPALLICCI, CHIOSTERGI, CAMANGI, Azzi, MAGRINI, PAOLUCCI, ZucCARINI, LONGHENA"
+t532,question,sed272,1947-10-24,42,signature block,1,BUBBIO
+t533,question,sed272,1947-10-24,42,signature block,10,"SULLO, Bosco LUCARELLI, FIrRrao, NicorRAa MARIA, CARRATELLI, QUINTIERI ADOLFO, CASTELLI AVOLIO, Copacci PISANELLI, REALE VITO, RoDINÒ UGo"
+t534,vote request,sed272,1947-10-24,13,presentation formula,19,"Paietta Giuliano, Jotti Leonilde, Moranino, Barontini Anelito, Carini, Saccenti, Ricci, Bucci, Laconi, Chiarini, Landi, Grieco, Corbi, Allegato, Imperiale, Pucci, Cavallotti, Ruggeri, Mezzadra, Pajetta Giancarlo"
+t535,vote request,sed272,1947-10-24,15,presentation formula,20,"Carpano Maglioli, Fiorentino, Tomba, Barbareschi, Fedeli Aldo, Faralli, Vischioni, Pistoia, Vernocchi, Tega, Fornara, Bordon, Costa, Giacometti, Stampacchia, Corbi, Pajetta Giancarlo, Jotti Leonilde, Fantuzzi, Moranino"
+t536,vote request,sed272,1947-10-24,22,presentation formula,14,"Maltagliati, Laconi, Vernocchi, Giacometti, Fedeli Aldo, Pistoia, Scoccimarro, Sicignano, Corbi, Grieco, Pesenti, Gallico Spano Nadia, Fedeli Armando, Saccenti e altri"
+t537,question,sed273,1947-10-25,10,signature block,3,"TRULLI, Coppa, RopINÒ MARIO"
+t538,question,sed273,1947-10-25,10,signature block,1,SANTI
+t539,question,sed273,1947-10-25,10,signature block,1,PAOLPCCI
+t540,motion,sed276,1947-10-29,16,presentation formula,10,"Russo Perez, Mazzoni, Cianca, Bellavista, Schiavetti, Uberti, Marazza, Togliatti, Mastino Pietro, Condorelli"
+t541,question,sed277,1947-10-29,45,signature block,1,CANEVARI
+t542,question,sed277,1947-10-29,46,signature block,1,PERSICO
+t543,question,sed277,1947-10-29,46,signature block,1,PERRONE CAPANO
+t544,question,sed277,1947-10-29,46,signature block,2,"GEUNA, GIACCHERO"
+t545,question,sed277,1947-10-29,46,signature block,4,"GEUNA, STELLA, GIACCHERO, SCOTTI A LESSANDRO"
+t546,question,sed277,1947-10-29,46,signature block,15,"MoRanDI, LomBARDI RiccaARDO, GiaAcoMETTI, LIZZADRI, NENNI, MALAGUGINI, GIUA, - BARBARESCHI, GRAZIA VERENIN, DE MICHELIS, SANSONE, PRESSINOTTI, BONOMELLI, FIORENTINO, VISCHIONI"
+t547,question,sed277,1947-10-29,50,signature block,3,"SCOTTI ALESSANDRO, GIAccHERO, RAIMONDI"
+t548,question,sed277,1947-10-29,50,signature block,1,IMPERIALE
+t549,question,sed277,1947-10-29,50,signature block,1,PISTOIA
+t550,question,sed277,1947-10-29,50,signature block,4,"ARATA, BERNAMONTI, PALLASTRELLI, MAZZONI"
+t551,question,sed277,1947-10-29,50,signature block,1,BUBBIO
+t552,question,sed277,1947-10-29,50,signature block,1,DI FAUSTO
+t553,question,sed277,1947-10-29,51,signature block,6,"ARATA, PALLASTRELLI, MICHELI, FERRARI, VALENTI, MAZZONI"
+t554,question,sed277,1947-10-29,51,signature block,1,GERVASI
+t555,question,sed277,1947-10-29,51,signature block,1,LOPARDI
+t556,question,sed277,1947-10-29,51,signature block,1,BASILE
+t557,question,sed277,1947-10-29,52,signature block,6,"BERNARDI, PRESSINOTTI, GIACOMETTI, BONOMELLI, VISCHIONI, MARIANI ENRICO"
+t558,question,sed277,1947-10-29,52,signature block,1,CAMPOSARCUNO
+t559,question,sed277,1947-10-29,52,signature block,5,"PERRONE CAPANO, CACCURI, SULLO, Recca, RobI, MONTERISI"
+t560,vote request,sed277,1947-10-29,6,presentation formula,15,"Cianca, Lussu, Schiavetti, Bordon, Pistoia, Nasi, Bennani, Spallini, Carpano Maglioli, Bianchi Bianca, Grazzi, Foa, Bellusci, Binni, Costantini"
+t561,order of the day,sed277,1947-10-29,15,presentation formula,1,Targetti ed altri
+t562,order of the day,sed277,1947-10-29,32,presentation formula,2,"Colitto, Morelli Renato"
+t563,question,sed281,1947-11-06,24,signature block,1,NASI
+t564,question,sed281,1947-11-06,24,signature block,1,CRISPO
+t565,question,sed281,1947-11-06,24,signature block,4,"SCHIAVETTI, VALIANI, PERTINI, CIANCA"
+t566,question,sed281,1947-11-06,24,signature block,2,"SPANO, LACONI"
+t567,question,sed281,1947-11-06,25,signature block,1,LAMI STARNUTI
+t568,question,sed281,1947-11-06,25,signature block,4,"LA Rocca, SERENI, REALE EUGENIO, . AMENDOLA"
+t569,question,sed281,1947-11-06,25,signature block,1,LA ROCCA
+t570,question,sed281,1947-11-06,25,signature block,1,BRASCHI
+t571,question,sed281,1947-11-06,25,signature block,1,PRIOLO
+t572,question,sed281,1947-11-06,26,signature block,1,LUCIFERO
+t573,question,sed281,1947-11-06,26,signature block,1,LACONI
+t574,question,sed281,1947-11-06,26,signature block,1,MATTEOTTI MATTEO
+t575,question,sed281,1947-11-06,26,signature block,1,VILLABRUNA-
+t576,question,sed281,1947-11-06,26,signature block,1,DI GLORIA
+t577,question,sed281,1947-11-06,27,signature block,1,PERSICO
+t578,question,sed283,1947-11-07,24,signature block,1,MASTROJANNI
+t579,question,sed283,1947-11-07,24,signature block,1,SANSONE
+t580,question,sed283,1947-11-07,25,signature block,1,DI FAUSTO
+t581,question,sed283,1947-11-07,25,signature block,1,TREMELLONI
+t582,question,sed283,1947-11-07,25,signature block,1,RICCIO STEFANO
+t583,question,sed283,1947-11-07,26,signature block,6,"FUSCHINI, BALDUZZI, Moro, SCALFARo, MANNIRONI, MURGIA"
+t584,question,sed283,1947-11-07,26,signature block,1,SAPIENZA
+t585,question,sed284,1947-11-08,23,signature block,3,"PRESSINOTTI, MaLaGUGINI, DE MICHELIS"
+t586,question,sed284,1947-11-08,23,signature block,2,"MORINI, SAMPIETRO"
+t587,question,sed284,1947-11-08,23,signature block,1,MORINI
+t588,question,sed284,1947-11-08,23,signature block,1,DE MARTINO
+t589,question,sed287,1947-11-11,32,signature block,1,LUCIFERO
+t590,question,sed287,1947-11-11,32,signature block,1,DI FAUSTO
+t591,question,sed287,1947-11-11,32,signature block,1,LAMI STARNUTI
+t592,question,sed287,1947-11-11,33,signature block,1,MONTEMARTINI
+t593,question,sed287,1947-11-11,33,signature block,1,ZANARDI
+t594,question,sed287,1947-11-11,33,signature block,1,CHIARAMELLO
+t595,question,sed287,1947-11-11,33,signature block,1,BRUNI
+t596,question,sed287,1947-11-11,33,signature block,1,PERSICO
+t597,question,sed287,1947-11-11,34,signature block,1,PISTOIA
+t598,question,sed287,1947-11-11,34,signature block,1,PIGNATARI
+t599,question,sed287,1947-11-11,34,signature block,1,CRISPO
+t600,question,sed287,1947-11-11,34,signature block,1,RESCIGNO
+t601,question,sed287,1947-11-11,35,signature block,1,PrIOLO
+t602,question,sed289,1947-11-12,29,signature block,4,"DI VITTORIO, MASSINI, BITOSSI, BARBARESCHI"
+t603,question,sed289,1947-11-12,29,signature block,10,"LI Causi, MoNTALBANO, D'AMICO, FioRENTINO, Musotto, CIANCA, LA MaLra, Nasi, VARVARO, CORBI"
+t604,question,sed289,1947-11-12,29,signature block,4,"PAJETTA GIAN CARLO, ALBERGANTI, ScorTtTI FRANCESCO, CAVALLOTTI"
+t605,question,sed289,1947-11-12,30,signature block,5,"CoPPA, CANNIZZO, SELVAGGI, MAZZA, Russo PEREZ"
+t606,question,sed289,1947-11-12,30,signature block,4,"MARIANI FRANcESCO, MALAGUGINI, PISTOIA, ""‘'ARGETTI"
+t607,question,sed289,1947-11-12,30,signature block,8,"Carro, LAMI STARNUTI, DI GLORIA, TREMELLONI, Corsi, MOMIGLIANO, FILIPPINI, RoSssI PAOLO"
+t608,question,sed289,1947-11-12,31,signature block,2,"GASPAROTTO, ALDISIO"
+t609,question,sed289,1947-11-12,31,signature block,1,SANSONE
+t610,question,sed289,1947-11-12,31,signature block,1,DI FAUSTO
+t611,question,sed289,1947-11-12,31,signature block,1,SILES
+t612,question,sed289,1947-11-12,32,signature block,1,BULLONI
+t613,question,sed289,1947-11-12,32,signature block,2,"GUERRIERI FILIPPO, SCALFARO"
+t614,question,sed289,1947-11-12,32,signature block,3,"Varvaro, MonTALBANO, MANCINI"
+t615,question,sed289,1947-11-12,33,signature block,1,GIACOMETTI
+t616,question,sed289,1947-11-12,33,signature block,1,SCOTTI ALESSANDRO
+t617,question,sed289,1947-11-12,33,signature block,1,RESCIGNO
+t618,question,sed289,1947-11-12,34,signature block,1,POLLASTRINI ELETTRA
+t619,question,sed289,1947-11-12,34,signature block,1,MAZZEI
+t620,question,sed293,1947-11-14,2,signature block,1,GOVELLI
+t621,question,sed293,1947-11-14,2,signature block,1,SERENI
+t622,question,sed293,1947-11-14,2,signature block,1,RODINÒ MARIO
+t623,question,sed293,1947-11-14,2,signature block,2,"PuoTI, DE FALCO"
+t624,question,sed293,1947-11-14,2,signature block,12,"DELLA SETA, CHIOSTERGI, PAOLUCCI, De MERCURIO, ZUCCARINI, AZZI, MAGRINI, MAGRASSI, BERNABEI, PARRI, CAMANGI, MACRELLI"
+t625,question,sed293,1947-11-14,2,signature block,1,LABRIOLA
+t626,question,sed293,1947-11-14,3,signature block,6,"BADINI CONFALONIERI, VILLABRUNA, RUBILLI, CRISPO, MARTINO GAETANO, Russo PEREZ"
+t627,question,sed293,1947-11-14,3,signature block,2,"CRISPO, CORTESE"
+t628,question,sed293,1947-11-14,37,signature block,5,"MERLIN ANGELINA, Rossi MARIA MappALENA, Noce TERESA, BEI ADELE, MONTAGNANA RITA"
+t629,question,sed293,1947-11-14,37,signature block,2,"GIACCHERO, GEUNA"
+t630,question,sed293,1947-11-14,37,signature block,1,CAMPOSARCUNO
+t631,question,sed293,1947-11-14,37,signature block,2,"CLERICI, ERMINI"
+t632,question,sed293,1947-11-14,37,signature block,4,"MoRINI, Riccio STEFANO, DE MERCURIO, SAMPIETRO"
+t633,question,sed293,1947-11-14,38,signature block,3,"MEDA, ROSSELLI, BENVENUTI"
+t634,question,sed293,1947-11-14,38,signature block,1,MEZZADRA
+t635,question,sed293,1947-11-14,38,signature block,1,DOMINEDÒ
+t636,question,sed293,1947-11-14,38,signature block,1,TREMELLONI
+t637,question,sed293,1947-11-14,38,signature block,1,BIANCHI BIANCA
+t638,question,sed293,1947-11-14,39,signature block,1,GIACCHERO
+t639,question,sed293,1947-11-14,39,signature block,1,RESCIGNO
+t640,question,sed293,1947-11-14,40,signature block,1,VISCHIONI
+t641,question,sed293,1947-11-14,40,signature block,1,MONTICELLI
+t642,question,sed293,1947-11-14,40,signature block,1,LOPARDI
+t643,question,sed293,1947-11-14,40,signature block,1,FILIPPINI
+t644,question,sed293,1947-11-14,41,signature block,1,MERIGHI
+t645,question,sed294,1947-11-15,27,signature block,3,"Russo PEREZ, CANNIZZO, CASTIGLIA"
+t646,question,sed294,1947-11-15,27,signature block,2,"FABBRI, COVELLI"
+t647,question,sed294,1947-11-15,27,signature block,2,"GABRIELI, DE MARIA"
+t648,question,sed294,1947-11-15,27,signature block,1,PECORARI
+t649,question,sed294,1947-11-15,28,signature block,1,DE MARTINO
+t650,question,sed294,1947-11-15,28,signature block,1,SANTI
+t651,question,sed294,1947-11-15,28,signature block,1,BIAGIONI
+t652,question,sed297,1947-11-20,42,signature block,6,"SAMPIETRO, CASTELLI EbGarpo, BALpuzzi, FERRERI, MEDA, MORINI"
+t653,question,sed297,1947-11-20,44,signature block,1,PERSICO
+t654,question,sed297,1947-11-20,44,signature block,1,BENEDETTINI
+t655,question,sed297,1947-11-20,44,signature block,1,TUMMINELLI
+t656,question,sed297,1947-11-20,44,signature block,1,RUSSO PEREZ
+t657,question,sed297,1947-11-20,44,signature block,1,CHIARAMELLO
+t658,question,sed297,1947-11-20,45,signature block,1,RUBILLI
+t659,question,sed299,1947-11-21,31,signature block,1,CASTIGLIA
+t660,question,sed299,1947-11-21,31,signature block,1,CICERONE
+t661,question,sed299,1947-11-21,31,signature block,2,"MARCONI, DOSSETTI"
+t662,question,sed299,1947-11-21,31,signature block,2,"STAMPACCHIA, CACCIATONE"
+t663,question,sed299,1947-11-21,31,signature block,1,CIFALDI
+t664,question,sed299,1947-11-21,31,signature block,1,MORINI
+t665,question,sed299,1947-11-21,32,signature block,2,"CopaccCI PISANELLI, RECCA"
+t666,question,sed299,1947-11-21,32,signature block,1,DE MARIA
+t667,question,sed299,1947-11-21,32,signature block,4,"MACRELLI, PAoLUCCI, MaGRASSI, BENABEI"
+t668,question,sed299,1947-11-21,32,signature block,1,CACCURI
+t669,question,sed299,1947-11-21,32,signature block,1,GABRIELI
+t670,question,sed299,1947-11-21,32,signature block,1,COSTANTINI
+t671,question,sed299,1947-11-21,32,signature block,1,Tozzi CONDIVI
+t672,question,sed299,1947-11-21,33,signature block,1,ZAGARI
+t673,question,sed299,1947-11-21,33,signature block,1,BIANCHI BRUNO
+t674,question,sed299,1947-11-21,33,signature block,1,GEUNA
+t675,question,sed299,1947-11-21,33,signature block,2,"CAVALLOTTI, LUOZZA"
+t676,question,sed299,1947-11-21,33,signature block,3,"CAVALLOTTI, SCOTTI FRANCESCO, LOZZA"
+t677,question,sed301,1947-11-22,23,signature block,1,CRISPO
+t678,question,sed301,1947-11-22,23,signature block,1,RICCIO STEFANO
+t679,question,sed301,1947-11-22,24,signature block,2,"SULLO, SCOCA"
+t680,question,sed301,1947-11-22,24,signature block,3,"FIORE, MONTALBANO, D'AMICO"
+t681,question,sed301,1947-11-22,24,signature block,1,MORINI
+t682,question,sed301,1947-11-22,24,signature block,4,"CrIispo, Bozzi, MARTINO GAETANO, VILLABRUNA"
+t683,question,sed301,1947-11-22,24,signature block,1,SILIPO
+t684,question,sed301,1947-11-22,24,signature block,5,"D'AMICO, Li CAUSI, MONTALBANO, Fiore, NASI"
+t685,question,sed301,1947-11-22,25,signature block,1,MARTINO GAETANO
+t686,question,sed301,1947-11-22,25,signature block,1,FINOCCHIARO APRILE
+t687,question,sed301,1947-11-22,25,signature block,1,REALE VITO
+t688,question,sed301,1947-11-22,25,signature block,1,GARLATO
+t689,question,sed301,1947-11-22,26,signature block,2,"CANEPA, PERA"
+t690,question,sed301,1947-11-22,26,signature block,1,BASILE
+t691,question,sed303,1947-11-24,19,signature block,1,MONTERISI
+t692,question,sed303,1947-11-24,19,signature block,1,PAOLUCCI
+t693,question,sed303,1947-11-24,19,signature block,1,PASTORE RAFFAELE
+t694,question,sed303,1947-11-24,19,signature block,1,BUBBIO
+t695,question,sed303,1947-11-24,19,signature block,1,COLITTO
+t696,question,sed303,1947-11-24,20,signature block,1,CAMANGI
+t697,question,sed303,1947-11-24,20,signature block,1,LOPARDI
+t698,question,sed303,1947-11-24,20,signature block,1,PERSICO
+t699,question,sed303,1947-11-24,20,signature block,1,MONTAGNANA MARIO
+t700,question,sed303,1947-11-24,20,signature block,1,CORSI
+t701,question,sed303,1947-11-24,21,signature block,4,"CAPUA, PENNA OTTAVIA, ABOZZI, VENDITTI"
+t702,question,sed305,1947-11-25,24,signature block,1,MANCINI
+t703,question,sed305,1947-11-25,24,signature block,1,BORSELLINO
+t704,question,sed305,1947-11-25,24,signature block,1,TUMMINELLI
+t705,question,sed305,1947-11-25,24,signature block,1,TURCO
+t706,question,sed305,1947-11-25,24,signature block,9,"QUINTIERI QUINTO, Bonino, PERRONE CaPaNO, CONDORELLI, MORELLI RENATO, CORTESE GuIinpo, BADINI ConFALONIERI, COLONNA, VILLABRUNA"
+t707,question,sed305,1947-11-25,25,signature block,1,MURGIA
+t708,question,sed305,1947-11-25,25,signature block,1,SANSONE
+t709,question,sed305,1947-11-25,25,signature block,2,"LEONE GIOVANNI, MAZZA"
+t710,question,sed305,1947-11-25,25,signature block,3,"MORINI, SAMPIETRO, SALERNO"
+t711,question,sed305,1947-11-25,25,signature block,1,CORTESE GUIDO
+t712,question,sed305,1947-11-25,26,signature block,1,CAMANGI
+t713,question,sed305,1947-11-25,26,signature block,2,"DI GLORIA, PERSICO"
+t714,question,sed305,1947-11-25,26,signature block,1,VIGORELLI
+t715,question,sed305,1947-11-25,26,signature block,1,IMPERIALE
+t716,question,sed305,1947-11-25,26,signature block,1,GORTANI
+t717,motion,sed305,1947-11-25,20,presentation formula,2,"Abozzi, Perrone Capano"
+t718,vote request,sed306,1947-11-26,20,presentation formula,20,"Mastrojanni, Perugi, Villabruna, Mastino Gesumino, Corbino, Penna Oittavia, Corsini, Colitto, Scalfaro, Giacchero, Micheli, Badini Confalonieri, Bellavista, Valenti, Alberti, Colonnetti, Corsanego, Baracco, Coppi e Bubb'o"
+t719,question,sed307,1947-11-26,26,signature block,5,"SiLipo, GuLLo Fausto, MusoLINO, MANCINI, PRIOLO"
+t720,question,sed307,1947-11-26,26,signature block,4,"MANCINI, PRIOLO, GuLLO FAUSTO, SILIPO"
+t721,question,sed307,1947-11-26,26,signature block,2,"PRETI, BINNI"
+t722,question,sed307,1947-11-26,27,signature block,1,SCOTTI ALESSANDRO
+t723,question,sed307,1947-11-26,27,signature block,1,DI GLORIA
+t724,question,sed307,1947-11-26,27,signature block,1,JACOMETTI
+t725,question,sed307,1947-11-26,27,signature block,1,CAMPOSARCUNO
+t726,question,sed307,1947-11-26,28,signature block,1,RopINÒ MARIO
+t727,question,sed307,1947-11-26,28,signature block,1,PIGNATARI
+t728,question,sed307,1947-11-26,28,signature block,1,VILLANI
+t729,question,sed307,1947-11-26,28,signature block,1,BADINI CONFALONIERI
+t730,question,sed309,1947-11-27,43,signature block,3,"BRLLAVISTA, VILLABRUNA, CRISPO"
+t731,question,sed309,1947-11-27,44,signature block,1,DI FAUSTO
+t732,question,sed309,1947-11-27,44,signature block,1,MAZZA
+t733,question,sed309,1947-11-27,44,signature block,2,"FIORENTINO, MUSOTTO"
+t734,question,sed309,1947-11-27,44,signature block,3,"D'AMICO, MONTALBANO, FIORE"
+t735,question,sed309,1947-11-27,44,signature block,2,"PRESSINOTTI, SANSONE"
+t736,question,sed309,1947-11-27,45,signature block,1,MURGIA
+t737,question,sed309,1947-11-27,45,signature block,1,CRIsPo
+t738,question,sed309,1947-11-27,45,signature block,1,SANSONE
+t739,question,sed309,1947-11-27,45,signature block,1,BOZZI
+t740,question,sed309,1947-11-27,46,signature block,1,ZACCAGNINI
+t741,question,sed309,1947-11-27,46,signature block,1,MINIO
+t742,question,sed309,1947-11-27,46,signature block,1,BASILE
+t743,vote request,sed309,1947-11-27,32,presentation formula,14,"Scalfaro, Coppi, Nicotra Maria, Bianchini Laura, Calamandrei, Bertola, De Maria, Meda, Caronia, Fabbri, Caso, Bosco Lucarelli, Dominedò, Fantoni e altri"
+t744,question,sed311,1947-11-28,31,signature block,1,GASPAROTTO
+t745,question,sed311,1947-11-28,31,signature block,1,BELLAVISTA
+t746,question,sed311,1947-11-28,31,signature block,2,"MARINA, MAZZA"
+t747,question,sed311,1947-11-28,31,signature block,9,"CLERICI, MEDA LUIGI, BENVENUTI, BALDUZZI, CASTELLI EpGARDO, FERRERI, ZERBI, MARTINELLI, SAMPIETRO"
+t748,question,sed311,1947-11-28,31,signature block,1,MALAGUGINI
+t749,question,sed311,1947-11-28,32,signature block,5,"BuBBIO, BARACcO, BuRATO, BELLATO, GIACCHERO"
+t750,question,sed311,1947-11-28,32,signature block,4,"Mastino PIETRO, LUSSU, ABOZZI, CORSI"
+t751,question,sed311,1947-11-28,32,signature block,2,"TREVES, PRETI"
+t752,question,sed311,1947-11-28,32,signature block,1,DE PALMA
+t753,question,sed311,1947-11-28,33,signature block,1,MOLINELLI
+t754,question,sed311,1947-11-28,33,signature block,1,MARTINO GAETANO
+t755,question,sed311,1947-11-28,33,signature block,1,BELLATO
+t756,question,sed311,1947-11-28,33,signature block,1,FIORE
+t757,question,sed311,1947-11-28,34,signature block,1,COSATTINI
+t758,question,sed312,1947-11-29,5,signature block,3,"MASTROJANNI, CAPUA, PERUGI"
+t759,question,sed312,1947-11-29,5,signature block,1,PARRI
+t760,question,sed312,1947-11-29,5,signature block,1,SCOCCIMARRO
+t761,question,sed313,1947-11-29,16,signature block,1,VERONI
+t762,question,sed313,1947-11-29,16,signature block,1,SCOCA
+t763,question,sed313,1947-11-29,16,signature block,1,CANEVARI
+t764,question,sed313,1947-11-29,16,signature block,1,FINOCCHIARO APRILE
+t765,question,sed313,1947-11-29,16,signature block,3,"COSATTINI, TARGETTI, CANEVARI"
+t766,question,sed315,1947-12-02,29,signature block,1,BUBBIO
+t767,question,sed315,1947-12-02,29,signature block,1,SANSONE
+t768,question,sed315,1947-12-02,29,signature block,1,PIEMONTE
+t769,question,sed315,1947-12-02,29,signature block,1,ARATA
+t770,question,sed315,1947-12-02,30,signature block,1,SCHIRATTI
+t771,question,sed315,1947-12-02,30,signature block,1,GHIDETTI
+t772,question,sed315,1947-12-02,30,signature block,1,SILIPO
+t773,question,sed315,1947-12-02,30,signature block,1,CAMANGI
+t774,vote request,sed315,1947-12-02,25,presentation formula,15,"Uberti, Moro, Ponti, Dominedò, Fabriani, Delli Castelli Filomena, Coppi, Bubbio,Nicotra Maria, Ambrosini, Murdaca, Damiani, Alberti, Bosco Lucarelli, Ermini"
+t775,question,sed317,1947-12-03,30,signature block,2,"GIUA, FORNARA"
+t776,question,sed317,1947-12-03,30,signature block,2,"LEONE GIOVANNI, GABRIELI"
+t777,question,sed317,1947-12-03,30,signature block,1,DE MARIA
+t778,question,sed317,1947-12-03,31,signature block,1,ZAGARI
+t779,question,sed317,1947-12-03,31,signature block,1,GHIDETTI
+t780,question,sed317,1947-12-03,31,signature block,1,PIEMONTE
+t781,question,sed317,1947-12-03,31,signature block,4,"NoBILE, CoRBINO, BOZZI, COSTANTINI"
+t782,question,sed317,1947-12-03,31,signature block,1,RESCIGNO
+t783,vote request,sed317,1947-12-03,13,presentation formula,15,"Laconi, Grieco, Reale Eugenio, Moranino, Farina, Pellegrini, Longo, Rossi Maria Maddalena, Musolino, Gullo Fausto, Platone, Lozza, Cremaschi Olindo, Pucci, Lombardi Carlo"
+t784,question,sed319,1947-12-04,33,signature block,1,LUSSU
+t785,question,sed319,1947-12-04,33,signature block,1,BRASCHI
+t786,question,sed319,1947-12-04,33,signature block,1,SCOTTI ALESSANDRO
+t787,question,sed319,1947-12-04,34,signature block,1,PERSICO
+t788,question,sed319,1947-12-04,34,signature block,1,BASTIANETTO
+t789,question,sed319,1947-12-04,34,signature block,1,RUSSO PEREZ
+t790,question,sed321,1947-12-05,38,signature block,3,"CARBONI ENRICO, CHIEFFI, MANNIRONI"
+t791,question,sed321,1947-12-05,38,signature block,1,PERSICO
+t792,question,sed321,1947-12-05,39,signature block,1,ROVEDA
+t793,question,sed321,1947-12-05,39,signature block,10,"PERSICO, CEVOLOTTO, TREVES, CoRBINO, Bonino, PERLINGIERI, GUERRIERI EMANUELE, CANDELA, GASPAROTTO, BASILE"
+t794,question,sed321,1947-12-05,39,signature block,1,SAPIENZA
+t795,question,sed321,1947-12-05,39,signature block,1,RICCIO STEFANO
+t796,question,sed321,1947-12-05,39,signature block,1,PRETI
+t797,question,sed321,1947-12-05,40,signature block,1,MONTAGNANA MARIO
+t798,question,sed321,1947-12-05,40,signature block,1,MASTINO PIETRO
+t799,question,sed321,1947-12-05,40,signature block,1,MAZZEI
+t800,question,sed322,1947-12-06,21,signature block,5,"Massini, D’OnoFRIO, NOBILE, GALLICO Napia, MINIO"
+t801,question,sed322,1947-12-06,21,signature block,1,CASSIANI
+t802,question,sed322,1947-12-06,21,signature block,2,"LIZZADRI, ROMITA"
+t803,question,sed322,1947-12-06,22,signature block,1,TUMMINELLI
+t804,question,sed322,1947-12-06,22,signature block,1,FERRARESE
+t805,question,sed328,1947-12-11,20,signature block,1,CORBI
+t806,question,sed328,1947-12-11,20,signature block,1,PAOLUCCI
+t807,question,sed328,1947-12-11,20,signature block,1,GRAZI
+t808,interpellation,sed328,1947-12-11,31,signature block,1,GRAZI
+t809,interpellation,sed328,1947-12-11,32,signature block,28,"‘GoRRERI, MONTALBANO, FLECCHIA, SALERNO, —(CIANCA, =—.MONTAGNANA Rita, GALLICO SPANO NADIA, LEONE FRANCESCO, TonELLO, MAZZONI, Persico, CANEPA, FABBRI, RoSSI MarIA MADDALENA, LonGo, FEDELI ARMANDO, AMADEI, MOLINELLI, BEI . ApELE, CaRPANO MAGLIOLI, ViIGoRELLI, COSTANTINI, D'Amico, LussU, BARBARESCHI, FARALLI, GRAZI, MACRELLI"
+t810,interpellation,sed328,1947-12-11,32,signature block,1,COLITTO
+t811,question,sed328,1947-12-11,32,signature block,1,GRIECO
+t812,question,sed328,1947-12-11,33,signature block,1,VINCIGUERRA
+t813,question,sed328,1947-12-11,33,signature block,6,"Nasi, RUBILLI, VeRONI, DI Fausto, MARINARO, BERTINI"
+t814,question,sed328,1947-12-11,33,signature block,1,MOLINELLI
+t815,question,sed328,1947-12-11,33,signature block,1,MUSOTTO
+t816,question,sed328,1947-12-11,34,signature block,1,SCOTTI ALESSANDRO
+t817,question,sed328,1947-12-11,34,signature block,1,RESCIGNO
+t818,question,sed328,1947-12-11,34,signature block,1,BASTIANETTO
+t819,question,sed328,1947-12-11,35,signature block,1,BIAGIONI
+t820,order of the day,sed329,1947-12-12,1,signature block,6,"CANEVARI, LONGHENA, TREVES, CANEPA, CAPORALI, FIETTA"
+t821,question,sed330,1947-12-12,2,signature block,17,"NENNI, NAsI, BRUNI, Rossi MARIA MADDALENA, JACOMETTI, MALAGUGINI, MASSOLA, GALLICO SPANO NADIA, Li Causi, GRIECO, PUCCI, - PESENTI, NEGARVILLE, MONTAGNANA MARIO, FARINI, MARIANT, GIUA, FORNARA"
+t822,order of the day,sed330,1947-12-12,23,signature block,15,"PeRASSI, UBERTI, Rossi PAOLO, MAGRINI, BELLUSCI, DOSSETTI, NumeRroso, CAPPI, PERA, RODI, CoLITTO, GIANNINI, ZERBI, BULLONI, MEDA LUIGI"
+t823,question,sed330,1947-12-12,24,signature block,9,"JACOMETTI, RAVAGNAN, CIANCA, SCHIAVETTI, MINnIO, SPANO, FARINI CARLO, . BUFFONI, PERTINI"
+t824,question,sed330,1947-12-12,24,signature block,1,MATTEOTTI MATTEO
+t825,question,sed330,1947-12-12,25,signature block,1,GORTANI
+t826,question,sed330,1947-12-12,25,signature block,3,"VIALE, BERTONE, CHIARAMELLO"
+t827,question,sed330,1947-12-12,25,signature block,1,PIEMONTE
+t828,question,sed343,1947-12-20,36,signature block,1,SIMONINI
+t829,question,sed343,1947-12-20,36,signature block,1,MARINA
+t830,question,sed343,1947-12-20,36,signature block,3,"Russo PEREZ, CASTIGLIA, PATRICOLO"
+t831,question,sed343,1947-12-20,36,signature block,2,"DE MARTA, CODACCI PISANELLI"
+t832,question,sed343,1947-12-20,36,signature block,1,MONTERISI
+t833,question,sed343,1947-12-20,37,signature block,4,"MonTALBANO, Li Gausi, D'AMICO, FIORE"
+t834,question,sed343,1947-12-20,37,signature block,1,BONINO
+t835,question,sed343,1947-12-20,37,signature block,2,"GHIDETTI, PELLEGRINI"
+t836,question,sed343,1947-12-20,38,signature block,1,TEGA
+t837,question,sed343,1947-12-20,38,signature block,1,BURATO
+t838,question,sed343,1947-12-20,38,signature block,1,CASO
+t839,question,sed346,1947-12-22,23,signature block,1,CASTIGLIA
+t840,question,sed346,1947-12-22,23,signature block,2,"Coccia, MENTASTI"
+t841,question,sed346,1947-12-22,23,signature block,2,"SEGALA, PERSICO"
