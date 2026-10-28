@@ -260,6 +260,16 @@ _tv['id_emendamento'] = _tv.id_emendamento.astype(int); _tv = _tv.set_index('id_
 E['materia'] = E.id_emendamento.map(_tv.materia).fillna('')
 E['articolo_costituzione'] = E.id_emendamento.map(_tv.articolo_costituzione).fillna('')
 E['controllo_data'] = E.id_emendamento.map(_tv.tavola).fillna('')
+# qualita' dell'abbinamento di ogni arco (punto 18): il criterio migliore con cui quel nome e' stato riconosciuto in una
+# delle menzioni dell'emendamento; gli elenchi corretti a mano sono stati letti sull'immagine
+RANGO = ['esatto', 'esatto+partito', 'prefisso', 'ambiguo+cofirme', 'ambiguo+seduta', 'approssimato', 'approssimato+partito']
+_mt = pd.read_csv(os.path.join(EST, 'menzioni_tutte.csv'), usecols=['id_menzione', 'id_emendamento']).dropna()
+_mn = pd.read_csv(os.path.join(EST, 'menzioni_nomi.csv'), usecols=['id_menzione', 'id_dep', 'abbinamento']).merge(_mt, on='id_menzione')
+_mn = _mn[_mn.abbinamento.isin(RANGO)].assign(r=lambda d: d.abbinamento.map(RANGO.index))
+_best = _mn.sort_values('r').drop_duplicates(['id_emendamento', 'id_dep']).set_index(['id_emendamento', 'id_dep']).abbinamento
+L['abbinamento'] = ['correzione manuale' if e in corretti else _best.get((e, d), 'decisione manuale') for e, d in zip(L.id_emendamento, L.id_dep)]
+CONSERVATIVO = {'esatto', 'esatto+partito', 'correzione manuale'}
+print('Abbinamento degli archi di co-firma:', L.abbinamento.value_counts().to_dict())
 E['id_emendamento'] = 'a' + E.id_emendamento.astype(str)
 L['id_emendamento'] = 'a' + L.id_emendamento.astype(str)
 L = L.drop_duplicates().sort_values(['id_emendamento', 'id_dep'])
@@ -270,7 +280,8 @@ E_it = E.rename(columns={'firmatari': 'firmatari_id'})[['id_emendamento', 'firma
         'articolo_menzionato', 'articolo_in_discussione', 'materia', 'articolo_costituzione', 'controllo_data', 'prima_seduta', 'data', 'pagina', 'fonte', 'url_pdf', 'id_presentatore', 'presentatore_fonte',
         'tipo_emendamento', 'esito', 'testo']]
 E_it.to_csv(os.path.join(IT, 'emendamenti_nodi.csv'), index=False)
-L[['id_dep', 'id_emendamento', 'ruolo']].to_csv(os.path.join(IT, 'edgelist_emendamenti.csv'), index=False)
+L[['id_dep', 'id_emendamento', 'ruolo', 'abbinamento']].to_csv(os.path.join(IT, 'edgelist_emendamenti.csv'), index=False)
+L[L.abbinamento.isin(CONSERVATIVO)][['id_dep', 'id_emendamento', 'ruolo', 'abbinamento']].to_csv(os.path.join(IT, 'edgelist_emendamenti_conservativa.csv'), index=False)
 E_en = E_it.drop(columns='firmatari_id').rename(columns={
     'id_emendamento': 'id_amendment', 'n_firmatari': 'n_signatories', 'completo': 'complete',
     'articolo_menzionato': 'article_mentioned', 'articolo_in_discussione': 'article_under_discussion', 'materia': 'subject_title',
@@ -290,9 +301,14 @@ E_en = E_en.rename(columns={'testo': 'text_it'})
 E_en[['id_amendment', 'n_signatories', 'complete', 'source', 'sitting', 'date', 'pdf_page', 'article_mentioned', 'article_under_discussion', 'subject_title', 'constitution_article', 'date_check', 'url_pdf',
       'id_proposer', 'proposer_source', 'amendment_type', 'outcome', 'text_it']] \
     .to_csv(os.path.join(EN, 'amendments_nodes.csv'), index=False)
-L.assign(role=L.ruolo.map({'presentatore': 'proposer', 'firmatario': 'signatory'})) \
-    .rename(columns={'id_dep': 'id_member', 'id_emendamento': 'id_amendment'})[['id_member', 'id_amendment', 'role']] \
-    .to_csv(os.path.join(EN, 'edgelist_amendments.csv'), index=False)
+MATCH_EN = {'esatto': 'exact', 'esatto+partito': 'exact+party', 'prefisso': 'prefix', 'ambiguo+cofirme': 'namesake+cosignatures',
+            'ambiguo+seduta': 'namesake+sitting', 'approssimato': 'approximate', 'approssimato+partito': 'approximate+party',
+            'correzione manuale': 'manual correction', 'decisione manuale': 'manual decision', 'fascia alfabetica': 'alphabetical band',
+            'omonimo risolto': 'namesake resolved', 'frammento': 'fragment'}
+_Len = L.assign(role=L.ruolo.map({'presentatore': 'proposer', 'firmatario': 'signatory'}), matching=L.abbinamento.map(MATCH_EN)) \
+    .rename(columns={'id_dep': 'id_member', 'id_emendamento': 'id_amendment'})
+_Len[['id_member', 'id_amendment', 'role', 'matching']].to_csv(os.path.join(EN, 'edgelist_amendments.csv'), index=False)
+_Len[L.abbinamento.isin(CONSERVATIVO).values][['id_member', 'id_amendment', 'role', 'matching']].to_csv(os.path.join(EN, 'edgelist_amendments_conservative.csv'), index=False)
 
 # ---------- menzioni nei discorsi (tools/estrai_menzioni_discorso.py) ----------
 f_md = os.path.join(EST, 'menzioni_discorso.csv')
@@ -349,7 +365,15 @@ Vt['on_constitution'] = (~Vt.id_voto.isin(NON_COSTITUZIONE)).astype(int)
 Vt['id_voto'] = 'v' + Vt.id_voto.astype(str); Ev['id_voto'] = 'v' + Ev.id_voto.astype(str)
 Vt = Vt.rename(columns={'oggetto': 'excerpt_it'})
 Vt.drop(columns=[]).to_csv(os.path.join(IT, 'voti_nodi.csv'), index=False)
-Ev[['id_dep', 'id_voto', 'voto']].to_csv(os.path.join(IT, 'edgelist_voti.csv'), index=False)
+_vn = pd.read_csv(os.path.join(EST, 'voti_nominali.csv'), keep_default_na=False)
+_vn = _vn[_vn.id_dep != ''].assign(id_voto=lambda d: 'v' + d.id_voto.astype(str))
+_RV = ['correzione manuale', 'esatto', 'omonimo risolto', 'fascia alfabetica', 'approssimato']
+_vn = _vn[_vn.abbinamento.isin(_RV)].assign(r=lambda d: d.abbinamento.map(_RV.index)).sort_values('r').drop_duplicates(['id_voto', 'id_dep'])
+_bv = _vn.set_index(['id_voto', 'id_dep']).abbinamento
+Ev['abbinamento'] = [_bv.get((v, d), 'decisione manuale') for v, d in zip(Ev.id_voto, Ev.id_dep)]
+print('Abbinamento degli archi di voto:', Ev.abbinamento.value_counts().to_dict())
+Ev[['id_dep', 'id_voto', 'voto', 'abbinamento']].to_csv(os.path.join(IT, 'edgelist_voti.csv'), index=False)
+Ev[Ev.abbinamento.isin({'esatto', 'correzione manuale'})][['id_dep', 'id_voto', 'voto', 'abbinamento']].to_csv(os.path.join(IT, 'edgelist_voti_conservativa.csv'), index=False)
 ctrl = lambda c: 'ok' if c == 'ok' else ('no official totals' if c == 'senza totali' else
        'void: quorum not reached, totals not announced' if str(c).startswith('votazione nulla') else
        ('verified: printed list differs from announced totals' if str(c).startswith('verificato') else 'to check'))
@@ -360,9 +384,10 @@ V_en = Vt.rename(columns={'id_voto': 'id_vote', 'seduta': 'sitting', 'data': 'da
 V_en['check'] = V_en.check.map(ctrl)
 V_en[['id_vote', 'sitting', 'date', 'pdf_page', 'label_en', 'on_constitution', 'yes_official', 'yes_matched', 'no_official',
       'no_matched', 'abstain_matched', 'leave_matched', 'quorum_failed', 'check', 'excerpt_it', 'url_pdf']].to_csv(os.path.join(EN, 'votes_nodes.csv'), index=False)
-Ev.assign(vote=Ev.voto.map({'sì': 'yes', 'no': 'no', 'astenuto': 'abstain'})) \
-  .rename(columns={'id_dep': 'id_member', 'id_voto': 'id_vote'})[['id_member', 'id_vote', 'vote']] \
-  .to_csv(os.path.join(EN, 'edgelist_votes.csv'), index=False)
+_Ven = Ev.assign(vote=Ev.voto.map({'sì': 'yes', 'no': 'no', 'astenuto': 'abstain'}), matching=Ev.abbinamento.map(MATCH_EN)) \
+  .rename(columns={'id_dep': 'id_member', 'id_voto': 'id_vote'})
+_Ven[['id_member', 'id_vote', 'vote', 'matching']].to_csv(os.path.join(EN, 'edgelist_votes.csv'), index=False)
+_Ven[Ev.abbinamento.isin({'esatto', 'correzione manuale'}).values][['id_member', 'id_vote', 'vote', 'matching']].to_csv(os.path.join(EN, 'edgelist_votes_conservative.csv'), index=False)
 
 print('\nEmendamenti:', len(E), '| con 2+ firmatari:', int((E.n_firmatari >= 2).sum()), '| legami:', len(L))
 print('Voti:', len(Vt), '| controllo:', Vt.controllo.str.split(':').str[0].value_counts().to_dict(),
