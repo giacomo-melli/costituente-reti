@@ -341,4 +341,6 @@ Ev.assign(vote=Ev.voto.map({'sì': 'yes', 'no': 'no', 'astenuto': 'abstain'})) \
 print('\nEmendamenti:', len(E), '| con 2+ firmatari:', int((E.n_firmatari >= 2).sum()), '| legami:', len(L))
 print('Voti:', len(Vt), '| controllo:', Vt.controllo.str.split(':').str[0].value_counts().to_dict(),
       '| da etichettare:', int((Vt.label_en.str.startswith('to be')).sum()), '| legami:', len(Ev))
+# variabili dei costituenti ricavate dagli altri file (commissione, presenza agli appelli)
+print(subprocess.run([sys.executable, os.path.join(QUI, 'tools', 'arricchisci_costituenti.py')], capture_output=True, text=True).stdout)
 print('\nFatto. File scritti in', DS)

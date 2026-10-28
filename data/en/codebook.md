@@ -259,6 +259,20 @@ Automatic coding: sections such as Works, Notes, and Bibliography are excluded, 
 | `const_degree_proj`, `const_eigenvector`, `const_betweenness` | Constitutional bodies only |
 | `n_chairs`, `n_offices` | Chairs held; offices held (chair, vice-chair, secretary, quaestor) |
 
+### Constitution Committee and roll-call attendance
+
+| Variable | Description |
+|---|---|
+| `committee_75` | 1 if ever a member of the Committee for the Constitution (97 people, because of replacements) |
+| `subcommittee` | `I`, `II`, `III` (several separated by «;») |
+| `drafting_committee` | Drafting Committee, known as «of the 18» (20 people over time) |
+| `committee_role` | Highest office in the Committee or its bodies: `chair`, `vice-chair`, `secretary`, `member` |
+| `votes_in_office` | Roll-call votes held while in office (of 27) |
+| `votes_present`, `votes_on_leave`, `votes_absent` | Answered yes, no or abstained; on leave; in no list. Votes void for lack of quorum count, since the roll call took place |
+| `share_present` | `votes_present / votes_in_office`. A printed but unmatched name makes a voter look absent: the error is the one measured on official totals (2.3 names out of about 350 per vote on average). Terracini, President of the Assembly from February 1947, never appears in the lists |
+
+Source: `edgelist_bodies.csv` (bodies o621–o625) and `edgelist_votes.csv`; computed by `pipeline/tools/arricchisci_costituenti.py`.
+
 ### Activity and interaction
 
 | Variable | Description |
