@@ -85,6 +85,9 @@ def scomponi(piece, data):
                 cands = [c for c in cands if c.inizio_mandato <= data <= c.fine_mandato] or cands
             if j < len(toks):                                   # nome proprio dopo il cognome?
                 byname = [c for c in cands if c.k_nome.startswith(toks[j][:4]) or toks[j][:4] in c.k_nome]
+                # il token dopo e' un altro cognome, non il nome proprio: «Longhena Mariani Enrico» (sed104, punto perso
+                # dall'OCR) non e' Longhena Mario seguito da «Enrico»
+                if toks[j] in IDX and not any(toks[j] in c.k_nome for c in byname): byname = []
                 if byname and len(toks[j]) >= 3:
                     nn = byname[0].k_nome; jj = j
                     while jj < len(toks) and toks[jj] in nn: jj += 1      # consuma tutto il nome («VITTORIO EMANUELE»)
@@ -126,7 +129,7 @@ def page_at(pm, pos):
 
 M_SI = re.compile(r'Rispond[oe]no\s+s[iìl1]\s*[:;.]?', re.I)
 M_NO = re.compile(r'Rispond[oe]no\s+no\s*[:;.]?', re.I)
-M_AST = re.compile(r'Si\s+(?:sono\s+)?astengono\s*[:;.]?|Si\s+sono\s+astenuti\s*[:;.]?|Si\s+[èe]\s+astenut[oa]\s*[:;.]?|Astenut[oi]\s*[:;]', re.I)   # anche l'intestazione secca «Astenuti:» (coi due punti: quella del riquadro dei totali non li ha)
+M_AST = re.compile(r'Si\s+(?:sono\s+)?astengono\s*[:;.]?|Si\s+sono\s+astenu[a-zìí]{1,3}\s*[:;.]?|Si\s+[èe]\s+astenut[oa]\s*[:;.]?|Astenut[oi]\s*[:;]', re.I)   # anche l'intestazione secca «Astenuti:» (coi due punti: quella del riquadro dei totali non li ha)
 M_CONG = re.compile(r"(?:Sono|Deputati|[EÈ])\s+in\s+congedo\s*[:;.]?|In\s+congedo\s*[:;.]?", re.I)
 M_END = re.compile(r'Risultato\W{0,3}della\W{0,3}votazione|Hanno\W{0,4}rispost\w{0,2}\W{0,4}s|Comunico\W{0,3}il\W{0,3}risultato|Annuncio\W{0,3}il\W{0,3}risultato|Presenti\W{0,4}e\W{0,4}votanti|\bVotanti\W{0,8}\d{2,4}', re.I)
 
@@ -136,14 +139,27 @@ def nomi_da(seg):
     mp = PROSA.search(seg)
     if mp: seg = seg[:mp.start()]
     seg = re.split(r"PRESIDENTE\s*\.|Hanno risposto|Risultato", seg)[0]
+    # cognome spezzato dal cambio di pagina, con la riga di rifiuti della testatina in mezzo
+    # («Mari- . =w_rr———111—_rwrvr——— naro», sed075)
+    seg = re.sub(r"(?<=[A-Za-zà-ÿ])-[\s.]*\S*[=_—]{3,}\S*\s+(?=[a-zà-ÿ]{2,})", '', seg)
     s = re.sub(r"[|©°“”\"«»‘_~*]", ' ', seg)
+    # sillabazione anche con trattino doppio o segni spuri dopo il trattino («Gar-- bonari», «Se- - reni», «Spa- .| no»,
+    # «Fede-- ‘rici»): prima il pezzo dopo l'a capo restava un nome a se', scartato perche' minuscolo
+    s = re.sub(r"(?<=[A-Za-zà-ÿ])-{1,2}[\s.,:;'’-]*(?=[a-zà-ÿ]{2,})", '', s)
+    s = re.sub(r"(?<=\b[A-Z][a-z])\.\s*-\s+(?=[a-z]{3,})", '', s)          # «Ce. - volotto»
+    s = re.sub(r"\b(De|Di|Da|Del|Della|La|Lo|Li)\.\s+(?=[A-Z])", r"\1 ", s)   # «De. Maria»
     s = re.sub(r"(\w)-\s+([a-zàèéìòù])", r"\1\2", s)                 # sillabazione «Al- berti»
     parts = re.split(r'\s*[—–]+\s*-?\s*|\s+-\s+|\s*-{2,}\s*|\s*\.\s*(?=[A-Z][a-z])', s)
     out = []
     for p in parts:
         p = re.sub(r"[^A-Za-zÀ-ÿ' ]", ' ', p)
-        p = re.sub(r"\b(?!di\b|de\b)[a-z]{1,2}\b", ' ', p)                # rumore OCR (n, o...), ma non «di»
+        p = re.sub(r"(?<![A-Za-zÀ-ÿ'])(?!di\b|de\b)[a-zà-ÿ]{1,2}(?![A-Za-zÀ-ÿ'])", ' ', p)   # rumore OCR (n, o, «ì Alberti»), ma non «di»
+        p = re.sub(r"^\s*(?:(?!(?:D|DE|DI|DA|DO|LA|LO|LE)\b)[A-Z]{1,2}\s+)+(?=[A-ZÀ-Ý][a-zà-ÿ])", ' ', p)   # sigle spurie davanti al nome («LI Caccuri», sed073)
         p = re.sub(r"\s+", ' ', p).strip(" '")
+        if re.fullmatch(r"[a-zà-ÿ][a-zà-ÿ']{3,}", p): p = p[0].upper() + p[1:]   # iniziale letta minuscola («lussu», sed187)
+        if p and not p[0].isupper():      # rifiuti dell'OCR davanti al nome («rrF coprreoeoe LI Caccuri», sed073): si riparte dal nome
+            m_ = re.search(r"(?:^|\s)((?:D[eiao]?\s|De\s|Di\s)?[A-ZÀ-Ý][a-zà-ÿ'].*)$", p)
+            if m_ and len(m_.group(1)) >= 4: p = m_.group(1)
         if len(re.sub(r"[^A-Za-zÀ-ÿ]", '', p)) >= 3 and p[0].isupper():
             out.append(p)
     return out
@@ -177,6 +193,12 @@ TOTALI_CORRETTI = {('sed102', 'si', 147): 117}   # p. 18: 404 - 3 = 401 = 117 + 
 
 # Nomi stampati spezzati dal cambio pagina e abbinati alla persona sbagliata:
 # ricodifica manuale verificata sull'immagine del PDF.
+# Nomi stampati che l'OCR non ha letto affatto (la riga manca dal testo), aggiunti dopo la lettura dell'immagine,
+# e una correzione del resoconto stesso:
+# - sed177 p17: «Vicentini», ultimo nome dei «no» dopo «Uberti.», assente in entrambe le letture OCR
+# - sed296: «ERRATA-CORRIGE … il deputato Conti deve figurare come astenuto nella votazione nominale sull'ordine
+#   del giorno Benedettini» (sed312 p20); nel resoconto originale Conti non e' fra gli astenuti
+NOMI_AGGIUNTI = {('sed177', 'no'): ['VICENTINI'], ('sed296', 'astenuto'): ['CONTI']}
 CORREZIONI_NOMI = {('sed270', 'no', 'RICI'): 'CLERICI'}   # «Cle- / rici» a cavallo delle pp. 18-19 (Ricci Giuseppe votò sì)
 
 # Voti controllati a mano sull'immagine del PDF: lo scarto residuo non è un errore di
@@ -185,6 +207,7 @@ VERIFICATI = {('sed180', 16): 'verificato: elenco stampato con meno nomi dei tot
               ('sed270', 18): 'verificato: elenco stampato con più nomi dei totali (91 sì, 266 no)'}
 
 voti, righe = [], []
+SEGMENTI = {}
 sedute = sorted({os.path.basename(f).split('_')[0] for f in glob.glob(os.path.join(TXT, 'sed*_p*.txt'))})
 for s in sedute:
     text, pm = flatten(s)
@@ -210,11 +233,14 @@ for s in sedute:
         oggetto = before[max(0, k - 500):k + 200] if k >= 0 else before[-600:]
         vid = len(voti) + 1
         cnt = {}
+        if os.environ.get('SEGMENTI'): SEGMENTI[vid] = dict(segs)     # per i controlli di completezza
+        for voto in [v for (ss, v) in NOMI_AGGIUNTI if ss == s and v not in segs]: segs[voto] = ''
         for voto, seg in segs.items():
-            names = nomi_da(seg)
+            names = nomi_da(seg) + NOMI_AGGIUNTI.get((s, voto), [])
             cnt[voto] = 0
             for piece in names:
                 for nm, r, how in scomponi(piece, data):
+                    if piece in NOMI_AGGIUNTI.get((s, voto), []) and r is not None: how = 'correzione manuale'
                     fix = CORREZIONI_NOMI.get((s, voto, nm))
                     if fix:
                         r, how = IDX[fix][0], 'correzione manuale'
@@ -235,18 +261,25 @@ for s in sedute:
         for _vot in (totale(after, r'\bVotanti'), ultimo_numero(r'\bVotanti'), (_pres - _ast) if _pres and _ast is not None else None):
             _r = ripara_totali(t_si, t_no, _vot)
             if _vot and None not in _r and sum(_r) == _vot: t_si, t_no = _r; break
+        # astenuti: la riga del riquadro e' corta e l'OCR vi aggiunge cifre («8» letto «80», sed086); vale l'aritmetica
+        # presenti - (si' + no) quando il riquadro stampa i presenti
+        if _pres and t_si is not None and t_no is not None and 0 <= _pres - t_si - t_no <= 60:
+            _calc = _pres - t_si - t_no                  # si usa solo se la lettura manca o ne e' una versione sporca
+            if _ast is None or _ast > 60 or (str(_ast).startswith(str(_calc)) and _ast != _calc): _ast = _calc
         nx = M_SI.search(text, m.end() + 10)
         legale = NUM_LEGALE.search(text[m.end():nx.start() if nx else m.end() + 40000])
         voti.append(dict(id_voto=vid, seduta=s, data=data, pagina=page_at(pm, m.start()),
                          si_ufficiali=TOTALI_CORRETTI.get((s, 'si', t_si), t_si),
                          no_ufficiali=TOTALI_CORRETTI.get((s, 'no', t_no), t_no),
                          numero_legale_mancato=int(bool(legale) and t_si is None),
-                         astenuti_ufficiali=totale(after, r'Si\W{0,3}sono\W{0,3}astenuti'),
+                         astenuti_ufficiali=_ast,   # riga «Astenuti . . 3» del riquadro (prima si cercava «Si sono astenuti», che il riquadro non stampa)
                          si_abbinati=cnt.get('sì', 0), no_abbinati=cnt.get('no', 0), astenuti_abbinati=cnt.get('astenuto', 0),
                          congedo_abbinati=cnt.get('congedo', 0), oggetto=re.sub(r'\s+', ' ', oggetto).strip(),
                          url_pdf=f'https://documenti.camera.it/_dati/costituente/lavori/Assemblea/{s}/{s}nc.pdf#page={page_at(pm, m.start())}'))
 
 V = pd.DataFrame(voti); R = pd.DataFrame(righe)
+if os.environ.get('SEGMENTI'):
+    import json; json.dump(SEGMENTI, open(os.environ['SEGMENTI'], 'w'), ensure_ascii=False)
 
 # ---------- recupero per fascia alfabetica ----------
 # Gli elenchi dell'appello nominale sono stampati in ordine alfabetico: un nome storpiato
@@ -326,7 +359,11 @@ def recupera_fascia(R):
     return rec
 # una persona vota una volta sola: righe ripetute nello stesso voto sono duplicati dell'OCR
 # («Cingolani Mario» e poi «Cingolani»), e gonfiano il conteggio mascherando nomi mancanti
-_d = R[R.id_dep.astype(str) != ''].duplicated(subset=['id_voto', 'id_dep'], keep='first')
+# Solo dentro lo stesso elenco: un nome stampato fra i si' e fra i no e' un conflitto, risolto sotto (prima il secondo
+# elenco veniva cancellato e la persona contata nel primo, anche quando il primo abbinamento era quello sbagliato)
+_d = R[R.id_dep.astype(str) != ''].duplicated(subset=['id_voto', 'voto', 'id_dep'], keep='first')
+R['id_duplicato'] = ''
+R.loc[_d[_d].index, 'id_duplicato'] = R.loc[_d[_d].index, 'id_dep']
 R.loc[_d[_d].index, ['id_dep', 'abbinamento']] = ['', 'duplicato']
 print('righe duplicate rimosse:', int(_d.sum()))
 def omonimi_per_esclusione(R):
@@ -353,6 +390,14 @@ def omonimi_per_esclusione(R):
 print('omonimi risolti (esclusione o nome staccato):', omonimi_per_esclusione(R))
 print('approssimati fuori ordine alfabetico, riaperti:', fuori_ordine(R))
 print('recupero fascia alfabetica:', recupera_fascia(R))
+# le correzioni successive (ordine alfabetico, fascia) possono aver tolto la prima occorrenza di un nome segnato come
+# duplicato («PRELL» era Pella, poi Preti: il «Pella» stampato dopo restava cancellato, sed188): si ripristina
+_n_rip = 0
+for i in R.index[(R.abbinamento == 'duplicato') & (R.id_duplicato != '')]:
+    x = R.at[i, 'id_duplicato']
+    if not ((R.id_voto == R.at[i, 'id_voto']) & (R.voto == R.at[i, 'voto']) & (R.id_dep == x)).any():
+        R.loc[i, ['id_dep', 'abbinamento']] = [x, 'esatto']; _n_rip += 1
+print('duplicati ripristinati dopo le correzioni:', _n_rip)
 
 c = R[R.id_dep.astype(str) != ''].groupby(['id_voto', 'voto']).size().unstack(fill_value=0)
 for col, v in [('si_abbinati', 'sì'), ('no_abbinati', 'no'), ('astenuti_abbinati', 'astenuto'), ('congedo_abbinati', 'congedo')]:

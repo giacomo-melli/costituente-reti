@@ -43,6 +43,35 @@ def esito_per(r):
             a = APPROV.search(seg, m.end(), m.end() + 900)
             if a and (len(tn) < 30 or comune(tn, seg[m.start():a.end()])):
                 ev.append((m.start(), 'respinto' if a.group('no') else 'approvato', s, pm, start))
+        # votazione per appello nominale: l'esito e' la didascalia «(L'Assemblea approva / non approva)» dopo il risultato,
+        # e l'emendamento e' l'ultimo nominato prima dell'intestazione «Votazione nominale» (sed073 Cosattini, sed187
+        # Scoccimarro-Veroni, sed311 Lami Starnuti: prima restavano «non determinato»)
+        TESTA = r"Votazione\s+(?:per\s+appello\s+)?nominale\s*[.°]|(?:Ind[iì]co|Procediamo\s+alla|Si\s+proceda\W{0,3}\s?alla|Pongo[^.¶]{0,40}?in\s+vota\W{0,3}\s?zione[^.¶]{0,30}?per)\s+(?:la\s+)?(?:vota\W{0,3}\s?zione\s+)?(?:per\s+)?(?:appello\s+)?no\W{0,3}\s?minal"
+        NOME = r"([A-Z][a-zà-ÿ'’]+(?:\s[A-Z][a-zà-ÿ'’]+)?)"
+        for m in re.finditer(TESTA, seg):
+            pre = seg[max(0, m.start() - 4000):m.start()]
+            dopo = t[start + m.end():start + m.end() + 40000]     # dal testo intero: l'elenco della chiama e' lungo
+            # l'emendamento e' quello nominato nell'annuncio del voto («Indico la votazione nominale sull'emendamento La Rocca»,
+            # «Pongo in votazione, per appello nominale, l'emendamento aggiuntivo degli onorevoli Corbino, Marchesi»);
+            # se l'annuncio non lo nomina, l'ultimo emendamento nominato prima, esclusa la richiesta di appello nominale
+            ann = re.search(r"emendament\w*\s+(?:aggiuntiv\w+\s+|soppressiv\w+\s+|sostitutiv\w+\s+)?(?:(?:presen\W{0,3}\s?tat\w+|propost\w+)\s+(?:dal\W{0,3}\s?l?['’]?\s?onorevole\s+|dagli\W{0,3}\s?onorevoli\s+))?(?:dell['’]\s?onorevole\s+|degli\W{0,3}\s?o\w*revoli\s+)?" + NOME, seg[m.start():m.end() + 400])
+            if ann: chi = ann.group(1)
+            else:
+                men = [x for x in re.finditer(r"emendament\w*\s+(?:(?:presentat\w+|propost\w+|firmat\w+)\s+)?(?:dal|dell|degli|dagli)?\W{0,3}\s?(?:onorevol\w\s+)?" + NOME, pre)
+                       if not re.search(r"appello\s+nominale|chiest", pre[max(0, x.start() - 80):x.end() + 20])]
+                if not men: continue
+                chi = men[-1].group(1)
+            tutti_c = {str(cogn.get(x, '')).split()[0] for x in str(r.firmatari).split('|') if cogn.get(x, '')}
+            # l'emendamento e' chiamato col nome del primo firmatario, ma talvolta con quello di chi lo ha svolto
+            # («emendamento Ravagnan» per l'elenco Laconi, Ravagnan, Grieco): vale anche un altro firmatario se il testo coincide
+            if not re.match(sur, chi) and not (chi.split()[0] in tutti_c and len(tn) >= 30 and comune(tn, seg[max(0, m.start() - 6000):m.end() + 800])): continue
+            # con piu' firmatari, l'elenco dell'annuncio non deve nominare altri («degli onorevoli Scoccimarro e Veroni» non
+            # e' l'emendamento Scoccimarro-Pesenti-Lombardi citato poco prima)
+            el = re.search(r"emendament\w*\s+(?:aggiuntiv\w+\s+)?degli\W{0,3}\s?o\w*revoli\s+([^:.;«]{3,200})", seg[m.start():m.end() + 400])
+            if el and any(n not in tutti_c and n not in ('Presidente',) for n in re.findall(r"\b([A-Z][a-zà-ÿ'’]{2,})", el.group(1))): continue
+            nx = re.search(TESTA, dopo)
+            a = re.search(r"\(\s*L\W{0,3}\s?Assemblea\s+(?P<no>non\s+)?approva", dopo[:nx.start() if nx else len(dopo)])
+            if a: ev.append((m.start(), 'respinto' if a.group('no') else 'approvato', s, pm, start))
         for m in re.finditer(r"(?:¶|[.?!)]\s)\s*" + sur.upper() + r"[A-ZÀ-Ý '’]{0,25}\.\s+(?:[^¶]{0,400}?)\b(?:[Ll]o\s+ritiro|[Ll]i\s+ritiro|[Rr]itir\w*\b[^.¶]{0,25}emendament|[Nn]on\s+insist|[Rr]inunzio(?!\s+a\s+svolger)|[Rr]inuncio(?!\s+a\s+svolger))", seg):
             dom = seg[max(0, m.start() - 700):m.start() + 1]
             if not re.search(r"[Oo]norevole\s+" + sur + r"\b[^¶]{0,160}?(?:mant\w+|insist\w*|ritir\w*)[^¶]{0,60}\?", dom): continue

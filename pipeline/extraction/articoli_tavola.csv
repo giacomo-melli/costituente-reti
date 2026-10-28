@@ -301,7 +301,7 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 433,27,33,Parte I - Titolo II,data coerente
 434,27,33,Parte I - Titolo II,data coerente
 435,27,33,Parte I - Titolo II,data coerente
-436,28,34,Parte I - Titolo II,data coerente
+436,27,33,Parte I - Titolo II,data coerente
 437,28,34,Parte I - Titolo II,data coerente
 438,28,34,Parte I - Titolo II,data coerente
 439,28,34,Parte I - Titolo II,data coerente
@@ -325,25 +325,25 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 457,28,34,Parte I - Titolo II,data coerente
 458,28,34,Parte I - Titolo II,data coerente
 459,28,34,Parte I - Titolo II,data coerente
-460,29,9,Parte I - Titolo II,data coerente
+460,28,34,Parte I - Titolo II,data coerente
 461,29,9,Parte I - Titolo II,data coerente
 462,29,9,Parte I - Titolo II,data coerente
 463,29,9,Parte I - Titolo II,data coerente
-464,,,,giorno senza articoli del progetto
+464,29,9,Parte I - Titolo II,data coerente
 465,,,,giorno senza articoli del progetto
-467,,,,giorno senza articoli del progetto
+466,,,,giorno senza articoli del progetto
 468,,,,giorno senza articoli del progetto
 469,,,,giorno senza articoli del progetto
 470,,,,giorno senza articoli del progetto
 471,,,,giorno senza articoli del progetto
-472,30,35,Parte I - Titolo III,data coerente
+472,,,,giorno senza articoli del progetto
 473,30,35,Parte I - Titolo III,data coerente
 474,30,35,Parte I - Titolo III,data coerente
 475,30,35,Parte I - Titolo III,data coerente
 476,30,35,Parte I - Titolo III,data coerente
 477,30,35,Parte I - Titolo III,data coerente
 478,30,35,Parte I - Titolo III,data coerente
-481,30,35,Parte I - Titolo III,data coerente
+479,30,35,Parte I - Titolo III,data coerente
 482,30,35,Parte I - Titolo III,data coerente
 483,30,35,Parte I - Titolo III,data coerente
 484,30,35,Parte I - Titolo III,data coerente
@@ -359,10 +359,10 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 494,30,35,Parte I - Titolo III,data coerente
 495,30,35,Parte I - Titolo III,data coerente
 496,30,35,Parte I - Titolo III,data coerente
-498,31,4,Parte I - Titolo III,data coerente
+497,30,35,Parte I - Titolo III,data coerente
 499,31,4,Parte I - Titolo III,data coerente
 500,31,4,Parte I - Titolo III,data coerente
-501,,,,data discordante
+501,31,4,Parte I - Titolo III,data coerente
 502,,,,data discordante
 503,,,,data discordante
 504,,,,data discordante
@@ -376,22 +376,22 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 512,,,,data discordante
 513,,,,data discordante
 514,,,,data discordante
-515,,,,non determinato
-516,,,,data discordante
+515,,,,data discordante
+516,,,,non determinato
+517,,,,data discordante
 53,31,4,Parte I - Titolo III,data coerente
-517,31,4,Parte I - Titolo III,data coerente
 518,31,4,Parte I - Titolo III,data coerente
-519,,,,non determinato
+519,31,4,Parte I - Titolo III,data coerente
 520,,,,non determinato
 521,,,,non determinato
 522,,,,non determinato
 523,,,,non determinato
 524,,,,non determinato
 525,,,,non determinato
-526,32,36,Parte I - Titolo III,data coerente
+526,,,,non determinato
 527,32,36,Parte I - Titolo III,data coerente
 528,32,36,Parte I - Titolo III,data coerente
-529,33,37,Parte I - Titolo III,data coerente
+529,32,36,Parte I - Titolo III,data coerente
 530,33,37,Parte I - Titolo III,data coerente
 531,33,37,Parte I - Titolo III,data coerente
 532,33,37,Parte I - Titolo III,data coerente
@@ -399,7 +399,7 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 534,33,37,Parte I - Titolo III,data coerente
 535,33,37,Parte I - Titolo III,data coerente
 536,33,37,Parte I - Titolo III,data coerente
-537,34,38,Parte I - Titolo III,data coerente
+537,33,37,Parte I - Titolo III,data coerente
 538,34,38,Parte I - Titolo III,data coerente
 539,34,38,Parte I - Titolo III,data coerente
 540,34,38,Parte I - Titolo III,data coerente
@@ -429,11 +429,11 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 564,34,38,Parte I - Titolo III,data coerente
 565,34,38,Parte I - Titolo III,data coerente
 566,34,38,Parte I - Titolo III,data coerente
-567,36,40,Parte I - Titolo III,data coerente
-568,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
+567,34,38,Parte I - Titolo III,data coerente
+568,36,40,Parte I - Titolo III,data coerente
 569,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
-570,36,40,Parte I - Titolo III,data coerente
-571,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
+570,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
+571,36,40,Parte I - Titolo III,data coerente
 572,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
 573,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
 574,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
@@ -444,24 +444,24 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 579,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
 580,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
 581,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
-582,36,40,Parte I - Titolo III,data coerente
-583,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
+582,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
+583,36,40,Parte I - Titolo III,data coerente
 584,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
-585,,,,non determinato
-586,37,41,Parte I - Titolo III,data coerente
+585,36,40,Parte I - Titolo III,unico articolo discusso quel giorno
+586,,,,non determinato
 587,37,41,Parte I - Titolo III,data coerente
 588,37,41,Parte I - Titolo III,data coerente
 589,37,41,Parte I - Titolo III,data coerente
 590,37,41,Parte I - Titolo III,data coerente
-592,37,41,Parte I - Titolo III,data coerente
-593,,,,data discordante
+591,37,41,Parte I - Titolo III,data coerente
+593,37,41,Parte I - Titolo III,data coerente
 594,,,,data discordante
 595,,,,data discordante
 596,,,,data discordante
 597,,,,data discordante
 598,,,,data discordante
-599,38,42,Parte I - Titolo III,data coerente
-600,,,,data discordante
+599,,,,data discordante
+600,38,42,Parte I - Titolo III,data coerente
 601,,,,data discordante
 602,,,,data discordante
 603,,,,data discordante
@@ -469,7 +469,7 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 605,,,,data discordante
 606,,,,data discordante
 607,,,,data discordante
-608,40,43,Parte I - Titolo III,data coerente
+608,,,,data discordante
 609,40,43,Parte I - Titolo III,data coerente
 610,40,43,Parte I - Titolo III,data coerente
 611,40,43,Parte I - Titolo III,data coerente
@@ -477,11 +477,11 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 613,40,43,Parte I - Titolo III,data coerente
 614,40,43,Parte I - Titolo III,data coerente
 615,40,43,Parte I - Titolo III,data coerente
-617,40,43,Parte I - Titolo III,data coerente
+616,40,43,Parte I - Titolo III,data coerente
 618,40,43,Parte I - Titolo III,data coerente
 619,40,43,Parte I - Titolo III,data coerente
-620,,,,non determinato
-621,,,,data discordante
+620,40,43,Parte I - Titolo III,data coerente
+621,,,,non determinato
 622,,,,data discordante
 623,,,,data discordante
 624,,,,data discordante
@@ -492,16 +492,16 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 629,,,,data discordante
 630,,,,data discordante
 631,,,,data discordante
-633,,,,data discordante
-634,42,45,Parte I - Titolo III,data coerente
-635,,,,non determinato
-636,42,45,Parte I - Titolo III,data coerente
-637,,,,non determinato
+632,,,,data discordante
+634,,,,data discordante
+635,42,45,Parte I - Titolo III,data coerente
+636,,,,non determinato
+637,42,45,Parte I - Titolo III,data coerente
 638,,,,non determinato
 639,,,,non determinato
 640,,,,non determinato
 641,,,,non determinato
-642,43,46,Parte I - Titolo III,data coerente
+642,,,,non determinato
 643,43,46,Parte I - Titolo III,data coerente
 644,43,46,Parte I - Titolo III,data coerente
 645,43,46,Parte I - Titolo III,data coerente
@@ -511,11 +511,11 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 649,43,46,Parte I - Titolo III,data coerente
 650,43,46,Parte I - Titolo III,data coerente
 651,43,46,Parte I - Titolo III,data coerente
+652,43,46,Parte I - Titolo III,data coerente
 54,44,47,Parte I - Titolo III,data coerente
 55,44,47,Parte I - Titolo III,data coerente
-652,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
 653,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
-655,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
+654,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
 656,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
 657,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
 658,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
@@ -523,17 +523,17 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 660,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
 661,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
 662,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
-664,,,,giorno senza articoli del progetto
+663,44,47,Parte I - Titolo III,unico articolo discusso quel giorno
+665,,,,giorno senza articoli del progetto
 56,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 57,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
-666,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 667,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
-668,45,48,Parte I - Titolo IV,data coerente
-669,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
+668,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
+669,45,48,Parte I - Titolo IV,data coerente
 670,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 671,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 672,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
-674,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
+673,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 675,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 676,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 677,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
@@ -542,16 +542,16 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 680,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 681,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 682,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
+683,45,48,Parte I - Titolo IV,unico articolo discusso quel giorno
 58,49,52,Parte I - Titolo IV,data coerente
 59,49,52,Parte I - Titolo IV,data coerente
 60,49,52,Parte I - Titolo IV,data coerente
 61,49,52,Parte I - Titolo IV,data coerente
 62,49,52,Parte I - Titolo IV,data coerente
-683,46,50,Parte I - Titolo IV,data coerente
 684,46,50,Parte I - Titolo IV,data coerente
 685,46,50,Parte I - Titolo IV,data coerente
 686,46,50,Parte I - Titolo IV,data coerente
-687,47,49,Parte I - Titolo IV,data coerente
+687,46,50,Parte I - Titolo IV,data coerente
 688,47,49,Parte I - Titolo IV,data coerente
 689,47,49,Parte I - Titolo IV,data coerente
 690,47,49,Parte I - Titolo IV,data coerente
@@ -561,13 +561,12 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 694,47,49,Parte I - Titolo IV,data coerente
 695,47,49,Parte I - Titolo IV,data coerente
 696,47,49,Parte I - Titolo IV,data coerente
-697,48,51,Parte I - Titolo IV,data coerente
+697,47,49,Parte I - Titolo IV,data coerente
 698,48,51,Parte I - Titolo IV,data coerente
 699,48,51,Parte I - Titolo IV,data coerente
 700,48,51,Parte I - Titolo IV,data coerente
-701,,,,non determinato
+701,48,51,Parte I - Titolo IV,data coerente
 702,49,52,Parte I - Titolo IV,data coerente
-703,49,52,Parte I - Titolo IV,data coerente
 704,49,52,Parte I - Titolo IV,data coerente
 705,49,52,Parte I - Titolo IV,data coerente
 706,49,52,Parte I - Titolo IV,data coerente
@@ -578,31 +577,30 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 711,49,52,Parte I - Titolo IV,data coerente
 712,49,52,Parte I - Titolo IV,data coerente
 713,49,52,Parte I - Titolo IV,data coerente
+714,49,52,Parte I - Titolo IV,data coerente
 63,50,54,Parte I - Titolo IV,data coerente
 64,50,54,Parte I - Titolo IV,data coerente
 65,50,54,Parte I - Titolo IV,data coerente
-714,50,54,Parte I - Titolo IV,data coerente
-716,50,54,Parte I - Titolo IV,data coerente
+715,50,54,Parte I - Titolo IV,data coerente
 717,50,54,Parte I - Titolo IV,data coerente
 718,50,54,Parte I - Titolo IV,data coerente
 719,50,54,Parte I - Titolo IV,data coerente
 720,50,54,Parte I - Titolo IV,data coerente
 721,50,54,Parte I - Titolo IV,data coerente
 722,50,54,Parte I - Titolo IV,data coerente
-724,50,54,Parte I - Titolo IV,data coerente
+723,50,54,Parte I - Titolo IV,data coerente
 725,50,54,Parte I - Titolo IV,data coerente
-726,50,54,Parte I - Titolo IV,data coerente
 727,50,54,Parte I - Titolo IV,data coerente
 728,50,54,Parte I - Titolo IV,data coerente
-729,,,,giorno senza articoli del progetto
+729,50,54,Parte I - Titolo IV,data coerente
 730,,,,giorno senza articoli del progetto
-731,106,5,Parte II - Titolo V,data coerente
+731,,,,giorno senza articoli del progetto
 732,106,5,Parte II - Titolo V,data coerente
 733,106,5,Parte II - Titolo V,data coerente
 734,106,5,Parte II - Titolo V,data coerente
 735,106,5,Parte II - Titolo V,data coerente
 736,106,5,Parte II - Titolo V,data coerente
-737,107,114,Parte II - Titolo V,data coerente
+737,106,5,Parte II - Titolo V,data coerente
 738,107,114,Parte II - Titolo V,data coerente
 739,107,114,Parte II - Titolo V,data coerente
 740,107,114,Parte II - Titolo V,data coerente
@@ -616,13 +614,13 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 748,107,114,Parte II - Titolo V,data coerente
 749,107,114,Parte II - Titolo V,data coerente
 750,107,114,Parte II - Titolo V,data coerente
-751,108,115; 116,Parte II - Titolo V,data coerente
+751,107,114,Parte II - Titolo V,data coerente
 752,108,115; 116,Parte II - Titolo V,data coerente
 753,108,115; 116,Parte II - Titolo V,data coerente
 754,108,115; 116,Parte II - Titolo V,data coerente
 755,108,115; 116,Parte II - Titolo V,data coerente
-756,,,,non determinato
-757,109,,Parte II - Titolo V,data coerente
+756,108,115; 116,Parte II - Titolo V,data coerente
+757,,,,non determinato
 758,109,,Parte II - Titolo V,data coerente
 759,109,,Parte II - Titolo V,data coerente
 760,109,,Parte II - Titolo V,data coerente
@@ -631,9 +629,9 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 763,109,,Parte II - Titolo V,data coerente
 764,109,,Parte II - Titolo V,data coerente
 765,109,,Parte II - Titolo V,data coerente
-766,,,,non determinato
-767,109,,Parte II - Titolo V,data coerente
-768,,,,non determinato
+766,109,,Parte II - Titolo V,data coerente
+767,,,,non determinato
+768,109,,Parte II - Titolo V,data coerente
 769,,,,non determinato
 770,,,,non determinato
 771,,,,non determinato
@@ -642,17 +640,17 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 774,,,,non determinato
 775,,,,non determinato
 776,,,,non determinato
-778,,,,non determinato
+777,,,,non determinato
 779,,,,non determinato
 780,,,,non determinato
 781,,,,non determinato
 782,,,,non determinato
-783,109,,Parte II - Titolo V,data coerente
-784,,,,non determinato
+783,,,,non determinato
+784,109,,Parte II - Titolo V,data coerente
 785,,,,non determinato
-786,109,,Parte II - Titolo V,data coerente
-787,,,,non determinato
-789,,,,non determinato
+786,,,,non determinato
+787,109,,Parte II - Titolo V,data coerente
+788,,,,non determinato
 790,,,,non determinato
 791,,,,non determinato
 792,,,,non determinato
@@ -660,16 +658,16 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 794,,,,non determinato
 795,,,,non determinato
 796,,,,non determinato
-797,109,,Parte II - Titolo V,data coerente
-798,,,,non determinato
-800,,,,non determinato
+797,,,,non determinato
+798,109,,Parte II - Titolo V,data coerente
+799,,,,non determinato
 801,,,,non determinato
 802,,,,non determinato
 803,,,,non determinato
+804,,,,non determinato
 66,,,,data discordante
 67,,,,data discordante
 68,,,,data discordante
-804,,,,data discordante
 805,,,,data discordante
 806,,,,data discordante
 807,,,,data discordante
@@ -688,13 +686,13 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 820,,,,data discordante
 821,,,,data discordante
 822,,,,data discordante
-823,109,,Parte II - Titolo V,data coerente
+823,,,,data discordante
 824,109,,Parte II - Titolo V,data coerente
-825,,,,non determinato
-827,,,,non determinato
+825,109,,Parte II - Titolo V,data coerente
+826,,,,non determinato
 828,,,,non determinato
 829,,,,non determinato
-830,,,,data discordante
+830,,,,non determinato
 831,,,,data discordante
 832,,,,data discordante
 833,,,,data discordante
@@ -703,21 +701,21 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 836,,,,data discordante
 837,,,,data discordante
 838,,,,data discordante
-839,,,,non determinato
+839,,,,data discordante
 840,,,,non determinato
 841,,,,non determinato
 842,,,,non determinato
 843,,,,non determinato
-844,109,,Parte II - Titolo V,data coerente
+844,,,,non determinato
 845,109,,Parte II - Titolo V,data coerente
-846,,,,non determinato
-847,112,118,Parte II - Titolo V,data coerente
+846,109,,Parte II - Titolo V,data coerente
+847,,,,non determinato
 848,112,118,Parte II - Titolo V,data coerente
 849,112,118,Parte II - Titolo V,data coerente
 850,112,118,Parte II - Titolo V,data coerente
+851,112,118,Parte II - Titolo V,data coerente
 69,,,,giorno senza articoli del progetto
 70,,,,giorno senza articoli del progetto
-851,,,,giorno senza articoli del progetto
 852,,,,giorno senza articoli del progetto
 853,,,,giorno senza articoli del progetto
 854,,,,giorno senza articoli del progetto
@@ -735,31 +733,31 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 866,,,,giorno senza articoli del progetto
 867,,,,giorno senza articoli del progetto
 868,,,,giorno senza articoli del progetto
-869,113,119; 120,Parte II - Titolo V,data coerente
-870,,,,non determinato
+869,,,,giorno senza articoli del progetto
+870,113,119; 120,Parte II - Titolo V,data coerente
 871,,,,non determinato
 872,,,,non determinato
 873,,,,non determinato
 874,,,,non determinato
-875,113,119; 120,Parte II - Titolo V,data coerente
-876,,,,non determinato
+875,,,,non determinato
+876,113,119; 120,Parte II - Titolo V,data coerente
 877,,,,non determinato
 878,,,,non determinato
 879,,,,non determinato
 880,,,,non determinato
-881,113,119; 120,Parte II - Titolo V,data coerente
+881,,,,non determinato
 882,113,119; 120,Parte II - Titolo V,data coerente
-883,,,,non determinato
-884,113,119; 120,Parte II - Titolo V,data coerente
-885,,,,non determinato
+883,113,119; 120,Parte II - Titolo V,data coerente
+884,,,,non determinato
+885,113,119; 120,Parte II - Titolo V,data coerente
 886,,,,non determinato
 887,,,,non determinato
 888,,,,non determinato
 889,,,,non determinato
-890,,,,data discordante
+890,,,,non determinato
 891,,,,data discordante
 892,,,,data discordante
-893,114,121; 122,Parte II - Titolo V,data coerente
+893,,,,data discordante
 894,114,121; 122,Parte II - Titolo V,data coerente
 895,114,121; 122,Parte II - Titolo V,data coerente
 896,114,121; 122,Parte II - Titolo V,data coerente
@@ -768,39 +766,39 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 899,114,121; 122,Parte II - Titolo V,data coerente
 900,114,121; 122,Parte II - Titolo V,data coerente
 901,114,121; 122,Parte II - Titolo V,data coerente
-902,115,121,Parte II - Titolo V,data coerente
+902,114,121; 122,Parte II - Titolo V,data coerente
 903,115,121,Parte II - Titolo V,data coerente
 904,115,121,Parte II - Titolo V,data coerente
-905,116,124,Parte II - Titolo V,data coerente
+905,115,121,Parte II - Titolo V,data coerente
 906,116,124,Parte II - Titolo V,data coerente
 907,116,124,Parte II - Titolo V,data coerente
 908,116,124,Parte II - Titolo V,data coerente
-909,,,,non determinato
+909,116,124,Parte II - Titolo V,data coerente
 910,,,,non determinato
 911,,,,non determinato
-912,,,,data discordante
+912,,,,non determinato
 913,,,,data discordante
 914,,,,data discordante
 915,,,,data discordante
 916,,,,data discordante
+917,,,,data discordante
 71,120,,Parte II - Titolo V,data coerente
 72,120,,Parte II - Titolo V,data coerente
 73,120,,Parte II - Titolo V,data coerente
 74,120,,Parte II - Titolo V,data coerente
 75,120,,Parte II - Titolo V,data coerente
-917,,,,data discordante
-918,120,,Parte II - Titolo V,data coerente
+918,,,,data discordante
 919,120,,Parte II - Titolo V,data coerente
 920,120,,Parte II - Titolo V,data coerente
 921,120,,Parte II - Titolo V,data coerente
 922,120,,Parte II - Titolo V,data coerente
 923,120,,Parte II - Titolo V,data coerente
 924,120,,Parte II - Titolo V,data coerente
-926,120,,Parte II - Titolo V,data coerente
+925,120,,Parte II - Titolo V,data coerente
 927,120,,Parte II - Titolo V,data coerente
 928,120,,Parte II - Titolo V,data coerente
 929,120,,Parte II - Titolo V,data coerente
-930,,,,giorno senza articoli del progetto
+930,120,,Parte II - Titolo V,data coerente
 931,,,,giorno senza articoli del progetto
 932,,,,giorno senza articoli del progetto
 933,,,,giorno senza articoli del progetto
@@ -811,12 +809,12 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 938,,,,giorno senza articoli del progetto
 939,,,,giorno senza articoli del progetto
 940,,,,giorno senza articoli del progetto
-941,124,123,Parte II - Titolo V,data coerente
+941,,,,giorno senza articoli del progetto
 942,124,123,Parte II - Titolo V,data coerente
-943,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
-944,124,123,Parte II - Titolo V,data coerente
+943,124,123,Parte II - Titolo V,data coerente
+944,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 945,124,123,Parte II - Titolo V,data coerente
-946,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
+946,124,123,Parte II - Titolo V,data coerente
 947,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 948,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 949,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
@@ -830,7 +828,7 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 957,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 958,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 959,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
-961,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
+960,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 962,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 963,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 964,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
@@ -839,18 +837,18 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 967,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 968,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
 969,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
-970,,,,non determinato
-971,52,55,"Parte II - Titolo I, Sez. I",data coerente
+970,124,123,Parte II - Titolo V,unico articolo discusso quel giorno
+971,,,,non determinato
 972,52,55,"Parte II - Titolo I, Sez. I",data coerente
-973,53,56,"Parte II - Titolo I, Sez. I",data coerente
+973,52,55,"Parte II - Titolo I, Sez. I",data coerente
 974,53,56,"Parte II - Titolo I, Sez. I",data coerente
 975,53,56,"Parte II - Titolo I, Sez. I",data coerente
-976,54,56,"Parte II - Titolo I, Sez. I",data coerente
+976,53,56,"Parte II - Titolo I, Sez. I",data coerente
 977,54,56,"Parte II - Titolo I, Sez. I",data coerente
 978,54,56,"Parte II - Titolo I, Sez. I",data coerente
 979,54,56,"Parte II - Titolo I, Sez. I",data coerente
-980,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
-982,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
+980,54,56,"Parte II - Titolo I, Sez. I",data coerente
+981,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 983,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 984,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 985,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
@@ -868,21 +866,21 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 997,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 998,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 999,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
-1000,,,,giorno senza articoli del progetto
-1001,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
+1000,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
+1001,,,,giorno senza articoli del progetto
 1002,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 1003,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 1004,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 1005,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
-1006,,,,non determinato
+1006,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
+1007,,,,non determinato
 76,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
-1007,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 1008,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 1009,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 1010,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
-1011,,,,non determinato
+1011,55,57; 58,"Parte II - Titolo I, Sez. I",data coerente
 1012,,,,non determinato
-1013,56,58,"Parte II - Titolo I, Sez. I",data coerente
+1013,,,,non determinato
 1014,56,58,"Parte II - Titolo I, Sez. I",data coerente
 1015,56,58,"Parte II - Titolo I, Sez. I",data coerente
 1016,56,58,"Parte II - Titolo I, Sez. I",data coerente
@@ -894,31 +892,31 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1022,56,58,"Parte II - Titolo I, Sez. I",data coerente
 1023,56,58,"Parte II - Titolo I, Sez. I",data coerente
 1024,56,58,"Parte II - Titolo I, Sez. I",data coerente
-1025,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
-1026,,,,non determinato
-1027,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
+1025,56,58,"Parte II - Titolo I, Sez. I",data coerente
+1026,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
+1027,,,,non determinato
 1028,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
 1029,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
 1030,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
 1031,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
 1032,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
 1033,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
-1034,64,67,"Parte II - Titolo I, Sez. I",data coerente
+1034,58,60; 61,"Parte II - Titolo I, Sez. I",data coerente
 1035,64,67,"Parte II - Titolo I, Sez. I",data coerente
 1036,64,67,"Parte II - Titolo I, Sez. I",data coerente
 1037,64,67,"Parte II - Titolo I, Sez. I",data coerente
-1038,62,65,"Parte II - Titolo I, Sez. I",data coerente
-1039,63,66,"Parte II - Titolo I, Sez. I",data coerente
+1038,64,67,"Parte II - Titolo I, Sez. I",data coerente
+1039,62,65,"Parte II - Titolo I, Sez. I",data coerente
 1040,63,66,"Parte II - Titolo I, Sez. I",data coerente
 1041,63,66,"Parte II - Titolo I, Sez. I",data coerente
 1042,63,66,"Parte II - Titolo I, Sez. I",data coerente
-1043,,,,non determinato
-1044,65,68,"Parte II - Titolo I, Sez. I",data coerente
+1043,63,66,"Parte II - Titolo I, Sez. I",data coerente
+1044,,,,non determinato
 1045,65,68,"Parte II - Titolo I, Sez. I",data coerente
 1046,65,68,"Parte II - Titolo I, Sez. I",data coerente
-1047,,,,non determinato
-1048,67,70,"Parte II - Titolo I, Sez. II",data coerente
-1049,69,72,"Parte II - Titolo I, Sez. II",data coerente
+1047,65,68,"Parte II - Titolo I, Sez. I",data coerente
+1048,,,,non determinato
+1049,67,70,"Parte II - Titolo I, Sez. II",data coerente
 1050,69,72,"Parte II - Titolo I, Sez. II",data coerente
 1051,69,72,"Parte II - Titolo I, Sez. II",data coerente
 1052,69,72,"Parte II - Titolo I, Sez. II",data coerente
@@ -930,47 +928,47 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1058,69,72,"Parte II - Titolo I, Sez. II",data coerente
 1059,69,72,"Parte II - Titolo I, Sez. II",data coerente
 1060,69,72,"Parte II - Titolo I, Sez. II",data coerente
-1061,,,,non determinato
-1062,70,soppresso,"Parte II - Titolo I, Sez. II",data coerente
+1061,69,72,"Parte II - Titolo I, Sez. II",data coerente
+1062,,,,non determinato
 1063,70,soppresso,"Parte II - Titolo I, Sez. II",data coerente
 1064,70,soppresso,"Parte II - Titolo I, Sez. II",data coerente
 1065,70,soppresso,"Parte II - Titolo I, Sez. II",data coerente
 1066,70,soppresso,"Parte II - Titolo I, Sez. II",data coerente
 1067,70,soppresso,"Parte II - Titolo I, Sez. II",data coerente
 1068,70,soppresso,"Parte II - Titolo I, Sez. II",data coerente
-1069,72,75,"Parte II - Titolo I, Sez. II",data coerente
+1069,70,soppresso,"Parte II - Titolo I, Sez. II",data coerente
 1070,72,75,"Parte II - Titolo I, Sez. II",data coerente
 1071,72,75,"Parte II - Titolo I, Sez. II",data coerente
 1072,72,75,"Parte II - Titolo I, Sez. II",data coerente
 1073,72,75,"Parte II - Titolo I, Sez. II",data coerente
 1074,72,75,"Parte II - Titolo I, Sez. II",data coerente
 1075,72,75,"Parte II - Titolo I, Sez. II",data coerente
-1076,73,75,"Parte II - Titolo I, Sez. II",data coerente
-1077,74,76,"Parte II - Titolo I, Sez. II",data coerente
+1076,72,75,"Parte II - Titolo I, Sez. II",data coerente
+1077,73,75,"Parte II - Titolo I, Sez. II",data coerente
 1078,74,76,"Parte II - Titolo I, Sez. II",data coerente
 1079,74,76,"Parte II - Titolo I, Sez. II",data coerente
 1080,74,76,"Parte II - Titolo I, Sez. II",data coerente
-1081,,,,non determinato
+1081,74,76,"Parte II - Titolo I, Sez. II",data coerente
 1082,,,,non determinato
 1083,,,,non determinato
 1084,,,,non determinato
 1085,,,,non determinato
 1086,,,,non determinato
 1087,,,,non determinato
-1088,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
-1089,,,,non determinato
-1090,76,80,"Parte II - Titolo I, Sez. II",data coerente
-1091,,,,non determinato
-1092,77,81,"Parte II - Titolo I, Sez. II",data coerente
+1088,,,,non determinato
+1089,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
+1090,,,,non determinato
+1091,76,80,"Parte II - Titolo I, Sez. II",data coerente
+1092,,,,non determinato
 1093,77,81,"Parte II - Titolo I, Sez. II",data coerente
 1094,77,81,"Parte II - Titolo I, Sez. II",data coerente
 1095,77,81,"Parte II - Titolo I, Sez. II",data coerente
 1096,77,81,"Parte II - Titolo I, Sez. II",data coerente
 1097,77,81,"Parte II - Titolo I, Sez. II",data coerente
 1098,77,81,"Parte II - Titolo I, Sez. II",data coerente
-1099,78,82,"Parte II - Titolo I, Sez. II",data coerente
-1100,52,55,"Parte II - Titolo I, Sez. I",unico articolo discusso quel giorno
-1101,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
+1099,77,81,"Parte II - Titolo I, Sez. II",data coerente
+1100,78,82,"Parte II - Titolo I, Sez. II",data coerente
+1101,52,55,"Parte II - Titolo I, Sez. I",unico articolo discusso quel giorno
 1102,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
 1103,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
 1104,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
@@ -983,38 +981,38 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1111,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
 1112,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
 1113,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
-1114,,,,non determinato
+1114,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
 1115,,,,non determinato
-1116,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
+1116,,,,non determinato
 1117,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
 1118,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
-1119,79,83,Parte II - Titolo II,data coerente
-1120,,,,non determinato
-1121,79,83,Parte II - Titolo II,data coerente
+1119,75,78; 79,"Parte II - Titolo I, Sez. II",data coerente
+1120,79,83,Parte II - Titolo II,data coerente
+1121,,,,non determinato
 1122,79,83,Parte II - Titolo II,data coerente
 1123,79,83,Parte II - Titolo II,data coerente
 1124,79,83,Parte II - Titolo II,data coerente
 1125,79,83,Parte II - Titolo II,data coerente
 1126,79,83,Parte II - Titolo II,data coerente
-1127,,,,non determinato
-1128,80,84,Parte II - Titolo II,data coerente
+1127,79,83,Parte II - Titolo II,data coerente
+1128,,,,non determinato
 1129,80,84,Parte II - Titolo II,data coerente
 1130,80,84,Parte II - Titolo II,data coerente
 1131,80,84,Parte II - Titolo II,data coerente
-1132,81,85,Parte II - Titolo II,data coerente
+1132,80,84,Parte II - Titolo II,data coerente
 1133,81,85,Parte II - Titolo II,data coerente
-1134,80,84,Parte II - Titolo II,data coerente
-1135,81,85,Parte II - Titolo II,data coerente
+1134,81,85,Parte II - Titolo II,data coerente
+1135,80,84,Parte II - Titolo II,data coerente
 1136,81,85,Parte II - Titolo II,data coerente
 1137,81,85,Parte II - Titolo II,data coerente
 1138,81,85,Parte II - Titolo II,data coerente
 1139,81,85,Parte II - Titolo II,data coerente
 1140,81,85,Parte II - Titolo II,data coerente
-1141,,,,non determinato
-1142,82,86,Parte II - Titolo II,data coerente
+1141,81,85,Parte II - Titolo II,data coerente
+1142,,,,non determinato
 1143,82,86,Parte II - Titolo II,data coerente
-1144,83,87,Parte II - Titolo II,data coerente
-1146,83,87,Parte II - Titolo II,data coerente
+1144,82,86,Parte II - Titolo II,data coerente
+1145,83,87,Parte II - Titolo II,data coerente
 1147,83,87,Parte II - Titolo II,data coerente
 1148,83,87,Parte II - Titolo II,data coerente
 1149,83,87,Parte II - Titolo II,data coerente
@@ -1023,33 +1021,33 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1152,83,87,Parte II - Titolo II,data coerente
 1153,83,87,Parte II - Titolo II,data coerente
 1154,83,87,Parte II - Titolo II,data coerente
-1155,,,,data discordante
-1156,84,88,Parte II - Titolo II,data coerente
+1155,83,87,Parte II - Titolo II,data coerente
+1156,,,,data discordante
 1157,84,88,Parte II - Titolo II,data coerente
 1158,84,88,Parte II - Titolo II,data coerente
 1159,84,88,Parte II - Titolo II,data coerente
-1160,86,92,"Parte II - Titolo III, Sez. I",data coerente
+1160,84,88,Parte II - Titolo II,data coerente
 1161,86,92,"Parte II - Titolo III, Sez. I",data coerente
 1162,86,92,"Parte II - Titolo III, Sez. I",data coerente
 1163,86,92,"Parte II - Titolo III, Sez. I",data coerente
 1164,86,92,"Parte II - Titolo III, Sez. I",data coerente
-1165,79,83,Parte II - Titolo II,data coerente
-1166,67,70,"Parte II - Titolo I, Sez. II",data coerente
+1165,86,92,"Parte II - Titolo III, Sez. I",data coerente
+1166,79,83,Parte II - Titolo II,data coerente
 1167,67,70,"Parte II - Titolo I, Sez. II",data coerente
-1168,85,89; 90,Parte II - Titolo II,data coerente
+1168,67,70,"Parte II - Titolo I, Sez. II",data coerente
 1169,85,89; 90,Parte II - Titolo II,data coerente
 1170,85,89; 90,Parte II - Titolo II,data coerente
 1171,85,89; 90,Parte II - Titolo II,data coerente
 1172,85,89; 90,Parte II - Titolo II,data coerente
 1173,85,89; 90,Parte II - Titolo II,data coerente
 1174,85,89; 90,Parte II - Titolo II,data coerente
-1175,86,92,"Parte II - Titolo III, Sez. I",data coerente
+1175,85,89; 90,Parte II - Titolo II,data coerente
 1176,86,92,"Parte II - Titolo III, Sez. I",data coerente
 1177,86,92,"Parte II - Titolo III, Sez. I",data coerente
-1178,,,,non determinato
+1178,86,92,"Parte II - Titolo III, Sez. I",data coerente
 1179,,,,non determinato
 1180,,,,non determinato
-1181,87,,"Parte II - Titolo III, Sez. I",data coerente
+1181,,,,non determinato
 1182,87,,"Parte II - Titolo III, Sez. I",data coerente
 1183,87,,"Parte II - Titolo III, Sez. I",data coerente
 1184,87,,"Parte II - Titolo III, Sez. I",data coerente
@@ -1057,33 +1055,33 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1186,87,,"Parte II - Titolo III, Sez. I",data coerente
 1187,87,,"Parte II - Titolo III, Sez. I",data coerente
 1188,87,,"Parte II - Titolo III, Sez. I",data coerente
-1189,88,94,"Parte II - Titolo III, Sez. I",data coerente
-1190,,,,non determinato
-1191,84,88,Parte II - Titolo II,data coerente
+1189,87,,"Parte II - Titolo III, Sez. I",data coerente
+1190,88,94,"Parte II - Titolo III, Sez. I",data coerente
+1191,,,,non determinato
 1192,84,88,Parte II - Titolo II,data coerente
 1193,84,88,Parte II - Titolo II,data coerente
 1194,84,88,Parte II - Titolo II,data coerente
 1195,84,88,Parte II - Titolo II,data coerente
 1196,84,88,Parte II - Titolo II,data coerente
-1197,52,55,"Parte II - Titolo I, Sez. I",data coerente
+1197,84,88,Parte II - Titolo II,data coerente
 1198,52,55,"Parte II - Titolo I, Sez. I",data coerente
-1199,,,,non determinato
-1200,89,95,"Parte II - Titolo III, Sez. I",data coerente
+1199,52,55,"Parte II - Titolo I, Sez. I",data coerente
+1200,,,,non determinato
 1201,89,95,"Parte II - Titolo III, Sez. I",data coerente
-1202,90,96,"Parte II - Titolo III, Sez. I",data coerente
+1202,89,95,"Parte II - Titolo III, Sez. I",data coerente
 1203,90,96,"Parte II - Titolo III, Sez. I",data coerente
 1204,90,96,"Parte II - Titolo III, Sez. I",data coerente
 1205,90,96,"Parte II - Titolo III, Sez. I",data coerente
 1206,90,96,"Parte II - Titolo III, Sez. I",data coerente
-1207,,,,non determinato
+1207,90,96,"Parte II - Titolo III, Sez. I",data coerente
 1208,,,,non determinato
 1209,,,,non determinato
 1210,,,,non determinato
-1211,93,100,"Parte II - Titolo III, Sez. II",data coerente
+1211,,,,non determinato
 1212,93,100,"Parte II - Titolo III, Sez. II",data coerente
 1213,93,100,"Parte II - Titolo III, Sez. II",data coerente
 1214,93,100,"Parte II - Titolo III, Sez. II",data coerente
-1215,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
+1215,93,100,"Parte II - Titolo III, Sez. II",data coerente
 1216,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
 1217,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
 1218,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
@@ -1097,8 +1095,8 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1226,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
 1227,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
 1228,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
-1229,123,131,Parte II - Titolo V,data coerente
-1230,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
+1229,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
+1230,123,131,Parte II - Titolo V,data coerente
 1231,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
 1232,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
 1233,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
@@ -1108,7 +1106,7 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1237,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
 1238,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
 1239,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
-1240,,,,giorno senza articoli del progetto
+1240,123,131,Parte II - Titolo V,unico articolo discusso quel giorno
 1241,,,,giorno senza articoli del progetto
 1242,,,,giorno senza articoli del progetto
 1243,,,,giorno senza articoli del progetto
@@ -1118,8 +1116,9 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1247,,,,giorno senza articoli del progetto
 1248,,,,giorno senza articoli del progetto
 1249,,,,giorno senza articoli del progetto
-1250,94,101,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
+1250,,,,giorno senza articoli del progetto
 1251,94,101,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
+1252,94,101,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 77,94,101,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 78,94,101,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 79,94,101,"Parte II - Titolo IV, Sez. I",data coerente
@@ -1134,8 +1133,7 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 88,94,101,"Parte II - Titolo IV, Sez. I",data coerente
 89,94,101,"Parte II - Titolo IV, Sez. I",data coerente
 90,94,101,"Parte II - Titolo IV, Sez. I",data coerente
-1252,94,101,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
-1253,94,101,"Parte II - Titolo IV, Sez. I",data coerente
+1253,94,101,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1254,94,101,"Parte II - Titolo IV, Sez. I",data coerente
 1255,94,101,"Parte II - Titolo IV, Sez. I",data coerente
 1256,94,101,"Parte II - Titolo IV, Sez. I",data coerente
@@ -1147,15 +1145,16 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1262,94,101,"Parte II - Titolo IV, Sez. I",data coerente
 1263,94,101,"Parte II - Titolo IV, Sez. I",data coerente
 1264,94,101,"Parte II - Titolo IV, Sez. I",data coerente
-1265,,,,data discordante
-1267,,,,data discordante
-1269,,,,data discordante
+1265,94,101,"Parte II - Titolo IV, Sez. I",data coerente
+1266,,,,data discordante
+1268,,,,data discordante
 1270,,,,data discordante
 1271,,,,data discordante
 1272,,,,data discordante
 1273,,,,data discordante
 1274,,,,data discordante
 1275,,,,data discordante
+1276,,,,data discordante
 91,,,,non determinato
 92,,,,non determinato
 93,,,,non determinato
@@ -1177,34 +1176,33 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 109,,,,non determinato
 110,,,,non determinato
 111,,,,non determinato
-1276,,,,non determinato
 1277,,,,non determinato
 1278,,,,non determinato
 1279,,,,non determinato
-1280,95,102; 103; 108,"Parte II - Titolo IV, Sez. I",data coerente
-1281,,,,non determinato
+1280,,,,non determinato
+1281,95,102; 103; 108,"Parte II - Titolo IV, Sez. I",data coerente
 1282,,,,non determinato
-1283,95,102; 103; 108,"Parte II - Titolo IV, Sez. I",data coerente
-1284,,,,non determinato
-1285,95,102; 103; 108,"Parte II - Titolo IV, Sez. I",data coerente
-1286,,,,non determinato
+1283,,,,non determinato
+1284,95,102; 103; 108,"Parte II - Titolo IV, Sez. I",data coerente
+1285,,,,non determinato
+1286,95,102; 103; 108,"Parte II - Titolo IV, Sez. I",data coerente
 1287,,,,non determinato
 1288,,,,non determinato
 1289,,,,non determinato
 1290,,,,non determinato
 1291,,,,non determinato
+1292,,,,non determinato
 112,,,,data discordante
 113,,,,non determinato
 114,,,,data discordante
-1292,,,,non determinato
-1293,,,,data discordante
+1293,,,,non determinato
 1294,,,,data discordante
 1295,,,,data discordante
 1296,,,,data discordante
 1297,,,,data discordante
 1298,,,,data discordante
-1299,,,,non determinato
-1300,,,,data discordante
+1299,,,,data discordante
+1300,,,,non determinato
 1301,,,,data discordante
 1302,,,,data discordante
 1303,,,,data discordante
@@ -1212,40 +1210,40 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1305,,,,data discordante
 1306,,,,data discordante
 1307,,,,data discordante
+1308,,,,data discordante
 115,96,102,"Parte II - Titolo IV, Sez. I",data coerente
 116,96,102,"Parte II - Titolo IV, Sez. I",data coerente
 117,96,102,"Parte II - Titolo IV, Sez. I",data coerente
 118,96,102,"Parte II - Titolo IV, Sez. I",data coerente
 119,96,102,"Parte II - Titolo IV, Sez. I",data coerente
 120,96,102,"Parte II - Titolo IV, Sez. I",data coerente
-1308,,,,data discordante
 1309,,,,data discordante
 1310,,,,data discordante
 1311,,,,data discordante
 1312,,,,data discordante
 1313,,,,data discordante
 1314,,,,data discordante
-1315,96,102,"Parte II - Titolo IV, Sez. I",data coerente
+1315,,,,data discordante
 1316,96,102,"Parte II - Titolo IV, Sez. I",data coerente
 1317,96,102,"Parte II - Titolo IV, Sez. I",data coerente
 1318,96,102,"Parte II - Titolo IV, Sez. I",data coerente
 1319,96,102,"Parte II - Titolo IV, Sez. I",data coerente
-1320,,,,non determinato
-1321,95,102; 103; 108,"Parte II - Titolo IV, Sez. I",data coerente
-1322,,,,non determinato
+1320,96,102,"Parte II - Titolo IV, Sez. I",data coerente
+1321,,,,non determinato
+1322,95,102; 103; 108,"Parte II - Titolo IV, Sez. I",data coerente
 1323,,,,non determinato
-1324,96,102,"Parte II - Titolo IV, Sez. I",data coerente
+1324,,,,non determinato
+1325,96,102,"Parte II - Titolo IV, Sez. I",data coerente
 122,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 123,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 124,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 125,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 126,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
-1325,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
-1326,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",data coerente
-1327,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
+1326,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
+1327,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",data coerente
 1328,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
-1329,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",data coerente
-1330,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
+1329,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
+1330,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",data coerente
 1331,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1332,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1333,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
@@ -1255,15 +1253,15 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1337,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1338,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1339,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
-1340,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",data coerente
-1341,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
+1340,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
+1341,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",data coerente
 1342,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1343,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1344,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1345,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1346,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1347,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
-1348,,,,non determinato
+1348,97,104; 105; 107,"Parte II - Titolo IV, Sez. I",unico articolo discusso quel giorno
 1349,,,,non determinato
 1350,,,,non determinato
 1351,,,,non determinato
@@ -1281,6 +1279,7 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1363,,,,non determinato
 1364,,,,non determinato
 1365,,,,non determinato
+1366,,,,non determinato
 127,99,107,"Parte II - Titolo IV, Sez. I",data coerente
 128,99,107,"Parte II - Titolo IV, Sez. I",data coerente
 129,99,107,"Parte II - Titolo IV, Sez. I",data coerente
@@ -1297,7 +1296,6 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 140,,,,non determinato
 141,,,,non determinato
 142,,,,non determinato
-1366,99,107,"Parte II - Titolo IV, Sez. I",data coerente
 1367,99,107,"Parte II - Titolo IV, Sez. I",data coerente
 1368,99,107,"Parte II - Titolo IV, Sez. I",data coerente
 1369,99,107,"Parte II - Titolo IV, Sez. I",data coerente
@@ -1308,17 +1306,18 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1374,99,107,"Parte II - Titolo IV, Sez. I",data coerente
 1375,99,107,"Parte II - Titolo IV, Sez. I",data coerente
 1376,99,107,"Parte II - Titolo IV, Sez. I",data coerente
-1377,100,109,"Parte II - Titolo IV, Sez. I",data coerente
-1378,,,,non determinato
-1379,100,109,"Parte II - Titolo IV, Sez. I",data coerente
+1377,99,107,"Parte II - Titolo IV, Sez. I",data coerente
+1378,100,109,"Parte II - Titolo IV, Sez. I",data coerente
+1379,,,,non determinato
 1380,100,109,"Parte II - Titolo IV, Sez. I",data coerente
-1381,,,,non determinato
+1381,100,109,"Parte II - Titolo IV, Sez. I",data coerente
 1382,,,,non determinato
 1383,,,,non determinato
 1384,,,,non determinato
 1385,,,,non determinato
 1386,,,,non determinato
 1387,,,,non determinato
+1388,,,,non determinato
 143,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 144,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 145,102,111,"Parte II - Titolo IV, Sez. II",data coerente
@@ -1330,25 +1329,24 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 151,,,,data discordante
 152,,,,data discordante
 153,,,,non determinato
-1388,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1389,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1390,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1391,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1392,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1393,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1394,102,111,"Parte II - Titolo IV, Sez. II",data coerente
-1396,102,111,"Parte II - Titolo IV, Sez. II",data coerente
+1395,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1397,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1398,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1399,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1400,102,111,"Parte II - Titolo IV, Sez. II",data coerente
 1401,102,111,"Parte II - Titolo IV, Sez. II",data coerente
-1402,103,113,"Parte II - Titolo IV, Sez. II",data coerente
-1403,,,,data discordante
+1402,102,111,"Parte II - Titolo IV, Sez. II",data coerente
+1403,103,113,"Parte II - Titolo IV, Sez. II",data coerente
 1404,,,,data discordante
-1405,105,soppresso,"Parte II - Titolo IV, Sez. II",data coerente
+1405,,,,data discordante
 1406,105,soppresso,"Parte II - Titolo IV, Sez. II",data coerente
-1407,,,,non determinato
+1407,105,soppresso,"Parte II - Titolo IV, Sez. II",data coerente
 1408,,,,non determinato
 1409,,,,non determinato
 1410,,,,non determinato
@@ -1358,15 +1356,15 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1414,,,,non determinato
 1415,,,,non determinato
 1416,,,,non determinato
+1417,,,,non determinato
 154,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 155,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 156,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 157,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 158,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 159,127,135,"Parte II - Titolo VI, Sez. I",data coerente
-1417,,,,non determinato
-1418,126,134,"Parte II - Titolo VI, Sez. I",data coerente
-1419,127,135,"Parte II - Titolo VI, Sez. I",data coerente
+1418,,,,non determinato
+1419,126,134,"Parte II - Titolo VI, Sez. I",data coerente
 1420,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1421,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1422,127,135,"Parte II - Titolo VI, Sez. I",data coerente
@@ -1374,13 +1372,14 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1424,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1425,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1426,127,135,"Parte II - Titolo VI, Sez. I",data coerente
+1427,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 160,128,136,"Parte II - Titolo VI, Sez. I",data coerente
 161,128,136,"Parte II - Titolo VI, Sez. I",data coerente
-1427,128,136,"Parte II - Titolo VI, Sez. I",data coerente
 1428,128,136,"Parte II - Titolo VI, Sez. I",data coerente
 1429,128,136,"Parte II - Titolo VI, Sez. I",data coerente
 1430,128,136,"Parte II - Titolo VI, Sez. I",data coerente
 1431,128,136,"Parte II - Titolo VI, Sez. I",data coerente
+1432,128,136,"Parte II - Titolo VI, Sez. I",data coerente
 162,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 163,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 164,,,,non determinato
@@ -1389,7 +1388,6 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 167,,,,non determinato
 168,128,136,"Parte II - Titolo VI, Sez. I",data coerente
 169,128,136,"Parte II - Titolo VI, Sez. I",data coerente
-1432,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1433,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1434,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1435,127,135,"Parte II - Titolo VI, Sez. I",data coerente
@@ -1397,54 +1395,54 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1437,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1438,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1439,127,135,"Parte II - Titolo VI, Sez. I",data coerente
-1440,128,136,"Parte II - Titolo VI, Sez. I",data coerente
+1440,127,135,"Parte II - Titolo VI, Sez. I",data coerente
 1441,128,136,"Parte II - Titolo VI, Sez. I",data coerente
 1442,128,136,"Parte II - Titolo VI, Sez. I",data coerente
-1443,,,,non determinato
+1443,128,136,"Parte II - Titolo VI, Sez. I",data coerente
 1444,,,,non determinato
-1445,129,137,"Parte II - Titolo VI, Sez. I",data coerente
+1445,,,,non determinato
 1446,129,137,"Parte II - Titolo VI, Sez. I",data coerente
 1447,129,137,"Parte II - Titolo VI, Sez. I",data coerente
 1448,129,137,"Parte II - Titolo VI, Sez. I",data coerente
 1449,129,137,"Parte II - Titolo VI, Sez. I",data coerente
-1450,126,134,"Parte II - Titolo VI, Sez. I",data coerente
-1451,130,138,"Parte II - Titolo VI, Sez. II",data coerente
+1450,129,137,"Parte II - Titolo VI, Sez. I",data coerente
+1451,126,134,"Parte II - Titolo VI, Sez. I",data coerente
 1452,130,138,"Parte II - Titolo VI, Sez. II",data coerente
 1453,130,138,"Parte II - Titolo VI, Sez. II",data coerente
 1454,130,138,"Parte II - Titolo VI, Sez. II",data coerente
-1455,131,139,"Parte II - Titolo VI, Sez. II",data coerente
+1455,130,138,"Parte II - Titolo VI, Sez. II",data coerente
 1456,131,139,"Parte II - Titolo VI, Sez. II",data coerente
+1457,131,139,"Parte II - Titolo VI, Sez. II",data coerente
 170,118,127,Parte II - Titolo V,data coerente
 171,118,127,Parte II - Titolo V,data coerente
 172,118,127,Parte II - Titolo V,data coerente
 173,,,,non determinato
 174,,,,non determinato
 175,,,,non determinato
-1457,,,,non determinato
 1458,,,,non determinato
 1459,,,,non determinato
 1460,,,,non determinato
-1461,117,126,Parte II - Titolo V,data coerente
-1462,118,127,Parte II - Titolo V,data coerente
+1461,,,,non determinato
+1462,117,126,Parte II - Titolo V,data coerente
 1463,118,127,Parte II - Titolo V,data coerente
 1464,118,127,Parte II - Titolo V,data coerente
 1465,118,127,Parte II - Titolo V,data coerente
-1466,122,125; 130,Parte II - Titolo V,data coerente
+1466,118,127,Parte II - Titolo V,data coerente
 1467,122,125; 130,Parte II - Titolo V,data coerente
 1468,122,125; 130,Parte II - Titolo V,data coerente
 1469,122,125; 130,Parte II - Titolo V,data coerente
+1470,122,125; 130,Parte II - Titolo V,data coerente
 176,,,,non determinato
 177,,,,non determinato
 178,50,54,Parte I - Titolo IV,data coerente
-1470,,,,non determinato
 1471,,,,non determinato
 1472,,,,non determinato
 1473,,,,non determinato
 1474,,,,non determinato
-1476,,,,non determinato
+1475,,,,non determinato
 1477,,,,non determinato
 1478,,,,non determinato
-1479,125,132,Parte II - Titolo V,data coerente
+1479,,,,non determinato
 1480,125,132,Parte II - Titolo V,data coerente
 1481,125,132,Parte II - Titolo V,data coerente
 1482,125,132,Parte II - Titolo V,data coerente
@@ -1461,13 +1459,13 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1493,125,132,Parte II - Titolo V,data coerente
 1494,125,132,Parte II - Titolo V,data coerente
 1495,125,132,Parte II - Titolo V,data coerente
-1496,50,54,Parte I - Titolo IV,data coerente
+1496,125,132,Parte II - Titolo V,data coerente
 1497,50,54,Parte I - Titolo IV,data coerente
-1498,,,,data discordante
+1498,50,54,Parte I - Titolo IV,data coerente
 1499,,,,data discordante
 1500,,,,data discordante
 1501,,,,data discordante
-1502,,,,non determinato
+1502,,,,data discordante
 1503,,,,non determinato
 1504,,,,non determinato
 1505,,,,non determinato
@@ -1489,7 +1487,7 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1521,,,,non determinato
 1522,,,,non determinato
 1523,,,,non determinato
-1524,,,,giorno senza articoli del progetto
+1524,,,,non determinato
 1525,,,,giorno senza articoli del progetto
 1526,,,,giorno senza articoli del progetto
 1527,,,,giorno senza articoli del progetto
@@ -1502,8 +1500,8 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1534,,,,giorno senza articoli del progetto
 1535,,,,giorno senza articoli del progetto
 1536,,,,giorno senza articoli del progetto
-179,,,,giorno senza articoli del progetto
 1537,,,,giorno senza articoli del progetto
+179,,,,giorno senza articoli del progetto
 1538,,,,giorno senza articoli del progetto
 1539,,,,giorno senza articoli del progetto
 1540,,,,giorno senza articoli del progetto
@@ -1533,3 +1531,4 @@ id_emendamento,articolo_progetto,articolo_costituzione,materia,tavola
 1564,,,,giorno senza articoli del progetto
 1565,,,,giorno senza articoli del progetto
 1566,,,,giorno senza articoli del progetto
+1567,,,,giorno senza articoli del progetto

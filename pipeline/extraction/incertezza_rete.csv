@@ -1,8 +1,8 @@
 statistica,osservato,versione_conservativa,media_repliche,ic95_basso,ic95_alto
-densita,0.044,0.0424,0.0397,0.0358,0.0413
-grado_medio,25.5146,24.6024,23.0351,20.7637,23.9346
-centralizzazione,0.1894,0.1875,0.1776,0.1416,0.1908
-quota_legami_stesso_gruppo,0.6454,0.6468,0.651,0.6325,0.6997
-omofilia_rapporto_atteso,3.2,3.2069,3.2274,3.1358,3.4691
-reciprocita_firmatario_presentatore,0.1045,0.0988,0.0959,0.0853,0.1056
+densita,0.0444,0.0428,0.0401,0.0365,0.0416
+grado_medio,25.759,24.8503,23.2824,21.1837,24.1382
+centralizzazione,0.189,0.1871,0.1779,0.1409,0.1908
+quota_legami_stesso_gruppo,0.6397,0.6409,0.6442,0.6256,0.6914
+omofilia_rapporto_atteso,3.1716,3.1777,3.1939,3.1018,3.4276
+reciprocita_firmatario_presentatore,0.1038,0.0981,0.0948,0.0844,0.1043
 reciprocita_menzioni,0.2929,,,,

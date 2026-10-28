@@ -167,6 +167,7 @@ def flatten(seduta):
             c = re.sub(r"\b([A-ZÀ-Ý][a-zà-ÿ]{1,3})\s*[‘'’|-]+\s*\n?\s*([a-zà-ÿ]{2,})\b", r"\1\2", c)
             # punto esclamativo spurio a fine riga dentro un elenco («Giua! / e Balduzzi», sed117): l'elenco si interrompeva
             c = re.sub(r"(?<=[a-zà-ÿ])[!|]+(?=[ \t]*\n\s*e\s+[A-ZÀ-Ý])", '', c)
+            c = re.sub(r"\b(d[ae]gli|d[ae]ll['’])\s*[«\"]\s*(?=o\w{0,2}norevol)", r'\1 ', c)   # «presentato dagli / «onorevoli Corbino…» (sed105)
             c = re.sub(r'\b(ed|e)\s+a[sf]tri\b', r'\1 altri', c)     # «Giannini, Maffioli ed astri» (sed117)
             c = re.sub(r'\n\s*\n', ' ¶ ', c)
             c = re.sub(r'\s*\n\s*', ' ', c)
@@ -716,6 +717,13 @@ for e in EM[EM.n_firmatari == 1].itertuples():
     ha_testo = lambda t: isinstance(t, str) and len(t) >= 25
     pezzo = lambda c: isinstance(c.testo, str) and len(_n(c.testo).replace(' ', '')) >= 8 and _n(c.testo).replace(' ', '') in _n(e.testo).replace(' ', '')
     cand = [c for c in cand.itertuples() if stesso_testo(c.testo, e.testo) and (not ha_testo(e.testo) or ha_testo(c.testo) or pezzo(c))]
+    if not cand and isinstance(e.testo, str) and len(_n(e.testo)) >= 40:
+        # un firmatario (non il primo) che svolge o ripete l'emendamento dell'elenco, con lo stesso testo
+        # (Calosso nell'emendamento Cairo, sed129): stesso atto se il testo coincide quasi del tutto
+        _te = _n(e.testo).replace(' ', '')[:300]
+        cand = [c for c in EM[(EM.n_firmatari >= 2) & (EM.prima_seduta == e.prima_seduta) & ((EM.pagina - e.pagina).abs() <= 2)].itertuples()
+                if e.firmatari in c.firmatari.split('|') and isinstance(c.testo, str)
+                and difflib.SequenceMatcher(None, _te, _n(c.testo).replace(' ', '')[:300]).ratio() >= 0.98]
     if cand: fusi[e.id_emendamento] = cand[0].id_emendamento
 # «Taviani, Ermini ed altri» (elenco troncato) nella stessa seduta dell'elenco completo che contiene quei nomi con lo stesso
 # primo firmatario: e' lo stesso atto (sed124 p4, le due menzioni citano pezzi diversi del testo)
@@ -727,6 +735,18 @@ for e in EM[(EM.completo == 0) & (EM.n_firmatari >= 2)].itertuples():
             if s < set(c.firmatari.split('|')) and c.id_emendamento not in fusi and (c.pagina == e.pagina or stesso_testo(c.testo, e.testo))]
     if len(cand) == 1: fusi[e.id_emendamento] = cand[0].id_emendamento; n_tronchi += 1
 print('elenchi troncati assorbiti nell\'elenco completo della stessa seduta:', n_tronchi)
+# lo stesso elenco con lo stesso testo riletto oltre le tre sedute (presentato in sed126, messo ai voti in sed130):
+# e' lo stesso atto se i testi coincidono quasi del tutto; fino a sei sedute, oltre si tratta di una ripresentazione
+n_riletti = 0
+_tt = lambda t: _n(t).replace(' ', '')[:300] if isinstance(t, str) else ''
+for k_, g_ in EM[EM.n_firmatari >= 2].groupby(EM.firmatari):
+    g_ = g_.sort_values('snum')
+    for a_, b_ in zip(g_.itertuples(), list(g_.itertuples())[1:]):
+        if b_.id_emendamento in fusi or a_.id_emendamento in fusi: continue
+        ta, tb = _tt(a_.testo), _tt(b_.testo)
+        if 3 < b_.snum - a_.snum <= 6 and min(len(ta), len(tb)) >= 40 and difflib.SequenceMatcher(None, ta, tb).ratio() >= 0.95:
+            fusi[b_.id_emendamento] = a_.id_emendamento; n_riletti += 1
+print('emendamenti riletti a distanza di 4-6 sedute uniti:', n_riletti)
 if fusi:
     R['id_emendamento'] = R.id_emendamento.map(lambda x: fusi.get(x, x))
     EM = EM[~EM.id_emendamento.isin(fusi)]

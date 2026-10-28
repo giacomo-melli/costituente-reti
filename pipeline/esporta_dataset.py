@@ -392,7 +392,7 @@ for r in DEC.get('voti_approssimati', pd.DataFrame()).itertuples():
     if d.startswith('giusto'): continue
     vid = vid_di(r); vecchio = r.chiave.split('|')[-1]
     if vid is None: continue
-    Ev = Ev[~((Ev.id_voto == vid) & (Ev.id_dep == vecchio))]; n_dv += 1
+    Ev = Ev[~((Ev.id_voto == vid) & (Ev.id_dep == vecchio) & (Ev.voto == r.voto))]; n_dv += 1   # solo nell'elenco del caso: «Berne» fra i sì non toglie il Bertone stampato fra i no
     if not d.startswith('sbagliato'):
         x = id_da_etichetta(d, Vt.set_index('id_voto').data.get(vid))
         if x and r.voto in ('sì', 'no', 'astenuto'): Ev = pd.concat([Ev, pd.DataFrame([dict(id_voto=vid, id_dep=x, voto=r.voto)])], ignore_index=True)
