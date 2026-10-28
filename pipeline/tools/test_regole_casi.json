@@ -757,5 +757,71 @@
   "nota": "«aderisco a quello dell'onorevole Gullo, ¶ UBERTI. Chiedo di parlare»: Uberti e' il turno di parola che segue",
   "atteso": [],
   "testo": "parlare. \n\n PRESIDENTE, Ne ha facoltà. I SCHIAVETTI. Ritiro il min emendamento e aderisco a quello dell'onorevole Gullo, \n\n UBERTI. Chiedo di parlare. \n\n PRESIDENTE. Ne ha facoltà. \n\n UBERTI. Trasferiamo "
+ },
+ {
+  "nome": "due_punti_dopo_onorevoli",
+  "seduta": "sed118",
+  "nota": "«l'emendamento presentato dagli onorevoli: Montagnana Mario, Foa…»: i due punti non interrompono l'elenco (11 firme)",
+  "atteso": [
+   [
+    "Barontini Ilio",
+    "Colombi",
+    "D'Onofrio",
+    "Foa",
+    "Grieco",
+    "Laconi",
+    "Leone Francesco",
+    "Minio",
+    "Montagnana Mario",
+    "Pajetta Gian",
+    "Ravagnan"
+   ]
+  ],
+  "testo": "ane stabilito). + \n\n Pongo ora in votazione l’emendamento presentato dagli onorevoli: Montagnana Mario, Foa, Pajetta Giancarlo, Laconi, Grieco, Minio, Ravagnan, Barontini Ilio, Leone Francesco, D'Onofrio, Colombi Arturo: \n\n «Allo scopo di garantire il diritto al lavoro di tutti i cittadini, lo Stato interverrà per coordinare e orientare l’attività pr"
+ },
+ {
+  "nome": "verbo_accentato_ocr",
+  "seduta": "sed123",
+  "nota": "«Gli onorevoli Arata, Piemonte… hanno prèsentato il seguente emendamento»: l'accento dell'OCR sul verbo",
+  "atteso": [
+   [
+    "Arata",
+    "Cairo",
+    "Carboni Angelo",
+    "Fietta",
+    "Lami Starnuti",
+    "Longhena",
+    "Momigliano",
+    "Persico",
+    "Piemonte",
+    "Pignatari",
+    "Preti",
+    "Ruggiero",
+    "Segala"
+   ]
+  ],
+  "testo": "to. i \n\n PRESIDENTE. Gli onorevoli Arata, Piemonte, Preti, Carboni, Persico, Segala, Cairo, Mo:nigliano, Lami Starnuti, Ruggiero Carlo, Longhena, Fietta e Pignatari hanno prèsentato il seguente emendamento: . \n\n « Coordinare gli articoli 37 e 39 come segue: ‘ \n\n “_—« Trasferire i testo dell'articolo 39 nell’articolo 87, in sostituzione della sua prima"
+ },
+ {
+  "nome": "proposta_a_firma",
+  "seduta": "sed301",
+  "nota": "«una proposta di articolo 8-bis, a firma degli onorevoli Schiavetti, Fiorentino…»: un atto solo, non proposte distinte",
+  "atteso": [
+   [
+    "Carpano Maglioli",
+    "Faralli",
+    "Farini",
+    "Fedeli Aldo",
+    "Fiorentino",
+    "Giua",
+    "Nenni",
+    "Pieri",
+    "Pistoia",
+    "Priolo",
+    "Schiavetti",
+    "Togliatti"
+   ]
+  ],
+  "testo": " (È approvato). . \n\n Vi è una proposta di articolo 8-bîis, a firma degli onorevoli Schiavetti, Fiorentino, Faralli, Pistoia, Giua, Farini, Carpano Maglioli, Pieri, Fedeli Aldo, Nenni, Priolo e Togliatti, del seguente tenore: o \n\n «Nei casi previsti dall'articolo 1 il Ministro dell’interno, mentre dispone la de- _rr—————————————————— e z-zrTTr_— mey n"
  }
 ]

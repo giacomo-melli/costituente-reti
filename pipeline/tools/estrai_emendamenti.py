@@ -192,13 +192,13 @@ def is_signature(c):
 # fra le parole di un nome: spazio, eventualmente un apice spurio («Creméschi ‘Garlo»); un punto solo se segue
 # un nome proprio («Pajetta. Giancarlo»), altrimenti il nome attraverserebbe la fine della frase
 NAME = r"[A-ZÀ-Ý][\w'’À-ÿ:|¶]+(?:\.\s(?=[a-z])\w+)?(?:(?:\.\s+(?=(?:" + NOMI_RE + r")\b)|\s+(?:[‘’'\"“”]\s?)?)[A-ZÀ-Ý][\w'’À-ÿ:|¶]+){0,3}"   # ammette «Miccol:s», «Bo. nino» (rumore OCR)
-PRES = re.compile(r"(?:dell['’]\s?onorevole|[Dd]all['’]?\s?onorevole|della\s+onorevole|de\s?gli onorevoli|dagli onorevoli|dalle onorevoli|dell['’]\s?on\.|insie\w{1,3}\s+con\s+gli\s+onorevoli|unitamente\s+(?:agli|con\s+gli|ai)\s+(?:onorevoli|colleghi)|dal\s+collega(?:\s+onorevole)?|dai\s+colleghi(?:\s+onorevoli)?|firm\w+\s+(?:anche\s+)?(?:dei|degli|dai)\s+colleghi)[\s‘'’]+(" + NAME +
+PRES = re.compile(r"(?:dell['’]\s?onorevole|[Dd]all['’]?\s?onorevole|della\s+onorevole|de\s?gli onorevoli|dagli onorevoli|dalle onorevoli|dell['’]\s?on\.|insie\w{1,3}\s+con\s+gli\s+onorevoli|unitamente\s+(?:agli|con\s+gli|ai)\s+(?:onorevoli|colleghi)|dal\s+collega(?:\s+onorevole)?|dai\s+colleghi(?:\s+onorevoli)?|firm\w+\s+(?:anche\s+)?(?:dei|degli|dai)\s+colleghi)[\s‘'’:]+(" + NAME +
                   r"(?:[\s·]*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b|\s*-\s*)[\s¶\-·.‘’'\"“”|$*!:]*(?:(?:dell['’]\s?|della\s+)onorevole[\s‘'’]+)?" + NAME + r")*(?:,?\s*(?:ed|e)\s+altri)?)")
 # Il segno ¶ (riga vuota nel testo appiattito) e' ammesso fra separatore e nome:
 # senza, elenchi come «Marinaro e ¶ Rodi» si interrompevano prima dell'ultimo firmatario.
 # «Gli onorevoli X, Y e Z hanno presentato il seguente emendamento»
 PRES2 = re.compile(r"\b[Gg]li\W{0,2}\s*onorevoli[\s\-–]+(" + NAME + r"(?:[\s·]*(?:,\s*(?:ed|e)\b|,|;|\be\b|\bed\b|\s*-\s*)[\s¶\-·.‘’'\"“”|$*!:]*" + NAME +
-                   r")*(?:,?\s*(?:ed|e)\s+altri)?)[\s,.’'‘\"“”*!$]+ha\w{1,3}o[\s’'‘\",.]+(?:pres[ea]\w{2,5}ato|proposto|ripresentato)\b")
+                   r")*(?:,?\s*(?:ed|e)\s+altri)?)[\s,.’'‘\"“”*!$]+ha\w{1,3}o[\s’'‘\",.]+(?:pr[eèé]s[eaèé]\w{2,5}ato|proposto|ripresentato)\b")
 ART = re.compile(r"articol[oi]\s+(\d+(?:-bis)?)", re.I)
 # «L'onorevole X ha presentato il seguente emendamento:» e' la formula con cui il Presidente legge un
 # emendamento a firma singola; prima serviva solo ad aggiungere il presentatore ai «firmato anche dagli».
@@ -328,6 +328,9 @@ def elenco_di_atti_distinti(before, nxt=''):
     # «due emendamenti, dei quali uno ... presentato dall'onorevole X»: il pronome singolare riporta a un atto solo
     if re.search(r"(?i:" + PLUR_NOME + r")\b[^;:]{0,40}\b(?:uno|il\s+primo|il\s+secondo|l['’]altro|l['’]ultimo)\b[^;:]{0,60}$", before[-110:]):
         return False
+    # «una proposta di articolo 8-bis, a firma degli onorevoli X, Y»: «a firma» regge l'elenco, l'atto e' uno solo
+    if re.search(r"\ba\s+firma\s*$", before[-20:], re.I):
+        return False
     # `nxt` serve solo al plurale: QUELLI e RISPETTIV sono ancorati allo spazio prima della menzione
     return bool(PLURALE.search((before + nxt)[-90:]) or QUELLI.search(before[-90:]) or RISPETTIV.search(before[-40:]))
 
@@ -443,7 +446,7 @@ for s in sedute:
         if re.match(r"dall", m.group(0), re.I) and (
                 re.search(r"(?:accennat|rilevat|osservat|dett|ricordat|sostenut|espress|citat|richiamat|lamentat|affermat|dichiarat|"
                           r"segnalat|espost|definit|sollevat|prospettat|manifestat|integrat|"
-                          r"pres[oa]\s+in\s+considerazione|fatt[oa]\s+propri)\w*[\s,]*$", before[-40:], re.I)
+                          r"pres[oa]\s+in\s+considerazione|fatt[oa]\W{1,4}propri)\w*[\s,‘'’]*$", before[-40:], re.I)
                 or re.match(r"[\s,]*(?:nella|in|in\s+sede\s+di)\s+(?:\w+\s+)?(?:Sotto)?[Cc]ommissione", after)):
             continue
         # «la questione posta dall'onorevole X», «al quesito posto dall'onorevole X»: non e' un emendamento,
