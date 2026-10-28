@@ -54,7 +54,7 @@ The effect of the measured errors on network statistics is reported in the codeb
 
 ## Usage notes and limitations
 
-The dataset contains about two thirds of the amendments printed in the transcribed sittings, and 16 sittings held on days when the draft Constitution was discussed are not yet transcribed (listed in `pipeline/sedute_non_trascritte.csv`). Network volume measures are therefore lower bounds; structural measures are more robust. Thirty-two amendment lists are closed by «ed altri» and lack the unnamed signatories. Group affiliation is recorded at the start and end of the Assembly, not at the date of each signature. Open cases that the extraction cannot settle (shared surnames without other evidence, illegible names) are listed in `pipeline/CASI_APERTI.xlsx`; decisions taken on the page image are applied at every export and remain in the repository.
+The dataset contains about two thirds of the amendments printed in the transcribed sittings, and 16 sittings held on days when the draft Constitution was discussed are not yet transcribed (listed in `pipeline/sedute_non_trascritte.csv`). Network volume measures are therefore lower bounds; structural measures are more robust. Thirty-two amendment lists are closed by «ed altri» and lack the unnamed signatories. Group affiliation at the date of each signature and vote comes from the Chamber's open data on group membership. Open cases that the extraction cannot settle (shared surnames without other evidence, illegible names) are listed in `pipeline/CASI_APERTI.xlsx`; decisions taken on the page image are applied at every export and remain in the repository.
 
 ## Code availability
 
