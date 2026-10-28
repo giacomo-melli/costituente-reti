@@ -1,0 +1,842 @@
+id_atto,tipo_atto,seduta,data,pagina,fonte,n_firmatari,testo_stampato
+t1,richiesta di votazione,sed075,1947-03-25,47,presentazione,15,"Selvaggi, Cicerone, Puoti, Coppa, Perugi, Penna Ottavia, Colitto, Rodinò Mario, Marina, Maffioli, De Falco, Miccolis, Corsini, Mazza, Vilardi"
+t2,interrogazione,sed081,1947-03-29,23,firma,2,"DI GIOVANNI, CARTIA"
+t3,interrogazione,sed081,1947-03-29,23,firma,1,BIBOLOTTI
+t4,interrogazione,sed081,1947-03-29,24,firma,6,"TARGETTI, De MICHELIS, GIaAcoMETTI, VERNOCCHI, TONELLO, PiSTOIA"
+t5,interrogazione,sed081,1947-03-29,24,firma,4,"PERRONE CAPANO, CIFALDI, BADINI CONFALONIERI, CONDORELLI"
+t6,interrogazione,sed081,1947-03-29,24,firma,1,PASTORE RAFFAELE
+t7,interrogazione,sed081,1947-03-29,24,firma,1,MANCINI
+t8,interrogazione,sed081,1947-03-29,35,firma,2,"DI VITTORIO, LIZZADRI"
+t9,interrogazione,sed081,1947-03-29,35,firma,2,"MontaLBANO, D'AMICO MICHELE"
+t10,interrogazione,sed081,1947-03-29,35,firma,1,COSATTINI
+t11,interrogazione,sed081,1947-03-29,36,firma,1,MASTROJANNI
+t12,interrogazione,sed081,1947-03-29,36,firma,1,MARZAROTTO
+t13,interrogazione,sed081,1947-03-29,36,firma,1,BONFANTINI
+t14,interrogazione,sed081,1947-03-29,36,firma,1,CIMENTI
+t15,interrogazione,sed081,1947-03-29,37,firma,1,CAMANGI
+t16,interrogazione,sed081,1947-03-29,37,firma,1,CARBONARI
+t17,interrogazione,sed081,1947-03-29,37,firma,2,"CARBONARI, FANTONI"
+t18,interrogazione,sed081,1947-03-29,38,firma,1,MUSOLINO
+t19,interrogazione,sed081,1947-03-29,38,firma,15,"BUBBIO, BALDUZZI, SAMPIETRO, BoVETTI, GORTANI, QUARELLO, STELLA, BaRAccO, BuraTo, GIACCHERO, RAIMONDI, BELOTTI, BELLATO, ""Tozzi CONDIVI, FERRARIO CELESTINO"
+t20,interrogazione,sed081,1947-03-29,38,firma,6,"Mariani FRANCESCO, De MICHELIS PaoLo, PisToIa, FEDELI ALDO, ViSCHIONI, BIANCHI COSTANTE"
+t21,interrogazione,sed083,1947-04-11,27,firma,1,FOGAGNOLO
+t22,interrogazione,sed083,1947-04-11,27,firma,1,BÀDINI CONFALONIERI
+t23,interrogazione,sed083,1947-04-11,27,firma,1,CAPUA
+t24,interrogazione,sed083,1947-04-11,27,firma,1,BERTINI
+t25,interrogazione,sed083,1947-04-11,27,firma,1,RIVERA
+t26,interrogazione,sed083,1947-04-11,28,firma,1,LACONI
+t27,interrogazione,sed083,1947-04-11,28,firma,1,COLONNETTI
+t28,interrogazione,sed083,1947-04-11,29,firma,1,ABOZZI
+t29,interrogazione,sed083,1947-04-11,29,firma,1,SELVAGGI
+t30,interrogazione,sed083,1947-04-11,29,firma,1,MARINARO
+t31,interrogazione,sed083,1947-04-11,29,firma,1,SANTI
+t32,interrogazione,sed083,1947-04-11,29,firma,1,CAMANGI
+t33,interrogazione,sed083,1947-04-11,29,firma,1,PERA
+t34,interrogazione,sed083,1947-04-11,30,firma,1,BOSI
+t35,interrogazione,sed083,1947-04-11,30,firma,1,MASTROJANNI
+t36,interrogazione,sed083,1947-04-11,30,firma,1,GRIECO
+t37,interrogazione,sed083,1947-04-11,30,firma,1,BASILE
+t38,interrogazione,sed083,1947-04-11,30,firma,1,GUARIENTO
+t39,interrogazione,sed083,1947-04-11,31,firma,1,CICERONE
+t40,interrogazione,sed083,1947-04-11,31,firma,1,PAOLUCCI
+t41,interrogazione,sed083,1947-04-11,32,firma,1,ANDREOTTI
+t42,interrogazione,sed083,1947-04-11,33,firma,1,CANNIZZO
+t43,interrogazione,sed083,1947-04-11,33,firma,1,SCOTTI ALESSANDRO
+t44,interrogazione,sed083,1947-04-11,33,firma,1,MARTINO GAETANO
+t45,interrogazione,sed083,1947-04-11,33,firma,1,CIFALDI
+t46,interrogazione,sed083,1947-04-11,34,firma,1,NATOLI
+t47,interrogazione,sed083,1947-04-11,34,firma,1,MAZZA
+t48,interrogazione,sed083,1947-04-11,34,firma,1,MUSOLINO
+t49,interrogazione,sed083,1947-04-11,35,firma,1,COLITTO
+t50,interpellanza,sed083,1947-04-11,35,firma,2,"COCCIA, CARIGNANI"
+t51,interrogazione,sed084,1947-04-11,15,firma,6,"MASSsINI, FARINI, D'ONOFRIO, PERTINI, BARBARESCHI, GRIECO"
+t52,interrogazione,sed084,1947-04-11,15,firma,16,"GRILLI, BADINI CONFALONIERI, BonoMI IVANOE, CIFALDI, TREMELLONI, CHIARAMELLO, È CALOSSO, GHIDINI, ° CANEVARI, DE CARO RAFFAELE, RUGGIERO, D'ARAGONA, Carro, Rossi PAoLO, DI GLORIA, VERONI"
+t53,richiesta di votazione,sed084,1947-04-11,4,presentazione,3,"Ravagnan, Laconi e Grieco"
+t54,interrogazione,sed085,1947-04-12,12,firma,16,"GRILLI, BADINI CONFALONIERI, BoNOMI IVANOE, CIFALDI, TREMELLONI, CHIARAMELLO, CALOSSO, GHIDINI, CANEVARI, DE Caro RAFFAELE, RuGGIiERO, D'ARAGONA, Carro, Rossi PaoLo, DI GLORIA, VERONI"
+t55,interrogazione,sed087,1947-04-14,23,firma,6,"PIEMONTE, PARIS, RUGGIERO, CHIARA_ MELLO, GRILLI, CANEVARI"
+t56,interrogazione,sed087,1947-04-14,23,firma,9,"BASTIANETTO, COSTANTINI, PoNTI, RÀVAGNAN, FRANCESCHINI, SARTOR, GHIDETTI, TONETTI, FERRARESE"
+t57,interrogazione,sed087,1947-04-14,23,firma,3,"CAMPOSARCUNO, COLITTO, CIAMPITTI"
+t58,interrogazione,sed087,1947-04-14,24,firma,10,"BERTOLA, ‘BINNI, Lozza, SILIPO, CREMascHI CarLo, ‘GIUA, FARINA, PLATONE, FRANCESCHINI, FOA"
+t59,interrogazione,sed087,1947-04-14,24,firma,8,"BERTOLA, CREMASCHI CARLO, FRANCESCHINI, TUMMINELLI, Lozza, BInNI, GIUA, FOA"
+t60,interrogazione,sed087,1947-04-14,24,firma,2,"CANEVARI, CALOSSO"
+t61,interrogazione,sed087,1947-04-14,24,firma,3,"MiccoLis, RoDI, TUMMINELLI"
+t62,interrogazione,sed087,1947-04-14,24,firma,1,TUMMINELLI
+t63,interrogazione,sed087,1947-04-14,25,firma,1,GOTELLI ANGELA
+t64,interrogazione,sed087,1947-04-14,25,firma,1,"MÉpA LUIGI, CREMASCHI' CARLO"
+t65,interrogazione,sed087,1947-04-14,25,firma,1,SULLO
+t66,interrogazione,sed087,1947-04-14,25,firma,1,MAZZA
+t67,interrogazione,sed087,1947-04-14,25,firma,1,PUOTI
+t68,interrogazione,sed087,1947-04-14,25,firma,1,MARIANI FRANCESCO
+t69,interrogazione,sed087,1947-04-14,26,firma,1,FRANCESCHINI
+t70,interrogazione,sed087,1947-04-14,26,firma,1,BITOSSI
+t71,interrogazione,sed087,1947-04-14,26,firma,1,TIERI
+t72,interrogazione,sed087,1947-04-14,27,firma,1,LONGHENA
+t73,interrogazione,sed087,1947-04-14,27,firma,1,BINNI
+t74,interrogazione,sed087,1947-04-14,27,firma,8,"CORBINO, QUINTIERI QUINTO, PATRIcoLo, Coppa Ezio, FUSCO, BADINI CONFALONIERI, RODI, CIFALDI"
+t75,richiesta di votazione,sed088,1947-04-14,24,presentazione,17,"Cairo, Bassano, Morini, Ruini, Preti, Calosso, Tremelloni, Ruggiero, Bocconi, Carboni, Foa, Veroni, Filippini, Canevari, Ghidini, Zanardi, Taddia"
+t76,interrogazione,sed089,1947-04-15,24,firma,3,"MONTAGNANA MARIO, RoveDA, FLECCHIA"
+t77,interrogazione,sed089,1947-04-15,25,firma,2,"DI VITTORIO, LIZZADRI"
+t78,interrogazione,sed089,1947-04-15,25,firma,1,CICERONE
+t79,richiesta di votazione,sed089,1947-04-15,23,presentazione,2,"Leone Giovanni, Badini Confalonieri e altri"
+t80,interrogazione,sed092,1947-04-17,24,firma,1,BUBBIO
+t81,interrogazione,sed092,1947-04-17,24,firma,2,"BUBBIO, BELLATO"
+t82,interrogazione,sed092,1947-04-17,25,firma,1,CAMANGI
+t83,interrogazione,sed092,1947-04-17,25,firma,2,"LOMBARDI CARLO, FARINA"
+t84,interrogazione,sed092,1947-04-17,25,firma,1,PuoTI
+t85,interrogazione,sed092,1947-04-17,25,firma,1,MASTROJANNI
+t86,interrogazione,sed092,1947-04-17,25,firma,1,CASTELLI AVOLIO
+t87,interrogazione,sed092,1947-04-17,25,firma,1,PAOLÙCCI
+t88,interrogazione,sed094,1947-04-18,19,firma,2,"LOZZA, SILIPO"
+t89,interrogazione,sed094,1947-04-18,19,firma,1,LIZZADRI
+t90,interrogazione,sed094,1947-04-18,19,firma,5,"CARBONI, PERSICO, CAIRO, BINNI, | PRETI"
+t91,interrogazione,sed094,1947-04-18,19,firma,1,BELLAVISTA
+t92,interrogazione,sed094,1947-04-18,19,firma,1,TRIPEPI
+t93,interrogazione,sed094,1947-04-18,20,firma,1,GHIDETTI
+t94,interrogazione,sed094,1947-04-18,20,firma,1,TOMBA
+t95,interrogazione,sed098,1947-04-21,21,firma,1,MORINI
+t96,interrogazione,sed098,1947-04-21,22,firma,1,TONELLO
+t97,interrogazione,sed098,1947-04-21,22,firma,7,"CANEPA, RossI PaoLo, TREVES, NENNI, BARBARESCHI, ‘ CALOSSO, PERA"
+t98,interrogazione,sed098,1947-04-21,22,firma,1,BELLATO
+t99,interrogazione,sed098,1947-04-21,22,firma,1,BUBBIO
+t100,interrogazione,sed098,1947-04-21,22,firma,1,PAOLUCCI
+t101,interrogazione,sed098,1947-04-21,22,firma,1,ABOZZI
+t102,interrogazione,sed098,1947-04-21,23,firma,1,LOPARDI
+t103,interrogazione,sed098,1947-04-21,23,firma,1,PIEMONTE
+t104,interrogazione,sed100,1947-04-22,23,firma,1,FERRARESE
+t105,interrogazione,sed100,1947-04-22,23,firma,1,PERSICO
+t106,interrogazione,sed100,1947-04-22,23,firma,1,PIEMONTE
+t107,interrogazione,sed100,1947-04-22,23,firma,1,PERUGI
+t108,interrogazione,sed100,1947-04-22,23,firma,1,MARTINO GAETANO
+t109,interrogazione,sed100,1947-04-22,24,firma,1,GHIDETTI
+t110,interrogazione,sed100,1947-04-22,24,firma,1,SARDIELLO
+t111,interrogazione,sed100,1947-04-22,7,presentazione,2,"Silipo, Musolinò; Man"
+t112,interrogazione,sed101,1947-04-22,39,firma,5,"SCALFARO, .CONDORELLI, BASSANO, ! BeLLUSCI, MASTINO PIETRO"
+t113,interrogazione,sed101,1947-04-22,39,firma,1,L'UCIFERO
+t114,interrogazione,sed103,1947-04-24,31,firma,1,MAZZA
+t115,interrogazione,sed103,1947-04-24,31,firma,4,"BETTIOL, Gui, Costa, MARCHESI"
+t116,interrogazione,sed103,1947-04-24,31,firma,1,RIVERA
+t117,interrogazione,sed103,1947-04-24,31,firma,3,"MACRELLI, SARDIELLO, CONTI"
+t118,interrogazione,sed103,1947-04-24,32,firma,1,CANEPA
+t119,interrogazione,sed103,1947-04-24,33,firma,2,"BERTOLA, PASTORE GIULIO"
+t120,interrogazione,sed103,1947-04-24,34,firma,7,"GORTANI, FANTONI, TESSITORI, PIEMONTE, GARLATO, PAT, SCHIRATTI"
+t121,interrogazione,sed103,1947-04-24,34,firma,1,MARINARO
+t122,interrogazione,sed103,1947-04-24,34,firma,1,LOPARDI
+t123,interrogazione,sed103,1947-04-24,34,firma,2,"BINNI, PRETI"
+t124,interrogazione,sed103,1947-04-24,34,firma,3,"BERTOLA, PASTORE GIULIO, SAMPIETRO"
+t125,interrogazione,sed103,1947-04-24,35,firma,1,PAOLUCCI
+t126,interrogazione,sed103,1947-04-24,35,firma,1,BALDUZZI
+t127,interrogazione,sed103,1947-04-24,35,firma,1,BUBBIO
+t128,interrogazione,sed103,1947-04-24,35,firma,1,RICCIO STEFANO
+t129,richiesta di votazione,sed104,1947-04-28,17,presentazione,18,"Preti, Barbereschi, Gullo Rocco, Salerno, Crispo, Nasi, Lami Starnuti, Faralli, Saragat, Treves, Grilli, Damiani, Valiani, Lombardi, Caporali, Malagugini, Foa, Carpano, Grazia"
+t130,richiesta di votazione,sed104,1947-04-28,20,presentazione,13,"Gullo Rocco, Grilli, Crispo, Grazia, Spallicci, Villani, Calosso, Di Gloria, Persico, .Bocconi, Veroni, Nasi, Pera e altri"
+t131,interrogazione,sed105,1947-04-29,29,firma,1,DI VITTORIO
+t132,richiesta di votazione,sed105,1947-04-29,14,presentazione,2,"Corbino, Marchesi ed altri"
+t133,interrogazione,sed106,1947-04-30,32,firma,1,NITTI
+t134,interrogazione,sed106,1947-04-30,32,firma,2,"MORINI, SAMPIETRO"
+t135,interrogazione,sed106,1947-04-30,33,firma,3,"CRISPO, CIFALDI, CORTESE"
+t136,interrogazione,sed106,1947-04-30,33,firma,1,COLITTO
+t137,interrogazione,sed106,1947-04-30,34,firma,3,"FIORITTO, LoPARDI, MANCINI"
+t138,interrogazione,sed106,1947-04-30,34,firma,22,"DOMINEDÒ, CANEVARI, CARBONI, TREÈ MELLONI, PALLASTRELLI, BELOTTI, CassIaNI, Bozzi, REALE VIro, BaDINI CONFALONIERI, CIAMPITTI, REsciGNo, De FALCO, CLERICI, CIMENTI, BUBBIO, VALENTI, ANGELUCCI; FoRESI, SiLES, CORTESE, PUOTI, ZOTTA"
+t139,interrogazione,sed106,1947-04-30,34,firma,1,COCCIA
+t140,interrogazione,sed106,1947-04-30,34,firma,1,NASI
+t141,interrogazione,sed106,1947-04-30,34,firma,1,MATTEOTTI MATTEO
+t142,interrogazione,sed106,1947-04-30,34,firma,1,VENDITTI
+t143,interrogazione,sed106,1947-04-30,35,firma,1,ABOZZI
+t144,interrogazione,sed106,1947-04-30,35,firma,1,BEI ADELE
+t145,interrogazione,sed106,1947-04-30,35,firma,1,MASTROJANNI
+t146,interrogazione,sed106,1947-04-30,35,firma,1,PIEMONTE
+t147,interrogazione,sed106,1947-04-30,35,firma,1,BENCIVENGA
+t148,interrogazione,sed106,1947-04-30,35,firma,1,NOBILE
+t149,interrogazione,sed106,1947-04-30,36,firma,1,CANEPA
+t150,interrogazione,sed106,1947-04-30,36,firma,1,SELVAGGI
+t151,interrogazione,sed106,1947-04-30,36,firma,1,CHIARAMELLO
+t152,interrogazione,sed106,1947-04-30,37,firma,1,VISCHIONI
+t153,interrogazione,sed106,1947-04-30,37,firma,1,PAOLUCCI
+t154,interrogazione,sed106,1947-04-30,39,firma,1,ZUCCARINI
+t155,interrogazione,sed106,1947-04-30,39,firma,1,GRILLI
+t156,interrogazione,sed106,1947-04-30,39,firma,1,FANTONI
+t157,interrogazione,sed106,1947-04-30,39,firma,1,DE FALCO
+t158,interrogazione,sed106,1947-04-30,39,firma,1,CASTELLI AVOLIO
+t159,interrogazione,sed106,1947-04-30,40,firma,2,"CRISPO, CORTESE"
+t160,interrogazione,sed106,1947-04-30,40,firma,1,SCHIRATTI
+t161,interrogazione,sed106,1947-04-30,40,firma,1,MARCHESI
+t162,interrogazione,sed106,1947-04-30,40,firma,9,"CALAMANDREI, CIANCA, MASTINO PIETRO, LOMBARDI RICCARDO, CODIGNOLA, Lussu, Giua, Foa, PRIOLO"
+t163,interrogazione,sed109,1947-05-03,35,firma,1,PERSICO
+t164,interrogazione,sed109,1947-05-03,35,firma,1,ZACCAGNINI
+t165,interrogazione,sed109,1947-05-03,36,firma,1,MACRELLI
+t166,interrogazione,sed113,1947-05-06,39,firma,2,"MiccoLIs, Ropr, AJroLDI; DE CARO, ‘ TRULLI"
+t167,interrogazione,sed113,1947-05-06,40,firma,1,MAZZA
+t168,interrogazione,sed113,1947-05-06,40,firma,10,"DE MARTINO, CORSANEGO, COLITTO, i Dominenò, MAsTINO GESUMINO, Roi MANO, Bozzi, Cappi, Frrrao, No: TARIANNI"
+t169,interrogazione,sed113,1947-05-06,40,firma,2,"VILLABRUNA, BADÎNI CONFALONIERI"
+t170,interrogazione,sed113,1947-05-06,40,firma,1,RUBILLI
+t171,interrogazione,sed113,1947-05-06,41,firma,1,CICERONE
+t172,interrogazione,sed113,1947-05-06,41,firma,1,De MERCURIO
+t173,interrogazione,sed113,1947-05-06,41,firma,1,AYROLDI
+t174,interrogazione,sed115,1947-05-07,26,firma,2,"CACCURI, MONTERISI"
+t175,interrogazione,sed115,1947-05-07,26,firma,10,"De MERCURIO, MORINI, ‘PAOLUCCI, Ca: i MANGI, ReALE Viro, BERNABEI, DE | Vira, Carro, RopINÒ MARIO, ABOZZI, CARBONI"
+t176,interrogazione,sed115,1947-05-07,27,firma,1,MARIANI FRANCESCO
+t177,interrogazione,sed115,1947-05-07,27,firma,1,CAMANGI
+t178,interrogazione,sed115,1947-05-07,27,firma,1,DUGONI
+t179,interrogazione,sed115,1947-05-07,27,firma,1,COTELLESSA
+t180,interrogazione,sed115,1947-05-07,28,firma,1,PERRONE CAPANO
+t181,interrogazione,sed116,1947-05-08,36,firma,1,MARTINO GAETANO
+t182,interrogazione,sed116,1947-05-08,36,firma,3,"MORINI, AMADEI, GAIRO"
+t183,interrogazione,sed116,1947-05-08,36,firma,2,"MORINI, CAIRO"
+t184,interrogazione,sed116,1947-05-08,36,firma,1,FILIPPINI
+t185,interrogazione,sed116,1947-05-08,36,firma,3,"Rossi PaoLO, CANEPA, PERA"
+t186,interrogazione,sed116,1947-05-08,37,firma,1,MONTEMARTINI
+t187,interrogazione,sed116,1947-05-08,37,firma,1,RESCIGNO
+t188,interrogazione,sed116,1947-05-08,37,firma,4,"PAT, GUARIENTO, FERRARESE, AVANZINI"
+t189,interrogazione,sed116,1947-05-08,37,firma,1,ROSSI PAOLO
+t190,interrogazione,sed116,1947-05-08,37,firma,1,MARINARO
+t191,interrogazione,sed118,1947-05-09,26,firma,5,"PastoRe RarFaAELE, SiLipo, Muso_ ©‘. LINO, ALLEGATO, IMPERIALR"
+t192,interrogazione,sed118,1947-05-09,26,firma,1,DE PALMA
+t193,interrogazione,sed118,1947-05-09,26,firma,13,"SCHIAVETTI, SARAGAT, BIANCHI BIANCA, CIANCA, ZUCCARINI, Fox, CALOSso, LomBarpr' RIiccARDO,' CALAMANDREI, BENNANI, CEVOLOTTO, BINNI, VALIANI, MACRELLI, CORBI"
+t194,interrogazione,sed118,1947-05-09,26,firma,1,ROVEDA
+t195,interrogazione,sed120,1947-05-10,36,firma,2,"CANEPA, PERA"
+t196,interrogazione,sed120,1947-05-10,36,firma,4,"CrIsPo, Ropinò Mario, MAZZA, RicCIO STEFANO"
+t197,interrogazione,sed120,1947-05-10,37,firma,1,BERTOLA
+t198,interrogazione,sed122,1947-05-12,43,firma,1,MORINI
+t199,interrogazione,sed122,1947-05-12,43,firma,1,De MERCURIO
+t200,interrogazione,sed122,1947-05-12,43,firma,1,MAZZA
+t201,interrogazione,sed122,1947-05-12,43,firma,1,PUOTI
+t202,interrogazione,sed122,1947-05-12,44,firma,1,DE FALCO
+t203,interrogazione,sed122,1947-05-12,44,firma,3,"RAVAGNAN, GHIDETTI, PELLEGRINI"
+t204,interrogazione,sed122,1947-05-12,44,firma,1,* FRANCESCHINI
+t205,interrogazione,sed122,1947-05-12,45,firma,2,"MALAGUGINI, PIEMONTE"
+t206,interrogazione,sed122,1947-05-12,45,firma,1,EINAUDI
+t207,interrogazione,sed122,1947-05-12,45,firma,1,MERLIN ANGELINA
+t208,interrogazione,sed122,1947-05-12,45,firma,2,"CARBONI, ‘DE PALMA"
+t209,interrogazione,sed122,1947-05-12,46,firma,1,CORBI
+t210,interrogazione,sed123,1947-05-13,28,firma,1,PARRI
+t211,interrogazione,sed124,1947-05-13,30,firma,1,TRIPEPI
+t212,interrogazione,sed124,1947-05-13,31,firma,1,RICCIO STEFANO
+t213,interrogazione,sed124,1947-05-13,31,firma,2,"CAPPELLETTI, CODIGNOLA"
+t214,interrogazione,sed124,1947-05-13,31,firma,1,BADINI CONFALONIERI
+t215,interrogazione,sed125,1947-05-14,33,firma,1,BERTINI
+t216,richiesta di votazione,sed125,1947-05-14,31,presentazione,15,"Gronchi, Pastore Giulio, Togni, Storchi, Fanfani, Benvenuti, Franceschini, Codacci Pisanelli, Firrao, Salizzoni, Bianchini Laura, Mannironi, Federici Maria, Saggin e Montini"
+t217,richiesta di votazione,sed128,1947-05-21,40,presentazione,18,"Mariani, Merlin Lina, Musotto, Jotti Leonilde, Ravagnan, Barontini Ilio, Faralli, Fogagnolo, Maffi, Pistoia, Assennato, Pellegrini, Secchia, Tonetti, Fioritto, Vischioni, Fiorentino, Li Causi, Togliatti"
+t218,richiesta di votazione,sed129,1947-05-22,33,presentazione,14,"Chiaramello, Morini, Calosso, Momigliano, Filippini, Persico, Caporali, Canevari, Longhena, Pera, Carestia, Cairo, Labriola, e Villani"
+t219,richiesta di votazione,sed129,1947-05-22,37,presentazione,20,"Colitto, Sullo, Maffioli, Rodi, Corbino, Rognoni, Corsini, Abozzi, Caso, Bencivenga, Lucifero, Russò Perez, Coppa, Miccolis, De Falco, Garoleo, Siles, Bellavista, Giacchero, Lagravinese Pasquale"
+t220,richiesta di votazione,sed129,1947-05-22,37,presentazione,2,"Cairo, Chiatamello"
+t221,ordine del giorno,sed129,1947-05-22,42,presentazione,7,"Chatrian, Togliatti, Malagugini, Basso, Tonello, Rossi Paolo e Caroleo:"
+t222,ordine del giorno,sed147,1947-06-12,5,firma,1,ABOZZI
+t223,ordine del giorno,sed147,1947-06-12,18,presentazione,2,Castiglia e Cannizzo
+t224,interrogazione,sed164,1947-06-27,43,firma,2,"MUSOLINO, SILIPO"
+t225,interrogazione,sed164,1947-06-27,43,firma,1,SARDIELLO
+t226,interrogazione,sed164,1947-06-27,44,firma,2,"PrIOLO, MANCINI PIETRO"
+t227,interrogazione,sed164,1947-06-27,44,firma,1,Russo PEREZ
+t228,interrogazione,sed164,1947-06-27,44,firma,1,COSTANTINI
+t229,interrogazione,sed164,1947-06-27,45,firma,1,MALAGUGINI
+t230,interrogazione,sed164,1947-06-27,45,firma,1,PERSICO
+t231,interrogazione,sed164,1947-06-27,46,firma,1,GRIECO
+t232,interrogazione,sed164,1947-06-27,46,firma,1,NOBILE
+t233,interrogazione,sed164,1947-06-27,46,firma,1,SCOTTI ALESSANDRO
+t234,interrogazione,sed164,1947-06-27,46,firma,1,DI GLORIA
+t235,interrogazione,sed164,1947-06-27,47,firma,1,TERRANOVA
+t236,interrogazione,sed164,1947-06-27,47,firma,4,"BuBBIO, BARACCO, STELLA, QUARELLO"
+t237,interrogazione,sed164,1947-06-27,47,firma,2,"DUGONI, VERNOCCHI"
+t238,interrogazione,sed164,1947-06-27,47,firma,1,CORBI
+t239,interrogazione,sed164,1947-06-27,47,firma,1,CAMANGI
+t240,interrogazione,sed164,1947-06-27,48,firma,1,GUERRIERI FILIPPO
+t241,interrogazione,sed164,1947-06-27,48,firma,1,GRILLI
+t242,interrogazione,sed164,1947-06-27,48,firma,1,RESCIGNO
+t243,ordine del giorno,sed164,1947-06-27,21,presentazione,2,Bozzi e Grassi
+t244,interrogazione,sed168,1947-07-01,30,firma,1,PELLEGRINI
+t245,interrogazione,sed168,1947-07-01,30,firma,1,MAZZA
+t246,interrogazione,sed168,1947-07-01,30,firma,1,'CORSI
+t247,interrogazione,sed168,1947-07-01,31,firma,1,VERNOCCHI
+t248,interrogazione,sed168,1947-07-01,31,firma,1,GIOLITTI
+t249,interrogazione,sed168,1947-07-01,31,firma,1,MASTROJANNI
+t250,interrogazione,sed168,1947-07-01,32,firma,1,BARBARESCHI
+t251,interrogazione,sed168,1947-07-01,32,firma,1,Z'UCCARINI
+t252,interrogazione,sed168,1947-07-01,32,firma,1,STELLA
+t253,interrogazione,sed168,1947-07-01,33,firma,1,GUERRIERI FILIPPO
+t254,interrogazione,sed168,1947-07-01,33,firma,2,"BIANCHI COSTANTINO, ROSELLI"
+t255,interrogazione,sed170,1947-07-02,17,firma,2,"BETTIOL, LAZZATI"
+t256,interrogazione,sed170,1947-07-02,17,firma,1,ZACCAGNINI
+t257,interrogazione,sed170,1947-07-02,18,firma,1,SCOTTI FRANCESCO
+t258,interrogazione,sed170,1947-07-02,18,firma,1,FERRARESE
+t259,interrogazione,sed170,1947-07-02,19,firma,1,BASILE
+t260,ordine del giorno,sed170,1947-07-02,14,presentazione,2,Lami Starnuti e Preti
+t261,richiesta di votazione,sed170,1947-07-02,15,presentazione,27,"Nobile, Costantini, Ruggeri, Ferrari, Sicignano, Ricci, Pastore Giulio, Rubilli, Musolino, Fedeli Armando, Tonello, Landi, Barontini. Ilio, Barontini Anelito, Maffioli, De Filpo, Colombi Arturo, Corbino, Alberganti, Gavina, Morelli Renato, Bolognesi, Bei Adele, Binni, Roveda, Nobili Tito Oro, Fornara. i"
+t262,interpellanza,sed171,1947-07-03,25,firma,6,"Li CAUSI, MONTALBANO, LOMBARDI Riccarpo, NAsI, SANSONE, FIORE"
+t263,interrogazione,sed171,1947-07-03,25,firma,1,JACOMETTI
+t264,interrogazione,sed171,1947-07-03,25,firma,2,"MONTEMARTINI, FERRERI"
+t265,interrogazione,sed171,1947-07-03,25,firma,1,POLLASTRINI ELETTRA
+t266,interrogazione,sed171,1947-07-03,26,firma,1,SULLO FIORENTINO
+t267,interrogazione,sed171,1947-07-03,26,firma,1,CARBONARI
+t268,richiesta di votazione,sed171,1947-07-03,16,presentazione,28,"Moranino, Rossi Maria Maddalena, Bibelotti, Negro, Landi, Li Causi, Bucci, De Filpo, Assennato, Barontini Ilio, Dozza, Fedeli Armando, Farini, Ricci, Pratolongo, Giannini, Abozzi, Castiglia, Venditti, Colitto, Coppa, Condorelli, Trulli, Mastrojanni, Perugi, Silipo, Miccolis, Patritolo"
+t269,interrogazione,sed171,1947-07-03,24,presentazione,3,"D'Onofrio, Minio e Gallico Spano Nadia"
+t270,interrogazione,sed173,1947-07-04,26,firma,1,MERLIN LINA
+t271,interrogazione,sed173,1947-07-04,26,firma,1,MALAGUGINI
+t272,interrogazione,sed173,1947-07-04,26,firma,1,MICCOLIS
+t273,interrogazione,sed173,1947-07-04,26,firma,1,RECCA
+t274,interrogazione,sed173,1947-07-04,26,firma,1,PRIOLO
+t275,interrogazione,sed173,1947-07-04,27,firma,1,LAMI STARNUTI
+t276,interrogazione,sed173,1947-07-04,27,firma,2,"GOTELLI ANGELA, GUERRIERI FILIPPO"
+t277,interrogazione,sed173,1947-07-04,27,firma,1,BRASCHI
+t278,interrogazione,sed173,1947-07-04,27,firma,1,DE MERCURIO
+t279,interrogazione,sed173,1947-07-04,28,firma,1,CARBONI ANGELO
+t280,interrogazione,sed173,1947-07-04,28,firma,1,MONTEMARTINI
+t281,interrogazione,sed173,1947-07-04,28,firma,1,MUSOLINO
+t282,interrogazione,sed173,1947-07-04,28,firma,1,CAMANGI
+t283,interrogazione,sed173,1947-07-04,29,firma,1,GASPAROTTO
+t284,interrogazione,sed173,1947-07-04,29,firma,1,ZOTTA
+t285,interrogazione,sed173,1947-07-04,29,firma,1,SCOTTI ALESSANDRO
+t286,interrogazione,sed173,1947-07-04,29,firma,1,SCOCA
+t287,interrogazione,sed176,1947-07-08,24,firma,1,BELLATO
+t288,interrogazione,sed176,1947-07-08,25,firma,1,RICCIO STEFANO
+t289,interrogazione,sed176,1947-07-08,25,firma,1,LONGHENA
+t290,interrogazione,sed176,1947-07-08,25,firma,1,BRUNI
+t291,interrogazione,sed176,1947-07-08,25,firma,1,RESCIGNO
+t292,interrogazione,sed176,1947-07-08,25,firma,1,FERRARESE
+t293,interrogazione,sed176,1947-07-08,25,firma,1,ROSELLI
+t294,richiesta di votazione,sed176,1947-07-08,22,presentazione,2,Zuccarini e Caronia
+t295,interrogazione,sed178,1947-07-09,20,firma,1,PERSICO
+t296,interrogazione,sed178,1947-07-09,20,firma,1,BASILE
+t297,interrogazione,sed180,1947-07-10,17,firma,2,"NuMEROSso, DE MICHELE"
+t298,interrogazione,sed180,1947-07-10,17,firma,3,"NuMEROso, DE MICHELE, CASO"
+t299,interrogazione,sed180,1947-07-10,17,firma,1,FARALLI
+t300,interrogazione,sed180,1947-07-10,18,firma,3,"Gaso, NUMEROSO, TITOMANLIO VITTORIA, DE MICHELE"
+t301,interrogazione,sed180,1947-07-10,18,firma,8,"Lozza, PRETI, BINNI, CODIGNOLA, BERNINI, CONDORELLI, CIFALDI, + PARRI"
+t302,interrogazione,sed180,1947-07-10,18,firma,3,"TREMELLONI, D'ARAGONA, TREVES"
+t303,interrogazione,sed180,1947-07-10,18,firma,1,CAROLEO
+t304,interrogazione,sed180,1947-07-10,18,firma,1,CANNIZZO
+t305,interrogazione,sed180,1947-07-10,19,firma,3,"BAZOLI, BULLONI, MONTINI"
+t306,interrogazione,sed180,1947-07-10,19,firma,3,"SULLO, PREZIOSI, DE MERCURIO"
+t307,interrogazione,sed180,1947-07-10,19,firma,2,"GUERRIERI FILIPPO, GOTELLI ANGELA"
+t308,interrogazione,sed180,1947-07-10,20,firma,1,FUSCO
+t309,interrogazione,sed180,1947-07-10,20,firma,1,CODIGNOLA
+t310,interrogazione,sed180,1947-07-10,20,firma,2,"CODIGNOLA, CORBI"
+t311,interrogazione,sed180,1947-07-10,21,firma,1,CORTESE
+t312,richiesta di votazione,sed180,1947-07-10,15,presentazione,16,"Micheli, Cappi, Coccia, Belotti, Schiratti, Monticelli, Morelli Luigi, Piccioni, Fuschini, Vigo, Scotti Alessandro, Caroleo, Tessitòri, Angelucci, Pastore Giulio e Tosi"
+t313,interrogazione,sed182,1947-07-11,26,firma,37,"FRANCESCHINI, LIZIER, FERRARESE, Baracco, PONTI, CARBONARI, FANTONI, VALMARANA, SCHIRATTI, RAPELLI, ALBERTI, RUMOR, GIACCHERO, CAPPELLETTI, ‘ UBERTI, MICHELI, Sartor, TESSITORI, DEL CURTO, GiorDANI,, GUERRIERI FILIPPO, DoMINEDÒ, Moro, FIRRAO, VALENTI, STELLA, BASTIANETTI, MONTICELLI, Tosato, BaLpuzzi, CaAPPUGI, FABRIANI, BELLATO, BURATO, MARZAROTTO, CreEMascHI CarLo, BiaGIONI"
+t314,interrogazione,sed182,1947-07-11,27,firma,1,BULLONI
+t315,interrogazione,sed182,1947-07-11,27,firma,1,PERUGI
+t316,interrogazione,sed182,1947-07-11,27,firma,1,VINCIGUERRA
+t317,interrogazione,sed182,1947-07-11,27,firma,1,BRASCHI
+t318,interrogazione,sed183,1947-07-12,33,firma,9,"GaLLICO SPANO NADIA, MERLIN LINA, MONTAGNANA RITA, MATTEI TERESA, Bri ApELE, NocE TERESA, POLLASTRINI ELETTRA, IOTTI LEONILDE, MinELLA AncioLA, Rossi MARIA MADDALENA"
+t319,interrogazione,sed183,1947-07-12,33,firma,1,DI GIOVANNI
+t320,interrogazione,sed183,1947-07-12,34,firma,3,"Caso, DE MicHELE, NUMEROSO"
+t321,interrogazione,sed183,1947-07-12,34,firma,2,"MERLIN ANGELINA, FIORENTINO GIOSUÈ"
+t322,interrogazione,sed183,1947-07-12,34,firma,2,"BRASCHI, PALLASTRELLI"
+t323,interrogazione,sed183,1947-07-12,34,firma,2,"MEZZADRA, LOMBARDI CARLO"
+t324,interrogazione,sed186,1947-07-15,35,firma,1,STAMPACCHIA
+t325,interrogazione,sed186,1947-07-15,36,firma,1,MASTROJSANNI
+t326,interrogazione,sed186,1947-07-15,36,firma,1,BENCIVENGA
+t327,interrogazione,sed186,1947-07-15,36,firma,1,CAPPI
+t328,interrogazione,sed186,1947-07-15,37,firma,1,AZZI
+t329,interrogazione,sed186,1947-07-15,37,firma,1,CAMANGI
+t330,interrogazione,sed186,1947-07-15,37,firma,1,NOBILE
+t331,interrogazione,sed186,1947-07-15,38,firma,1,DUGONI
+t332,interrogazione,sed186,1947-07-15,38,firma,1,SILIPO
+t333,interrogazione,sed186,1947-07-15,38,firma,1,GUERRIERI FILIPPO
+t334,interpellanza,sed190,1947-07-17,28,firma,3,"CODIGNOLA, LAMI STARNUTI, CARBONI, | LUSSU"
+t335,interrogazione,sed190,1947-07-17,29,firma,1,RIVERA
+t336,interrogazione,sed190,1947-07-17,29,firma,2,"BULLONI, CAPPI"
+t337,interrogazione,sed190,1947-07-17,30,firma,1,BORSELLINO
+t338,interrogazione,sed190,1947-07-17,30,firma,1,FERRERI
+t339,interrogazione,sed190,1947-07-17,31,firma,1,DI FAUSTO
+t340,interrogazione,sed190,1947-07-17,31,firma,1,NOBILE
+t341,interrogazione,sed190,1947-07-17,31,firma,1,BIAGIONI
+t342,interrogazione,sed190,1947-07-17,31,firma,1,FERRARESE
+t343,interrogazione,sed190,1947-07-17,32,firma,1,JACINI
+t344,interrogazione,sed190,1947-07-17,33,firma,1,SARDIELLO
+t345,interrogazione,sed190,1947-07-17,33,firma,1,RICCIO STEFANO
+t346,richiesta di votazione,sed190,1947-07-17,2,presentazione,3,"Cremaschi Carlo, Uberti, Camposarcuno ed altri"
+t347,interrogazione,sed192,1947-07-18,25,firma,7,"VIGORELLI, BASTIANETTO, FACCHINETTI, FANTUZZI, CARIGNANI, CAVALLARI, RUSso PEREZ"
+t348,interrogazione,sed192,1947-07-18,25,firma,6,"CAVALLARI, Russo PEREZ, BASTIANETTO, FANTUZZI, GIACcHÈRO, CARIGNANI"
+t349,interrogazione,sed192,1947-07-18,25,firma,7,"CARIGNANI, BASTIANETTO, GIACCIHÈRo, FACCHINETTI, CAVALLARI, FANTUZZI, RUSSO PEREZ"
+t350,interrogazione,sed192,1947-07-18,26,firma,4,"BASTIANETTO, GIACCHÈRO, CARIGNANI, Russo PEREZ"
+t351,interrogazione,sed192,1947-07-18,26,firma,1,MICCOLIS
+t352,interrogazione,sed192,1947-07-18,26,firma,12,"Caso, Corpa, CAPUA, De MARIA, MERIGHI, FoRNARA, SPALLICCI, MARCONI, Rivera, CAVALLOTTI, MAFFI, DeL CuRTO"
+t353,interrogazione,sed192,1947-07-18,26,firma,2,"CONDORELLI, BONINO"
+t354,interrogazione,sed192,1947-07-18,26,firma,1,DI GIOVANNI
+t355,interrogazione,sed192,1947-07-18,27,firma,1,SARDIELLO
+t356,interrogazione,sed192,1947-07-18,27,firma,1,COTELLESSA
+t357,interrogazione,sed192,1947-07-18,28,firma,1,LAMI STARNUTI
+t358,interrogazione,sed192,1947-07-18,28,firma,1,COLITTO
+t359,interrogazione,sed192,1947-07-18,29,firma,1,BUBBIO
+t360,interrogazione,sed192,1947-07-18,29,firma,2,"Russo PEREZ, BUBBIO"
+t361,interrogazione,sed192,1947-07-18,29,firma,1,RESCIGNO
+t362,interrogazione,sed213,1947-09-10,24,firma,1,MARTINO GAETANO
+t363,interrogazione,sed213,1947-09-10,24,firma,1,BELLAVISTA
+t364,interrogazione,sed213,1947-09-10,25,firma,1,FIORE
+t365,interrogazione,sed213,1947-09-10,25,firma,2,"MOLINELLI, RUGGERI LUIGI"
+t366,interrogazione,sed213,1947-09-10,25,firma,1,SCHIAVETTI
+t367,interrogazione,sed215,1947-09-11,30,firma,1,SCOTTI ALESSANDRO
+t368,interrogazione,sed215,1947-09-11,30,firma,1,JACOMETTI
+t369,interrogazione,sed215,1947-09-11,30,firma,1,DI GLORIA
+t370,interrogazione,sed215,1947-09-11,30,firma,1,PERSICO
+t371,interpellanza,sed216,1947-09-12,36,firma,1,SANSONE
+t372,interpellanza,sed216,1947-09-12,36,firma,1,VERNOCCHI
+t373,interpellanza,sed216,1947-09-12,36,firma,1,CALOSSO
+t374,interpellanza,sed216,1947-09-12,36,firma,1,SCOTTI ALESSANDRO
+t375,interrogazione,sed216,1947-09-12,37,firma,2,"ABOZZI, MASTINO PIETRO"
+t376,interrogazione,sed216,1947-09-12,37,firma,1,ABOZZI
+t377,interrogazione,sed216,1947-09-12,37,firma,1,ARATA
+t378,interrogazione,sed218,1947-09-15,12,firma,1,RODINÒ MARIO
+t379,interrogazione,sed218,1947-09-15,12,firma,1,RUSSO PEREZ
+t380,interrogazione,sed218,1947-09-15,12,firma,1,LA GRAVINESE NICOLA
+t381,interrogazione,sed218,1947-09-15,13,firma,1,PAOLUCCI
+t382,interrogazione,sed218,1947-09-15,13,firma,1,IMPERIALE
+t383,interrogazione,sed218,1947-09-15,13,firma,1,TRIPEPI
+t384,interrogazione,sed218,1947-09-15,13,firma,1,SALVATORE
+t385,interpellanza,sed220,1947-09-16,26,firma,8,"SiLipo, GuLLO Fausto, MuSOLINO, MANCINI, SARDIELLO, PRIOLO, GAROLEO, MAZZEI"
+t386,interrogazione,sed220,1947-09-16,26,firma,1,MONTEMARTINI
+t387,interrogazione,sed220,1947-09-16,26,firma,1,SALVATORE
+t388,interrogazione,sed220,1947-09-16,26,firma,1,MARCHESI
+t389,interrogazione,sed220,1947-09-16,26,firma,1,MERIGHI
+t390,interrogazione,sed220,1947-09-16,27,firma,1,BULLONI
+t391,interrogazione,sed220,1947-09-16,27,firma,1,PRIOLO
+t392,interrogazione,sed220,1947-09-16,27,firma,1,MAZZEI
+t393,interrogazione,sed220,1947-09-16,27,firma,1,COSTANTINI
+t394,interrogazione,sed220,1947-09-16,27,firma,2,"SCOTTI ALESSANDRO, GRILLI"
+t395,interrogazione,sed220,1947-09-16,28,firma,1,GIUA
+t396,interrogazione,sed220,1947-09-16,28,firma,1,ALDISIO
+t397,interrogazione,sed220,1947-09-16,28,firma,2,"MASTINO GESUMINO, CARBONI ENRICO"
+t398,interrogazione,sed220,1947-09-16,28,firma,4,"COLONNETTI, GIaccHERO, FIRRAO, DI FAUSTO"
+t399,ordine del giorno,sed222,1947-09-17,29,firma,13,"PIGNATARI, LONGHENA , CAPORALI, CARBONI, VIGORELLI, VILLANI, PERsIco, REALE, CRISPO, FILIPPINI, PRETI, LAMI STARNUTI, ZANARDI, PARIS"
+t400,interrogazione,sed222,1947-09-17,29,firma,1,MAZZEI
+t401,interrogazione,sed222,1947-09-17,29,firma,1,SAPIENZA
+t402,interrogazione,sed222,1947-09-17,29,firma,13,"SULLO, LETTIERI, GIORDANI, MAZZA, * MATTARELLA, CASTELLI AvOLIO, CoDACCI PISANELLI, BUBBIO, CASSIANI, TRIMARCHI, DE Caro GERARDO, GaLATI, RODINÒ Ucg"
+t403,interrogazione,sed224,1947-09-18,23,firma,1,CIFALDI
+t404,interrogazione,sed224,1947-09-18,24,firma,1,SILIPO
+t405,interrogazione,sed224,1947-09-18,24,firma,1,BETTIOL
+t406,interrogazione,sed224,1947-09-18,24,firma,1,LONGHENA
+t407,interrogazione,sed224,1947-09-18,24,firma,1,MUSOLINO
+t408,interrogazione,sed224,1947-09-18,25,firma,1,BONINO
+t409,interrogazione,sed224,1947-09-18,25,firma,1,SULLO
+t410,interrogazione,sed224,1947-09-18,26,firma,1,ARCANGELI
+t411,interrogazione,sed224,1947-09-18,26,firma,1,FABRIANI
+t412,interpellanza,sed226,1947-09-19,36,firma,1,NOBILE
+t413,interrogazione,sed226,1947-09-19,37,firma,6,"MasTINO Pietro, LUSSU, .ABOZZI, .  Grua, MURGIA, MANNIRONI, CORSI"
+t414,interrogazione,sed226,1947-09-19,37,firma,7,"MANNIRONI, MasTINO PiETRO, LUSSU, MastINo GESUMINO, CARBONI ENi RICO, CHIEFFI, MURGIA"
+t415,interrogazione,sed226,1947-09-19,38,firma,6,"Dozza, ZANARDI, TEGA, GRAZIA, BERNINI, COLOMBI ARTURO"
+t416,interrogazione,sed226,1947-09-19,39,firma,3,"LAGRAVINESE PASQUALE, RopI, LA GRaVINESE NICOLA, AYROLDI"
+t417,interrogazione,sed226,1947-09-19,39,firma,1,MAZZA
+t418,interrogazione,sed226,1947-09-19,39,firma,1,SILIPO
+t419,interrogazione,sed226,1947-09-19,39,firma,1,FERRERI
+t420,interrogazione,sed226,1947-09-19,39,firma,1,MARTINO GAETANO
+t421,interrogazione,sed226,1947-09-19,39,firma,1,FERRARESE
+t422,interrogazione,sed226,1947-09-19,39,firma,1,BELLATO
+t423,interrogazione,sed226,1947-09-19,40,firma,1,CAMPOSARCUNO
+t424,interrogazione,sed226,1947-09-19,40,firma,4,"CAMPOSARCUNO, CIAMPITTI, COLITTO, MORELLI RENATO"
+t425,interrogazione,sed229,1947-09-23,20,firma,2,"De MARIA, CODACCI PISANELLI"
+t426,interrogazione,sed229,1947-09-23,21,firma,1,SULLO
+t427,interrogazione,sed229,1947-09-23,21,firma,2,"CARBONI ANGELO, PERSICO"
+t428,interrogazione,sed229,1947-09-23,21,firma,1,AYROLDI
+t429,interrogazione,sed229,1947-09-23,21,firma,7,"GALOSSO, * MOMIGLIANO, .SAPIENZA, BrancHI BIANCA, BocconI, CORSI, ° LAMI STARNUTI"
+t430,interrogazione,sed229,1947-09-23,21,firma,3,"SULLO, GORTANI, QUINTIERI ADOLFO"
+t431,interrogazione,sed229,1947-09-23,22,firma,6,"MANNIRONI, MASTINO GESUMINO, CARBONI EnRICO, MURGIA, CHIEFFI, 7. LUSSU"
+t432,ordine del giorno,sed229,1947-09-23,3,presentazione,2,Laconi e Grieco
+t433,ordine del giorno,sed229,1947-09-23,8,presentazione,2,Piccioni e Moro:
+t434,interrogazione,sed231,1947-09-24,41,firma,4,"MACRELLI, CHIOSTERGI, SPALLICCI, PACCIARDI"
+t435,interrogazione,sed231,1947-09-24,41,firma,1,MORINI
+t436,interrogazione,sed231,1947-09-24,41,firma,1,ZAPPELLI
+t437,interrogazione,sed231,1947-09-24,42,firma,1,CARBONI ANGELO
+t438,interrogazione,sed231,1947-09-24,42,firma,1,CASTELLI AVOLIO
+t439,interrogazione,sed231,1947-09-24,42,firma,1,CAROLEO
+t440,ordine del giorno,sed231,1947-09-24,31,presentazione,14,"Lami Starnuti, Binni, Morini, Rossi Paolo, Treves, Longhena, Bennani, Canevari, Bocconi, Caporali, Villani, Zanardi, Momigliano e Filippini:"
+t441,ordine del giorno,sed233,1947-09-25,27,firma,10,"CANEVARI, SARAGAT, ZAGARIS VicoRELLI, SIMONINI, PERSICO, PIEMONTE, VILLANI, CARTIA, LAMI STARNUTI, CAIRO"
+t442,interrogazione,sed233,1947-09-25,27,firma,1,RIVERA
+t443,interrogazione,sed233,1947-09-25,27,firma,1,PIEMONTE
+t444,interrogazione,sed233,1947-09-25,27,firma,6,"GASPAROTTO, BELOTTI, VICENTINI, CRE© MASCHI CARLO, VIGORELLI, ZERBI"
+t445,interrogazione,sed233,1947-09-25,28,firma,1,SILIPO
+t446,ordine del giorno,sed248,1947-10-07,12,firma,19,"NITTI, RUBILLI, PERSICO, LACONI, GuLLo FAUSTO, QUINTIERI QUINTO, Nasi, Bozzi, GrIECO, TOGLIATTI, CIFALDI, REALE VITO, VIGNA, MOLÈ, Perrone CapANO, BASILE, Russo PEREZ, DUGONI, COLITTO"
+t447,interrogazione,sed248,1947-10-07,30,firma,1,FROGGIO
+t448,interrogazione,sed248,1947-10-07,30,firma,2,"COLOMBO, ZOTTA"
+t449,interrogazione,sed248,1947-10-07,30,firma,1,PERSICO
+t450,interrogazione,sed248,1947-10-07,31,firma,1,VALENTI
+t451,interrogazione,sed248,1947-10-07,31,firma,1,LOZZA
+t452,richiesta di votazione,sed249,1947-10-08,7,presentazione,4,"Uberti, Dominedò, Moro, Bertone ed altri"
+t453,interrogazione,sed250,1947-10-08,30,firma,6,"Rossi PAOLO, LAMI STARNUTI,' SEGALA, MAZZONI, CARBONI ANGELO, PERSICO"
+t454,interrogazione,sed250,1947-10-08,31,firma,1,MANCINI
+t455,interrogazione,sed250,1947-10-08,31,firma,1,RopINò MARIO
+t456,interrogazione,sed250,1947-10-08,31,firma,1,DI FAUSTO
+t457,interrogazione,sed250,1947-10-08,32,firma,1,GHIDETTI
+t458,interrogazione,sed252,1947-10-09,30,firma,1,MEZZADRA
+t459,interrogazione,sed252,1947-10-09,30,firma,1,PRETI
+t460,interrogazione,sed252,1947-10-09,30,firma,1,GUERRIERI FILIPPO
+t461,interrogazione,sed252,1947-10-09,31,firma,1,CAMPOSARCUNO
+t462,interrogazione,sed252,1947-10-09,31,firma,1,BASTIANETTO
+t463,interrogazione,sed252,1947-10-09,32,firma,1,GALATI
+t464,interrogazione,sed252,1947-10-09,32,firma,1,MASTROJANNI
+t465,interrogazione,sed254,1947-10-10,30,firma,1,MONTICELLI
+t466,interrogazione,sed254,1947-10-10,30,firma,1,DI FAUSTO
+t467,interrogazione,sed254,1947-10-10,30,firma,1,ARATA
+t468,interrogazione,sed254,1947-10-10,31,firma,1,GUERRIERI FILIPPO
+t469,interrogazione,sed254,1947-10-10,31,firma,1,RoDINÒ MARIO
+t470,interrogazione,sed257,1947-10-14,20,firma,1,COLITTO
+t471,interrogazione,sed257,1947-10-14,20,firma,1,BRASCHI
+t472,interrogazione,sed257,1947-10-14,20,firma,1,ERMINI
+t473,richiesta di votazione,sed258,1947-10-15,2,presentazione,20,"Lucifero, Colitto, Rodinò Mario, Mastrojanni, Corsini, - Penna Ottavia, Rodi, Abozzi, Miccolis, Russo Perez, Lombardi Riccardo, Veroni, Mazza, Nasi, Foa, Rognoni, Bencivenga; Zuccarini, Cevolotto, De Vita"
+t474,interrogazione,sed259,1947-10-15,32,firma,1,MATTARELLA
+t475,interrogazione,sed259,1947-10-15,32,firma,1,GHIDETTI
+t476,interrogazione,sed259,1947-10-15,33,firma,1,SAPIENZA
+t477,interrogazione,sed259,1947-10-15,33,firma,1,SCOTTI ALESSANDRO
+t478,interrogazione,sed259,1947-10-15,33,firma,2,"SCOTTI ALESSANDRO, CAROLEO"
+t479,interrogazione,sed259,1947-10-15,33,firma,2,"DE CARO RAFFAELE, CIFALDI"
+t480,interrogazione,sed259,1947-10-15,34,firma,1,CORSI
+t481,interrogazione,sed259,1947-10-15,34,firma,1,CORTESE
+t482,interrogazione,sed259,1947-10-15,34,firma,1,COLITTO
+t483,interrogazione,sed259,1947-10-15,35,firma,1,BELOTTI
+t484,interrogazione,sed259,1947-10-15,35,firma,1,BARONTINI ANELITO
+t485,interrogazione,sed261,1947-10-16,24,firma,4,"PATRISSI, FRESA, PuUoTI, DE FALCO"
+t486,interrogazione,sed261,1947-10-16,24,firma,1,SCALFARO
+t487,interrogazione,sed261,1947-10-16,24,firma,1,CAMANGI
+t488,interrogazione,sed261,1947-10-16,24,firma,23,"BELOTTI, DOMINEDÒ, CARBONARI, CIMENTI, CLERICI, MALVESTITI, FERRArIO CELESTINO, SAMPIETRO, BALDUZZI, BovETTI, QUARELLO, SCALp FARO, BURATO, GORTANI, RAPELLI, BENVENUTI, VALENTI, FoRESI, CoLoMBo EMILIO, ZACCAGNINI, RAIMONDI, MONTICELLI, RopI, GiacCHERO"
+t489,interrogazione,sed261,1947-10-16,24,firma,1,CARBONARI
+t490,interrogazione,sed261,1947-10-16,24,firma,1,COLITTO
+t491,interrogazione,sed262,1947-10-17,32,firma,1,MORINI
+t492,interrogazione,sed262,1947-10-17,32,firma,1,PACCIARDI
+t493,interrogazione,sed262,1947-10-17,33,firma,1,BENCIVENGA
+t494,interrogazione,sed262,1947-10-17,33,firma,2,"SCARPA, FORNARA"
+t495,interrogazione,sed262,1947-10-17,34,firma,1,CLERICI
+t496,interrogazione,sed262,1947-10-17,34,firma,1,FILIPPINI
+t497,interrogazione,sed262,1947-10-17,34,firma,1,CAROLEO
+t498,interrogazione,sed262,1947-10-17,34,firma,1,CAMANGI
+t499,interrogazione,sed262,1947-10-17,34,firma,1,PRIOLO
+t500,interrogazione,sed263,1947-10-18,17,firma,4,"Fusco, De MICHELE, NUMEROSO, CASO"
+t501,interrogazione,sed263,1947-10-18,17,firma,1,BRASCHI
+t502,interrogazione,sed263,1947-10-18,19,firma,1,GORTANI
+t503,interrogazione,sed266,1947-10-21,25,firma,2,"CARONIA, DOMINEDÒ"
+t504,interrogazione,sed266,1947-10-21,25,firma,1,SANSONE
+t505,interrogazione,sed266,1947-10-21,25,firma,1,RICCIO STEFANO
+t506,interrogazione,sed266,1947-10-21,26,firma,1,MANNIRONI
+t507,interrogazione,sed266,1947-10-21,26,firma,1,PASTORE RAFFAELE
+t508,interrogazione,sed266,1947-10-21,26,firma,6,"‘GLERICI, MEDA, LAZZATI, CASTELLI EpGARDO, BALDUZZI, SAMPIETRO"
+t509,interrogazione,sed266,1947-10-21,27,firma,1,MOLINELLI
+t510,interrogazione,sed266,1947-10-21,27,firma,1,PERSICO
+t511,interrogazione,sed266,1947-10-21,27,firma,1,GORTANI
+t512,interrogazione,sed268,1947-10-22,33,firma,2,"CARONIA, DOMINEDÒ"
+t513,interrogazione,sed268,1947-10-22,33,firma,1,SANSONE
+t514,interrogazione,sed268,1947-10-22,35,firma,1,SAMPIETRO
+t515,interrogazione,sed268,1947-10-22,35,firma,33,"ROSELLI, MANNIRONI, DE ISNTERRICHTER JERVOLINO MARIA, SAMPIETRO, .  SALIZZONI, MonTINI, RESTIvO, VIaLE, CAPPI, BASTIANETTO, CARBONI ENRICO, RUMOR, DE MARTA, LA PIRA, . CopaAccI PISANELLI, SALVATORE, DoMINEDÒ, DE PALMA, STELLA; BaRACCO, AVANZINI, VALENTI, GIORDANI, SAGGIN, SARTOR, GuI, Conci ELISABETTA, SCALFARO, BERTOLA,. SILES, MORELLI LUIGI, FirRA0, BUBi BIO, Moro"
+t516,interrogazione,sed268,1947-10-22,35,firma,1,LACONI
+t517,interrogazione,sed268,1947-10-22,35,firma,1,DI GLORIA
+t518,interrogazione,sed268,1947-10-22,35,firma,1,FERRERI
+t519,interrogazione,sed270,1947-10-23,21,firma,6,"SPALLICCI, DE MERCURIO, PAOLUCCI, “— DeLLa Seta, MACRELLI, FACCHINETTI, FORTUNA"
+t520,interrogazione,sed270,1947-10-23,21,firma,1,PERRONE CAPANO
+t521,interrogazione,sed270,1947-10-23,21,firma,2,"PASTORE RAFFAELE, ASSENNATO"
+t522,interrogazione,sed270,1947-10-23,21,firma,1,RICCIO
+t523,interrogazione,sed270,1947-10-23,21,firma,1,DI GLORIA
+t524,interrogazione,sed270,1947-10-23,22,firma,1,SANTI
+t525,interrogazione,sed270,1947-10-23,22,firma,2,"SIMONINI, D'ARAGONA"
+t526,interrogazione,sed270,1947-10-23,22,firma,1,RUBILLI
+t527,interrogazione,sed270,1947-10-23,22,firma,1,CIFALDI
+t528,interrogazione,sed270,1947-10-23,22,firma,1,MONTALBANO
+t529,richiesta di votazione,sed270,1947-10-23,16,presentazione,15,"Bettiol, Siles, Lizier, Coppi, Angelucci, Bosco Lucarelli, Rapelli, Monticelli, Bertone, Restagno, Rodinò Ugo, Recca, De Michele, Chieffi, De Martino, Jervolino"
+t530,interrogazione,sed272,1947-10-24,41,firma,1,PRIOLO
+t531,interrogazione,sed272,1947-10-24,41,firma,8,"SPALLICCI, CHIOSTERGI, CAMANGI, Azzi, MAGRINI, PAOLUCCI, ZucCARINI, LONGHENA"
+t532,interrogazione,sed272,1947-10-24,42,firma,1,BUBBIO
+t533,interrogazione,sed272,1947-10-24,42,firma,10,"SULLO, Bosco LUCARELLI, FIrRrao, NicorRAa MARIA, CARRATELLI, QUINTIERI ADOLFO, CASTELLI AVOLIO, Copacci PISANELLI, REALE VITO, RoDINÒ UGo"
+t534,richiesta di votazione,sed272,1947-10-24,13,presentazione,19,"Paietta Giuliano, Jotti Leonilde, Moranino, Barontini Anelito, Carini, Saccenti, Ricci, Bucci, Laconi, Chiarini, Landi, Grieco, Corbi, Allegato, Imperiale, Pucci, Cavallotti, Ruggeri, Mezzadra, Pajetta Giancarlo"
+t535,richiesta di votazione,sed272,1947-10-24,15,presentazione,20,"Carpano Maglioli, Fiorentino, Tomba, Barbareschi, Fedeli Aldo, Faralli, Vischioni, Pistoia, Vernocchi, Tega, Fornara, Bordon, Costa, Giacometti, Stampacchia, Corbi, Pajetta Giancarlo, Jotti Leonilde, Fantuzzi, Moranino"
+t536,richiesta di votazione,sed272,1947-10-24,22,presentazione,14,"Maltagliati, Laconi, Vernocchi, Giacometti, Fedeli Aldo, Pistoia, Scoccimarro, Sicignano, Corbi, Grieco, Pesenti, Gallico Spano Nadia, Fedeli Armando, Saccenti e altri"
+t537,interrogazione,sed273,1947-10-25,10,firma,3,"TRULLI, Coppa, RopINÒ MARIO"
+t538,interrogazione,sed273,1947-10-25,10,firma,1,SANTI
+t539,interrogazione,sed273,1947-10-25,10,firma,1,PAOLPCCI
+t540,mozione,sed276,1947-10-29,16,presentazione,10,"Russo Perez, Mazzoni, Cianca, Bellavista, Schiavetti, Uberti, Marazza, Togliatti, Mastino Pietro, Condorelli"
+t541,interrogazione,sed277,1947-10-29,45,firma,1,CANEVARI
+t542,interrogazione,sed277,1947-10-29,46,firma,1,PERSICO
+t543,interrogazione,sed277,1947-10-29,46,firma,1,PERRONE CAPANO
+t544,interrogazione,sed277,1947-10-29,46,firma,2,"GEUNA, GIACCHERO"
+t545,interrogazione,sed277,1947-10-29,46,firma,4,"GEUNA, STELLA, GIACCHERO, SCOTTI A LESSANDRO"
+t546,interrogazione,sed277,1947-10-29,46,firma,15,"MoRanDI, LomBARDI RiccaARDO, GiaAcoMETTI, LIZZADRI, NENNI, MALAGUGINI, GIUA, - BARBARESCHI, GRAZIA VERENIN, DE MICHELIS, SANSONE, PRESSINOTTI, BONOMELLI, FIORENTINO, VISCHIONI"
+t547,interrogazione,sed277,1947-10-29,50,firma,3,"SCOTTI ALESSANDRO, GIAccHERO, RAIMONDI"
+t548,interrogazione,sed277,1947-10-29,50,firma,1,IMPERIALE
+t549,interrogazione,sed277,1947-10-29,50,firma,1,PISTOIA
+t550,interrogazione,sed277,1947-10-29,50,firma,4,"ARATA, BERNAMONTI, PALLASTRELLI, MAZZONI"
+t551,interrogazione,sed277,1947-10-29,50,firma,1,BUBBIO
+t552,interrogazione,sed277,1947-10-29,50,firma,1,DI FAUSTO
+t553,interrogazione,sed277,1947-10-29,51,firma,6,"ARATA, PALLASTRELLI, MICHELI, FERRARI, VALENTI, MAZZONI"
+t554,interrogazione,sed277,1947-10-29,51,firma,1,GERVASI
+t555,interrogazione,sed277,1947-10-29,51,firma,1,LOPARDI
+t556,interrogazione,sed277,1947-10-29,51,firma,1,BASILE
+t557,interrogazione,sed277,1947-10-29,52,firma,6,"BERNARDI, PRESSINOTTI, GIACOMETTI, BONOMELLI, VISCHIONI, MARIANI ENRICO"
+t558,interrogazione,sed277,1947-10-29,52,firma,1,CAMPOSARCUNO
+t559,interrogazione,sed277,1947-10-29,52,firma,5,"PERRONE CAPANO, CACCURI, SULLO, Recca, RobI, MONTERISI"
+t560,richiesta di votazione,sed277,1947-10-29,6,presentazione,15,"Cianca, Lussu, Schiavetti, Bordon, Pistoia, Nasi, Bennani, Spallini, Carpano Maglioli, Bianchi Bianca, Grazzi, Foa, Bellusci, Binni, Costantini"
+t561,ordine del giorno,sed277,1947-10-29,15,presentazione,1,Targetti ed altri
+t562,ordine del giorno,sed277,1947-10-29,32,presentazione,2,"Colitto, Morelli Renato"
+t563,interrogazione,sed281,1947-11-06,24,firma,1,NASI
+t564,interrogazione,sed281,1947-11-06,24,firma,1,CRISPO
+t565,interrogazione,sed281,1947-11-06,24,firma,4,"SCHIAVETTI, VALIANI, PERTINI, CIANCA"
+t566,interrogazione,sed281,1947-11-06,24,firma,2,"SPANO, LACONI"
+t567,interrogazione,sed281,1947-11-06,25,firma,1,LAMI STARNUTI
+t568,interrogazione,sed281,1947-11-06,25,firma,4,"LA Rocca, SERENI, REALE EUGENIO, . AMENDOLA"
+t569,interrogazione,sed281,1947-11-06,25,firma,1,LA ROCCA
+t570,interrogazione,sed281,1947-11-06,25,firma,1,BRASCHI
+t571,interrogazione,sed281,1947-11-06,25,firma,1,PRIOLO
+t572,interrogazione,sed281,1947-11-06,26,firma,1,LUCIFERO
+t573,interrogazione,sed281,1947-11-06,26,firma,1,LACONI
+t574,interrogazione,sed281,1947-11-06,26,firma,1,MATTEOTTI MATTEO
+t575,interrogazione,sed281,1947-11-06,26,firma,1,VILLABRUNA-
+t576,interrogazione,sed281,1947-11-06,26,firma,1,DI GLORIA
+t577,interrogazione,sed281,1947-11-06,27,firma,1,PERSICO
+t578,interrogazione,sed283,1947-11-07,24,firma,1,MASTROJANNI
+t579,interrogazione,sed283,1947-11-07,24,firma,1,SANSONE
+t580,interrogazione,sed283,1947-11-07,25,firma,1,DI FAUSTO
+t581,interrogazione,sed283,1947-11-07,25,firma,1,TREMELLONI
+t582,interrogazione,sed283,1947-11-07,25,firma,1,RICCIO STEFANO
+t583,interrogazione,sed283,1947-11-07,26,firma,6,"FUSCHINI, BALDUZZI, Moro, SCALFARo, MANNIRONI, MURGIA"
+t584,interrogazione,sed283,1947-11-07,26,firma,1,SAPIENZA
+t585,interrogazione,sed284,1947-11-08,23,firma,3,"PRESSINOTTI, MaLaGUGINI, DE MICHELIS"
+t586,interrogazione,sed284,1947-11-08,23,firma,2,"MORINI, SAMPIETRO"
+t587,interrogazione,sed284,1947-11-08,23,firma,1,MORINI
+t588,interrogazione,sed284,1947-11-08,23,firma,1,DE MARTINO
+t589,interrogazione,sed287,1947-11-11,32,firma,1,LUCIFERO
+t590,interrogazione,sed287,1947-11-11,32,firma,1,DI FAUSTO
+t591,interrogazione,sed287,1947-11-11,32,firma,1,LAMI STARNUTI
+t592,interrogazione,sed287,1947-11-11,33,firma,1,MONTEMARTINI
+t593,interrogazione,sed287,1947-11-11,33,firma,1,ZANARDI
+t594,interrogazione,sed287,1947-11-11,33,firma,1,CHIARAMELLO
+t595,interrogazione,sed287,1947-11-11,33,firma,1,BRUNI
+t596,interrogazione,sed287,1947-11-11,33,firma,1,PERSICO
+t597,interrogazione,sed287,1947-11-11,34,firma,1,PISTOIA
+t598,interrogazione,sed287,1947-11-11,34,firma,1,PIGNATARI
+t599,interrogazione,sed287,1947-11-11,34,firma,1,CRISPO
+t600,interrogazione,sed287,1947-11-11,34,firma,1,RESCIGNO
+t601,interrogazione,sed287,1947-11-11,35,firma,1,PrIOLO
+t602,interrogazione,sed289,1947-11-12,29,firma,4,"DI VITTORIO, MASSINI, BITOSSI, BARBARESCHI"
+t603,interrogazione,sed289,1947-11-12,29,firma,10,"LI Causi, MoNTALBANO, D'AMICO, FioRENTINO, Musotto, CIANCA, LA MaLra, Nasi, VARVARO, CORBI"
+t604,interrogazione,sed289,1947-11-12,29,firma,4,"PAJETTA GIAN CARLO, ALBERGANTI, ScorTtTI FRANCESCO, CAVALLOTTI"
+t605,interrogazione,sed289,1947-11-12,30,firma,5,"CoPPA, CANNIZZO, SELVAGGI, MAZZA, Russo PEREZ"
+t606,interrogazione,sed289,1947-11-12,30,firma,4,"MARIANI FRANcESCO, MALAGUGINI, PISTOIA, ""‘'ARGETTI"
+t607,interrogazione,sed289,1947-11-12,30,firma,8,"Carro, LAMI STARNUTI, DI GLORIA, TREMELLONI, Corsi, MOMIGLIANO, FILIPPINI, RoSssI PAOLO"
+t608,interrogazione,sed289,1947-11-12,31,firma,2,"GASPAROTTO, ALDISIO"
+t609,interrogazione,sed289,1947-11-12,31,firma,1,SANSONE
+t610,interrogazione,sed289,1947-11-12,31,firma,1,DI FAUSTO
+t611,interrogazione,sed289,1947-11-12,31,firma,1,SILES
+t612,interrogazione,sed289,1947-11-12,32,firma,1,BULLONI
+t613,interrogazione,sed289,1947-11-12,32,firma,2,"GUERRIERI FILIPPO, SCALFARO"
+t614,interrogazione,sed289,1947-11-12,32,firma,3,"Varvaro, MonTALBANO, MANCINI"
+t615,interrogazione,sed289,1947-11-12,33,firma,1,GIACOMETTI
+t616,interrogazione,sed289,1947-11-12,33,firma,1,SCOTTI ALESSANDRO
+t617,interrogazione,sed289,1947-11-12,33,firma,1,RESCIGNO
+t618,interrogazione,sed289,1947-11-12,34,firma,1,POLLASTRINI ELETTRA
+t619,interrogazione,sed289,1947-11-12,34,firma,1,MAZZEI
+t620,interrogazione,sed293,1947-11-14,2,firma,1,GOVELLI
+t621,interrogazione,sed293,1947-11-14,2,firma,1,SERENI
+t622,interrogazione,sed293,1947-11-14,2,firma,1,RODINÒ MARIO
+t623,interrogazione,sed293,1947-11-14,2,firma,2,"PuoTI, DE FALCO"
+t624,interrogazione,sed293,1947-11-14,2,firma,12,"DELLA SETA, CHIOSTERGI, PAOLUCCI, De MERCURIO, ZUCCARINI, AZZI, MAGRINI, MAGRASSI, BERNABEI, PARRI, CAMANGI, MACRELLI"
+t625,interrogazione,sed293,1947-11-14,2,firma,1,LABRIOLA
+t626,interrogazione,sed293,1947-11-14,3,firma,6,"BADINI CONFALONIERI, VILLABRUNA, RUBILLI, CRISPO, MARTINO GAETANO, Russo PEREZ"
+t627,interrogazione,sed293,1947-11-14,3,firma,2,"CRISPO, CORTESE"
+t628,interrogazione,sed293,1947-11-14,37,firma,5,"MERLIN ANGELINA, Rossi MARIA MappALENA, Noce TERESA, BEI ADELE, MONTAGNANA RITA"
+t629,interrogazione,sed293,1947-11-14,37,firma,2,"GIACCHERO, GEUNA"
+t630,interrogazione,sed293,1947-11-14,37,firma,1,CAMPOSARCUNO
+t631,interrogazione,sed293,1947-11-14,37,firma,2,"CLERICI, ERMINI"
+t632,interrogazione,sed293,1947-11-14,37,firma,4,"MoRINI, Riccio STEFANO, DE MERCURIO, SAMPIETRO"
+t633,interrogazione,sed293,1947-11-14,38,firma,3,"MEDA, ROSSELLI, BENVENUTI"
+t634,interrogazione,sed293,1947-11-14,38,firma,1,MEZZADRA
+t635,interrogazione,sed293,1947-11-14,38,firma,1,DOMINEDÒ
+t636,interrogazione,sed293,1947-11-14,38,firma,1,TREMELLONI
+t637,interrogazione,sed293,1947-11-14,38,firma,1,BIANCHI BIANCA
+t638,interrogazione,sed293,1947-11-14,39,firma,1,GIACCHERO
+t639,interrogazione,sed293,1947-11-14,39,firma,1,RESCIGNO
+t640,interrogazione,sed293,1947-11-14,40,firma,1,VISCHIONI
+t641,interrogazione,sed293,1947-11-14,40,firma,1,MONTICELLI
+t642,interrogazione,sed293,1947-11-14,40,firma,1,LOPARDI
+t643,interrogazione,sed293,1947-11-14,40,firma,1,FILIPPINI
+t644,interrogazione,sed293,1947-11-14,41,firma,1,MERIGHI
+t645,interrogazione,sed294,1947-11-15,27,firma,3,"Russo PEREZ, CANNIZZO, CASTIGLIA"
+t646,interrogazione,sed294,1947-11-15,27,firma,2,"FABBRI, COVELLI"
+t647,interrogazione,sed294,1947-11-15,27,firma,2,"GABRIELI, DE MARIA"
+t648,interrogazione,sed294,1947-11-15,27,firma,1,PECORARI
+t649,interrogazione,sed294,1947-11-15,28,firma,1,DE MARTINO
+t650,interrogazione,sed294,1947-11-15,28,firma,1,SANTI
+t651,interrogazione,sed294,1947-11-15,28,firma,1,BIAGIONI
+t652,interrogazione,sed297,1947-11-20,42,firma,6,"SAMPIETRO, CASTELLI EbGarpo, BALpuzzi, FERRERI, MEDA, MORINI"
+t653,interrogazione,sed297,1947-11-20,44,firma,1,PERSICO
+t654,interrogazione,sed297,1947-11-20,44,firma,1,BENEDETTINI
+t655,interrogazione,sed297,1947-11-20,44,firma,1,TUMMINELLI
+t656,interrogazione,sed297,1947-11-20,44,firma,1,RUSSO PEREZ
+t657,interrogazione,sed297,1947-11-20,44,firma,1,CHIARAMELLO
+t658,interrogazione,sed297,1947-11-20,45,firma,1,RUBILLI
+t659,interrogazione,sed299,1947-11-21,31,firma,1,CASTIGLIA
+t660,interrogazione,sed299,1947-11-21,31,firma,1,CICERONE
+t661,interrogazione,sed299,1947-11-21,31,firma,2,"MARCONI, DOSSETTI"
+t662,interrogazione,sed299,1947-11-21,31,firma,2,"STAMPACCHIA, CACCIATONE"
+t663,interrogazione,sed299,1947-11-21,31,firma,1,CIFALDI
+t664,interrogazione,sed299,1947-11-21,31,firma,1,MORINI
+t665,interrogazione,sed299,1947-11-21,32,firma,2,"CopaccCI PISANELLI, RECCA"
+t666,interrogazione,sed299,1947-11-21,32,firma,1,DE MARIA
+t667,interrogazione,sed299,1947-11-21,32,firma,4,"MACRELLI, PAoLUCCI, MaGRASSI, BENABEI"
+t668,interrogazione,sed299,1947-11-21,32,firma,1,CACCURI
+t669,interrogazione,sed299,1947-11-21,32,firma,1,GABRIELI
+t670,interrogazione,sed299,1947-11-21,32,firma,1,COSTANTINI
+t671,interrogazione,sed299,1947-11-21,32,firma,1,Tozzi CONDIVI
+t672,interrogazione,sed299,1947-11-21,33,firma,1,ZAGARI
+t673,interrogazione,sed299,1947-11-21,33,firma,1,BIANCHI BRUNO
+t674,interrogazione,sed299,1947-11-21,33,firma,1,GEUNA
+t675,interrogazione,sed299,1947-11-21,33,firma,2,"CAVALLOTTI, LUOZZA"
+t676,interrogazione,sed299,1947-11-21,33,firma,3,"CAVALLOTTI, SCOTTI FRANCESCO, LOZZA"
+t677,interrogazione,sed301,1947-11-22,23,firma,1,CRISPO
+t678,interrogazione,sed301,1947-11-22,23,firma,1,RICCIO STEFANO
+t679,interrogazione,sed301,1947-11-22,24,firma,2,"SULLO, SCOCA"
+t680,interrogazione,sed301,1947-11-22,24,firma,3,"FIORE, MONTALBANO, D'AMICO"
+t681,interrogazione,sed301,1947-11-22,24,firma,1,MORINI
+t682,interrogazione,sed301,1947-11-22,24,firma,4,"CrIispo, Bozzi, MARTINO GAETANO, VILLABRUNA"
+t683,interrogazione,sed301,1947-11-22,24,firma,1,SILIPO
+t684,interrogazione,sed301,1947-11-22,24,firma,5,"D'AMICO, Li CAUSI, MONTALBANO, Fiore, NASI"
+t685,interrogazione,sed301,1947-11-22,25,firma,1,MARTINO GAETANO
+t686,interrogazione,sed301,1947-11-22,25,firma,1,FINOCCHIARO APRILE
+t687,interrogazione,sed301,1947-11-22,25,firma,1,REALE VITO
+t688,interrogazione,sed301,1947-11-22,25,firma,1,GARLATO
+t689,interrogazione,sed301,1947-11-22,26,firma,2,"CANEPA, PERA"
+t690,interrogazione,sed301,1947-11-22,26,firma,1,BASILE
+t691,interrogazione,sed303,1947-11-24,19,firma,1,MONTERISI
+t692,interrogazione,sed303,1947-11-24,19,firma,1,PAOLUCCI
+t693,interrogazione,sed303,1947-11-24,19,firma,1,PASTORE RAFFAELE
+t694,interrogazione,sed303,1947-11-24,19,firma,1,BUBBIO
+t695,interrogazione,sed303,1947-11-24,19,firma,1,COLITTO
+t696,interrogazione,sed303,1947-11-24,20,firma,1,CAMANGI
+t697,interrogazione,sed303,1947-11-24,20,firma,1,LOPARDI
+t698,interrogazione,sed303,1947-11-24,20,firma,1,PERSICO
+t699,interrogazione,sed303,1947-11-24,20,firma,1,MONTAGNANA MARIO
+t700,interrogazione,sed303,1947-11-24,20,firma,1,CORSI
+t701,interrogazione,sed303,1947-11-24,21,firma,4,"CAPUA, PENNA OTTAVIA, ABOZZI, VENDITTI"
+t702,interrogazione,sed305,1947-11-25,24,firma,1,MANCINI
+t703,interrogazione,sed305,1947-11-25,24,firma,1,BORSELLINO
+t704,interrogazione,sed305,1947-11-25,24,firma,1,TUMMINELLI
+t705,interrogazione,sed305,1947-11-25,24,firma,1,TURCO
+t706,interrogazione,sed305,1947-11-25,24,firma,9,"QUINTIERI QUINTO, Bonino, PERRONE CaPaNO, CONDORELLI, MORELLI RENATO, CORTESE GuIinpo, BADINI ConFALONIERI, COLONNA, VILLABRUNA"
+t707,interrogazione,sed305,1947-11-25,25,firma,1,MURGIA
+t708,interrogazione,sed305,1947-11-25,25,firma,1,SANSONE
+t709,interrogazione,sed305,1947-11-25,25,firma,2,"LEONE GIOVANNI, MAZZA"
+t710,interrogazione,sed305,1947-11-25,25,firma,3,"MORINI, SAMPIETRO, SALERNO"
+t711,interrogazione,sed305,1947-11-25,25,firma,1,CORTESE GUIDO
+t712,interrogazione,sed305,1947-11-25,26,firma,1,CAMANGI
+t713,interrogazione,sed305,1947-11-25,26,firma,2,"DI GLORIA, PERSICO"
+t714,interrogazione,sed305,1947-11-25,26,firma,1,VIGORELLI
+t715,interrogazione,sed305,1947-11-25,26,firma,1,IMPERIALE
+t716,interrogazione,sed305,1947-11-25,26,firma,1,GORTANI
+t717,mozione,sed305,1947-11-25,20,presentazione,2,"Abozzi, Perrone Capano"
+t718,richiesta di votazione,sed306,1947-11-26,20,presentazione,20,"Mastrojanni, Perugi, Villabruna, Mastino Gesumino, Corbino, Penna Oittavia, Corsini, Colitto, Scalfaro, Giacchero, Micheli, Badini Confalonieri, Bellavista, Valenti, Alberti, Colonnetti, Corsanego, Baracco, Coppi e Bubb'o"
+t719,interrogazione,sed307,1947-11-26,26,firma,5,"SiLipo, GuLLo Fausto, MusoLINO, MANCINI, PRIOLO"
+t720,interrogazione,sed307,1947-11-26,26,firma,4,"MANCINI, PRIOLO, GuLLO FAUSTO, SILIPO"
+t721,interrogazione,sed307,1947-11-26,26,firma,2,"PRETI, BINNI"
+t722,interrogazione,sed307,1947-11-26,27,firma,1,SCOTTI ALESSANDRO
+t723,interrogazione,sed307,1947-11-26,27,firma,1,DI GLORIA
+t724,interrogazione,sed307,1947-11-26,27,firma,1,JACOMETTI
+t725,interrogazione,sed307,1947-11-26,27,firma,1,CAMPOSARCUNO
+t726,interrogazione,sed307,1947-11-26,28,firma,1,RopINÒ MARIO
+t727,interrogazione,sed307,1947-11-26,28,firma,1,PIGNATARI
+t728,interrogazione,sed307,1947-11-26,28,firma,1,VILLANI
+t729,interrogazione,sed307,1947-11-26,28,firma,1,BADINI CONFALONIERI
+t730,interrogazione,sed309,1947-11-27,43,firma,3,"BRLLAVISTA, VILLABRUNA, CRISPO"
+t731,interrogazione,sed309,1947-11-27,44,firma,1,DI FAUSTO
+t732,interrogazione,sed309,1947-11-27,44,firma,1,MAZZA
+t733,interrogazione,sed309,1947-11-27,44,firma,2,"FIORENTINO, MUSOTTO"
+t734,interrogazione,sed309,1947-11-27,44,firma,3,"D'AMICO, MONTALBANO, FIORE"
+t735,interrogazione,sed309,1947-11-27,44,firma,2,"PRESSINOTTI, SANSONE"
+t736,interrogazione,sed309,1947-11-27,45,firma,1,MURGIA
+t737,interrogazione,sed309,1947-11-27,45,firma,1,CRIsPo
+t738,interrogazione,sed309,1947-11-27,45,firma,1,SANSONE
+t739,interrogazione,sed309,1947-11-27,45,firma,1,BOZZI
+t740,interrogazione,sed309,1947-11-27,46,firma,1,ZACCAGNINI
+t741,interrogazione,sed309,1947-11-27,46,firma,1,MINIO
+t742,interrogazione,sed309,1947-11-27,46,firma,1,BASILE
+t743,richiesta di votazione,sed309,1947-11-27,32,presentazione,14,"Scalfaro, Coppi, Nicotra Maria, Bianchini Laura, Calamandrei, Bertola, De Maria, Meda, Caronia, Fabbri, Caso, Bosco Lucarelli, Dominedò, Fantoni e altri"
+t744,interrogazione,sed311,1947-11-28,31,firma,1,GASPAROTTO
+t745,interrogazione,sed311,1947-11-28,31,firma,1,BELLAVISTA
+t746,interrogazione,sed311,1947-11-28,31,firma,2,"MARINA, MAZZA"
+t747,interrogazione,sed311,1947-11-28,31,firma,9,"CLERICI, MEDA LUIGI, BENVENUTI, BALDUZZI, CASTELLI EpGARDO, FERRERI, ZERBI, MARTINELLI, SAMPIETRO"
+t748,interrogazione,sed311,1947-11-28,31,firma,1,MALAGUGINI
+t749,interrogazione,sed311,1947-11-28,32,firma,5,"BuBBIO, BARACcO, BuRATO, BELLATO, GIACCHERO"
+t750,interrogazione,sed311,1947-11-28,32,firma,4,"Mastino PIETRO, LUSSU, ABOZZI, CORSI"
+t751,interrogazione,sed311,1947-11-28,32,firma,2,"TREVES, PRETI"
+t752,interrogazione,sed311,1947-11-28,32,firma,1,DE PALMA
+t753,interrogazione,sed311,1947-11-28,33,firma,1,MOLINELLI
+t754,interrogazione,sed311,1947-11-28,33,firma,1,MARTINO GAETANO
+t755,interrogazione,sed311,1947-11-28,33,firma,1,BELLATO
+t756,interrogazione,sed311,1947-11-28,33,firma,1,FIORE
+t757,interrogazione,sed311,1947-11-28,34,firma,1,COSATTINI
+t758,interrogazione,sed312,1947-11-29,5,firma,3,"MASTROJANNI, CAPUA, PERUGI"
+t759,interrogazione,sed312,1947-11-29,5,firma,1,PARRI
+t760,interrogazione,sed312,1947-11-29,5,firma,1,SCOCCIMARRO
+t761,interrogazione,sed313,1947-11-29,16,firma,1,VERONI
+t762,interrogazione,sed313,1947-11-29,16,firma,1,SCOCA
+t763,interrogazione,sed313,1947-11-29,16,firma,1,CANEVARI
+t764,interrogazione,sed313,1947-11-29,16,firma,1,FINOCCHIARO APRILE
+t765,interrogazione,sed313,1947-11-29,16,firma,3,"COSATTINI, TARGETTI, CANEVARI"
+t766,interrogazione,sed315,1947-12-02,29,firma,1,BUBBIO
+t767,interrogazione,sed315,1947-12-02,29,firma,1,SANSONE
+t768,interrogazione,sed315,1947-12-02,29,firma,1,PIEMONTE
+t769,interrogazione,sed315,1947-12-02,29,firma,1,ARATA
+t770,interrogazione,sed315,1947-12-02,30,firma,1,SCHIRATTI
+t771,interrogazione,sed315,1947-12-02,30,firma,1,GHIDETTI
+t772,interrogazione,sed315,1947-12-02,30,firma,1,SILIPO
+t773,interrogazione,sed315,1947-12-02,30,firma,1,CAMANGI
+t774,richiesta di votazione,sed315,1947-12-02,25,presentazione,15,"Uberti, Moro, Ponti, Dominedò, Fabriani, Delli Castelli Filomena, Coppi, Bubbio,Nicotra Maria, Ambrosini, Murdaca, Damiani, Alberti, Bosco Lucarelli, Ermini"
+t775,interrogazione,sed317,1947-12-03,30,firma,2,"GIUA, FORNARA"
+t776,interrogazione,sed317,1947-12-03,30,firma,2,"LEONE GIOVANNI, GABRIELI"
+t777,interrogazione,sed317,1947-12-03,30,firma,1,DE MARIA
+t778,interrogazione,sed317,1947-12-03,31,firma,1,ZAGARI
+t779,interrogazione,sed317,1947-12-03,31,firma,1,GHIDETTI
+t780,interrogazione,sed317,1947-12-03,31,firma,1,PIEMONTE
+t781,interrogazione,sed317,1947-12-03,31,firma,4,"NoBILE, CoRBINO, BOZZI, COSTANTINI"
+t782,interrogazione,sed317,1947-12-03,31,firma,1,RESCIGNO
+t783,richiesta di votazione,sed317,1947-12-03,13,presentazione,15,"Laconi, Grieco, Reale Eugenio, Moranino, Farina, Pellegrini, Longo, Rossi Maria Maddalena, Musolino, Gullo Fausto, Platone, Lozza, Cremaschi Olindo, Pucci, Lombardi Carlo"
+t784,interrogazione,sed319,1947-12-04,33,firma,1,LUSSU
+t785,interrogazione,sed319,1947-12-04,33,firma,1,BRASCHI
+t786,interrogazione,sed319,1947-12-04,33,firma,1,SCOTTI ALESSANDRO
+t787,interrogazione,sed319,1947-12-04,34,firma,1,PERSICO
+t788,interrogazione,sed319,1947-12-04,34,firma,1,BASTIANETTO
+t789,interrogazione,sed319,1947-12-04,34,firma,1,RUSSO PEREZ
+t790,interrogazione,sed321,1947-12-05,38,firma,3,"CARBONI ENRICO, CHIEFFI, MANNIRONI"
+t791,interrogazione,sed321,1947-12-05,38,firma,1,PERSICO
+t792,interrogazione,sed321,1947-12-05,39,firma,1,ROVEDA
+t793,interrogazione,sed321,1947-12-05,39,firma,10,"PERSICO, CEVOLOTTO, TREVES, CoRBINO, Bonino, PERLINGIERI, GUERRIERI EMANUELE, CANDELA, GASPAROTTO, BASILE"
+t794,interrogazione,sed321,1947-12-05,39,firma,1,SAPIENZA
+t795,interrogazione,sed321,1947-12-05,39,firma,1,RICCIO STEFANO
+t796,interrogazione,sed321,1947-12-05,39,firma,1,PRETI
+t797,interrogazione,sed321,1947-12-05,40,firma,1,MONTAGNANA MARIO
+t798,interrogazione,sed321,1947-12-05,40,firma,1,MASTINO PIETRO
+t799,interrogazione,sed321,1947-12-05,40,firma,1,MAZZEI
+t800,interrogazione,sed322,1947-12-06,21,firma,5,"Massini, D’OnoFRIO, NOBILE, GALLICO Napia, MINIO"
+t801,interrogazione,sed322,1947-12-06,21,firma,1,CASSIANI
+t802,interrogazione,sed322,1947-12-06,21,firma,2,"LIZZADRI, ROMITA"
+t803,interrogazione,sed322,1947-12-06,22,firma,1,TUMMINELLI
+t804,interrogazione,sed322,1947-12-06,22,firma,1,FERRARESE
+t805,interrogazione,sed328,1947-12-11,20,firma,1,CORBI
+t806,interrogazione,sed328,1947-12-11,20,firma,1,PAOLUCCI
+t807,interrogazione,sed328,1947-12-11,20,firma,1,GRAZI
+t808,interpellanza,sed328,1947-12-11,31,firma,1,GRAZI
+t809,interpellanza,sed328,1947-12-11,32,firma,28,"‘GoRRERI, MONTALBANO, FLECCHIA, SALERNO, —(CIANCA, =—.MONTAGNANA Rita, GALLICO SPANO NADIA, LEONE FRANCESCO, TonELLO, MAZZONI, Persico, CANEPA, FABBRI, RoSSI MarIA MADDALENA, LonGo, FEDELI ARMANDO, AMADEI, MOLINELLI, BEI . ApELE, CaRPANO MAGLIOLI, ViIGoRELLI, COSTANTINI, D'Amico, LussU, BARBARESCHI, FARALLI, GRAZI, MACRELLI"
+t810,interpellanza,sed328,1947-12-11,32,firma,1,COLITTO
+t811,interrogazione,sed328,1947-12-11,32,firma,1,GRIECO
+t812,interrogazione,sed328,1947-12-11,33,firma,1,VINCIGUERRA
+t813,interrogazione,sed328,1947-12-11,33,firma,6,"Nasi, RUBILLI, VeRONI, DI Fausto, MARINARO, BERTINI"
+t814,interrogazione,sed328,1947-12-11,33,firma,1,MOLINELLI
+t815,interrogazione,sed328,1947-12-11,33,firma,1,MUSOTTO
+t816,interrogazione,sed328,1947-12-11,34,firma,1,SCOTTI ALESSANDRO
+t817,interrogazione,sed328,1947-12-11,34,firma,1,RESCIGNO
+t818,interrogazione,sed328,1947-12-11,34,firma,1,BASTIANETTO
+t819,interrogazione,sed328,1947-12-11,35,firma,1,BIAGIONI
+t820,ordine del giorno,sed329,1947-12-12,1,firma,6,"CANEVARI, LONGHENA, TREVES, CANEPA, CAPORALI, FIETTA"
+t821,interrogazione,sed330,1947-12-12,2,firma,17,"NENNI, NAsI, BRUNI, Rossi MARIA MADDALENA, JACOMETTI, MALAGUGINI, MASSOLA, GALLICO SPANO NADIA, Li Causi, GRIECO, PUCCI, - PESENTI, NEGARVILLE, MONTAGNANA MARIO, FARINI, MARIANT, GIUA, FORNARA"
+t822,ordine del giorno,sed330,1947-12-12,23,firma,15,"PeRASSI, UBERTI, Rossi PAOLO, MAGRINI, BELLUSCI, DOSSETTI, NumeRroso, CAPPI, PERA, RODI, CoLITTO, GIANNINI, ZERBI, BULLONI, MEDA LUIGI"
+t823,interrogazione,sed330,1947-12-12,24,firma,9,"JACOMETTI, RAVAGNAN, CIANCA, SCHIAVETTI, MINnIO, SPANO, FARINI CARLO, . BUFFONI, PERTINI"
+t824,interrogazione,sed330,1947-12-12,24,firma,1,MATTEOTTI MATTEO
+t825,interrogazione,sed330,1947-12-12,25,firma,1,GORTANI
+t826,interrogazione,sed330,1947-12-12,25,firma,3,"VIALE, BERTONE, CHIARAMELLO"
+t827,interrogazione,sed330,1947-12-12,25,firma,1,PIEMONTE
+t828,interrogazione,sed343,1947-12-20,36,firma,1,SIMONINI
+t829,interrogazione,sed343,1947-12-20,36,firma,1,MARINA
+t830,interrogazione,sed343,1947-12-20,36,firma,3,"Russo PEREZ, CASTIGLIA, PATRICOLO"
+t831,interrogazione,sed343,1947-12-20,36,firma,2,"DE MARTA, CODACCI PISANELLI"
+t832,interrogazione,sed343,1947-12-20,36,firma,1,MONTERISI
+t833,interrogazione,sed343,1947-12-20,37,firma,4,"MonTALBANO, Li Gausi, D'AMICO, FIORE"
+t834,interrogazione,sed343,1947-12-20,37,firma,1,BONINO
+t835,interrogazione,sed343,1947-12-20,37,firma,2,"GHIDETTI, PELLEGRINI"
+t836,interrogazione,sed343,1947-12-20,38,firma,1,TEGA
+t837,interrogazione,sed343,1947-12-20,38,firma,1,BURATO
+t838,interrogazione,sed343,1947-12-20,38,firma,1,CASO
+t839,interrogazione,sed346,1947-12-22,23,firma,1,CASTIGLIA
+t840,interrogazione,sed346,1947-12-22,23,firma,2,"Coccia, MENTASTI"
+t841,interrogazione,sed346,1947-12-22,23,firma,2,"SEGALA, PERSICO"
