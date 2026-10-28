@@ -269,6 +269,7 @@ Codifiche automatiche: le sezioni Opere, Note e Bibliografia sono escluse, ma re
 | `voti_in_carica` | Votazioni per appello nominale tenute mentre era in carica (su 27) |
 | `voti_presente`, `voti_congedo`, `voti_assente` | Ha risposto sì, no o si è astenuto; era in congedo; non risulta in nessun elenco. Le votazioni nulle per mancanza del numero legale contano, perché la chiama c'è stata |
 | `quota_presenza` | `voti_presente / voti_in_carica`. Un nome stampato ma non abbinato fa risultare assente chi ha votato: l'errore è quello misurato sui totali ufficiali (in media 2,3 nomi su circa 350 per votazione). Terracini, Presidente dell'Assemblea dal febbraio 1947, non compare mai negli elenchi |
+| `eletto_camera_1948` | 1 se eletto alla Camera il 18 aprile 1948 (I legislatura; esclusi i subentrati): 260. Fonte: elenco degli eletti per circoscrizione su Wikipedia, `pipeline/fonti/eletti_camera_1948_wikipedia.txt`; tutti i 260 risultano deputati della Repubblica nei dati della Camera (`deputato_rep`). Il Senato del 1948 non è coperto: `futuro_senatore` dice se una persona è stata senatrice, non quando |
 
 Fonte: `edgelist.csv` (organi o621–o625) e `edgelist_voti.csv`; calcolate da `pipeline/tools/arricchisci_costituenti.py`.
 

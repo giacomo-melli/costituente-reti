@@ -271,6 +271,7 @@ Automatic coding: sections such as Works, Notes, and Bibliography are excluded, 
 | `votes_in_office` | Roll-call votes held while in office (of 27) |
 | `votes_present`, `votes_on_leave`, `votes_absent` | Answered yes, no or abstained; on leave; in no list. Votes void for lack of quorum count, since the roll call took place |
 | `share_present` | `votes_present / votes_in_office`. A printed but unmatched name makes a voter look absent: the error is the one measured on official totals (2.3 names out of about 350 per vote on average). Terracini, President of the Assembly from February 1947, never appears in the lists |
+| `elected_chamber_1948` | 1 if elected to the Chamber on 18 April 1948 (Legislature I; later replacements excluded): 260. Source: list of those elected by constituency on Wikipedia, `pipeline/fonti/eletti_camera_1948_wikipedia.txt`; all 260 are deputies of the Republic in the Chamber's data (`republic_deputy`). The 1948 Senate is not covered: `later_senator` says whether a person was ever a senator, not when |
 
 Source: `edgelist_bodies.csv` (bodies o621–o625) and `edgelist_votes.csv`; computed by `pipeline/tools/arricchisci_costituenti.py`.
 

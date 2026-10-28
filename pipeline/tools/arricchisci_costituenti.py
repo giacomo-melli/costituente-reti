@@ -14,9 +14,9 @@ import pandas as pd
 QUI = os.path.dirname(os.path.abspath(__file__)); RADICE = os.path.dirname(os.path.dirname(QUI))
 IT = os.path.join(RADICE, 'data', 'it'); EN = os.path.join(RADICE, 'data', 'en'); EST = os.path.join(os.path.dirname(QUI), 'extraction')
 NUOVE = ['commissione_75', 'sottocommissione', 'comitato_redazione', 'ruolo_commissione',
-         'voti_in_carica', 'voti_presente', 'voti_congedo', 'voti_assente', 'quota_presenza']
+         'voti_in_carica', 'voti_presente', 'voti_congedo', 'voti_assente', 'quota_presenza', 'eletto_camera_1948']
 EN_NOMI = dict(zip(NUOVE, ['committee_75', 'subcommittee', 'drafting_committee', 'committee_role',
-                           'votes_in_office', 'votes_present', 'votes_on_leave', 'votes_absent', 'share_present']))
+                           'votes_in_office', 'votes_present', 'votes_on_leave', 'votes_absent', 'share_present', 'elected_chamber_1948']))
 C = pd.read_csv(os.path.join(IT, 'costituenti_nodi.csv')).drop(columns=NUOVE, errors='ignore')
 G = pd.read_csv(os.path.join(IT, 'edgelist.csv'))
 com = G[G.id_organo.isin(['o621', 'o622', 'o623', 'o624', 'o625'])]
@@ -43,6 +43,8 @@ for r, ini, fin in zip(C.id_dep, C.inizio_mandato, fine):
     rows.append((len(vv), len(pres), len(cg), len(vv) - len(pres) - len(cg)))
 C[['voti_in_carica', 'voti_presente', 'voti_congedo', 'voti_assente']] = rows
 C['quota_presenza'] = (C.voti_presente / C.voti_in_carica.where(C.voti_in_carica > 0)).round(3)
+sys.path.insert(0, QUI); from eletti_1948 import eletto
+C['eletto_camera_1948'] = [eletto(c, x) for c, x in zip(C.cognome, C.nome)]
 C.to_csv(os.path.join(IT, 'costituenti_nodi.csv'), index=False)
 M = pd.read_csv(os.path.join(EN, 'members_nodes.csv')).drop(columns=list(EN_NOMI.values()), errors='ignore')
 assert (M.id_member.values == C.id_dep.values).all()
@@ -51,4 +53,5 @@ M['committee_role'] = M.committee_role.map({'presidente': 'chair', 'vicepresiden
 M.to_csv(os.path.join(EN, 'members_nodes.csv'), index=False)
 print('Commissione dei 75:', int(C.commissione_75.sum()), '| sottocommissioni:', C.sottocommissione.value_counts().to_dict(),
       '| Comitato di redazione:', int(C.comitato_redazione.sum()), '| ruoli:', C.ruolo_commissione.value_counts().to_dict())
+print('Eletti alla Camera nel 1948:', int(C.eletto_camera_1948.sum()))
 print('Presenza media agli appelli:', round(C.quota_presenza.mean(), 3), '| mai presenti:', int((C.voti_presente == 0).sum()))
